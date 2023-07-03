@@ -1,0 +1,19 @@
+.sec01 {
+    width: 100%;
+    margin-top: 30px;
+    >h1 {
+        margin-bottom: 30px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            width: calc((100% - 50px)/3); height: 50vh;  
+            border: 1px solid #000;
+            text-align: center; 
+            line-height: 50vh;
+            border-radius: 15px;
+            gap: 10px;
+        }
+    }
+}

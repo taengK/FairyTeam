@@ -1,0 +1,17 @@
+.Navi {
+  border: 1px solid #000;
+}
+.Navi ul {
+  display: flex;
+  justify-content: space-between;
+}
+.Navi ul li {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: #f00;
+}
+.Navi ul li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}

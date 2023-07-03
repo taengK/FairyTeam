@@ -1,0 +1,20 @@
+.sec01 {
+  width: 100%;
+  margin-top: 30px;
+}
+.sec01 > h1 {
+  margin-bottom: 30px;
+}
+.sec01 ul {
+  display: flex;
+  justify-content: space-between;
+}
+.sec01 ul li {
+  width: calc((100% - 50px) / 3);
+  height: 50vh;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 50vh;
+  border-radius: 15px;
+  gap: 10px;
+}
