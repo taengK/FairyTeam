@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BookMark = () => {
+const Mypage = () => {
   return (
     <div>
       BookMark
@@ -8,4 +8,4 @@ const BookMark = () => {
   )
 }
 
-export default BookMark
+export default Mypage

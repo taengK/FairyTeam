@@ -1,7 +1,7 @@
 import React from 'react'
 import Login from '../Head/Login'
 import SignUp from '../Head/SignUp'
-import BookMark from '../Head/BookMark'
+import Mypage from './Mypage'
 import Love from './Love'
 
 
@@ -14,7 +14,7 @@ const Head = () => {
         <li><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요'/></li>
         <li><a href="#"><SignUp/></a></li>
         <li><a href="#"><Login/></a></li>
-        <li><a href="#"><BookMark/></a></li>
+        <li><a href="#"><Mypage/></a></li>
         <li><a href="#"><Love/></a></li>
         
       </ul>
