@@ -18,8 +18,10 @@ function App() {
       <main>
         <div></div>
       </main>
-      <footer>
-      </footer>
+          
+          {/* footer */}
+
+          <h1>by 김호현</h1>
     </div>
   );
 }
