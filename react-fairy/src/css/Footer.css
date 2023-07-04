@@ -8,16 +8,21 @@
   width: 100%;
   border: 1px solid #000;
 }
+.Footer ul li h3 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+.Footer ul li i {
+  margin-right: 10px;
+}
 .Footer ul li .footerLeftBox {
   width: 80%;
   margin: 0 auto;
   padding: 20px 0 20px 0;
 }
-.Footer ul li .footerLeftBox > h3 {
-  margin-bottom: 20px;
-}
 .Footer ul li .footerLeftBox > p {
-  margin: 10px 0 10px 0;
+  margin: 20px 0 20px 0;
 }
 .Footer ul li .footerLeftBox > iframe {
   width: 500px;
@@ -26,9 +31,6 @@
 }
 .Footer ul li:nth-child(2) {
   padding: 20px;
-}
-.Footer ul li:nth-child(2) > h3 {
-  margin-top: 20px;
 }
 .Footer ul li:nth-child(2) input, .Footer ul li:nth-child(2) textarea {
   background: #eee;

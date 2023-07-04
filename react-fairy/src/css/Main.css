@@ -1,11 +1,14 @@
 .Main-sec01 {
   width: 100%;
-  height: 50vh;
 }
-.Main-sec01 .swiper {
-  border: 1px solid #000;
+.Main-sec01 h2 {
+  margin-bottom: 30px;
+}
+.Main-sec01 .SlideBox {
   width: 100%;
-  height: 300px;
+}
+.Main-sec01 .SlideBox .SlideImg {
+  width: 100%;
 }
 
 .Main-sec02 {

@@ -17,6 +17,7 @@ import './css/Footer.css'
 
 
 
+
 function App() {
   return (
     <div id='con'>
@@ -32,10 +33,10 @@ function App() {
       <footer>
         <Footer/>
       </footer>
+    </div>
           
 
           
-    </div>
   );
 }
 
