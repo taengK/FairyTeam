@@ -1,6 +1,6 @@
 import './App.css'
 import Head from './componenet/Head/Head';
-import Section01 from './componenet/Main/Section01';
+
 import NavList from './componenet/Navigation/NavList';
 import './css/Common.css'
 import './css/Head.css'
