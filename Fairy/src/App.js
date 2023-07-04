@@ -25,6 +25,8 @@ function App() {
       </main>
           
           {/* footer */}
+
+          <h1>hi</h1>
     </div>
   );
 }
