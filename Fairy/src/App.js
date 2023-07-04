@@ -1,6 +1,8 @@
 import './App.css'
 import Head from './componenet/Head/Head';
 import NavList from './componenet/Navigation/NavList';
+import Section01 from './componenet/Main/01.MainPage/Section01';
+import Section02 from './componenet/Main/01.MainPage/Section02';
 import './css/Common.css'
 import './css/Head.css'
 import './css/NavList.css'
@@ -15,7 +17,8 @@ function App() {
           <NavList/>
       </nav>
       <main>
-        <div></div>
+        <Section01/>
+        <Section02/>
       </main>
           
           {/* footer */}
