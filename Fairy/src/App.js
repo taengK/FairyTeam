@@ -1,11 +1,10 @@
 import './App.css'
 import Head from './componenet/Head/Head';
-
 import NavList from './componenet/Navigation/NavList';
 import './css/Common.css'
 import './css/Head.css'
 import './css/NavList.css'
-import './css/Section01.css'
+
 function App() {
   return (
     <div id='con'>
