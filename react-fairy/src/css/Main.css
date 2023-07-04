@@ -1,25 +1,15 @@
 .Main-sec01 {
   width: 100%;
   height: 50vh;
-  border: 1px solid #000;
 }
-.Main-sec01 ul {
-  display: flex;
-  justify-content: space-between;
-}
-.Main-sec01 ul li {
+.Main-sec01 .swiper {
   border: 1px solid #000;
-  width: calc((100% - 50px) / 3);
-  height: 50vh;
-  border-radius: 15px;
-  gap: 10px;
-  text-align: center;
-  line-height: 50vh;
+  width: 100%;
+  height: 300px;
 }
 
 .Main-sec02 {
   width: 100%;
-  border: 1px solid #000;
 }
 .Main-sec02 h2 {
   margin-bottom: 30px;
@@ -28,14 +18,60 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 30px;
 }
 .Main-sec02 ul li {
+  width: calc((100% - 58px) / 1);
+  border-radius: 15px;
   overflow: hidden;
-  border: 1px solid #000;
-  height: 450px;
+  border: 1px solid #bbb;
+  transition: all 0.7s ease;
+  margin: 0 -1px 30px 0;
+  position: relative;
+}
+.Main-sec02 ul li:hover {
+  transform: translateY(-3%);
 }
 .Main-sec02 ul li a {
   display: block;
-  background-image: url(../../img/yu.png);
+  width: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.Main-sec02 ul li a:nth-child(1) {
+  width: 180px;
+}
+.Main-sec02 ul li a:nth-child(1) > img {
+  width: 100%;
+}
+.Main-sec02 ul .btn {
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  height: 80px;
+  line-height: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: left;
+  position: relative;
+}
+.Main-sec02 ul .btn h3, .Main-sec02 ul .btn p {
+  text-align: center;
+}
+.Main-sec02 ul .btn::after {
+  content: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 10px;
+  color: #eee;
+}
+.Main-sec02 ul li:hover .btn::after {
+  content: attr(data-name);
 }/*# sourceMappingURL=Main.css.map */
