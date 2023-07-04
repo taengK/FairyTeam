@@ -16,15 +16,10 @@ function App() {
           <NavList/>
       </nav>
       <main>
-        <section>
-              <Section01/>
-        </section>
-        <section>
-
-        </section>
+        <div></div>
       </main>
-          
-          {/* footer */}
+      <footer>
+      </footer>
     </div>
   );
 }
