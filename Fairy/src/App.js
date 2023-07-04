@@ -26,7 +26,7 @@ function App() {
           
           {/* footer */}
 
-          <h1>by</h1>
+          <h1>by 김호현</h1>
     </div>
   );
 }
