@@ -26,7 +26,7 @@ function App() {
           
           {/* footer */}
 
-          <h1>hi</h1>
+          <h1>by</h1>
     </div>
   );
 }
