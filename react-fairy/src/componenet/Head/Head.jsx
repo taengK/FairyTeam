@@ -10,7 +10,7 @@ const Head = () => {
   return (
     <div className='head'>
       <ul>
-        <li><div>LOGO </div></li>
+        <li><div><img src="/" alt="" /> </div></li>
         <li><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요'/></li>
         <li><a href="#"><SignUp/></a></li>
         <li><a href="#"><Login/></a></li>
