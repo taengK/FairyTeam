@@ -1,0 +1,14 @@
+.Footer {
+  border: 1px solid #000;
+}
+.Footer ul {
+  display: flex;
+}
+.Footer ul li {
+  width: 100%;
+  border: 1px solid #000;
+}
+.Footer ul li > iframe {
+  width: 600px;
+  height: 400px;
+}/*# sourceMappingURL=footer.css.map */

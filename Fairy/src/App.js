@@ -14,6 +14,7 @@ import './css/Common.css'
 import './css/Head.css'
 import './css/NavList.css'
 import './css/Main.css'
+import './css/Footer.css'
 
 
 
@@ -22,17 +23,6 @@ function App() {
     <div id='con'>
       <header>
           <Head/>
-    {/* 
-       <Routes>
-      <Route path='/' element={<Main/>}></Route>
-      <Route path='/' element={<SignUp/>}></Route>
-      <Route path='/' element={<Login/>}></Route>
-      <Route path='/' element={<Mypage/>}></Route>
-      <Route path='/' element={<Love/>}></Route>
-      </Routes>
-
-    */}
-
       </header>
       <nav>
           <NavList/>
@@ -43,9 +33,6 @@ function App() {
       <footer>
         <Footer/>
       </footer>
-          
-
-          
     </div>
   );
 }

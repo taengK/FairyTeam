@@ -12,26 +12,147 @@ const Main = () => {
         </section>
         <section className='sec02'>
             <ul>
-                <li><a href="https://picsum.photos/200/300"><img src="" alt="" /><h4>1</h4></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
-                <li><a href=""><img src="" alt="" /></a></li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://picsum.photos/200/300" alt="" />
+                        <h3>tit</h3>
+                        <h5>ctt</h5>
+                    </a>
+                </li>
+                
                 
             </ul>
         </section>

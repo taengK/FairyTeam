@@ -1,0 +1,13 @@
+.Footer {
+    border: 1px solid #000;
+    ul {
+        display: flex;
+        li {
+            width: 100%;
+            border: 1px solid #000;
+            >iframe {
+                width: 600px; height: 400px;
+            }
+        }
+    }
+}
