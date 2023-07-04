@@ -6,6 +6,7 @@ import Section02 from './componenet/Main/01.MainPage/Section02';
 import './css/Common.css'
 import './css/Head.css'
 import './css/NavList.css'
+import SubSection01 from './componenet/Main/01.MainPage/02.SubPage/SubSection01';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <main>
         <Section01/>
         <Section02/>
+        <SubSection01/>
       </main>
           
           {/* footer */}
