@@ -7,6 +7,8 @@ import './css/Common.css'
 import './css/Head.css'
 import './css/NavList.css'
 import SubSection01 from './componenet/Main/01.MainPage/02.SubPage/SubSection01';
+import Footer from './componenet/Footer/Footer';
+
 
 function App() {
   return (
@@ -22,10 +24,12 @@ function App() {
         <Section02/>
         <SubSection01/>
       </main>
+      <footer>
+        <Footer/>
+      </footer>
           
-          {/* footer */}
 
-          <h1>by 김호현</h1>
+          
     </div>
   );
 }
