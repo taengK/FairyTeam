@@ -1,8 +1,8 @@
 import React from 'react'
-import Login from '../Head/Login'
-import SignUp from '../Head/SignUp'
-import Mypage from './Mypage'
-import Love from './Love'
+import Login from '../../page/Login'
+import SignUp from '../../page/SignUp'
+import Mypage from '../../page/Mypage'
+import Love from '../../page/Love'
 
 
 
