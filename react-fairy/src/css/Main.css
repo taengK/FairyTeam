@@ -1,13 +1,13 @@
-.Main {
+.Main-sec01 {
   width: 100%;
   height: 50vh;
   border: 1px solid #000;
 }
-.Main ul {
+.Main-sec01 ul {
   display: flex;
   justify-content: space-between;
 }
-.Main ul li {
+.Main-sec01 ul li {
   border: 1px solid #000;
   width: calc((100% - 50px) / 3);
   height: 50vh;
@@ -15,4 +15,27 @@
   gap: 10px;
   text-align: center;
   line-height: 50vh;
+}
+
+.Main-sec02 {
+  width: 100%;
+  border: 1px solid #000;
+}
+.Main-sec02 h2 {
+  margin-bottom: 30px;
+}
+.Main-sec02 ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 30px;
+}
+.Main-sec02 ul li {
+  overflow: hidden;
+  border: 1px solid #000;
+  height: 450px;
+}
+.Main-sec02 ul li a {
+  display: block;
+  background-image: url(../../img/yu.png);
 }/*# sourceMappingURL=Main.css.map */
