@@ -72,7 +72,7 @@ function Join() {
   return (
     <div className='main-box info-box'>
     <Form onSubmit={handleJoin}>
-      <Row className="mb-3">
+      <Row >
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>ID</Form.Label>
           <Form.Control type="text" placeholder="Enter id" ref={idRef}/>
