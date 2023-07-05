@@ -20,24 +20,31 @@ import './css/Footer.css'
 
 function App() {
   return (
+   
+
+ 
+    
     <div id='con'>
       <div id = 'untilMain'>
+      
       <header>
           <Head/>
       </header>
       <nav>
           <NavList/>
       </nav>
+      {/*<main>
+          <Main/>
+      </main>*/}
       <Routes>
-        <Route path='/' element={<Main/>}/>
+        <Route path='/' element={<Main/>}/> 
+      </Routes>
+      <Routes>
+        <Route path='/signup' element={<SignUp/>}/>
         <Route path='/Login' element={<Login/>}/>
-        <Route path='/Signup' element={<SignUp/>}/>
         <Route path='/Mypage' element={<Mypage/>}/>
         <Route path='/Love' element={<Love/>}/>
       </Routes>
-      {/* <main>
-          <Main/>
-      </main> */}
       </div>
       <footer>
         <Footer/>
@@ -47,6 +54,7 @@ function App() {
 
     
           
+   
 
           
   );

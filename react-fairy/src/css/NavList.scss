@@ -1,16 +1,28 @@
 .Navi{
+    display: flex;
+    .ctg{
+        border: 1px solid #f00;
+        width: 5%;
+        font-size: 1.5rem;
+    }
     border: 1px solid #000;
     ul{
+        width: 45%;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
         li{
-            width: 100%;
+            width: 50%;
             border: 1px solid #000;
-            background-color: #f00;
             a {
                 display: block;
-                padding: 20px;
+                padding: 10px;
                 text-align: center;
+            }
+            &:nth-child(1){
+                text-align-last: left;
+            }
+            &:nth-child(1){
+                margin-left: 30px;
             }
         }
     }
