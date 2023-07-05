@@ -18,6 +18,7 @@ import './css/Footer.css'
 
 
 
+
 function App() {
   return (
    
@@ -26,7 +27,6 @@ function App() {
     
     <div id='con'>
       <div id = 'untilMain'>
-      
       <header>
           <Head/>
       </header>
