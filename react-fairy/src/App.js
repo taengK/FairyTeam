@@ -7,7 +7,7 @@ import SignUp from './page/SignUp';
 import Login from './page/Login';
 import Mypage from './page/Mypage';
 import Love from './page/Love';
-// import {Routes,Route} from 'react-router-dom'
+import {Routes,Route} from 'react-router-dom'
 // *************************CSS***********************************************
 import './css/Common.css'
 import './css/Head.css'
@@ -20,23 +20,38 @@ import './css/Footer.css'
 
 function App() {
   return (
+   
+
+ 
+    
     <div id='con'>
       <div id = 'untilMain'>
+      
       <header>
           <Head/>
       </header>
       <nav>
           <NavList/>
       </nav>
-      <main>
+      {/*<main>
           <Main/>
-      </main>
+      </main>*/}
+      <Routes>
+        <Route path='/' element={<Main/>}/> 
+      </Routes>
+      <Routes>
+        <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/Login' element={<Login/>}/>
+        <Route path='/Mypage' element={<Mypage/>}/>
+        <Route path='/Love' element={<Love/>}/>
+      </Routes>
       </div>
       <footer>
         <Footer/>
       </footer>
     </div>
           
+   
 
           
   );
