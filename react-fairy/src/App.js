@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Head from './componenet/Head/Head';
+import NavList from './componenet/Navigation/NavList';
+import Footer from './componenet/Footer/Footer';
+import Main from './page/Main';
+import SignUp from './page/SignUp';
+import Login from './page/Login';
+import Mypage from './page/Mypage';
+import Love from './page/Love';
+// import {Routes,Route} from 'react-router-dom'
+// *************************CSS***********************************************
+import './css/Common.css'
+import './css/Head.css'
+import './css/NavList.css'
+import './css/Main.css'
+import './css/Footer.css'
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div id='con'>
+      <header>
+          <Head/>
       </header>
+      <nav>
+          <NavList/>
+      </nav>
+      <main>
+          <Main/>
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
+          
+
+          
   );
 }
 
