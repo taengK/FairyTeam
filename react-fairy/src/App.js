@@ -7,7 +7,7 @@ import SignUp from './page/SignUp';
 import Login from './page/Login';
 import Mypage from './page/Mypage';
 import Love from './page/Love';
-// import {Routes,Route} from 'react-router-dom'
+import {Routes,Route} from 'react-router-dom'
 // *************************CSS***********************************************
 import './css/Common.css'
 import './css/Head.css'
@@ -28,13 +28,21 @@ function App() {
       <nav>
           <NavList/>
       </nav>
-      <main>
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/Login' element={<Login/>}/>
+        <Route path='/Signup' element={<SignUp/>}/>
+        <Route path='/Mypage' element={<Mypage/>}/>
+        <Route path='/Love' element={<Love/>}/>
+      </Routes>
+      {/* <main>
           <Main/>
-      </main>
+      </main> */}
       </div>
       <footer>
         <Footer/>
       </footer>
+
     </div>
 
     
