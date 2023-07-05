@@ -1,8 +1,5 @@
 import React from 'react'
-import Login from '../../page/Login'
-import SignUp from '../../page/SignUp'
-import Mypage from '../../page/Mypage'
-import Love from '../../page/Love'
+import Logo from '../../Images/Logo.png'
 
 import { Link } from 'react-router-dom'
 
@@ -11,18 +8,15 @@ import { Link } from 'react-router-dom'
 
 const Head = () => {
   return (
-    <div className='head'>+
+    <div className='head'>
+        <div className='LogoBox'><a href="#"><img src={Logo} alt="" className='LogoImg'/></a></div>
+        <div className='inputBox'><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요'/></div>
       <ul>
-        <li><div><img src="/" alt="" /> </div></li>
-        <li><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요'/></li>
-        <li><Link to='/Signup'>회원가입</Link></li>
-        <li><Link to='/Login'>로그인</Link></li>
-        <li><Link to='/Mypage'>마이페이지</Link></li>
-        <li><Link to='/Love'>찜 목록</Link></li>
-        
+        <li><Link to='/Signup'><p>회원가입</p></Link></li>
+        <li><Link to='/Login'><p>로그인</p></Link></li>
+        <li><Link to='/Mypage'><p>마이페이지</p></Link></li>
+        <li><Link to='/Love'><p>찜목록</p></Link></li>
       </ul>
-
-
     </div>
   )
 }

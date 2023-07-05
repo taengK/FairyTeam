@@ -26,7 +26,6 @@ function App() {
     
     <div id='con'>
       <div id = 'untilMain'>
-      
       <header>
           <Head/>
       </header>
