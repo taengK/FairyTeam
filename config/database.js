@@ -5,7 +5,7 @@ const db_info = {
     port : '3308',
     user : 'campus_h_230627_5',
     password : 'smhrd5',
-    database : 'Fairy'
+    database : 'campus_h_230627_5'
 }
 
 module.exports = {
