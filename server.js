@@ -2,12 +2,12 @@
  const app = express()
  const indexRouter = require('./routes')
  const path = require('path')
- const cors = require('cors')
+//  const cors = require('cors')
 
  app.set('port',process.env.PORT || 8888)
 
- app.use(express.json())
- app.use(cors())
+//  app.use(express.json())
+//  app.use(cors())
 
  app.use(express.static(path.join(__dirname,'react-fairy/build')))
  
