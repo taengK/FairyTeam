@@ -5,16 +5,14 @@
         width: 5%;
         font-size: 1.5rem;
     }
-    ul{
+    >ul{
         width: 40%;
-        
         display: flex;
         justify-content: right;
         align-items: center;
-        li{
+        >li{
             width: 100%;
-            a {
-                
+            >a {
                 display: block;
                 padding: 10px;
                 text-align: center;
