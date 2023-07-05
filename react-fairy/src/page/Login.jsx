@@ -46,29 +46,7 @@ const Login = () => {
 
 
   return (
-    <div className='main-box info-box'>
-    <Form onSubmit={handleLogin}>
-
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>ID</Form.Label>
-          <Form.Control type="text" placeholder="Enter Id" ref={idRef} />
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" ref={pwRef} />
-        </Form.Group>
-
-
-
-
-    
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
-    </div>
+    <div>Login</div>
   )
 }
 

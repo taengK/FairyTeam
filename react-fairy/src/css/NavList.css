@@ -1,17 +1,30 @@
 .Navi {
+  display: flex;
   border: 1px solid #000;
+}
+.Navi .ctg {
+  border: 1px solid #f00;
+  width: 5%;
+  font-size: 1.5rem;
 }
 .Navi ul {
+  width: 45%;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 .Navi ul li {
-  width: 100%;
+  width: 50%;
   border: 1px solid #000;
-  background-color: #f00;
 }
 .Navi ul li a {
   display: block;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+}
+.Navi ul li:nth-child(1) {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.Navi ul li:nth-child(1) {
+  margin-left: 30px;
 }/*# sourceMappingURL=NavList.css.map */
