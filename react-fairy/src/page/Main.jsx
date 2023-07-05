@@ -1,11 +1,16 @@
-import React from 'react'
-
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-// import 'swiper/swiper-bundle.min.css'
+
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
+
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
 
@@ -18,9 +23,10 @@ const Main = () => {
     <div className='Main'>
       <section className='Main-sec01'>
         <h2>EVENT</h2>
-      <Swiper
+        <Swiper
         slidesPerView={3}
         spaceBetween={30}
+        centeredSlides={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -32,18 +38,17 @@ const Main = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-        <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+    </Swiper>
         
-        
-      </Swiper>
       </section>
       <section className='Main-sec02'>
           <h2>오늘의 물품상품</h2>
