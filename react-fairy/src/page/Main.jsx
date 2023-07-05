@@ -7,16 +7,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-
-
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
-
-
 import SlideImg1 from '../Images/dog.jpg'
-
-
 
 const Main = () => {
   return (
@@ -50,7 +43,6 @@ const Main = () => {
       <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
       <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
     </Swiper>
-        
       </section>
       <section className='Main-sec02'>
           <h2>오늘의 물품상품</h2>
