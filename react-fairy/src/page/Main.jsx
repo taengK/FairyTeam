@@ -24,6 +24,7 @@ const Main = () => {
       <section className='Main-sec01'>
         <h2>EVENT</h2>
         <Swiper
+        slidesPerView={3}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
