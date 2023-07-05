@@ -21,6 +21,7 @@ import './css/Footer.css'
 function App() {
   return (
     <div id='con'>
+      <div id = 'untilMain'>
       <header>
           <Head/>
       </header>
@@ -30,10 +31,13 @@ function App() {
       <main>
           <Main/>
       </main>
+      </div>
       <footer>
         <Footer/>
       </footer>
     </div>
+
+    
           
 
           
