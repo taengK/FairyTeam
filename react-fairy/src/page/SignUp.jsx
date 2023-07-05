@@ -15,6 +15,7 @@ function Join() {
   
   const idRef =useRef()
   const pwRef =useRef()
+  const cpwRef = useRef()
   const nameRef=useRef()
   const nickRef=useRef()
   const addRef=useRef()
@@ -75,8 +76,9 @@ function Join() {
 
   },[userData])
 
-
-
+  const id_check = ()=> {
+    window.open()
+  }
 
 
 
@@ -88,6 +90,7 @@ function Join() {
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>ID</Form.Label>
           <Form.Control type="text" placeholder="Enter id" ref={idRef}/>
+          <Button onClick={id_check}>asas</Button>
         </Form.Group>
       </Row>
 
@@ -101,7 +104,7 @@ function Join() {
       <Row >
         <Form.Group as={Col} controlId="formGridCheckPassword">
           <Form.Label>Check pw</Form.Label>
-          <Form.Control type="password" placeholder="Check Pw" ref={pwRef}/>
+          <Form.Control type="password" placeholder="Check Pw" ref={cpwRef}/>
         </Form.Group>
       </Row>
       

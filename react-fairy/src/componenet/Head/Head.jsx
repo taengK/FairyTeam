@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const Head = () => {
   return (
     <div className='head'>
-        <div className='LogoBox'><a href="#"><img src={Logo} alt="" className='LogoImg'/></a></div>
+        <div className='LogoBox'><Link to='/'><img src={Logo} alt="" className='LogoImg'/></Link></div>
         <div className='inputBox'><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요'/></div>
       <ul>
         <li><Link to='/Signup'><p>회원가입</p></Link></li>
