@@ -5,7 +5,7 @@ const db_info = {
     port : '3308',
     user : 'campus_h_230627_5',
     password : 'smhrd5',
-    database : 'Fairy'
+    database : 'campus_h_230627_5'
 }
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
     },
     connect : function(conn){
         conn.connect(function(err){
-            if(err) console.log('연결 실패');
+            if(err) console.log('연결 실패', err);
             else console.log('연결 성공!');
         })
     }

@@ -2,12 +2,10 @@
  const app = express()
  const indexRouter = require('./routes')
  const path = require('path')
- 
 
  app.set('port',process.env.PORT || 8888)
 
 
- 
 
  app.use(express.static(path.join(__dirname,'react-fairy/build')))
  

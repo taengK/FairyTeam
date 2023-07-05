@@ -1,15 +1,19 @@
-.Footer {
-    border: 1px solid #000;
+.footer {
+    width: 1200px;
+    margin: 0 auto;
     ul {
         display: flex;
         li {
+            margin-left: -1px;
             h3 {
                 margin-bottom: 20px;
                 padding-bottom: 10px;
-                border-bottom: 1px solid #000;
+                border-bottom: 1px solid #bbb;
+                color: #bbb;
             }
             i {
                 margin-right: 10px;
+                color: #bbb;
             }
             width: 100%;
             border: 1px solid #000;
@@ -19,6 +23,7 @@
                 padding: 20px 0 20px 0;
                 >p {
                     margin: 20px 0 20px 0;
+                    color: #bbb;
                 }
                 >iframe {
                     width: 500px; height: 200px;
@@ -48,6 +53,8 @@
                     background-color: transparent; 
                     font-size: 1.3rem; color: #ccc; 
                     padding: 5px 20px; cursor: pointer;
+                    border: 1px solid #bbb;
+                    border-radius: 25px;
                 }
             }
         }
