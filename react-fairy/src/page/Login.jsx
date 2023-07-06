@@ -10,6 +10,7 @@ import  {useNavigate} from 'react-router-dom'
 
 const Login = () => {
 
+  const nav = useNavigate();
   const idRef = useRef();
   const pwRef = useRef();
   
@@ -17,7 +18,9 @@ const Login = () => {
 
   const handleLogin = (e)=>{
     e.preventDefault();
+
     console.log(idRef.current.value,pwRef.current.value);
+    
     setUserData({
       id : idRef.current.value,
       pw : pwRef.current.value
@@ -29,7 +32,7 @@ const Login = () => {
     .then((res)=>{
       console.log(res.data.result);
       if(res.data.result == 'success'){
-        alert(res.data.id+'환영합니다')
+        alert(res.data.id+' 님 , 환영합니다!')
 
         // 브라우저 세션 저장소에 데이터가 저장
         // => 브라우저를 껏다 키면 사라지는 반휘발성 데이터
@@ -37,6 +40,7 @@ const Login = () => {
 
         // 나중을 위해! 세션에 있는 데이터 가져오기!
         sessionStorage.getItem('id')
+        nav('/')
 
       }
     })

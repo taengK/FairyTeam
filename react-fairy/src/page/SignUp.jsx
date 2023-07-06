@@ -16,6 +16,7 @@ function Join() {
   
   const idRef =useRef()
   const pwRef =useRef()
+  const cpwRef = useRef()
   const nameRef=useRef()
   const nickRef=useRef()
   const addRef=useRef()
@@ -76,8 +77,9 @@ function Join() {
 
   },[userData])
 
-
-
+  const id_check = ()=> {
+    window.open()
+  }
 
 
 
@@ -90,8 +92,8 @@ function Join() {
       </div>
       <Row className='row1' >
         <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label><p>아이디입력</p></Form.Label>
-          <Form.Control type="text" placeholder="아이디를 입력해주세요" ref={idRef}/>
+          <Form.Label>ID</Form.Label>
+          <Form.Control type="text" placeholder="Enter id" ref={idRef}/>
         </Form.Group>
       </Row>
 
@@ -104,8 +106,8 @@ function Join() {
 
       <Row className='row1'>
         <Form.Group as={Col} controlId="formGridCheckPassword">
-          <Form.Label><p>비밀번호 중복입력</p></Form.Label>
-          <Form.Control type="password" placeholder="비밀번호를 입력해주세요" ref={pwRef}/>
+          <Form.Label>Check pw</Form.Label>
+          <Form.Control type="password" placeholder="Check Pw" ref={pwRef}/>
         </Form.Group>
       </Row>
       
