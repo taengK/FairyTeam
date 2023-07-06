@@ -1,6 +1,7 @@
 .main-box {
   width: 350px;
   margin: 0 auto;
+  border: 1px solid #000;
 }
 .main-box .SignUpImgBox {
   border: 1px solid #000;
@@ -17,5 +18,9 @@
 .main-box p {
   font-weight: bold;
   color: #555;
+  margin-top: 10px;
+}
+
+.nickOverlap {
   margin-top: 10px;
 }/*# sourceMappingURL=Signup.css.map */

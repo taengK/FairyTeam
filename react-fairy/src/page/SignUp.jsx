@@ -111,6 +111,7 @@ function Join() {
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>ID</Form.Label>
           <Form.Control type="text" placeholder="Enter id" ref={idRef}/>
+          <Form.Check type="checkbox" label="아이디 중복 확인" className='nickOverlap'/>
         </Form.Group>
       </Row>
 

@@ -1,6 +1,7 @@
 .main-box{
     width: 350px;
     margin: 0 auto;
+    border: 1px solid #000;
     .SignUpImgBox{
         border: 1px solid #000;
         width: 60%; 
@@ -14,9 +15,14 @@
         width: 350px;
         margin: 0 auto;
     }
+    .rowch {
+    }
     p {
         font-weight: bold;
         color: #555;
         margin-top: 10px;
     }
+}
+.nickOverlap{
+    margin-top: 10px;
 }
