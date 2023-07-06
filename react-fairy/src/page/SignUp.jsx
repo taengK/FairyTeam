@@ -88,7 +88,7 @@ function Join() {
   }else if(userData.id !== undefined && userData.pw !== userData.cpw){
         // id가 초기상태가 아니면서 pw, cpw가 일치하지 않으면 비밀번호를 다시 입력하게
     alert('비밀번호가 일치하지 않습니다')
-    pwRef.current.value=''`
+    pwRef.current.value=''
     cpwRef.current.value=''
     pwRef.current.focus()
   }
