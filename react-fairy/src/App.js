@@ -1,20 +1,29 @@
 import './App.css'
+// *************************jsx***********************************************
+// *******cpnt.jsx******
 import Head from './componenet/Head/Head';
 import NavList from './componenet/Navigation/NavList';
 import Footer from './componenet/Footer/Footer';
+// *******page.jsx******
 import Main from './page/Main';
 import SignUp from './page/SignUp';
 import Login from './page/Login';
 import Mypage from './page/Mypage';
 import Love from './page/Love';
-import {Routes,Route} from 'react-router-dom'
+// *************************install*******************************************
+import {Routes,Route} from 'react-router-dom' //라우터돔
 // *************************CSS***********************************************
+// *******Hold.css******
 import './css/Common.css'
-import './css/Head.css'
-import './css/NavList.css'
-import './css/Main.css'
-import './css/Footer.css'
-import './css/Login.css'
+import './css/Hold/Head.css'
+import './css//Hold/NavList.css'
+import './css//Hold/Footer.css'
+// *******Page.css******
+import './css/page/Main.css'
+import './css/page/Login.css'
+import './css/page/Signup.css'
+
+
 
 
 
@@ -24,10 +33,6 @@ import './css/Login.css'
 
 function App() {
   return (
-   
-
- 
-    
     <div id='con'>
       <div id = 'untilMain'>
       <header>
