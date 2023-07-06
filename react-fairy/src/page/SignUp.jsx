@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import { useEffect, useRef,useState } from 'react';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import Logo from '../Images/Logo.png'
 
 // html로 회원정보 관리하는거 가능 (nunjucks)
 // 아이디 중복체크 기능 ( 버튼식 또는 텍스트창 벗어나면 자동으로 체크 )
@@ -90,56 +91,58 @@ function Join() {
   return (
     <div className='main-box info-box'>
     <Form onSubmit={handleJoin}>
-      <Row >
+      <div className='SignUpImgBox'>
+        <img src={Logo} alt="" className='SignUpImg'/>이미지바꿔야함.svg파일로 찾아야해,누군가찾겠지
+      </div>
+      <Row className='row1' >
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>ID</Form.Label>
           <Form.Control type="text" placeholder="Enter id" ref={idRef}/>
-          <Button onClick={id_check}>asas</Button>
         </Form.Group>
       </Row>
 
-      <Row >
+      <Row className='row1' >
         <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" ref={pwRef}/>
+          <Form.Label><p>비밀번호입력</p></Form.Label>
+          <Form.Control type="password" placeholder="비밀번호를 입력해주세요" ref={pwRef}/>
         </Form.Group>
       </Row>
 
-      <Row >
+      <Row className='row1'>
         <Form.Group as={Col} controlId="formGridCheckPassword">
           <Form.Label>Check pw</Form.Label>
-          <Form.Control type="password" placeholder="Check Pw" ref={cpwRef}/>
+          <Form.Control type="password" placeholder="Check Pw" ref={pwRef}/>
         </Form.Group>
       </Row>
       
-      <Row >
+      <Row className='row1'>
         <Form.Group as={Col} controlId="formGridName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="Name" ref={nameRef}/>
+          <Form.Label><p>이름</p></Form.Label>
+          <Form.Control type="text" placeholder="이름을 입력해주세요" ref={nameRef}/>
         </Form.Group>
       </Row>
 
-      <Row >
+      <Row className='row1'>
         <Form.Group as={Col} controlId="formGridNick">
-          <Form.Label>Nickname</Form.Label>
-          <Form.Control type="text" placeholder="Nickname" ref={nickRef}/>
+          <Form.Label><p>닉네임</p></Form.Label>
+          <Form.Control type="text" placeholder="닉네임을 입력해주세요" ref={nickRef}/>
         </Form.Group>
       </Row>
 
-      <Row>
+      <Row className='row1'>
       <Form.Group className="mb-3" controlId="formGridAddress1">
-        <Form.Label>e-mail</Form.Label>
+        <Form.Label><p>e-mail</p></Form.Label>
         <Form.Control placeholder="" ref={addRef}/>
       </Form.Group>
       </Row>
 
     
 
-      <Form.Group className="mb-3" id="formGridCheckbox">
+      <Form.Group className='row1' id="formGridCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button className='row1' variant="primary" type="submit" >
         Submit
       </Button>
     </Form>
