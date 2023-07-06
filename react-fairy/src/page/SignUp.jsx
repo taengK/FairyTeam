@@ -88,7 +88,7 @@ function Join() {
   }else if(userData.id !== undefined && userData.pw !== userData.cpw){
         // id가 초기상태가 아니면서 pw, cpw가 일치하지 않으면 비밀번호를 다시 입력하게
     alert('비밀번호가 일치하지 않습니다')
-    pwRef.current.value=''`
+    pwRef.current.value=''
     cpwRef.current.value=''
     pwRef.current.focus()
   }
@@ -107,10 +107,11 @@ function Join() {
       <div className='SignUpImgBox'>
         <img src={Logo} alt="" className='SignUpImg'/>이미지바꿔야함.svg파일로 찾아야해,누군가찾겠지
       </div>
-      <Row className='row1' >
+      <Row className='row1 rowch' >
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>ID</Form.Label>
           <Form.Control type="text" placeholder="Enter id" ref={idRef}/>
+          <Form.Check type="checkbox" label="아이디 중복 확인" className='nickOverlap'/>
         </Form.Group>
       </Row>
 
