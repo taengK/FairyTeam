@@ -7,6 +7,10 @@ import { useEffect, useRef,useState } from 'react';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 
+// html로 회원정보 관리하는거 가능 (nunjucks)
+// 아이디 중복체크 기능 ( 버튼식 또는 텍스트창 벗어나면 자동으로 체크 )
+//    >> DB에서 아이디를 PK? 로 등록해놔서 중복 알아서 걸러지긴 함..
+// 비밀번호 재확인 기능
 
 
 function Join() {
@@ -77,7 +81,7 @@ function Join() {
   },[userData])
 
   const id_check = ()=> {
-    window.open()
+    alert('')
   }
 
 
