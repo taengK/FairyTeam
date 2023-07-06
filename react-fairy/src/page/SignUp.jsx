@@ -111,7 +111,7 @@ function Join() {
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>ID</Form.Label>
           <Form.Control type="text" placeholder="Enter id" ref={idRef}/>
-          <button className='idOverLap' style={{width:"150px",marginTop:"10px",padding:"5px", borderRadius:'15px' }}>아이디 중복 체크</button>
+          <button className='idOverLap' style={{width:"150px",height:"37px",marginTop:"10px",padding:"5px", borderRadius:'25px', backgroundColor:"red", color:'white',border:"none" }}>아이디 중복 체크</button>
           <Button className='idOverlap' variant="primary" type="submit" >아이디 중복 확인</Button>      
         </Form.Group>
       </Row>
