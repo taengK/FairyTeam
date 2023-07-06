@@ -107,7 +107,7 @@ function Join() {
       <div className='SignUpImgBox'>
         <img src={Logo} alt="" className='SignUpImg'/>이미지바꿔야함.svg파일로 찾아야해,누군가찾겠지
       </div>
-      <Row className='row1 rowch' >
+      <Row className='row1' >
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>ID</Form.Label>
           <Form.Control type="text" placeholder="Enter id" ref={idRef}/>

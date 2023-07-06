@@ -15,9 +15,6 @@
   width: 350px;
   margin: 0 auto;
 }
-.main-box .rowch {
-  border: 1px solid #000;
-}
 .main-box p {
   font-weight: bold;
   color: #555;
@@ -26,5 +23,4 @@
 
 .nickOverlap {
   margin-top: 10px;
-  border: 1px solid #000;
 }/*# sourceMappingURL=Signup.css.map */
