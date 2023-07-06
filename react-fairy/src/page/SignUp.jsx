@@ -107,11 +107,12 @@ function Join() {
       <div className='SignUpImgBox'>
         <img src={Logo} alt="" className='SignUpImg'/>이미지바꿔야함.svg파일로 찾아야해,누군가찾겠지
       </div>
-      <Row className='row1' >
+      <Row className='row1 rowch' >
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>ID</Form.Label>
           <Form.Control type="text" placeholder="Enter id" ref={idRef}/>
-          <Form.Check type="checkbox" label="아이디 중복 확인" className='nickOverlap'/>
+          <button className='idOverLap' style={{width:"150px",marginTop:"10px",padding:"5px", borderRadius:'15px' }}>아이디 중복 체크</button>
+          <Button className='idOverlap' variant="primary" type="submit" >아이디 중복 확인</Button>      
         </Form.Group>
       </Row>
 
