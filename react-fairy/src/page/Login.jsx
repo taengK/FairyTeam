@@ -34,11 +34,9 @@ const Login = () => {
       if(res.data.result == 'success'){
         alert(res.data.id+' 님 , 환영합니다!')
 
-        // 브라우저 세션 저장소에 데이터가 저장
-        // => 브라우저를 껏다 키면 사라지는 반휘발성 데이터
+
         sessionStorage.setItem('id',res.data.id)
 
-        // 나중을 위해! 세션에 있는 데이터 가져오기!
         sessionStorage.getItem('id')
         nav('/')
 
