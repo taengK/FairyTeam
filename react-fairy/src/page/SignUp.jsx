@@ -13,7 +13,7 @@ import Logo from '../Images/Logo.png'
 //    >> DB에서 아이디를 PK? 로 등록해놔서 중복 알아서 걸러지긴 함..
 // 비밀번호 재확인 기능
 
-
+// const crypto = require('crypto')
 
 // db에 not null 로 되어있는데 빈칸 쓰면 null로 입력되버림 어떡하냐...
 
@@ -33,22 +33,25 @@ function Join() {
   const [userData,setUserData]=useState({})
   const [userId, setUserId] = useState({})
 
+
+  // ID 중복체크
   const idCheck = (e)=>{
     e.preventDefault();
     
     setUserId({id : idRef.current.value})
-    // id 중복체크부터 해보자구
   }
 
   useEffect(()=>{   // 중복체크
     console.log('userId : ' ,userId.id)
-    userId.id !== undefined &&
+    // 초기 id 가 undefined가 아닐 때 글자 수가 5 이상이면 전송함
+    if(userId.id !== undefined ){
+      if(userId.id.length >= 5){
     axios.post('http://localhost:8888/user/idcheck',{
       userId : userId
     })
     .then((res)=>{
       console.log(res.data.idCheck);
-      if(res.data.idCheck == 'existed'){
+      if(res.data.idCheck === 'existed'){
         alert('이미 등록된 아이디입니다')
         idRef.current.value=''
         idRef.current.focus()
@@ -57,7 +60,13 @@ function Join() {
         pwRef.current.focus()
       }
     })
-  },[userId])
+    // undefined가 아니더라도 짧으면 전송하지 않음
+  }else if ( userId.id.length < 5){
+    alert('아이디가 너무 짧습니다')
+    idRef.current.focus()
+  }
+  }
+},[userId])
 
   // ... 코드 아니고 함수 접은거임
   const handleJoin =(e)=>{
@@ -83,13 +92,26 @@ function Join() {
     })
   }
 
+  const signUpCheck = ()=>{
+    if(userData.id.length >= 7 && userData.id.length <= 20 && userData.pw.length >= 8 
+      && userData.name.length > 2 && userData.nick.length > 1 && userData.add.length > 5){
+      return true;
+    } else{
+      return false;
+    }
+  }
+
   useEffect(()=>{
     console.log('userData : ',userData.id)
     /*useEffect의 특성 상, 무조건 화면의 첫 갱신 때 함수가 호출될 수 밖에 없다.
     비어있는 값을 가지고 회원가입을 하면 안되니까 
     화면의 첫 갱신때는 회원가입 로직이 
     실행되지 않도록 조건을 걸어둔 것!*/
-    if(userData.id !== undefined && userData.pw === userData.cpw ){
+    if(userData.id !== undefined && userData.pw === userData.cpw){
+      if(userData.id.length >= 5 
+        && userData.id.length <= 20 && userData.pw.length >= 6 
+        && userData.name.length >= 2 && userData.nick.length >= 2 && userData.add.length >= 5){
+        
       //  id 값이 초기상태인 undefined가 아니면서 pw, cpw가 일치할 때만 값을 전송함
     axios.post('http://localhost:8888/user/signup',{
       userData : userData
@@ -97,10 +119,10 @@ function Join() {
 
     .then((res)=>{
       console.log(res.data.result);
-      if (res.data.result == 'success'){
+      if (res.data.result === 'success'){
         alert('회원가입을 축하드립니다')
         nav('/')
-      }else if(res.data.result == 'duplicated'){
+      }else if(res.data.result === 'duplicated'){
         alert('뭐가 문제가 있으니까 다시 입력하세요') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
         idRef.current.value=''
         pwRef.current.value=''
@@ -115,6 +137,22 @@ function Join() {
     .catch(()=>{
       console.error('실패!')
     })
+    // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
+  }else if(userData.pw.length < 6){
+      alert('비밀번호가 너무 짧아요!')
+      pwRef.current.value=''
+      cpwRef.current.value=''
+      pwRef.current.focus()
+    }else if(userData.name.length < 2){
+      alert('이름이 너무 짧아요!')
+      nameRef.current.focus()
+    }else if(userData.nick.length < 2){
+      alert('닉네임이 너무 짧아요!')
+      nickRef.current.focus()
+    }else if(userData.add.length < 5){
+      alert('이메일이 잘못됐음')
+      addRef.current.focus()
+    }
   }else if(userData.id !== undefined && userData.pw !== userData.cpw){
         // id가 초기상태가 아니면서 pw, cpw가 일치하지 않으면 비밀번호를 다시 입력하게
     alert('비밀번호가 일치하지 않습니다')
@@ -140,7 +178,7 @@ function Join() {
       <Row className='row1 rowch' >
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>아이디</Form.Label>
-          <Form.Control type="text" placeholder="아이디를 입력하세요" ref={idRef}/>
+          <Form.Control type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef}/>
           {/* <button className='idOverLap' style={{width:"150px",height:"37px",marginTop:"10px",padding:"5px", borderRadius:'25px', backgroundColor:"red", color:'white',border:"none" }}>아이디 중복 체크</button>
           이건 나중에 해볼래... */}
           <Button onClick= {idCheck} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>      
@@ -150,7 +188,7 @@ function Join() {
       <Row className='row1' >
         <Form.Group as={Col} controlId="formGridPassword">
           <Form.Label><p>비밀번호 입력</p></Form.Label>
-          <Form.Control type="password" placeholder="비밀번호를 입력하세요" ref={pwRef}/>
+          <Form.Control type="password" placeholder="비밀번호를 입력하세요 (6자 이상)" ref={pwRef}/>
         </Form.Group>
       </Row>
 
