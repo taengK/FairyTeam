@@ -34,10 +34,13 @@ router.post('/user/idcheck', (req, res)=>{
 
 router.post('/user/signup', (req, res)=>{
     console.log('signup Router', req.body);
+    
 
     //회원가입 시작
+    
     let sql = "insert into user_info values(?, ?, ?, ?, ?, 37.5, current_timestamp, 'U')"
     // id, pw, name, nick, email
+   
     conn.query(sql
         , [req.body.userData.id
             , req.body.userData.pw
@@ -54,8 +57,9 @@ router.post('/user/signup', (req, res)=>{
                 res.json({result : 'duplicated'})
             }
     })
+} 
     //회원가입 끝
-})
+)
 
 
 router.post('/user/login',(req, res)=>{

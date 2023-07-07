@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useRef,useState } from 'react';
 import axios from 'axios'
-import {useNavigate} from 'react-router-dom'
+import {Await, useNavigate} from 'react-router-dom'
 import Logo from '../Images/Logo.png'
 
 // html로 회원정보 관리하는거 가능 (nunjucks) node Ex08DB
@@ -30,19 +30,28 @@ function Join() {
   const nickRef=useRef()
   const addRef=useRef()
 
+  
+  
+
+  
   const [userData,setUserData]=useState({})
   const [userId, setUserId] = useState({})
 
-
+  
+  
+  
   // ID 중복체크
-  const idCheck = (e)=>{
+  const idCheck1 = (e)=>{
     e.preventDefault();
     
     setUserId({id : idRef.current.value})
+    
   }
 
   useEffect(()=>{   // 중복체크
-    console.log('userId : ' ,userId.id)
+    console.log('userId : ' , userId.id)
+    
+    // console.log('중복체크 idCheck 값 : ', idCheck)
     // 초기 id 가 undefined가 아닐 때 글자 수가 5 이상이면 전송함
     if(userId.id !== undefined ){
       if(userId.id.length >= 5){
@@ -50,14 +59,19 @@ function Join() {
       userId : userId
     })
     .then((res)=>{
-      console.log(res.data.idCheck);
+
+      console.log('아이디 중복 검사 :' ,res.data.idCheck);
       if(res.data.idCheck === 'existed'){
-        alert('이미 등록된 아이디입니다')
+        alert('이미 등록된 아이디입니다', )
         idRef.current.value=''
         idRef.current.focus()
-      } else {
+        
+      } else if(res.data.idCheck === 'none') {
         alert('가입이 가능한 아이디입니다')
         pwRef.current.focus()
+        console.log('가입 가능, res.data.idCheck :',res.data.idCheck);
+        console.log('회원가입 가능? res.data.result :', res.data.result)
+        
       }
     })
     // undefined가 아니더라도 짧으면 전송하지 않음
@@ -69,7 +83,7 @@ function Join() {
 },[userId])
 
   // ... 코드 아니고 함수 접은거임
-  const handleJoin =(e)=>{
+  const handleJoin = (e)=>{
     console.log('handle Join Function'
     ,idRef.current.value
     ,pwRef.current.value
@@ -77,94 +91,88 @@ function Join() {
     ,nickRef.current.value
     ,addRef.current.value);
       
-
     // form이 submit 되지 못하도록 작업
     e.preventDefault();
-
-
+    
+    
     setUserData({
       id : idRef.current.value, 
       pw : pwRef.current.value,
       cpw : cpwRef.current.value,
       name : nameRef.current.value,
       nick : nickRef.current.value,
-      add : addRef.current.value,      
+      add : addRef.current.value
     })
+    
+    
   }
 
-  const signUpCheck = ()=>{
-    if(userData.id.length >= 7 && userData.id.length <= 20 && userData.pw.length >= 8 
-      && userData.name.length > 2 && userData.nick.length > 1 && userData.add.length > 5){
-      return true;
-    } else{
-      return false;
-    }
-  }
+  
 
-  useEffect(()=>{
-    console.log('userData : ',userData.id)
+  useEffect(() => {
+    console.log('userData : ', userData.id)
     /*useEffect의 특성 상, 무조건 화면의 첫 갱신 때 함수가 호출될 수 밖에 없다.
     비어있는 값을 가지고 회원가입을 하면 안되니까 
     화면의 첫 갱신때는 회원가입 로직이 
     실행되지 않도록 조건을 걸어둔 것!*/
-    if(userData.id !== undefined && userData.pw === userData.cpw){
-      if(userData.id.length >= 5 
-        && userData.id.length <= 20 && userData.pw.length >= 6 
-        && userData.name.length >= 2 && userData.nick.length >= 2 && userData.add.length >= 5){
-        
-      //  id 값이 초기상태인 undefined가 아니면서 pw, cpw가 일치할 때만 값을 전송함
-    axios.post('http://localhost:8888/user/signup',{
-      userData : userData
-    })
 
-    .then((res)=>{
-      console.log(res.data.result);
-      if (res.data.result === 'success'){
-        alert('회원가입을 축하드립니다')
-        nav('/')
-      }else if(res.data.result === 'duplicated'){
-        alert('뭐가 문제가 있으니까 다시 입력하세요') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
-        idRef.current.value=''
-        pwRef.current.value=''
-        cpwRef.current.value=''
-        nameRef.current.value=''
-        nickRef.current.value=''
-        addRef.current.value=''
+
+    if (userData.id !== undefined && userData.pw === userData.cpw) {
+      if (userData.id.length >= 5
+        && userData.id.length <= 20 && userData.pw.length >= 6
+        && userData.name.length >= 2 && userData.nick.length >= 2 && userData.add.length >= 5) {
+
+        //  id 값이 초기상태인 undefined가 아니면서 pw, cpw가 일치할 때만 값을 전송함
+        axios.post('http://localhost:8888/user/signup', {
+          userData: userData
+        })
+
+          .then((res) => {
+            console.log('회원가입 res', res.data.result);
+            if (res.data.result === 'success') {
+              alert('회원가입을 축하드립니다')
+              nav('/')
+            } else if (res.data.result === 'duplicated') {
+              alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
+              console.log('아이디 중복 확인')
+             
+              idRef.current.focus()
+            }
+           
+
+          })
+          .catch(() => {
+            console.error('실패!')
+          })
+        // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
+      } else if (userData.id.length < 5) {
+        alert('아이디가 너무 짧아요!')
         idRef.current.focus()
+      } else if (userData.pw.length < 6) {
+        alert('비밀번호가 너무 짧아요!')
+        pwRef.current.value = ''
+        cpwRef.current.value = ''
+        pwRef.current.focus()
+      } else if (userData.name.length < 2) {
+        alert('이름이 너무 짧아요!')
+        nameRef.current.focus()
+      } else if (userData.nick.length < 2) {
+        alert('닉네임이 너무 짧아요!')
+        nickRef.current.focus()
+      } else if (userData.add.length < 5) {
+        alert('이메일이 잘못됐음')
+        addRef.current.focus()
       }
-
-    })
-    .catch(()=>{
-      console.error('실패!')
-    })
-    // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
-  }else if(userData.pw.length < 6){
-      alert('비밀번호가 너무 짧아요!')
-      pwRef.current.value=''
-      cpwRef.current.value=''
+    } else if (userData.id !== undefined && userData.pw !== userData.cpw) {
+      // id가 초기상태가 아니면서 pw, cpw가 일치하지 않으면 비밀번호를 다시 입력하게
+      alert('비밀번호가 일치하지 않습니다')
+      pwRef.current.value = ''
+      cpwRef.current.value = ''
       pwRef.current.focus()
-    }else if(userData.name.length < 2){
-      alert('이름이 너무 짧아요!')
-      nameRef.current.focus()
-    }else if(userData.nick.length < 2){
-      alert('닉네임이 너무 짧아요!')
-      nickRef.current.focus()
-    }else if(userData.add.length < 5){
-      alert('이메일이 잘못됐음')
-      addRef.current.focus()
-    }
-  }else if(userData.id !== undefined && userData.pw !== userData.cpw){
-        // id가 초기상태가 아니면서 pw, cpw가 일치하지 않으면 비밀번호를 다시 입력하게
-    alert('비밀번호가 일치하지 않습니다')
-    pwRef.current.value=''
-    cpwRef.current.value=''
-    pwRef.current.focus()
-  }
-  },[userData])
+    } 
+  }, [userData])
 
-  // const id_check = ()=> {
-  //   alert('')
-  // }
+
 
 
 
@@ -181,7 +189,7 @@ function Join() {
           <Form.Control type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef}/>
           {/* <button className='idOverLap' style={{width:"150px",height:"37px",marginTop:"10px",padding:"5px", borderRadius:'25px', backgroundColor:"red", color:'white',border:"none" }}>아이디 중복 체크</button>
           이건 나중에 해볼래... */}
-          <Button onClick= {idCheck} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>      
+          <Button onClick= {idCheck1} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>      
         </Form.Group>
       </Row>
 
