@@ -7,8 +7,9 @@ const db_config = require('../config/database');
 let conn =db_config.init()
 db_config.connect(conn)
 
-router.get('/',()=>{
+router.get('/',(req, res)=>{
     console.log('index Router');
+    res.render('/')
     // res.send(path.join(__dirname, "react-fairy/build/index.html"))
 })
 
