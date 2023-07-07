@@ -1,25 +1,22 @@
 import React from 'react'
-import Login from '../../page/Login'
-import SignUp from '../../page/SignUp'
-import Mypage from '../../page/Mypage'
-import Love from '../../page/Love'
+import Logo from '../../Images/Logo.png'
+
+import { Link } from 'react-router-dom'
+
 
 
 
 const Head = () => {
   return (
     <div className='head'>
+        <div className='LogoBox'><Link to='/'><img src={Logo} alt="" className='LogoImg'/></Link></div>
+        <div className='inputBox'><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요'/></div>
       <ul>
-        <li><div><img src="/" alt="" /> </div></li>
-        <li><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요'/></li>
-        <li><a href="#"><SignUp/></a></li>
-        <li><a href="#"><Login/></a></li>
-        <li><a href="#"><Mypage/></a></li>
-        <li><a href="#"><Love/></a></li>
-        
+        <li><Link to='/Signup'><p>회원가입</p></Link></li>
+        <li><Link to='/Login'><p>로그인</p></Link></li>
+        <li><Link to='/Mypage'><p>마이페이지</p></Link></li>
+        <li><Link to='/Love'><p>찜목록</p></Link></li>
       </ul>
-
-
     </div>
   )
 }
