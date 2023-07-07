@@ -12,19 +12,27 @@ router.get('/',()=>{
     // res.send(path.join(__dirname, "react-fairy/build/index.html"))
 })
 
-router.post('/user/signup', (req, res)=>{
-    console.log('signup Router', req.body);
-
-
+router.post('/user/idcheck', (req, res)=>{
+    console.log('idcheck Router', req.body);
     // 중복체크 시작
-    let sql2 = "select id from user_info where id = ?"
-    conn.query(sql2, [req.body.userData.id], (err, rows)=>{
-        console.log(rows);
+    let sql = "select user_id from user_info where user_id = ?"
+    conn.query(sql, [req.body.userId.id], (err, rows)=>{
+        if (rows[0] !== undefined){
+            console.log('이미 존재하는 아이디', rows)
+            res.json({idCheck : 'existed'})
+        } else {
+            console.log('생성 가능')
+            res.json({idCheck : 'none'})
+        }
     })
-
-
+    
+    
     // 중복체크 끝
 
+})
+
+router.post('/user/signup', (req, res)=>{
+    console.log('signup Router', req.body);
 
     //회원가입 시작
     let sql = "insert into user_info values(?, ?, ?, ?, ?, 37.5, current_timestamp, 'U')"
