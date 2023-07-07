@@ -40,7 +40,7 @@ function Join() {
     // id 중복체크부터 해보자구
   }
 
-  useEffect(()=>{
+  useEffect(()=>{   // 중복체크
     console.log('userId : ' ,userId.id)
     userId.id !== undefined &&
     axios.post('http://localhost:8888/user/idcheck',{
