@@ -116,6 +116,7 @@ const Love = () => {
                             </tr>
                         </table>
                         <input type="submit" value="주문하기"/>
+                        <input type="submit" value="하 머가문제인데 안되냐GG"/>
                     </div>
                </form>
                </div>
