@@ -17,6 +17,7 @@ const Login = () => {
   const nav = useNavigate();
   const idRef = useRef();
   const pwRef = useRef();
+
   
   const [userData,setUserData] = useState({})
 
@@ -48,21 +49,23 @@ const Login = () => {
     })
   },[userData])
 
+ 
+
 
 
 
   return (
-  
     <div className='LoginBox'><Form onSubmit={handleLogin}>
 
     <Form.Group as={Col} controlId="formGridEmail">
-      <Form.Label>ID</Form.Label>
+      <Form.Label style={{fontWeight:"bold"}}>ID</Form.Label>
       <Form.Control type="text" placeholder="Enter Id" ref={idRef} className='LoginId' />
     </Form.Group>
 
     <Form.Group as={Col} controlId="formGridPassword">
-      <Form.Label>Password</Form.Label>
+      <Form.Label style={{fontWeight:"bold"}}>Password</Form.Label>
       <Form.Control type="password" placeholder="Password" ref={pwRef} className='LoginPw'/>
+      <a href="#" className='idOverlapLogiLogin'>아이디/비밀번호찾기</a>
     </Form.Group>
   <Button variant="primary" type="submit" className='LoginSubmit'>
     Submit

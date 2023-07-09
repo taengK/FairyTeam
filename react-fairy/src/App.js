@@ -10,6 +10,8 @@ import SignUp from './page/SignUp';
 import Login from './page/Login';
 import Mypage from './page/Mypage';
 import Love from './page/Love';
+import Detaill from './page/Detaill';
+
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
 // *************************CSS***********************************************
@@ -22,6 +24,8 @@ import './css//Hold/Footer.css'
 import './css/page/Main.css'
 import './css/page/Login.css'
 import './css/page/Signup.css'
+import './css/page/Detaill.css'
+import './css/page/cart.css'
 
 
 
@@ -41,15 +45,14 @@ function App() {
       <nav>
           <NavList/>
       </nav>
-      {/*<main>
-          <Main/>
-      </main>*/}
+      
       <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Mypage' element={<Mypage/>}/>
         <Route path='/Love' element={<Love/>}/>
+        <Route path='/Detaill' element={<Detaill/>}/>
       </Routes>
       </div>
       <footer>

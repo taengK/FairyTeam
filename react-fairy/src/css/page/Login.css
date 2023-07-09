@@ -1,15 +1,9 @@
 .LoginBox {
-  border: 3px solid #f00;
+  width: 300px;
+  margin: 0 auto;
 }
-
-.LoginId {
-  border: 3px solid #f0f;
-}
-
-.LoginPw {
-  border: 3px solid #0f0;
-}
-
-.LoginSubmit {
-  border: 3px solid #000;
+.LoginBox .LoginSubmit {
+  margin-top: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }/*# sourceMappingURL=Login.css.map */
