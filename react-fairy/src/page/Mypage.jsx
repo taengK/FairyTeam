@@ -12,20 +12,20 @@ const Mypage = () => {
       <div class="wrap">
         <div class="blueContainer">
           <i class="fa-solid fa-circle-user"></i>
-          <div>
+          <div className='myPageIden'>
             <div class="grade">GOLD</div>
-            <div class="name"> ID</div>
+            
+            <div class="name">ID</div>
+            <br />
             <button>수정하기</button>
           </div>
           <div class="modify">i</div>
         </div>
         <div class="summaryContainer">
+     
           <div class="item">
-            <div class="number">354</div>
-            <div>단골상점</div>
-          </div>
-          <div class="item">
-            <div class="number">354</div>
+            <div class="number">354</div> 
+            {/* 숫자는 임의의 수 입니다 */}
             <div>상품후기</div>
           </div>
           <div class="item">
@@ -56,7 +56,7 @@ const Mypage = () => {
             <div class="item">
               <div>
                 <div class="blue number">1</div>
-                <div class="text">배송중</div>
+                <div class="text">위탁중</div>
               </div>
               <div class="icon"> </div>
             </div>
@@ -86,11 +86,7 @@ const Mypage = () => {
             <div class="text">상품문의</div>
             <div class="right"> </div>
           </a>
-          <a href="#" class="item">
-            <div class="icon">ii</div>
-            <div class="text">단골상점</div>
-            <div class="right"> </div>
-          </a>
+ 
           <a href="#" class="item">
             <div class="icon">ii</div>
             <div class="text">찜한상품</div>
