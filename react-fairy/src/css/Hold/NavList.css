@@ -2,9 +2,15 @@
   display: flex;
 }
 .Navi .ctg {
+  background-color: #fc0;
   border: 1px solid #f00;
   width: 5%;
   font-size: 1.5rem;
+}
+.Navi .ctg .ctgNav {
+  border: 1px solid #000;
+  width: 500px;
+  height: 500px;
 }
 .Navi > ul {
   width: 40%;

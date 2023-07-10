@@ -4,7 +4,15 @@ import React from 'react'
 const NavList = () => {
   return (
     <div className='Navi'>
-      <div className='ctg'>카테고리</div>
+      <div className='ctg'>category
+        <ul className='ctgNav'>
+          <li><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+        </ul>
+      </div>
         <ul>
             <li><a href="#!"><p>이벤트</p></a></li>
             <li><a href="#!"><p>이달의행사</p></a></li>

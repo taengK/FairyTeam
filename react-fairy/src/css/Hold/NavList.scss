@@ -1,9 +1,14 @@
 .Navi{
     display: flex;
     .ctg{
+        background-color: #fc0;
         border: 1px solid #f00;
         width: 5%;
         font-size: 1.5rem;
+        .ctgNav{
+            border: 1px solid #000;
+            width: 500px; height: 500px;
+        }
     }
     >ul{
         width: 40%;

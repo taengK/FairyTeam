@@ -102,16 +102,8 @@ const Cart = () => {
                                 <td>27,000</td>
                             </tr>
                             <tr>
-                                <td>할인금액</td>
-                                <td>-1,000</td>
-                            </tr>
-                            <tr>
                                 <td>배송비</td>
                                 <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>포인트</td>
-                                <td>260</td>
                             </tr>
                             <tr>
                                 <td>전체주문금액</td>
