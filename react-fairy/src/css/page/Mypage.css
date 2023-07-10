@@ -33,6 +33,9 @@
   top: -5px;
   left: 110%;
 }
+.myPage .wrap .myPageIden {
+  margin-left: 20px;
+}
 .myPage .wrap .blueContainer {
   height: 100px;
   background-color: #3b72de;
@@ -40,10 +43,15 @@
   align-items: flex-end;
   padding: 16px;
 }
+.myPage .wrap .blueContainer .grade {
+  font-weight: bold;
+  color: gold;
+}
 .myPage .wrap .blueContainer .name {
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
+  margin-top: 10px;
 }
 .myPage .wrap .blueContainer .modify {
   margin-left: auto;
