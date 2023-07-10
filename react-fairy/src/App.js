@@ -9,7 +9,7 @@ import Main from './page/Main';
 import SignUp from './page/SignUp';
 import Login from './page/Login';
 import Mypage from './page/Mypage';
-import Love from './page/Love';
+import Cart from './page/Cart';
 import Detaill from './page/Detaill';
 
 // *************************install*******************************************
@@ -51,7 +51,7 @@ function App() {
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Mypage' element={<Mypage/>}/>
-        <Route path='/Love' element={<Love/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='/Detaill' element={<Detaill/>}/>
       </Routes>
       </div>

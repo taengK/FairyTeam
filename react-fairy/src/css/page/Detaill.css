@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.view {
+  margin-top: 30px;
+}
 .view article {
   width: 100%;
   height: auto;
