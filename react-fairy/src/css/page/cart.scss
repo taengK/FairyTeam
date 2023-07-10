@@ -49,7 +49,7 @@
           td {
             text-align: center;
 
-            &:last-child {
+            &:nth-child(4) {
               color: #ff006c;
               font-weight: bold;
             }
