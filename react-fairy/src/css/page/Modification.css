@@ -11,10 +11,16 @@
 }
 .ModiMainBox .ModificationImgBox {
   border: 1px solid #d3d3d3;
-  width: 50%;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   overflow: hidden;
+  position: relative;
 }
 .ModiMainBox .ModificationImgBox .ModificationImg {
   width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=Modification.css.map */

@@ -1,15 +1,41 @@
 .Navi{
     display: flex;
-    .ctg{
+    .ham{
         background-color: #fc0;
-        border: 1px solid #f00;
         width: 5%;
         font-size: 1.5rem;
-        .ctgNav{
-            border: 1px solid #000;
+        position: relative;
+        >ul{
+            position: absolute;
+            display: none;
+            
+            >li{
+                border: 1px solid #000;
+                margin-top: -1px;
+                
+                >a{
+                    color: #000;
+                    
+                }
+            }
+        }
+        &:hover > ul {
+            //햄버거를 건드리면 ul이 움직이게끔
+            display: block;
+            top: 35px; left: 0;
             width: 500px; height: 500px;
+            background-color: pink;
+            z-index: 2;
         }
     }
+    .active {
+        border: 1px solid #000;
+        background-color: pink;
+        .show {
+            background-color: pink;
+        }
+    }
+
     >ul{
         width: 40%;
         display: flex;
