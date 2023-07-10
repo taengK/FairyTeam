@@ -9,8 +9,9 @@ import Main from './page/Main';
 import SignUp from './page/SignUp';
 import Login from './page/Login';
 import Mypage from './page/Mypage';
-import Love from './page/Love';
+import Cart from './page/Cart';
 import Detaill from './page/Detaill';
+import Modification from './page/Modification';
 
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
@@ -26,6 +27,7 @@ import './css/page/Login.css'
 import './css/page/Signup.css'
 import './css/page/Detaill.css'
 import './css/page/cart.css'
+import './css/page/Modification.css'
 
 
 
@@ -51,8 +53,9 @@ function App() {
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Mypage' element={<Mypage/>}/>
-        <Route path='/Love' element={<Love/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='/Detaill' element={<Detaill/>}/>
+        <Route path='/Modification' element={<Modification/>}/>
       </Routes>
       </div>
       <footer>

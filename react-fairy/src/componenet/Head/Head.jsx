@@ -15,8 +15,9 @@ const Head = () => {
         <li><Link to='/Signup'><p>회원가입</p></Link></li>
         <li><Link to='/Login'><p>로그인</p></Link></li>
         <li><Link to='/Mypage'><p>마이페이지</p></Link></li>
-        <li><Link to='/Love'><p>찜목록</p></Link></li>
+        <li><Link to='/Cart'><p>찜목록</p></Link></li>
         <li><Link to='/Detaill'><p>상세페이지</p></Link></li>
+        <li><Link to='/Modification'><p>수정페이지</p></Link></li>
       </ul>
     </div>
   )
