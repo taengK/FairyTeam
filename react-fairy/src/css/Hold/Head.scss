@@ -1,0 +1,38 @@
+.head{
+    
+    display: flex;
+    align-items: center;
+    .LogoBox {
+        width: 100px;
+        
+        .LogoImg {
+            width: 100%;
+        }
+    }
+    .inputBox {
+        width: 50%;
+        margin-left: 50px;
+        .search {
+            width: 100%; height: 50px;
+            padding: 25px;
+            border-radius: 15px;
+        }
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        li {
+            p {
+                margin: 0 1px 0 10px;
+                transition: 0.7 all; 
+                &:hover {
+                    color: #00f;
+                }
+            }
+        }
+    }
+}
+   
+   
+

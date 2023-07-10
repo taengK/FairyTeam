@@ -1,0 +1,32 @@
+.head {
+  display: flex;
+  align-items: center;
+}
+.head .LogoBox {
+  width: 100px;
+}
+.head .LogoBox .LogoImg {
+  width: 100%;
+}
+.head .inputBox {
+  width: 50%;
+  margin-left: 50px;
+}
+.head .inputBox .search {
+  width: 100%;
+  height: 50px;
+  padding: 25px;
+  border-radius: 15px;
+}
+.head ul {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.head ul li p {
+  margin: 0 1px 0 10px;
+  transition: 0.7 all;
+}
+.head ul li p:hover {
+  color: #00f;
+}/*# sourceMappingURL=Head.css.map */

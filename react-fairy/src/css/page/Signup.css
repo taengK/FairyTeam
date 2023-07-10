@@ -1,0 +1,28 @@
+.main-box {
+  width: 350px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+.main-box .SignUpImgBox {
+  border: 1px solid #000;
+  width: 60%;
+  margin: 0 auto;
+}
+.main-box .SignUpImgBox .SignUpImg {
+  width: 100%;
+}
+.main-box .row1 {
+  width: 350px;
+  margin: 0 auto;
+}
+.main-box p {
+  font-weight: bold;
+  color: #555;
+  margin-top: 10px;
+}
+
+.idOverlap {
+  width: 150px;
+  border-radius: 15px;
+  margin-top: 10px;
+}/*# sourceMappingURL=Signup.css.map */

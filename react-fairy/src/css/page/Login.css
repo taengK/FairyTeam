@@ -1,0 +1,9 @@
+.LoginBox {
+  width: 300px;
+  margin: 0 auto;
+}
+.LoginBox .LoginSubmit {
+  margin-top: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=Login.css.map */

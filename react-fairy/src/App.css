@@ -38,23 +38,21 @@
   }
 }
 
-
-#con {
+#untilMain{
   width: 1200px;
   margin: 0 auto;
 }
-header{
-  border: 1px solid #000;
-  background-color: #00f;
-  display: flex;
-  justify-content: right;
-}
 
-section {
-  margin-top: 30px;
+
+main {
+  margin-top: -50px;
 }
 
 footer{
+  width: 100%;
+  background-color: #333;
   margin-top: 30px;
 }
+
+
 

@@ -1,0 +1,31 @@
+.main-box{
+    width: 350px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    .SignUpImgBox{
+        border: 1px solid #000;
+        width: 60%; 
+        margin: 0 auto;
+        .SignUpImg {
+            width: 100%; 
+            
+        }
+    }
+    .row1{
+        width: 350px;
+        margin: 0 auto;
+        
+    }
+  
+    p {
+        font-weight: bold;
+        color: #555;
+        margin-top: 10px;
+    }
+}
+.idOverlap{
+    width: 150px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
