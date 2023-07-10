@@ -23,12 +23,8 @@ const Cart = () => {
                             <tr>
                                 <th><input type="checkbox" name="all" /></th>
                                 <th>상품명</th>
-                                <th>총수량</th>
-                                <th>판매가</th>
-                                <th>할인</th>
-                                <th>포인트</th>
                                 <th>배송비</th>
-                                <th>소계</th>
+                                <th>판매가</th>
                             </tr>
                             <tr class="empty">
                                 <td colspan="7">장바구니에 상품이 없습니다.</td>
@@ -44,10 +40,6 @@ const Cart = () => {
                                         <p>상품설명</p>
                                     </div>
                                 </article></td>
-                                <td>1</td>
-                                <td>27,000</td>
-                                <td>5%</td>
-                                <td>270</td>
                                 <td>무료배송</td>
                                 <td>27,000</td>
                             </tr>
@@ -62,10 +54,6 @@ const Cart = () => {
                                         <p>상품설명</p>
                                     </div>
                                 </article></td>
-                                <td>1</td>
-                                <td>27,000</td>
-                                <td>5%</td>
-                                <td>270</td>
                                 <td>무료배송</td>
                                 <td>27,000</td>
                             </tr>
@@ -80,10 +68,6 @@ const Cart = () => {
                                         <p>상품설명</p>
                                     </div>
                                 </article></td>
-                                <td>1</td>
-                                <td>27,000</td>
-                                <td>5%</td>
-                                <td>270</td>
                                 <td>무료배송</td>
                                 <td>27,000</td>
                             </tr>
@@ -98,10 +82,6 @@ const Cart = () => {
                                         <p>상품설명</p>
                                     </div>
                                 </article></td>
-                                <td>1</td>
-                                <td>27,000</td>
-                                <td>5%</td>
-                                <td>270</td>
                                 <td>무료배송</td>
                                 <td>27,000</td>
                             </tr>
@@ -115,7 +95,7 @@ const Cart = () => {
                         <table>
                             <tr>
                                 <td>상품수</td>
-                                <td>1</td>
+
                             </tr>
                             <tr>
                                 <td>상품금액</td>
