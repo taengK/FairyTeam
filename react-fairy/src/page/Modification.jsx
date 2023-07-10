@@ -19,7 +19,7 @@ import Logo from '../Images/Logo.png'
 
 
 
-function Join() {
+function Modification() {
 
   const nav = useNavigate()
   
@@ -178,20 +178,13 @@ function Join() {
 
 
   return (
-    <div className='main-box info-box'>
+    <div className='main-box info-box ModiMainBox'>
+        <h3>수정페이지</h3>
     <Form onSubmit={handleJoin}>
-      <div className='SignUpImgBox'>
-        <img src={Logo} alt="" className='SignUpImg'/>이미지바꿔야함.svg파일로 찾아야해,누군가찾겠지
+      <div className='SignUpImgBox ModificationImgBox' style={{width:"w10px"}}>
+        <img src={Logo} alt="" className='SignUpImg ModificationImg'/>
       </div>
-      <Row className='row1 rowch' >
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>아이디</Form.Label>
-          <Form.Control type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef}/>
-          {/* <button className='idOverLap' style={{width:"150px",height:"37px",marginTop:"10px",padding:"5px", borderRadius:'25px', backgroundColor:"red", color:'white',border:"none" }}>아이디 중복 체크</button>
-          이건 나중에 해볼래... */}
-          <Button onClick= {idCheck1} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>      
-        </Form.Group>
-      </Row>
+      
 
       <Row className='row1' >
         <Form.Group as={Col} controlId="formGridPassword">
@@ -207,26 +200,13 @@ function Join() {
         </Form.Group>
       </Row>
       
-      <Row className='row1'>
-        <Form.Group as={Col} controlId="formGridName">
-          <Form.Label><p>이름</p></Form.Label>
-          <Form.Control type="text" placeholder="이름을 입력하세요" ref={nameRef}/>
-        </Form.Group>
-      </Row>
-
-      <Row className='row1'>
+           <Row className='row1'>
         <Form.Group as={Col} controlId="formGridNick">
           <Form.Label><p>닉네임</p></Form.Label>
           <Form.Control type="text" placeholder="닉네임을 입력하세요" ref={nickRef}/>
         </Form.Group>
       </Row>
 
-      <Row className='row1'>
-      <Form.Group className="mb-3" controlId="formGridAddress1">
-        <Form.Label><p>e-mail</p></Form.Label>
-        <Form.Control placeholder="" ref={addRef}/>
-      </Form.Group>
-      </Row>
 
       <Form.Group className='row1' id="formGridCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
@@ -240,4 +220,4 @@ function Join() {
   );
 }
 
-export default Join;
+export default Modification;

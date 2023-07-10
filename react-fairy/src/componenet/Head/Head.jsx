@@ -17,6 +17,7 @@ const Head = () => {
         <li><Link to='/Mypage'><p>마이페이지</p></Link></li>
         <li><Link to='/Cart'><p>찜목록</p></Link></li>
         <li><Link to='/Detaill'><p>상세페이지</p></Link></li>
+        <li><Link to='/Modification'><p>수정페이지</p></Link></li>
       </ul>
     </div>
   )

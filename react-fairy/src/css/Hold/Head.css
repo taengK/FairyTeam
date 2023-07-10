@@ -23,6 +23,9 @@
   align-items: center;
   margin-left: auto;
 }
+.head ul li {
+  width: calc((100% - 10px) / 6);
+}
 .head ul li p {
   margin: 0 1px 0 10px;
   transition: 0.7 all;

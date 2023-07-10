@@ -1,0 +1,22 @@
+.ModiMainBox{
+    >h3 {
+        color: #555;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    border: 1px solid #d3d3d3;
+    width: 350px;
+    margin: 30px auto;
+.ModificationImgBox {
+    border: 1px solid #d3d3d3;
+    width: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .ModificationImg{
+        width: 100%;
+    }
+}
+
+}

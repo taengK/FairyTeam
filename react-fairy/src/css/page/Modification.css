@@ -1,0 +1,20 @@
+.ModiMainBox {
+  border: 1px solid #d3d3d3;
+  width: 350px;
+  margin: 30px auto;
+}
+.ModiMainBox > h3 {
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.ModiMainBox .ModificationImgBox {
+  border: 1px solid #d3d3d3;
+  width: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ModiMainBox .ModificationImgBox .ModificationImg {
+  width: 100%;
+}/*# sourceMappingURL=Modification.css.map */
