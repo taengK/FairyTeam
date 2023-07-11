@@ -14,12 +14,6 @@ const NavList = () => {
  //<ul className={`hamNav ${showHamNav ? 'show' : ''}`}>
   return (
     <div className='Navi'>
-<<<<<<< HEAD
-      <div className='ctg'>category
-        <ul className='ctgNav'>
-          <li><a href="">1</a></li>
-        </ul>
-=======
       <div className={`ham ${showHamNav ? 'active' : ''}`} ref={hamElements} onClick={handleClick}>
         <div className='realHam'>
           <i class="fa-solid fa-bars"></i><p>카테고리</p>
@@ -77,7 +71,6 @@ const NavList = () => {
                   <div class="subBox">8</div>
               </li>
             </ul>
->>>>>>> ea2a68046d85ef2acbb199193d89b75c3df55e64
       </div>
         <ul>
           <li><a href="#!"><p>이벤트</p></a></li>

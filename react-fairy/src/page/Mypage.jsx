@@ -7,8 +7,11 @@ import { Link } from 'react-router-dom'
 
 const Mypage = () => {
   return (
+
+    
     <div className='myPage' style={{backgroundColor:"#fc0"}} >
-      
+ 
+
       <div class="wrap">
         <div class="blueContainer">
           <i class="fa-solid fa-circle-user"></i>
@@ -17,7 +20,7 @@ const Mypage = () => {
             
             <div class="name">ID</div>
             <br />
-            <button>수정하기</button>
+            <Link to='/Modification'><button>수정하기</button></Link>
           </div>
           <div class="modify">i</div>
         </div>
