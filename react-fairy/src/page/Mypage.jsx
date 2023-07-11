@@ -94,7 +94,7 @@ const Mypage = () => {
  
           <a href="#" class="item">
             <div class="icon">ii</div>
-            <div class="text">찜한상품</div>
+            <Link to ='/Cart'><div class="text">찜한상품</div></Link>
             <div class="right"> </div>
           </a>
         </div>
