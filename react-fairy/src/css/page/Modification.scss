@@ -8,15 +8,17 @@
     border: 1px solid #d3d3d3;
     width: 350px;
     margin: 30px auto;
-.ModificationImgBox {
-    border: 1px solid #d3d3d3;
-    width: 50%;
-    border-radius: 50%;
-    overflow: hidden;
-
-    .ModificationImg{
-        width: 100%;
+    .ModificationImgBox {
+        border: 1px solid #d3d3d3;
+        width: 130px; height: 130px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        .ModificationImg{
+            width: 100%;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
-}
-
 }
