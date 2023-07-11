@@ -16,7 +16,7 @@ const Love = () => {
                         <strong>장바구니</strong>
                     </p>
                 </nav>
-               <form action="#">
+               <form action="#!">
                     <table border="3">
                         <tr>
                             <th><input type="checkbox" name="all" /></th>
@@ -34,11 +34,11 @@ const Love = () => {
                         <tr>
                             <td><input type="checkbox" name="1" /></td>
                             <td><article>
-                                <a href="#">
+                                <a href="#!">
                                     <img src="	https://via.placeholder.com/80x80" alt="1" />
                                 </a>
                                 <div>
-                                    <h2><a href="#">상품명</a></h2>
+                                    <h2><a href="#!">상품명</a></h2>
                                     <p>상품설명</p>
                                 </div>
                             </article></td>
@@ -52,11 +52,11 @@ const Love = () => {
                         <tr>
                             <td><input type="checkbox" name="1" /></td>
                             <td><article>
-                                <a href="#">
+                                <a href="#!">
                                     <img src="	https://via.placeholder.com/80x80" alt="1" />
                                 </a>
                                 <div>
-                                    <h2><a href="#">상품명</a></h2>
+                                    <h2><a href="#!">상품명</a></h2>
                                     <p>상품설명</p>
                                 </div>
                             </article></td>
@@ -70,11 +70,11 @@ const Love = () => {
                         <tr>
                             <td><input type="checkbox" name="1"/></td>
                             <td><article>
-                                <a href="#">
+                                <a href="#!">
                                     <img src="	https://via.placeholder.com/80x80" alt="1"/>
                                 </a>
                                 <div>
-                                    <h2><a href="#">상품명</a></h2>
+                                    <h2><a href="#!">상품명</a></h2>
                                     <p>상품설명</p>
                                 </div>
                             </article></td>
