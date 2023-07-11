@@ -19,7 +19,7 @@ import Logo from '../Images/Logo.png'
 
 
 
-function Join() {
+function Modification() {
 
   const nav = useNavigate()
   
@@ -35,52 +35,11 @@ function Join() {
 
   
   const [userData,setUserData]=useState({})
-  const [userId, setUserId] = useState({})
+
 
   
   
-  
-  // ID 중복체크
-  const idCheck1 = (e)=>{
-    e.preventDefault();
-    
-    setUserId({id : idRef.current.value})
-    
-  }
 
-  useEffect(()=>{   // 중복체크
-    console.log('userId : ' , userId.id)
-    
-    // console.log('중복체크 idCheck 값 : ', idCheck)
-    // 초기 id 가 undefined가 아닐 때 글자 수가 5 이상이면 전송함
-    if(userId.id !== undefined ){
-      if(userId.id.length >= 5){
-    axios.post('http://localhost:8888/user/idcheck',{
-      userId : userId
-    })
-    .then((res)=>{
-
-      console.log('아이디 중복 검사 :' ,res.data.idCheck);
-      if(res.data.idCheck === 'existed'){
-        alert('이미 등록된 아이디입니다', )
-        idRef.current.value=''
-        idRef.current.focus()
-        
-      } else if(res.data.idCheck === 'none') {
-        alert('가입이 가능한 아이디입니다')
-        pwRef.current.focus()
-        console.log('가입 가능, res.data.idCheck :',res.data.idCheck);
-        console.log('회원가입 가능? res.data.result :', res.data.result)
-        
-      }
-    })
-    // undefined가 아니더라도 짧으면 전송하지 않음
-  }else if ( userId.id.length < 5){
-    alert('아이디가 너무 짧습니다')
-    idRef.current.focus()
-  }
-  }
-},[userId])
 
   // ... 코드 아니고 함수 접은거임
   const handleJoin = (e)=>{
@@ -176,22 +135,14 @@ function Join() {
 
 
 
-
   return (
-    <div className='main-box info-box'>
+    <div className='main-box info-box ModiMainBox'>
+        <h3>수정페이지</h3>
     <Form onSubmit={handleJoin}>
-      <div className='SignUpImgBox'>
-        <img src={Logo} alt="" className='SignUpImg'/>이미지바꿔야함.svg파일로 찾아야해,누군가찾겠지
+      <div className='SignUpImgBox ModificationImgBox' style={{width:"w10px"}}>
+        <img src={Logo} alt="" className='SignUpImg ModificationImg'/>
       </div>
-      <Row className='row1 rowch' >
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>아이디</Form.Label>
-          <Form.Control type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef}/>
-          {/* <button className='idOverLap' style={{width:"150px",height:"37px",marginTop:"10px",padding:"5px", borderRadius:'25px', backgroundColor:"red", color:'white',border:"none" }}>아이디 중복 체크</button>
-          이건 나중에 해볼래... */}
-          <Button onClick= {idCheck1} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>      
-        </Form.Group>
-      </Row>
+      
 
       <Row className='row1' >
         <Form.Group as={Col} controlId="formGridPassword">
@@ -207,26 +158,13 @@ function Join() {
         </Form.Group>
       </Row>
       
-      <Row className='row1'>
-        <Form.Group as={Col} controlId="formGridName">
-          <Form.Label><p>이름</p></Form.Label>
-          <Form.Control type="text" placeholder="이름을 입력하세요" ref={nameRef}/>
-        </Form.Group>
-      </Row>
-
-      <Row className='row1'>
+           <Row className='row1'>
         <Form.Group as={Col} controlId="formGridNick">
           <Form.Label><p>닉네임</p></Form.Label>
           <Form.Control type="text" placeholder="닉네임을 입력하세요" ref={nickRef}/>
         </Form.Group>
       </Row>
 
-      <Row className='row1'>
-      <Form.Group className="mb-3" controlId="formGridAddress1">
-        <Form.Label><p>e-mail</p></Form.Label>
-        <Form.Control placeholder="" ref={addRef}/>
-      </Form.Group>
-      </Row>
 
       <Form.Group className='row1' id="formGridCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
@@ -240,4 +178,4 @@ function Join() {
   );
 }
 
-export default Join;
+export default Modification;

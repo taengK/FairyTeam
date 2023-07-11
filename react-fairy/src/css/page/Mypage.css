@@ -1,0 +1,175 @@
+@charset "UTF-8";
+.blue {
+  color: #3b72de;
+}
+
+.myPage {
+  margin-top: 30px;
+}
+.myPage .wrap {
+  background-color: #F8F8F8;
+  /* 녹색 텍스트 */
+  /* 녹색배경 */
+  /* 단골상점 , 상품후기 , 적립금 박스 */
+  /* 단골상점 , 상품후기 , 적립금 */
+  /* 녹색 숫자 */
+  /* 텍스트 */
+  /* ================== 주문/배송조회 박스 시작 ==================== */
+  /* 주문/배송조회 타이틀 */
+  /* 장바구니 결제완료 배송중 구매확정 [로우] */
+  /* 장바구니 결제완료 배송중 구매확정 [아이템]  */
+  /*=================== 주문목록 ~ 찜한상품 리스트 ==================*/
+  /*=================== 내지갑의 보유 적립금 들어가는 부분 ================*/
+  /* 공지사항 이용안내 고객센터 */
+  /*  */
+}
+.myPage .wrap .circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: skyblue;
+  position: absolute;
+  top: -5px;
+  left: 110%;
+}
+.myPage .wrap .myPageIden {
+  margin-left: 20px;
+}
+.myPage .wrap .blueContainer {
+  height: 100px;
+  background-color: #3b72de;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+.myPage .wrap .blueContainer .grade {
+  font-weight: bold;
+  color: gold;
+}
+.myPage .wrap .blueContainer .name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.myPage .wrap .blueContainer .modify {
+  margin-left: auto;
+}
+.myPage .wrap .summaryContainer {
+  background-color: white;
+  display: flex;
+  padding: 21px 16px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+.myPage .wrap .summaryContainer .item {
+  flex-grow: 1;
+}
+.myPage .wrap .summaryContainer .number {
+  font-size: 19px;
+  font-weight: bold;
+  color: #3b72de;
+}
+.myPage .wrap .summaryContainer .item > div:nth-child(2) {
+  font-size: 13px;
+}
+.myPage .wrap .shippingStatusContainer {
+  padding: 21px 16px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.myPage .wrap .shippingStatusContainer .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.myPage .wrap .shippingStatusContainer .status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+.myPage .wrap .shippingStatusContainer .item {
+  display: flex;
+}
+.myPage .wrap .shippingStatusContainer .number {
+  font-size: 31px;
+  font-weight: 500;
+  text-align: center;
+}
+.myPage .wrap .shippingStatusContainer .text {
+  font-size: 12px;
+  font-weight: normal;
+  color: #c2c2c2;
+  text-align: center;
+}
+.myPage .wrap .shippingStatusContainer .icon {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 16px;
+  height: 16px;
+}
+.myPage .wrap .listContainer {
+  padding: 0;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+.myPage .wrap .listContainer .item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  color: black;
+  text-decoration: none;
+  height: 56px;
+  box-sizing: border-box;
+}
+.myPage .wrap .listContainer .icon {
+  margin-right: 14px;
+}
+.myPage .wrap .listContainer .text {
+  font-size: 16px;
+  position: relative;
+}
+.myPage .wrap .listContainer .right {
+  margin-left: auto;
+}
+.myPage .wrap .listContainer .smallLight {
+  font-size: 14px;
+  color: #c2c2c2;
+}
+.myPage .wrap .listContainer .smallLight > span {
+  margin-left: 10px;
+}
+.myPage .wrap .listContainer .right .blct {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.myPage .wrap .infoContainer {
+  background-color: white;
+  display: flex;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.myPage .wrap .infoContainer .item {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+}
+.myPage .wrap .infoContainer .item > div:first-child {
+  margin-bottom: 2px;
+}
+.myPage .wrap .listContainer .item:hover,
+.myPage .wrap .infoContainer .item:hover {
+  /*   background-color: #f8f8f8; */
+}
+.myPage .wrap .fa-circle-user {
+  font-size: 5rem;
+  color: white;
+}/*# sourceMappingURL=myPage.css.map */

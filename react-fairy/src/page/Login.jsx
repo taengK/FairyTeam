@@ -55,17 +55,18 @@ const Login = () => {
 
 
   return (
-    <div className='LoginBox'><Form onSubmit={handleLogin}>
+    <div className='LoginBox'>
+      <Form onSubmit={handleLogin} className='LoginMx'>
 
     <Form.Group as={Col} controlId="formGridEmail">
-      <Form.Label style={{fontWeight:"bold"}}>ID</Form.Label>
+      <Form.Label style={{fontWeight:"bold", margin:"30px 0 10px 10px"}}>ID</Form.Label>
       <Form.Control type="text" placeholder="Enter Id" ref={idRef} className='LoginId' />
     </Form.Group>
 
     <Form.Group as={Col} controlId="formGridPassword">
-      <Form.Label style={{fontWeight:"bold"}}>Password</Form.Label>
+      <Form.Label style={{fontWeight:"bold", margin:"30px 0 10px 10px"}}>Password</Form.Label>
       <Form.Control type="password" placeholder="Password" ref={pwRef} className='LoginPw'/>
-      <a href="#" className='idOverlapLogiLogin'>아이디/비밀번호찾기</a>
+      <a href="#" className='idOverlapLogin' style={{display:"block", margin:"10px 0 10px 10px"}}>아이디/비밀번호찾기</a>
     </Form.Group>
   <Button variant="primary" type="submit" className='LoginSubmit'>
     Submit

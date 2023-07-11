@@ -1,6 +1,11 @@
 .LoginBox{
+    border: 1px solid #d3d3d3;
     width: 300px;
-    margin: 0 auto;
+    margin: 30px auto;
+    .idOverlapLogin {
+        margin-top: 20px;
+        
+    }
     .LoginSubmit {
         margin-top: 20px;
         margin-left: 50%;

@@ -1,9 +1,10 @@
 .Main-sec01 {
   width: 100%;
-  border: 1px solid #d3d3d3;
+  margin-top: 10px;
+  margin-left: auto;
 }
 .Main-sec01 h2 {
-  margin-bottom: 30px;
+  margin: 30px 0 30px 0;
 }
 .Main-sec01 .SlideBox {
   width: 100%;
@@ -77,4 +78,4 @@
 }
 .Main-sec02 ul li:hover .btn::after {
   content: attr(data-name);
-}/*# sourceMappingURL=Main.css.map */
+}
