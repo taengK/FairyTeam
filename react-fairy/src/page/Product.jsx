@@ -1,135 +1,58 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useEffect, useRef, useState } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+function Product() {
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import SlideImg1 from '../Images/dog.jpg'
+    const nav = useNavigate()
 
-const Product = () => {
-  return (
-    <div className='Main'>
-        <section className='Main-sec01'>
-        <h2>EVENT</h2>
-        <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        centeredSlides={true}
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-      <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
-    </Swiper>
-      </section>
-        <section className='Main-sec02'>
-          <h2>오늘의 물품상품</h2>
-          <ul>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/250/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/251/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/252/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/253/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/254/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/255/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/256/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/257/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/258/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/259/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/260/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/261/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/270/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/263/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/264/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/265/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/266/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/267/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/268/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
-              <li>
-                <a href="#!"><img src='https://picsum.photos/id/269/150/150' alt="준비중.." /></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-              </li>
+    const idRef =useRef()
+
+    const [userId, setUserId] = useState({})
+
+    const test =(e)=>{
+        e.preventDefault();
+        
+        setUserId({id : idRef.current.value})
+    }
+    
+
+    useEffect(()=>{
+        if(userId.id !== undefined ){
+          axios.post('http://localhost:8888/user/product',{
+            userId : userId
+          })
+          .then((res)=>{
+      
+            console.log('아이디 중복 검사 :' ,res.data.idCheck);
+            if(res.data.idCheck !== undefined){
+                console.log(res.data.idCheck[0].prod_barcode);
+                const bar = res.data.idCheck[0].prod_barcode
+                nav(`/Detaill/${bar}`)
+                
+            // } else if(res.data.idCheck === 'none') {
+            //   alert('가입이 가능한 아이디입니다')
+            //   pwRef.current.focus()
+            //   console.log('가입 가능, res.data.idCheck :',res.data.idCheck);
+            //   console.log('회원가입 가능? res.data.result :', res.data.result)
               
-          </ul>
+            // }
+        }})
+          // undefined가 아니더라도 짧으면 전송하지 않음
+        
+        }
 
-          
-      </section>
+
+    })
+
+
+
+  return (
+    <div>
+        <div className='asd'>
+            <input type="text" ref = {idRef}/>
+            <button onClick = {test} type='button'>asdasdasdasd</button>
+        </div>
     </div>
   )
 }
