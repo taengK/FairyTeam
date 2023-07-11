@@ -20,7 +20,28 @@ const NavList = () => {
             </div>
             <ul class="gnb">
               <li><a href="">menu1</a>
-                  <div class="subBox">1</div>
+                  <div class="subBox">
+                    <ul>
+                      <li>
+                        <h4>의류</h4>
+                        <p><a href="#">상의</a></p>
+                        <p><a href="#">하의</a></p>
+                        <p><a href="#">시발</a></p>
+                      </li>
+                      <li>
+                      <h4>의류</h4>
+                        <p><a href="#">상의</a></p>
+                        <p><a href="#">하의</a></p>
+                        <p><a href="#">시발</a></p>
+                      </li>
+                      <li>
+                      <h4>의류</h4>
+                        <p><a href="#">상의</a></p>
+                        <p><a href="#">하의</a></p>
+                        <p><a href="#">시발</a></p>
+                      </li>
+                    </ul>
+                  </div>
               </li>
               <li><a href="">menu2</a>
                   <div class="subBox">2</div>
