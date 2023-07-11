@@ -78,4 +78,26 @@ router.post('/user/login',(req, res)=>{
 })
 
 
+// test
+
+router.post('/user/product', (req, res)=>{
+    // console.log('idcheck Router', req.body);
+    // 중복체크 시작
+    let sql = "select prod_barcode from product_info where prod_name = ?"
+    conn.query(sql, [req.body.userId.id], (err, rows)=>{
+        if (rows){
+            console.log('이미 존재하는 디', rows)
+            res.json({idCheck : rows})
+        } else {
+            console.log('생성 가능')
+            res.json({idCheck : 'none'})
+        }
+    })
+    
+    
+    // 중복체크 끝
+
+})
+
+
 module.exports = router;
