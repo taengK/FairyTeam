@@ -1,69 +1,102 @@
-.Navi{
+.Navi {
     display: flex;
-    .ham{
-        background-color: #fc0;
-        width: 5%;
-        font-size: 1.5rem;
-        position: relative;
-        >ul{
-            position: absolute;
-            display: none;
-            
-            >li{
-                border: 1px solid #000;
-                margin-top: -1px;
-                
-                >a{
-                    color: #000;
-                    
-                }
+    height: 40px;
+    border-bottom: 1px solid #000;
+    .ham {
+        .realHam {
+            background-color: #29a13b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            .fa-bars {
+                line-height: 40px;
+                font-size: 1.5rem;
+                text-align: center;
             }
         }
-        &:hover > ul {
+    }
+    .gnb {
+        z-index: 4;
+        width: 150px;
+        top: -1px;
+        position: relative;
+        >li {
+            height: 45px;
+            >a {
+                background-color: #0abb26;
+                display: block;
+                height: 69px;
+                line-height: 69px;
+                text-align: center;
+                color: #efefef;
+            }
+        }
+
+        .subBox {
+            width: 800px;
+            height: 384px;
+            background-color: #fc0;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            display: none;
+        }
+
+        >li:hover .subBox {
+            display: block;
+        }
+    }
+
+    /*&:hover > ul {
             //햄버거를 건드리면 ul이 움직이게끔
             display: block;
             top: 35px; left: 0;
             width: 500px; height: 500px;
             background-color: pink;
             z-index: 2;
-        }
-    }
+        }*/
     .active {
         border: 1px solid #000;
         background-color: pink;
+
         .show {
             background-color: pink;
         }
     }
 
-    >ul{
+    >ul {
         width: 40%;
         display: flex;
         justify-content: right;
         align-items: center;
-        >li{
+
+        >li {
             width: 100%;
             >a {
                 display: block;
                 padding: 10px;
                 text-align: center;
                 position: relative;
-                &::after { 
+
+                &::after {
                     position: absolute;
                     content: '';
-                    width: 0; height: 5px;
+                    width: 0;
+                    height: 5px;
                     background-color: #54c7f7;
-                    left: 0; bottom: 0;
+                    left: 0;
+                    bottom: 0;
                     transition: width 0.5s ease-in-out;
                 }
+
                 &:hover::after {
-                    width: 70%; transition: .3s all ease-in-out;
+                    width: 70%;
+                    transition: .3s all ease-in-out;
                     transform: translateX(20%);
                 }
-            }
-           
-            &:nth-child(1){
-                margin-left: 30px;
             }
         }
     }

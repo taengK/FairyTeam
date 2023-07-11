@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.Navi {
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid #000;
+  /*&:hover > ul {
+          //햄버거를 건드리면 ul이 움직이게끔
+          display: block;
+          top: 35px; left: 0;
+          width: 500px; height: 500px;
+          background-color: pink;
+          z-index: 2;
+      }*/
+}
+.Navi .ham .realHam {
+  background-color: #29a13b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.Navi .ham .realHam .fa-bars {
+  line-height: 40px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.Navi .gnb {
+  z-index: 4;
+  width: 150px;
+  top: -1px;
+  position: relative;
+}
+.Navi .gnb > li {
+  height: 45px;
+}
+.Navi .gnb > li > a {
+  background-color: #0abb26;
+  display: block;
+  height: 69px;
+  line-height: 69px;
+  text-align: center;
+  color: #efefef;
+}
+.Navi .gnb .subBox {
+  width: 800px;
+  height: 384px;
+  background-color: #fc0;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+}
+.Navi .gnb > li:hover .subBox {
+  display: block;
+}
+.Navi .active {
+  border: 1px solid #000;
+  background-color: pink;
+}
+.Navi .active .show {
+  background-color: pink;
+}
+.Navi > ul {
+  width: 40%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.Navi > ul > li {
+  width: 100%;
+}
+.Navi > ul > li > a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+.Navi > ul > li > a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 5px;
+  background-color: #54c7f7;
+  left: 0;
+  bottom: 0;
+  transition: width 0.5s ease-in-out;
+}
+.Navi > ul > li > a:hover::after {
+  width: 70%;
+  transition: 0.3s all ease-in-out;
+  transform: translateX(20%);
+}

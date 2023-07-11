@@ -19,10 +19,10 @@ import {Routes,Route} from 'react-router-dom' //라우터돔
 // *******Hold.css******
 import './css/Common.css'
 import './css/Hold/Head.css'
-import './css//Hold/NavList.css'
-import './css//Hold/Footer.css'
+import './css/css/NavList.css'
+import './css/Hold/Footer.css'
 // *******Page.css******
-import './css/page/Main.css'
+import './css/css/Main.css'
 import './css/page/Login.css'
 import './css/page/Signup.css'
 import './css/page/Detaill.css'
