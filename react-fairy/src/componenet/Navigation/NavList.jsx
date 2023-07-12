@@ -20,12 +20,12 @@ const NavList = () => {
           <i class="fa-solid fa-bars"></i><p>카테고리</p>
             </div>
             <ul class="gnb">
-              <li><Link to="http://localhost:3000/categories/110">여성의류</Link>
+              <li><Link to="/categories/110">여성의류</Link>
                   <div class="subBox">
                     <ul>
                       <li>
                         <h4>아우터</h4>
-                        <p><a href="#">패딩</a></p>
+                        <p><a href="/categories">패딩</a></p>
                         <p><a href="#">점퍼</a></p>
                         <p><a href="#">코트</a></p>
                         <p><a href="#">자켓</a></p>
