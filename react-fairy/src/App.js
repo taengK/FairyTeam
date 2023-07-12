@@ -74,9 +74,11 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/Detaill' element={<Detaill/>}/>
         <Route path='/Modification' element={<Modification/>}/>
-        <Route path='/Categories' element={<Categories/>}/>
+        <Route path='/PostForm' element={<PostForm/>}/>
+        
+        {/* <Route path='/Categories' element={<Categories/>}/>
         <Route path='/categories/100' element ={<WomanClothes/>}/>
-        <Route path='/categories/200' element ={<ManClothes/>}/>
+         <Route path='/categories/200' element ={<ManClothes/>}/>
         <Route path='/categories/300' element ={<Shoes/>}/>
         <Route path='/categories/400' element ={<BagWallet/>}/>
         <Route path='/categories/500' element ={<Digital/>}/>

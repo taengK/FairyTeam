@@ -198,37 +198,37 @@ function PostForm() {
           </li>
           <li className='df'>
             <div className='PostFormLabel1'>
-            <h5>설명</h5>
+              <h5>설명</h5>
             </div>
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridNick">
-                  <Form.Control type="text" placeholder="여러 장의 상품 사진과 구입 연도, 브랜드, 사용감, 하자 유무 등 구매자에게 필요한 정보를 꼭 포함해 주세요.(10자이상)" ref={nickRef} />
+                  <Form.Control className='PFTextArea' type="textarea" placeholder="이 내용에서 버그발견 엔터를누르면 오류가 뜸/심지어 글자도 넘어가 줄 바꿈이안돼 여러 장의 상품 사진과 구입 연도, 브랜드, 사용감, 하자 유무 등 구매자에게 필요한 정보를 꼭 포함해 주세요.(10자이상)" ref={nickRef} />
                 </Form.Group>
               </Row>
             </div>
           </li>
           <li className='df'>
             <div className='PostFormLabel1'>
-            <h5>가격</h5>
+              <h5>가격</h5>
             </div>
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridName">
-                  <Form.Control type="text" placeholder="숫자만 입력하세요" ref={nameRef} />
+                  <Form.Control className='PFPrice' type="text" placeholder="숫자만 입력하세요" ref={nameRef} />
                 </Form.Group>
               </Row>
             </div>
           </li>
           <li className='df'>
             <div className='PostFormLabel1'>
-            <h5>상태</h5>
+              <h5>상태</h5>
             </div>
             <div className='PostFormLabel2'>
-            <Form.Group className='row1 df' id="formGridCheckbox">
-              <Form.Check type="checkbox" label="새상품" />
-              <Form.Check type="checkbox" label="중고상품" />
-            </Form.Group>
+              <Form.Group className='row1 df' id="formGridCheckbox">
+                <Form.Check type="checkbox" label="새상품" />
+                <Form.Check type="checkbox" label="중고상품" />
+              </Form.Group>
             </div>
           </li>
           <li className='df'>
@@ -256,30 +256,42 @@ function PostForm() {
           </li>
           <li className='df'>
             <div className='PostFormLabel1'>
-            <h5>카테고리</h5>
+              <h5>카테고리</h5>
             </div>
             <div className='PostFormLabel2'>
               <Row className='row1' >
                 <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Control type="password" placeholder="비밀번호를 입력하세요 (6자 이상)" ref={pwRef} />
+                  <Form.Control className='PFCtegory' type="textarea" placeholder="비밀번호를 입력하세요 (6자 이상)" ref={pwRef} />
                 </Form.Group>
               </Row>
             </div>
           </li>
           <li className='df'>
             <div className='PostFormLabel1'>
-            <h5>거래지역</h5>
+              <h5>거래지역</h5>
             </div>
-            <div className='PostFormLabel2'>
-              <Row className='row1'>
-                <Form.Group className="mb-3" controlId="formGridAddress1">
-                  <Form.Control placeholder="" ref={addRef} />
-                </Form.Group>
-              </Row>
-            </div>
+
+            <ul className='PostFormLabel2 PFMapBox'>
+              <li>
+                <div className='PFMap'>
+                  <ul className='PFMapCtt'>
+                    <li><p>내위치</p></li>
+                    <li><p>최근검색</p></li>
+                    <li><p>주소검색</p></li>
+                    <li><p>지역설정안함</p></li>
+                  </ul>
+                  <input type="text" placeholder='거래장소를 입력하세요' />
+                </div>
+              </li>
+              <li className=' PFL2Box'>
+                <iframe className='PFIfram' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.8484619486135!2d126.87518697644086!3d35.11049467277688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35718b03033bfeef%3A0x9148e0a92fb527ab!2z7Iqk66eI7Yq47J247J6s6rCc67Cc7JuQ!5e0!3m2!1sko!2skr!4v1689157673616!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </li>
+            </ul>
+
+
           </li>
         </ul>
-        
+
 
         <Button className='row1' variant="primary" type="submit" >
           Submit
