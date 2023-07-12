@@ -14,7 +14,7 @@ const WomanClothes = () => {
   // deps 에 배열이 있으면 배열의 값이 변할 때 동작함
 
 
-  const [categorySeq, setCategorySeq] = useState(1);
+  const [categorySeq, setCategorySeq] = useState();
   const [superCate, setSuperCate] = useState([]);
   
   
@@ -22,8 +22,6 @@ const WomanClothes = () => {
 
   useEffect(()=>{
     
-    setCategorySeq();
-
     axios.post('http://localhost:8888/db/categories',{
       categorySeq : categorySeq
     })
