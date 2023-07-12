@@ -16,7 +16,7 @@ import Product from './page/Product';
 import PostForm from './page/PostForm';
 import Categories from './page/Categories';
 import WomanClothes from './componenet/Category/WomanClothes';
-import Chat from './page/Chat';
+// import Chat from './page/Chat';
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
 // *************************CSS***********************************************
@@ -65,7 +65,17 @@ function App() {
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/Product' element={<Product/>}/>
         <Route path='/Categories' element={<Categories/>}/>
-        <Route path='/WomanClothes/100' element ={<WomanClothes/>}/>
+        <Route path='/categories/100' element ={<WomanClothes/>}/>
+        <Route path='/categories/200' element ={<ManClothes/>}/>
+        <Route path='/categories/300' element ={<Shoes/>}/>
+        <Route path='/categories/400' element ={<WomanClothes/>}/>
+        <Route path='/categories/500' element ={<WomanClothes/>}/>
+        <Route path='/categories/600' element ={<WomanClothes/>}/>
+        <Route path='/categories/700' element ={<WomanClothes/>}/>
+        <Route path='/categories/800' element ={<WomanClothes/>}/>
+        <Route path='/categories/900' element ={<WomanClothes/>}/>
+        <Route path='/categories/1000' element ={<WomanClothes/>}/>
+        <Route path='/categories/1100' element ={<WomanClothes/>}/>
         <Route path='/PostForm' element={<PostForm/>}/>
       </Routes>
       </div>

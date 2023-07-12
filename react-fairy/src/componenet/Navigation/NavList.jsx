@@ -20,7 +20,7 @@ const NavList = () => {
           <i class="fa-solid fa-bars"></i><p>카테고리</p>
             </div>
             <ul class="gnb">
-              <li><Link to="/WomanClothes/100">여성의류</Link>
+              <li><Link to="/categories/100">여성의류</Link>
                   <div class="subBox">
                     <ul>
                       <li>
@@ -54,7 +54,7 @@ const NavList = () => {
                     </ul>
                   </div>
               </li>
-              <li><a href="">남성의류</a>
+              <li><Link to="/categories/200">남성의류</Link>
                   <div class="subBox">
                     <ul>
                       <li>
@@ -91,7 +91,7 @@ const NavList = () => {
                   </div>
               </li>
 
-              <li><a href="">신발</a>
+              <li><Link to="/categories/300">신발</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>남성화</h4>
@@ -119,7 +119,7 @@ const NavList = () => {
                     </ul></div>
               </li>
 
-              <li><a href="">가방/지갑</a>
+              <li><Link to="/categories/400">가방/지갑</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>여성가방</h4>
@@ -141,7 +141,7 @@ const NavList = () => {
                       </li>
                     </ul></div>
               </li>
-              <li><a href="">디지털</a>
+              <li><Link to="/categories/500">디지털</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>휴대폰</h4>
@@ -196,7 +196,7 @@ const NavList = () => {
                     </ul></div>
               </li>
 
-              <li><a href="">가전제품</a>
+              <li><Link to="/categories/600">가전제품</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>생활가전</h4>
@@ -218,7 +218,7 @@ const NavList = () => {
                       </li>
                     </ul></div>
               </li>
-              <li><a href="">스포츠/레저</a>
+              <li><Link to="/categories/700">스포츠/레저</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>골프</h4>
@@ -257,7 +257,7 @@ const NavList = () => {
                     </ul></div>
               </li>
 
-              <li><a href="">도서/티켓/문구</a>
+              <li><Link to="/categories/800">도서/티켓/문구</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>도서</h4>
@@ -280,7 +280,7 @@ const NavList = () => {
                     </ul></div>
               </li>
 
-              <li><a href="">뷰티/미용</a>
+              <li><Link to="/categories/900">뷰티/미용</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>스킨케어</h4>
@@ -332,7 +332,7 @@ const NavList = () => {
                     </ul></div>
               </li>
 
-              <li><a href="">가구/인테리어</a>
+              <li><Link to="/categories/1000">가구/인테리어</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>가구</h4>
@@ -355,7 +355,7 @@ const NavList = () => {
                     </ul></div>
               </li>
 
-              <li><a href="">생활/주방용품</a>
+              <li><Link to="/categories/1100">생활/주방용품</Link>
                   <div class="subBox"><ul>
                       <li>
                         <h4>주방용품</h4>
