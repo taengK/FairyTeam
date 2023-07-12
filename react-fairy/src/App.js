@@ -64,6 +64,7 @@ function App() {
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/Product' element={<Product/>}/>
         <Route path='/Categories' element={<Categories/>}/>
+        <Route path='/WomanClothes/100' element ={<WomanClothes/>}/>
         <Route path='/PostForm' element={<PostForm/>}/>
       </Routes>
       </div>
