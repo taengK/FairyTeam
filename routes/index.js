@@ -78,7 +78,24 @@ router.post('/user/login',(req, res)=>{
 })
 
 
-// test
+// product
+
+router.post('/user/categories', (req, res)=>{
+    let sql = "select category_seq from product_info where prod_name = ?"
+    conn.query(sql, [req.body.userId.id], (err, rows)=>{
+        if (rows){
+            console.log('값', rows[0].category_seq)
+            res.json({idCheck : rows})
+        } else {
+            console.log('error')
+        }
+    })
+    
+
+})
+
+
+// product
 
 router.post('/user/product', (req, res)=>{
     // console.log('idcheck Router', req.body);

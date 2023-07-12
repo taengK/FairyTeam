@@ -13,6 +13,7 @@ import Cart from './page/Cart';
 import Detaill from './page/Detaill';
 import Modification from './page/Modification';
 import Product from './page/Product';
+import Categories from './page/Categories';
 
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
@@ -59,6 +60,7 @@ function App() {
         <Route path='/Detaill' element={<Detaill/>}/>
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/Product' element={<Product/>}/>
+        <Route path='/Categories' element={<Categories/>}/>
       </Routes>
       </div>
       <footer>
