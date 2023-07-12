@@ -49,7 +49,7 @@ function Categories() {
   })
 
 
-    // const [seqCont, setSeqCont] = useState(cateSeq.cateseq)
+    const [seqCont, setSeqCont] = useState(cateSeq.cateseq)
 
     let img = 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjhfODAg%2FMDAxNjgyNjE3OTkyNjc1.D4SOrpmGLIGDY-7HY9KKFE_PKmUuPVPQJEl9gydLuqIg.Llyl_6G72u3AupkuaXb3C0sreG-uY0j_te0eydipk5Ig.JPEG.2zii118%2FIMG_5105.jpg&type=a340'
     
@@ -62,7 +62,7 @@ function Categories() {
         </div>
     
         {/* <ContextTest.provider value = {{barcodeCont, setBarcodeCont}}> */}
-        <TodayProd barcode = {cateSeq} img1 ={img}></TodayProd>
+        <TodayProd seq = {seqCont} img1 ={img}></TodayProd>
         {/* </ContextTest.provider> */}
     </div>
   )
