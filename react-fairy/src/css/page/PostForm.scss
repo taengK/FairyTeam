@@ -7,6 +7,7 @@
         font-size: 1.5rem;
         text-align: center;
         padding: 10px;
+
         >h5 {
             font-weight: bold;
             text-align-last: left;
@@ -19,9 +20,8 @@
     }
 }
 
-/****************************************************************/
+/*************************PostformBox***************************************/
 .PostFormBox {
-    border: 1px solid #d3d3d3;
     width: 100%;
     margin: 30px auto 30px auto;
 
@@ -33,59 +33,112 @@
     }
 }
 
-.PostFormLabel2 {
+//설명
+.PFTextArea {
+    width: 100%;
+    height: 20vh;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+//가격
+.PFPrice {
+    width: 180px;
+}
+
+//상태
+.PFCheck {
+    display: flex;
+
+    >li {
+        #PFCheckbuy2 {
+            margin-left: 20px;
+        }
+    }
+}
+
+//이미지
+.PFL2Box {
     >ul {
-        li {
-            &:nth-child(2) {
-                width: 100%;
+        width: 100%;
+        >li {
+            border: 1px solid #000;
+            &:first-child {
+                width: 30%;
+                background-color: #fc0;
+                position: relative;
+                >input {
+                    width: 29%;
+                    margin: 100px 100px 100px 100px;
+                    &::after {
+                        position: absolute;
+                        content: '하 이 이미지는 추가하면 화면에 보이게는 또 어떻게하지 DB가 하겠지? 흐흐흐흐';
+                        width: 90%; height: 90%;
+                        background-color: #0f0;
+                        top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
+                        cursor: pointer;
+                    }
+                }
+            }
+            &:last-child {
+                width: 70%;
                 padding: 30px;
+
                 p {
                     color: rgb(230, 21, 21);
                     line-height: 25px;
                 }
             }
         }
+
     }
 }
 
-.PFTextArea {
-    width: 100%;height: 20vh;
-}
-.PFPrice {
-    width: 180px;
-}
+//카테고리
 .PFCtegory {
     height: 30vh;
 }
 
+//거래지역
 .PFMapBox {
     display: flex;
-    gap: 20px;    
+    gap: 20px;
+
     >li {
         width: 100%;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             .PFMap {
-                
+
                 >input {
-                    
-                    width: 100%;height: 30px;
+
+                    width: 100%;
+                    height: 30px;
                     margin-top: 20px;
                     padding: 20px;
                 }
+
                 .PFMapCtt {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-rows: repeat(2, 1fr);
                     grid-gap: 10px;
                     gap: 20px;
+
                     >li {
                         border: 1px solid #000;
-                        width: 100%;height: 50px;
+                        width: 100%;
+                        height: 50px;
                         border-radius: 5px;
                         overflow: hidden;
-                        >p{
+
+                        >p {
                             text-align: center;
                             line-height: 50px;
+
                             &:hover {
                                 background-color: #fc0;
                                 cursor: pointer;
@@ -95,13 +148,22 @@
                 }
             }
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
             width: 100%;
-            > iframe {
-                width: 500px; height: 300px;
+
+            >iframe {
+                width: 500px;
+                height: 300px;
                 margin-left: auto;
             }
         }
     }
 }
 
+//submit
+.PFButton {
+    width: 250px;
+    margin: 30px 0 0 40%;
+    border: 1px solid #000;
+}
