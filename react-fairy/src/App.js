@@ -12,6 +12,8 @@ import Mypage from './page/Mypage';
 import Cart from './page/Cart';
 import Detaill from './page/Detaill';
 import Modification from './page/Modification';
+import Product from './page/Product';
+import Categories from './page/Categories';
 
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
@@ -19,10 +21,10 @@ import {Routes,Route} from 'react-router-dom' //라우터돔
 // *******Hold.css******
 import './css/Common.css'
 import './css/Hold/Head.css'
-import './css//Hold/NavList.css'
-import './css//Hold/Footer.css'
+import './css/css/NavList.css'
+import './css/Hold/Footer.css'
 // *******Page.css******
-import './css/page/Main.css'
+import './css/css/Main.css'
 import './css/page/Login.css'
 import './css/page/Signup.css'
 import './css/page/Detaill.css'
@@ -57,6 +59,8 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/Detaill' element={<Detaill/>}/>
         <Route path='/Modification' element={<Modification/>}/>
+        <Route path='/Product' element={<Product/>}/>
+        <Route path='/Categories' element={<Categories/>}/>
       </Routes>
       </div>
       <footer>
