@@ -31,7 +31,7 @@ import './css/page/Signup.css'
 import './css/page/Detaill.css'
 import './css/page/cart.css'
 import './css/page/Modification.css'
-import './css/page/myPage.css'
+import './css/page/Mypage.css'
 import './css/page/PostForm.css'
 
 
