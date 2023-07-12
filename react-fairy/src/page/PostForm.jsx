@@ -186,124 +186,100 @@ function PostForm() {
         <ul className='PFInnerBox'>
           <li className='df'>
             <div className='PostFormLabel1'>
-              상품이미지
-            </div>
-            <div className='PostFormLabel2'>
-              <ul className='df'>
-                <li className='PostFromLabel1'>
-                  <input type="file" accept='image/jpg, image/jpeg, image/png' />
-                </li>
-                <li>
-                  <b>
-                    * 상품 이미지는 640x640에 최적화 되어 있습니다.</b><br />
-                  - 상품 이미지는 PC에서는 1:1, 모바일에서는 1:1.23 비율로 보여집니다.<br />
-                  - 이미지는 상품 등록 시 정사각형으로 잘려서 등록됩니다.<br />
-                  - 이미지를 클릭할 경우 원본 이미지를 확인할 수 있습니다.<br />
-                  - 이미지를 클릭 후 이동하여 등록순서를 변경할 수 있습니다.<br />
-                  - 큰 이미지일 경우 이미지가 깨지는 경우가 발생할 수 있습니다.<br />
-                  최대 지원 사이즈인 640 X 640으로 리사이즈 해서 올려주세요.(개당 이미지 최대 10M)
-                </li>
-              </ul>
-            </div>
-          </li>
-
-
-
-          <li className='df'>
-            <div className='PostFormLabel1'>
-              제목
+              <h5>제목</h5>
             </div>
             <div className='PostFormLabel2'>
               <Row className='row1 rowch' >
                 <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Label>아이디</Form.Label>
-                  <Form.Control type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef} />
-                  <Button onClick={idCheck1} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>
+                  <Form.Control type="text" placeholder="상품 제목을 입력해주세요" ref={idRef} />
                 </Form.Group>
               </Row>
             </div>
           </li>
-
-
           <li className='df'>
             <div className='PostFormLabel1'>
-              카테고리
+            <h5>설명</h5>
+            </div>
+            <div className='PostFormLabel2'>
+              <Row className='row1'>
+                <Form.Group as={Col} controlId="formGridNick">
+                  <Form.Control type="text" placeholder="여러 장의 상품 사진과 구입 연도, 브랜드, 사용감, 하자 유무 등 구매자에게 필요한 정보를 꼭 포함해 주세요.(10자이상)" ref={nickRef} />
+                </Form.Group>
+              </Row>
+            </div>
+          </li>
+          <li className='df'>
+            <div className='PostFormLabel1'>
+            <h5>가격</h5>
+            </div>
+            <div className='PostFormLabel2'>
+              <Row className='row1'>
+                <Form.Group as={Col} controlId="formGridName">
+                  <Form.Control type="text" placeholder="숫자만 입력하세요" ref={nameRef} />
+                </Form.Group>
+              </Row>
+            </div>
+          </li>
+          <li className='df'>
+            <div className='PostFormLabel1'>
+            <h5>상태</h5>
+            </div>
+            <div className='PostFormLabel2'>
+            <Form.Group className='row1 df' id="formGridCheckbox">
+              <Form.Check type="checkbox" label="새상품" />
+              <Form.Check type="checkbox" label="중고상품" />
+            </Form.Group>
+            </div>
+          </li>
+          <li className='df'>
+            <div className='PostFormLabel1'>
+              <h5>상품이미지</h5>
+            </div>
+            <div className='PostFormLabel2'>
+              <ul className='df'>
+                <li className='PFImgBox'>
+                  <input type="file" accept='image/jpg, image/jpeg, image/png' />
+                </li>
+                <li>
+                  <p>
+                    <b>* 상품 이미지는 640x640에 최적화 되어 있습니다.</b><br />
+                    - 상품 이미지는 PC에서는 1:1, 모바일에서는 1:1.23 비율로 보여집니다.<br />
+                    - 이미지는 상품 등록 시 정사각형으로 잘려서 등록됩니다.<br />
+                    - 이미지를 클릭할 경우 원본 이미지를 확인할 수 있습니다.<br />
+                    - 이미지를 클릭 후 이동하여 등록순서를 변경할 수 있습니다.<br />
+                    - 큰 이미지일 경우 이미지가 깨지는 경우가 발생할 수 있습니다.<br />
+                    최대 지원 사이즈인 640 X 640으로 리사이즈 해서 올려주세요.(개당 이미지 최대 10M)
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li className='df'>
+            <div className='PostFormLabel1'>
+            <h5>카테고리</h5>
             </div>
             <div className='PostFormLabel2'>
               <Row className='row1' >
                 <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Label><p>비밀번호 입력</p></Form.Label>
                   <Form.Control type="password" placeholder="비밀번호를 입력하세요 (6자 이상)" ref={pwRef} />
                 </Form.Group>
               </Row>
             </div>
           </li>
-
           <li className='df'>
             <div className='PostFormLabel1'>
-              거래지역
+            <h5>거래지역</h5>
             </div>
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group className="mb-3" controlId="formGridAddress1">
-                  <Form.Label><p>e-mail</p></Form.Label>
                   <Form.Control placeholder="" ref={addRef} />
                 </Form.Group>
               </Row>
             </div>
           </li>
-
-
-          <li className='df'>
-            <div className='PostFormLabel1'>
-              상태
-            </div>
-            <div className='PostFormLabel2'>
-              <Row className='row1'>
-                <Form.Group as={Col} controlId="formGridPasswordck">
-                  <Form.Label><p>비밀번호 확인</p></Form.Label>
-                  <Form.Control type="password" placeholder="비밀번호를 다시 입력하세요" ref={cpwRef} />
-                </Form.Group>
-              </Row>
-            </div>
-          </li>
-
-
-          <li className='df'>
-            <div className='PostFormLabel1'>
-              가격
-            </div>
-            <div className='PostFormLabel2'>
-              <Row className='row1'>
-                <Form.Group as={Col} controlId="formGridName">
-                  <Form.Label><p>이름</p></Form.Label>
-                  <Form.Control type="text" placeholder="이름을 입력하세요" ref={nameRef} />
-                </Form.Group>
-              </Row>
-            </div>
-          </li>
-
-
-          <li className='df'>
-            <div className='PostFormLabel1'>
-              설명
-            </div>
-            <div className='PostFormLabel2'>
-              <Row className='row1'>
-                <Form.Group as={Col} controlId="formGridNick">
-                  <Form.Label><p>닉네임</p></Form.Label>
-                  <Form.Control type="text" placeholder="닉네임을 입력하세요" ref={nickRef} />
-                </Form.Group>
-              </Row>
-            </div>
-          </li>
-
         </ul>
-
-
-        <Form.Group className='row1' id="formGridCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+        
 
         <Button className='row1' variant="primary" type="submit" >
           Submit
