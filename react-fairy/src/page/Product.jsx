@@ -19,7 +19,7 @@ function Product() {
 
     useEffect(()=>{
         if(userId.id !== undefined ){
-          axios.post('http://localhost:8888/user/product',{
+          axios.post('http://localhost:8888/db/product',{
             userId : userId
           })
           .then((res)=>{

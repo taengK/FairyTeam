@@ -1,14 +1,26 @@
 import React from 'react'
 
-const TodayProd = ({img1, seq}) => {
-  return (
-    <div>
-<h2>오늘의 물품상품</h2>
-          <ul>
+const Shoes = () => {
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    return (
+    <div className='Main'>
+      <section className='Main-sec02'>
+
+         <ul>
               <li>
                 
-                <a href ="./product/:"  ><img src = {img1}/><p></p></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>{seq}</h3><p>CTT</p></a>
+                <a href ="./product/:"  ><img src = 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjhfODAg%2FMDAxNjgyNjE3OTkyNjc1.D4SOrpmGLIGDY-7HY9KKFE_PKmUuPVPQJEl9gydLuqIg.Llyl_6G72u3AupkuaXb3C0sreG-uY0j_te0eydipk5Ig.JPEG.2zii118%2FIMG_5105.jpg&type=a340'/><p></p></a>
+                <a href="#!" data-name="VIEW MORE" className="btn"><h3>afaf</h3><p>CTT</p></a>
               </li>
               <li>
                 <a href="#!"><img src='https://picsum.photos/id/251/150/150' alt="준비중.." /></a>
@@ -88,10 +100,9 @@ const TodayProd = ({img1, seq}) => {
               </li>
               
           </ul>
-
-          <button></button>
+          </section>
     </div>
   )
 }
 
-export default TodayProd
+export default Shoes
