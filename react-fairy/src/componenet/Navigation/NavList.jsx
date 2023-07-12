@@ -1,6 +1,7 @@
 
 import { useRef, useState } from 'react';
 
+import { Link } from 'react-router-dom';
 
 const NavList = () => {
   const hamElements = useRef(null);
@@ -19,7 +20,7 @@ const NavList = () => {
           <i class="fa-solid fa-bars"></i><p>카테고리</p>
             </div>
             <ul class="gnb">
-              <li><a href="">여성의류</a>
+              <li><Link to="http://localhost:3000/categories/110">여성의류</Link>
                   <div class="subBox">
                     <ul>
                       <li>

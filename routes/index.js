@@ -80,7 +80,7 @@ router.post('/user/login',(req, res)=>{
 
 // product
 
-router.post('/user/categories', (req, res)=>{
+router.post('/db/categories', (req, res)=>{
     let sql = "select category_seq from product_info where prod_name = ?"
     conn.query(sql, [req.body.userId.id], (err, rows)=>{
         if (rows){
@@ -97,7 +97,7 @@ router.post('/user/categories', (req, res)=>{
 
 // product
 
-router.post('/user/product', (req, res)=>{
+router.post('/db/product', (req, res)=>{
     // console.log('idcheck Router', req.body);
     // 중복체크 시작
     let sql = "select prod_barcode from product_info where prod_name = ?"

@@ -10,12 +10,13 @@ function Categories() {
     const idRef = useRef()
 
     const [userId, setUserId] = useState({})
-    const [catSeq, setCatSeq] = useState({})
+    const [cateSeq, setCateSeq] = useState({})
 
     const test =(e)=>{
         e.preventDefault();
         
         setUserId({id : idRef.current.value})
+        
     }
     
 
@@ -48,10 +49,10 @@ function Categories() {
   })
 
 
-    const [barcodeCont, setBarcodeCont] = useState(prodBarcode)
+    // const [seqCont, setSeqCont] = useState(cateSeq.cateseq)
 
     let img = 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjhfODAg%2FMDAxNjgyNjE3OTkyNjc1.D4SOrpmGLIGDY-7HY9KKFE_PKmUuPVPQJEl9gydLuqIg.Llyl_6G72u3AupkuaXb3C0sreG-uY0j_te0eydipk5Ig.JPEG.2zii118%2FIMG_5105.jpg&type=a340'
-    const barcode = prodBarcode.barcode;
+    
     
     return (
     <div>
@@ -61,7 +62,7 @@ function Categories() {
         </div>
     
         {/* <ContextTest.provider value = {{barcodeCont, setBarcodeCont}}> */}
-        <TodayProd barcode = {barcode} img1 ={img}></TodayProd>
+        <TodayProd barcode = {cateSeq} img1 ={img}></TodayProd>
         {/* </ContextTest.provider> */}
     </div>
   )
