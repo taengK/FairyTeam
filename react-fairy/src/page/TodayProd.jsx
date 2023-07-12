@@ -5,8 +5,7 @@ const TodayProd = ({img1, seq}) => {
     <div>
 <h2>오늘의 물품상품</h2>
           <ul>
-              <li>
-                
+              <li>                
                 <a href = {seq} ><img src = {img1}/><p></p></a>
                 <a href="#!" data-name="VIEW MORE" className="btn"><h3>{seq}</h3><p>CTT</p></a>
               </li>
