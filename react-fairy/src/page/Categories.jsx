@@ -10,7 +10,7 @@ function Categories() {
     const idRef = useRef()
 
     const [userId, setUserId] = useState({})
-    const [prodBarcode, setProdBarcode] = useState({})
+    const [catSeq, setCatSeq] = useState({})
 
     const test =(e)=>{
         e.preventDefault();
@@ -36,16 +36,17 @@ function Categories() {
             let topCate = parseInt(cateSeq / 100) * 100
             let midCate = parseInt(cateSeq / 10) * 10
             let botCate = parseInt(cateSeq)
-            const bar = String(topCate) + String(midCate) + String(botCate);
+            const seq = String(topCate) + String(midCate) + String(botCate);
 
-            setProdBarcode({ barcode: bar })
+            setCateSeq({ cateseq: seq })
 
-            nav(`/Categories/${bar}`)
+            nav(`/Categories/${seq}`)
 
           } 
         })
     }
   })
+
 
     const [barcodeCont, setBarcodeCont] = useState(prodBarcode)
 
