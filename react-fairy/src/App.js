@@ -60,6 +60,7 @@ function App() {
         <Route path='/Detaill' element={<Detaill/>}/>
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/Product' element={<Product/>}/>
+        <Route path='/Chat' element={<Chat/>}/>
       </Routes>
       </div>
       <footer>
