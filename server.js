@@ -1,30 +1,32 @@
  const express = require('express')
  const app = express()
  const indexRouter = require('./routes')
- const userRouter = require('./routes/user')
- const cateRouter = require('./routes/category')
- const prodRouter = require('./routes/product')
  const path = require('path')
  const cors = require('cors')
  const bodyParser = require('body-parser')
 
+
+
  app.set('port',process.env.PORT || 8888)
  
  app.use(bodyParser.urlencoded({extended:true}))
-
+ 
  app.use(express.json())
  app.use(cors())
+  
 
 
  app.use(express.static(path.join(__dirname,'react-fairy/build')))
  
  app.use('/', indexRouter)
 
- app.use('/', userRouter)
 
- app.use('/', prodRouter)
+
+//  app.use('/', userRouter)
+
+//  app.use('/', prodRouter)
  
- app.use('/', cateRouter)
+//  app.use('/', cateRouter)
 
  // category test
 //  app.get('/path/:id', (req, res)=>{
