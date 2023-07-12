@@ -25,6 +25,7 @@
         top: -40px; 
         padding-top: 40px;
         position: relative;
+        
         >li {
             display: none;
             >a {
@@ -119,12 +120,6 @@
                     transform: translateX(20%);
                 }
             }
-<<<<<<< HEAD
-            &:nth-child(1){
-                margin-left: 30px;
-            }
-=======
->>>>>>> ea2a68046d85ef2acbb199193d89b75c3df55e64
         }
     }
 }
