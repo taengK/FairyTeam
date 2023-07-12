@@ -191,7 +191,7 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1 rowch' >
                 <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Control type="text" placeholder="상품 제목을 입력해주세요" ref={idRef} />
+                  <Form.Control type="text" placeholder="상품 이름을 입력해주세요" ref={idRef} />
                 </Form.Group>
               </Row>
             </div>
@@ -203,7 +203,8 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridNick">
-                  <Form.Control className='PFTextArea' type="textarea" placeholder="이 내용에서 버그발견 엔터를누르면 오류가 뜸/심지어 글자도 넘어가 줄 바꿈이안돼 여러 장의 상품 사진과 구입 연도, 브랜드, 사용감, 하자 유무 등 구매자에게 필요한 정보를 꼭 포함해 주세요.(10자이상)" ref={nickRef} />
+                  <textarea className='PFTextArea' 
+                  placeholder="여러 장의 상품 사진과 구입 연도, 브랜드, 사용감, 하자 유무 등 구매자에게 필요한 정보를 꼭 포함해 주세요.(10자이상)" ></textarea>
                 </Form.Group>
               </Row>
             </div>
@@ -215,7 +216,7 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridName">
-                  <Form.Control className='PFPrice' type="text" placeholder="숫자만 입력하세요" ref={nameRef} />
+                  <Form.Control className='PFPrice' type="number" placeholder="숫자만 입력하세요" ref={nameRef} />
                 </Form.Group>
               </Row>
             </div>
@@ -225,17 +226,22 @@ function PostForm() {
               <h5>상태</h5>
             </div>
             <div className='PostFormLabel2'>
-              <Form.Group className='row1 df' id="formGridCheckbox">
-                <Form.Check type="checkbox" label="새상품" />
-                <Form.Check type="checkbox" label="중고상품" />
-              </Form.Group>
+              <ul class="PFCheck">
+                <li>
+                    <input type="radio" id="PFCheckbuy1" name="buy1"/>
+                    <label for="PFCheckbuy1">새상품</label>
+                    <input type="radio" id="PFCheckbuy2" name="buy1"/>
+                    <label for="PFCheckbuy2">중고상품</label>
+                </li>
+               
+              </ul>
             </div>
           </li>
           <li className='df'>
             <div className='PostFormLabel1'>
               <h5>상품이미지</h5>
             </div>
-            <div className='PostFormLabel2'>
+            <div className='PostFormLabel2 PFL2Box'>
               <ul className='df'>
                 <li className='PFImgBox'>
                   <input type="file" accept='image/jpg, image/jpeg, image/png' />
@@ -261,7 +267,7 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1' >
                 <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Control className='PFCtegory' type="textarea" placeholder="비밀번호를 입력하세요 (6자 이상)" ref={pwRef} />
+                  <Form.Control className='PFCtegory' type="textarea" placeholder="카테고리 이거 또 어떻게만드냐 이 멍멍이같은 자식같으니라구 멍청이같은 컴퓨터ㄹㄷㅁㄷㄻㄷㄹㅁㅜㄹ" ref={pwRef} />
                 </Form.Group>
               </Row>
             </div>
@@ -293,7 +299,7 @@ function PostForm() {
         </ul>
 
 
-        <Button className='row1' variant="primary" type="submit" >
+        <Button className='row1 PFButton' variant="primary" type="submit" >
           Submit
         </Button>
       </Form>
