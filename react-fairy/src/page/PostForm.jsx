@@ -17,7 +17,7 @@ const PostForm = () => {
 
   return (
     
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <label htmlFor="title">제목</label>
       <input
         type="text"
@@ -74,7 +74,7 @@ const PostForm = () => {
       />
 
       <button type="submit">등록</button>
-    </form>
+    </Form>
   );
 };
 
