@@ -66,7 +66,7 @@ function App() {
         <Route path='/Product' element={<Product/>}/>
         <Route path='/Categories' element={<Categories/>}/>
         <Route path='/categories/100' element ={<WomanClothes/>}/>
-        <Route path='/categories/200' element ={<ManClothes/>}/>
+        {/* <Route path='/categories/200' element ={<ManClothes/>}/>
         <Route path='/categories/300' element ={<Shoes/>}/>
         <Route path='/categories/400' element ={<WomanClothes/>}/>
         <Route path='/categories/500' element ={<WomanClothes/>}/>
@@ -75,7 +75,7 @@ function App() {
         <Route path='/categories/800' element ={<WomanClothes/>}/>
         <Route path='/categories/900' element ={<WomanClothes/>}/>
         <Route path='/categories/1000' element ={<WomanClothes/>}/>
-        <Route path='/categories/1100' element ={<WomanClothes/>}/>
+        <Route path='/categories/1100' element ={<WomanClothes/>}/> */}
         <Route path='/PostForm' element={<PostForm/>}/>
       </Routes>
       </div>

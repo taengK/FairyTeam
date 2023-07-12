@@ -7,7 +7,6 @@
         font-size: 1.5rem;
         text-align: center;
         padding: 10px;
-
         >h5 {
             font-weight: bold;
             text-align-last: left;
@@ -40,8 +39,69 @@
             &:nth-child(2) {
                 width: 100%;
                 padding: 30px;
-                border: 1px solid #000;
+                p {
+                    color: rgb(230, 21, 21);
+                    line-height: 25px;
+                }
             }
         }
     }
 }
+
+.PFTextArea {
+    width: 100%;height: 20vh;
+}
+.PFPrice {
+    width: 180px;
+}
+.PFCtegory {
+    height: 30vh;
+}
+
+.PFMapBox {
+    display: flex;
+    gap: 20px;    
+    >li {
+        width: 100%;
+        &:nth-child(1){
+            .PFMap {
+                
+                >input {
+                    
+                    width: 100%;height: 30px;
+                    margin-top: 20px;
+                    padding: 20px;
+                }
+                .PFMapCtt {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-gap: 10px;
+                    gap: 20px;
+                    >li {
+                        border: 1px solid #000;
+                        width: 100%;height: 50px;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        >p{
+                            text-align: center;
+                            line-height: 50px;
+                            &:hover {
+                                background-color: #fc0;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(2){
+            width: 100%;
+            > iframe {
+                width: 500px; height: 300px;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
