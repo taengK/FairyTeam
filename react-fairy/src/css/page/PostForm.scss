@@ -1,24 +1,32 @@
 /***************************ShareArea*************************************/
 .df {
     display: flex;
-    .PostFormLabel1{
+
+    .PostFormLabel1 {
         width: 10.5rem;
-        border: 1px solid #f00;
         font-size: 1.5rem;
         text-align: center;
         padding: 10px;
+
+        >h5 {
+            font-weight: bold;
+            text-align-last: left;
+        }
     }
-    .PostFormLabel2{
+
+    .PostFormLabel2 {
         width: 100%;
-        border: 1px solid #000;
+        margin: 15px;
     }
 }
+
 /****************************************************************/
-.PostFormBox{
+.PostFormBox {
     border: 1px solid #d3d3d3;
     width: 100%;
     margin: 30px auto 30px auto;
-    >form{
+
+    >form {
         h1 {
             margin-bottom: 30px;
             border-bottom: 1px solid #000;
@@ -26,19 +34,14 @@
     }
 }
 
-.PFInnerBox  {
-    >li {
-        .PostFormLabel {
-            border: 1px solid #000;
+.PostFormLabel2 {
+    >ul {
+        li {
+            &:nth-child(2) {
+                width: 100%;
+                padding: 30px;
+                border: 1px solid #000;
+            }
         }
     }
 }
-.PostFromLabel1 {
-    border: 1px solid #f00;
-    
-    >input {
-        
-        border: 1px solid #000;
-    }
-}
-    

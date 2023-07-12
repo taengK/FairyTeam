@@ -4,14 +4,18 @@
 }
 .df .PostFormLabel1 {
   width: 10.5rem;
-  border: 1px solid #f00;
   font-size: 1.5rem;
   text-align: center;
   padding: 10px;
 }
+.df .PostFormLabel1 > h5 {
+  font-weight: bold;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
 .df .PostFormLabel2 {
   width: 100%;
-  border: 1px solid #000;
+  margin: 15px;
 }
 
 /****************************************************************/
@@ -25,13 +29,8 @@
   border-bottom: 1px solid #000;
 }
 
-.PFInnerBox > li .PostFormLabel {
-  border: 1px solid #000;
-}
-
-.PostFromLabel1 {
-  border: 1px solid #f00;
-}
-.PostFromLabel1 > input {
+.PostFormLabel2 > ul li:nth-child(2) {
+  width: 100%;
+  padding: 30px;
   border: 1px solid #000;
 }/*# sourceMappingURL=PostForm.css.map */
