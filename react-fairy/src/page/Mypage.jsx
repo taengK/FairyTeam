@@ -40,6 +40,7 @@ const Mypage = () => {
           <div class="title">
             주문/배송조회
           </div>
+          
           <div class="status">
 
             <div class="item">
