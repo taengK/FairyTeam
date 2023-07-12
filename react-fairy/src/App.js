@@ -32,6 +32,7 @@ import './css/page/Detaill.css'
 import './css/page/cart.css'
 import './css/page/Modification.css'
 import './css/page/myPage.css'
+import './css/page/PostForm.css'
 
 
 
@@ -61,6 +62,8 @@ function App() {
         <Route path='/Detaill' element={<Detaill/>}/>
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/Product' element={<Product/>}/>
+        <Route path='/Categories' element={<Categories/>}/>
+        <Route path='/PostForm' element={<PostForm/>}/>
       </Routes>
       </div>
       <footer>
