@@ -15,7 +15,7 @@ import Modification from './page/Modification';
 import Product from './page/Product';
 import PostForm from './page/PostForm';
 import Categories from './page/Categories';
-
+import Chat from './page/Chat';
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
 // *************************CSS***********************************************
@@ -32,8 +32,7 @@ import './css/page/Detaill.css'
 import './css/page/cart.css'
 import './css/page/Modification.css'
 import './css/page/myPage.css'
-
-
+import './css/page/chat.css'
 
 
 
@@ -61,6 +60,7 @@ function App() {
         <Route path='/Detaill' element={<Detaill/>}/>
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/Product' element={<Product/>}/>
+        <Route path='/Chat' element={<Chat/>}/>
       </Routes>
       </div>
       <footer>
