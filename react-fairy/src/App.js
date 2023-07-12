@@ -15,6 +15,7 @@ import Modification from './page/Modification';
 import Product from './page/Product';
 import PostForm from './page/PostForm';
 import Categories from './page/Categories';
+import WomanClothes from './componenet/Category/WomanClothes';
 import Chat from './page/Chat';
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
