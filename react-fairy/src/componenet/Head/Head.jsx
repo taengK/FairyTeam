@@ -19,6 +19,7 @@ const Head = () => {
         <li><Link to='/Detaill'><p>상세페이지</p></Link></li>
         <li><Link to='/Modification'><p>수정페이지</p></Link></li>
         <li><Link to='/Product'><p>상품등록</p></Link></li>
+        <li><Link to='/categories'><p>카테고리번호</p></Link></li>
         <li><Link to='/PostForm'><p>게시물작성</p></Link></li>
       </ul>
     </div>
