@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 // test
 
-import './Womantest.css'
-import Womantest2 from './Womantest2';
+import './CategoryCSS.css'
+import CategoryTable from './CategoryTable';
 const WomanClothes = () => {
   
   // useEffect(function, deps)
@@ -16,10 +16,9 @@ const WomanClothes = () => {
 
   const [categorySeq, setCategorySeq] = useState(1);
   const [superCate, setSuperCate] = useState([]);
-  const [prodPhoto, setProdPhoto] = useState({});
-  const [prodName, setProdName] = useState({});
-  const [prodPrice, setProdPrice] = useState({});
-  const [prodBarcode, setProdBarcode] = useState({});
+  
+  
+  // WomanClothes 첫 렌더링 시 데이터 가져오는 useEffect
 
   useEffect(()=>{
     
@@ -32,14 +31,11 @@ const WomanClothes = () => {
       
       if (res.data.result !== undefined) {
         
-        console.log(res.data.result);
-        // setSuperCate('/Detaill/:'+res.data.superCate[0].prod_barcode)
+        // console.log(res.data.result);
+        
         setSuperCate(res.data.result)
         console.log(superCate);
-        // setProdPhoto(res.data.superCate[0].prod_photo)
-        // setProdName(res.data.superCate[0].prod_name)
-        // setProdPrice(res.data.superCate[0].prod_price)
-        // setProdBarcode(res.data.superCate[0].prod_barcode)
+        
 
       } else{
         console.log('nono');
@@ -48,15 +44,11 @@ const WomanClothes = () => {
     
   },[])
   
-//  const barc= superCate.map((item)=>{return item.prod_barcode})
- console.log(superCate);
 
- const barc2 =superCate.map(item => <Womantest2 key={item.prod_barcode}
-  name ={item.prod_name} 
-  price={item.prod_price}
-  photo={item.prod_photo}></Womantest2>)
-  
-  
+// 확인용 로그
+//  console.log(superCate);
+
+ 
   
   
     return (
@@ -66,16 +58,21 @@ const WomanClothes = () => {
             
         <div className='container'>
             {superCate.map(item=>
-                <Womantest2 key={item.prod_barcode}
+                <CategoryTable key={item.prod_barcode}
                 name ={item.prod_name} 
                 price={item.prod_price}
                 photo={item.prod_photo}
-                ></Womantest2>)}
+                ></CategoryTable>)}
         </div>
+        
+        {/* 
+
+          중분류 선택 시 category_seq 가 100이 아니면서            
+
         <h1>MF</h1>
         <div className='container2'>
             {barc2}
-        </div>
+        </div> */}
     </div>
 
 

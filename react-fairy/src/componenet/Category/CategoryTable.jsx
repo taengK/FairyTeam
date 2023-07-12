@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Womantest2 = ( {name, price, photo} ) => {
+const CategoryTable = ( {name, price, photo} ) => {
     /*
         리액트에서 table 생성시
         tbody태그를 넣어주어야 개발자모드에서 에러가 나오지 않음
@@ -11,7 +11,6 @@ const Womantest2 = ( {name, price, photo} ) => {
         <table>
             <tbody>
             <tr>
-                <td></td>
                 <td>{name}</td>
             </tr>
             {/* <tr>
@@ -19,7 +18,6 @@ const Womantest2 = ( {name, price, photo} ) => {
                 <td>{2023-age}</td>
             </tr> */}
             <tr>
-                <td></td>
                 <td>{price}</td>
             </tr>
             {/* <tr>
@@ -32,4 +30,4 @@ const Womantest2 = ( {name, price, photo} ) => {
   )
 }
 
-export default Womantest2
+export default CategoryTable
