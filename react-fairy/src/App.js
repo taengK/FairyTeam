@@ -37,6 +37,16 @@ import './css/page/PostForm.css'
 
 
 import './css/page/chat.css'
+import ManClothes from './componenet/Category/ManClothes';
+import Shoes from './componenet/Category/Shoes';
+import BagWallet from './componenet/Category/BagWallet';
+import HomeApp from './componenet/Category/HomeApp';
+import Sports from './componenet/Category/Sports';
+import Book from './componenet/Category/Book';
+import Digital from './componenet/Category/Digital';
+import Beauty from './componenet/Category/Beauty';
+import Interior from './componenet/Category/Interior';
+import DailySupplies from './componenet/Category/DailySupplies';
 
 
 
@@ -68,14 +78,14 @@ function App() {
         <Route path='/categories/100' element ={<WomanClothes/>}/>
         <Route path='/categories/200' element ={<ManClothes/>}/>
         <Route path='/categories/300' element ={<Shoes/>}/>
-        <Route path='/categories/400' element ={<WomanClothes/>}/>
-        <Route path='/categories/500' element ={<WomanClothes/>}/>
-        <Route path='/categories/600' element ={<WomanClothes/>}/>
-        <Route path='/categories/700' element ={<WomanClothes/>}/>
-        <Route path='/categories/800' element ={<WomanClothes/>}/>
-        <Route path='/categories/900' element ={<WomanClothes/>}/>
-        <Route path='/categories/1000' element ={<WomanClothes/>}/>
-        <Route path='/categories/1100' element ={<WomanClothes/>}/>
+        <Route path='/categories/400' element ={<BagWallet/>}/>
+        <Route path='/categories/500' element ={<Digital/>}/>
+        <Route path='/categories/600' element ={<HomeApp/>}/>
+        <Route path='/categories/700' element ={<Sports/>}/>
+        <Route path='/categories/800' element ={<Book/>}/>
+        <Route path='/categories/900' element ={<Beauty/>}/>
+        <Route path='/categories/1000' element ={<Interior/>}/>
+        <Route path='/categories/1100' element ={<DailySupplies/>}/>
         <Route path='/PostForm' element={<PostForm/>}/>
       </Routes>
       </div>
