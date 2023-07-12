@@ -31,6 +31,7 @@ import './css/page/Detaill.css'
 import './css/page/cart.css'
 import './css/page/Modification.css'
 import './css/page/myPage.css'
+import WomanClothes from './componenet/Category/WomanClothes';
 
 
 
@@ -61,6 +62,7 @@ function App() {
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/Product' element={<Product/>}/>
         <Route path='/Categories' element={<Categories/>}/>
+        <Route path='/WomanClothes/100' element ={<WomanClothes/>}/>
       </Routes>
       </div>
       <footer>

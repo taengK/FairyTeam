@@ -20,7 +20,7 @@ const NavList = () => {
           <i class="fa-solid fa-bars"></i><p>카테고리</p>
             </div>
             <ul class="gnb">
-              <li><Link to="http://localhost:3000/categories/110">여성의류</Link>
+              <li><Link to="/WomanClothes/100">여성의류</Link>
                   <div class="subBox">
                     <ul>
                       <li>
