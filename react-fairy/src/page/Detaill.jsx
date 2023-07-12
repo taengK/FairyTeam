@@ -3,6 +3,15 @@ import axios from 'axios';
 import PaymentComponet from '../js/PaymentComponet';
 
 const Detaill = () => {
+
+  // useEffect(()=>{
+  // },[])
+
+
+
+
+
+
   return (
 
     <div>

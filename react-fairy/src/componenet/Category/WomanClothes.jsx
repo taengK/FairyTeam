@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const WomanClothes = () => {
   
+  // useEffect(function, deps)
+  // deps 가 없으면 항상
+  // deps 가 빈 배열 [] 이면 렌더링 시에 동작함
+  // deps 에 배열이 있으면 배열의 값이 변할 때 동작함
+
+
+  const [topCate, setTopCate] = useState();
   
-  
+  setTopCate(100);
+
+  useEffect(()=>{
+    axios.post('http://localhost:8888/db/categories',{
+      topCate : topCate
+    })
+  },[])
   
   
   
@@ -17,11 +30,14 @@ const WomanClothes = () => {
       <section className='Main-sec02'>
 
          <ul>
+            <a href="/Detaill" >
               <li>
-                
-                <a href ="./product/:"  ><img src = 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MjhfODAg%2FMDAxNjgyNjE3OTkyNjc1.D4SOrpmGLIGDY-7HY9KKFE_PKmUuPVPQJEl9gydLuqIg.Llyl_6G72u3AupkuaXb3C0sreG-uY0j_te0eydipk5Ig.JPEG.2zii118%2FIMG_5105.jpg&type=a340'/><p></p></a>
-                <a href="#!" data-name="VIEW MORE" className="btn"><h3>afaf</h3><p>CTT</p></a>
+                <img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDhfMzgg%2FMDAxNjU3MjY0MjI5MjM1.MuPAFpxxCeTP-fOwcaL-3VapQqPSOc_uAX4AJQdxftMg.bHWQGqo4bdG9dq3BzdB5Nm5Q2Xt967Fl37-0_82mVX4g.JPEG.barbie8368%2F1657264225930.jpg&type=a340' width ={200}height={200}/>
+                <h3 align="center">afaf</h3><p align="center">CTT</p>
               </li>
+            </a>
+
+
               <li>
                 <a href="#!"><img src='https://picsum.photos/id/251/150/150' alt="준비중.." /></a>
                 <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
