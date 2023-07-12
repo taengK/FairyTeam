@@ -19,32 +19,73 @@ const NavList = () => {
           <i class="fa-solid fa-bars"></i><p>카테고리</p>
             </div>
             <ul class="gnb">
-              <li><a href="">menu1</a>
+              <li><a href="">여성의류</a>
                   <div class="subBox">
                     <ul>
                       <li>
-                        <h4>의류</h4>
-                        <p><a href="#">상의</a></p>
-                        <p><a href="#">하의</a></p>
-                        <p><a href="#">시발</a></p>
+                        <h4>아우터</h4>
+                        <p><a href="#">패딩</a></p>
+                        <p><a href="#">점퍼</a></p>
+                        <p><a href="#">코트</a></p>
+                        <p><a href="#">자켓</a></p>
+                        <p><a href="#">가디건</a></p>
+                        <p><a href="#">조끼</a></p>
                       </li>
                       <li>
-                      <h4>의류</h4>
-                        <p><a href="#">상의</a></p>
-                        <p><a href="#">하의</a></p>
-                        <p><a href="#">시발</a></p>
+                      <h4>상의</h4>
+                        <p><a href="#">니트/스웨터</a></p>
+                        <p><a href="#">후드티/후드집업</a></p>
+                        <p><a href="#">맨투맨</a></p>
+                        <p><a href="#">블라우스</a></p>
+                        <p><a href="#">셔츠</a></p>
+                        <p><a href="#">반팔 티셔츠</a></p>
+                        <p><a href="#">긴팔 티셔츠</a></p>
                       </li>
                       <li>
-                      <h4>의류</h4>
-                        <p><a href="#">상의</a></p>
-                        <p><a href="#">하의</a></p>
-                        <p><a href="#">시발</a></p>
+                      <h4>하의</h4>
+                        <p><a href="#">청바지</a></p>
+                        <p><a href="#">슬랙스</a></p>
+                        <p><a href="#">면바지</a></p>
+                        <p><a href="#">반바지</a></p>
+                        <p><a href="#">트레이닝</a></p>
+                        <p><a href="#">레깅스</a></p>
                       </li>
                     </ul>
                   </div>
               </li>
-              <li><a href="">menu2</a>
-                  <div class="subBox">2</div>
+              <li><a href="">남성의류</a>
+                  <div class="subBox">
+                    <ul>
+                      <li>
+                        <h4>아우터</h4>
+                        <p><a href="#">패딩</a></p>
+                        <p><a href="#">점퍼</a></p>
+                        <p><a href="#">코트</a></p>
+                        <p><a href="#">자켓</a></p>
+                        <p><a href="#">가디건</a></p>
+                        <p><a href="#">조끼</a></p>
+                      </li>
+                      <li>
+                      <h4>상의</h4>
+                        <p><a href="#">니트/스웨터</a></p>
+                        <p><a href="#">후드티/후드집업</a></p>
+                        <p><a href="#">맨투맨</a></p>
+                        <p><a href="#">블라우스</a></p>
+                        <p><a href="#">셔츠</a></p>
+                        <p><a href="#">반팔 티셔츠</a></p>
+                        <p><a href="#">긴팔 티셔츠</a></p>
+                      </li>
+                      <li>
+                      <h4>하의</h4>
+                        <p><a href="#">청바지</a></p>
+                        <p><a href="#">슬랙스</a></p>
+                        <p><a href="#">면바지</a></p>
+                        <p><a href="#">반바지</a></p>
+                        <p><a href="#">트레이닝</a></p>
+                        <p><a href="#">레깅스</a></p>
+                      </li>
+                    </ul>
+                  </div>
               </li>
 
               <li><a href="">menu3</a>
