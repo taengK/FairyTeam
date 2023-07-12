@@ -8,15 +8,16 @@ const WomanClothes = () => {
   // deps 에 배열이 있으면 배열의 값이 변할 때 동작함
 
 
-  const [topCate, setTopCate] = useState();
+  // const [topCate, setTopCate] = useState();
   
-  setTopCate(100);
+  // setTopCate(100);
 
-  useEffect(()=>{
-    axios.post('http://localhost:8888/db/categories',{
-      topCate : topCate
-    })
-  },[])
+  // useEffect(()=>{
+  //   axios.post('http://localhost:8888/db/categories',{
+  //     topCate : topCate
+  //   })
+  //   .th
+  // },[])
   
   
   
