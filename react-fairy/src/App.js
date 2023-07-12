@@ -32,7 +32,6 @@ import './css/page/Detaill.css'
 import './css/page/cart.css'
 import './css/page/Modification.css'
 import './css/page/myPage.css'
-import WomanClothes from './componenet/Category/WomanClothes';
 import './css/page/PostForm.css'
 
 
