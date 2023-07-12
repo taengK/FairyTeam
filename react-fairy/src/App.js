@@ -37,6 +37,16 @@ import './css/page/PostForm.css'
 
 
 import './css/page/chat.css'
+import ManClothes from './componenet/Category/ManClothes';
+import Shoes from './componenet/Category/Shoes';
+import BagWallet from './componenet/Category/BagWallet';
+import HomeApp from './componenet/Category/HomeApp';
+import Sports from './componenet/Category/Sports';
+import Book from './componenet/Category/Book';
+import Digital from './componenet/Category/Digital';
+import Beauty from './componenet/Category/Beauty';
+import Interior from './componenet/Category/Interior';
+import DailySupplies from './componenet/Category/DailySupplies';
 
 
 
@@ -75,7 +85,7 @@ function App() {
         <Route path='/categories/800' element ={<WomanClothes/>}/>
         <Route path='/categories/900' element ={<WomanClothes/>}/>
         <Route path='/categories/1000' element ={<WomanClothes/>}/>
-        <Route path='/categories/1100' element ={<WomanClothes/>}/> */}
+        <Route path='/categories/1100' element ={<WomanClothes/>}/>
         <Route path='/PostForm' element={<PostForm/>}/>
       </Routes>
       </div>
