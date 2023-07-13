@@ -67,11 +67,6 @@ const DailySupplies = () => {
      
     </div>
 
-
-   
-
-
-
   )
 }
 
