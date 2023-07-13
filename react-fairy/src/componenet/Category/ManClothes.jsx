@@ -62,25 +62,28 @@ const ManClothes = () => {
   const [superC, setSuperC] = useState([])
 
   // superCate에 값이 들어간 이후로 시점 변경 
-  useEffect(()=>{
-    console.log('supercate', superCate)
-    setSuperC(superCate.filter(item => item.category_seq >= 200 && item.category_seq < 300))
-
-
-    // let superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
-
-    if (searchParams.get('keyword') == 210) {
-      // console.log('keyword 110 enter')
-      setSuperC(superCate.filter(item => item.category_seq >= 210 && item.category_seq < 219))
-    } else if (searchParams.get('keyword') == 120) {
-      setSuperC(superCate.filter(item => item.category_seq >= 220 && item.category_seq < 229))
-    } else if (searchParams.get('keyword') == 130) {
-      setSuperC(superCate.filter(item => item.category_seq >= 230 && item.category_seq < 239))
-    }
+ 
+    
+    useEffect(()=>{
+      console.log('supercate', superCate)
+      setSuperC(superCate.filter(item => item.category_seq >= 200 && item.category_seq < 300))
       
-
-  },[superCate])
-
+      
+      // let superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
+      
+      if (searchParams.get('keyword') == 210) {
+        // console.log('keyword 110 enter')
+        setSuperC(superCate.filter(item => item.category_seq >= 210 && item.category_seq < 219))
+      } else if (searchParams.get('keyword') == 120) {
+        setSuperC(superCate.filter(item => item.category_seq >= 220 && item.category_seq < 229))
+      } else if (searchParams.get('keyword') == 130) {
+        setSuperC(superCate.filter(item => item.category_seq >= 230 && item.category_seq < 239))
+      }
+      
+      
+    },[superCate])
+  
+    
 
 
 

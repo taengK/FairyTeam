@@ -6,7 +6,7 @@ import CategoryTable from './CategoryTable';
 import { useSearchParams } from 'react-router-dom';
 
 
-const WomanClothes = () => {
+const WomanClothes = (props) => {
 
 
 
@@ -43,7 +43,7 @@ const WomanClothes = () => {
       }
     })
     
-  },[])
+  },[props.check])
   
 
 // 확인용 로그

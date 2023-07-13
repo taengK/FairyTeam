@@ -3,13 +3,16 @@ import { useRef, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-const NavList = () => {
+const NavList = (props) => {
   const hamElements = useRef(null);
   const [showHamNav, setShowHamNav] = useState(false);
+ let cnt = 0;
   const handleClick = () => {
     console.log('마우스 클릭 이벤트가 발생했습니다.');
     setShowHamNav(!showHamNav);
     // 추가 작업 수행
+    cnt++;
+    props.chCheck()
   };
 
  //<ul className={`hamNav ${showHamNav ? 'show' : ''}`}>
@@ -24,7 +27,7 @@ const NavList = () => {
                   <div class="subBox">
                     <ul>
                       <li>
-                      <Link to="/categories/100?keyword=110"><h4>아우터</h4></Link>
+                      <Link to="/categories/100?keyword=110"><h4 >아우터</h4></Link>
                         <p><a href="#">패딩</a></p>
                         <p><a href="#">점퍼</a></p>
                         <p><a href="#">코트</a></p>
@@ -33,7 +36,7 @@ const NavList = () => {
                         <p><a href="#">조끼</a></p>
                       </li>
                       <li>
-                      <Link to="/categories/100?keyword=120"><h4>상의</h4></Link>
+                      <Link to="/categories/100?keyword=120"><h4 >상의</h4></Link>
                         <p><a href="#">니트/스웨터</a></p>
                         <p><a href="#">후드티/후드집업</a></p>
                         <p><a href="#">맨투맨</a></p>
