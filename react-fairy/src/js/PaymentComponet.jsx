@@ -58,11 +58,19 @@ const PaymentComponet = () => {
   return (
   <div>
     
-    <div class="button">
-      <input type="button" class="cart" value="장바구니" />
-      <input type="button" class="order" value="결제하기" onClick={requestPay}/>
-      <Link to= '/Chat'><input type="button" class="order" value="채팅하기" />126516</Link>
-    </div>
+    <ul class="DtButton">
+      <li><input type="button" class="cart" value="장바구니" />
+      <i class="fa-solid fa-heart"></i>
+      </li>
+
+      <li>
+        <input type="button" class="order" value="결제하기" onClick={requestPay}/>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </li>
+      
+      <li><Link to= '/Chat'><input type="button" class="DtChat" value="채팅하기" /></Link>
+      <i class="fa-solid fa-comment"></i></li>
+    </ul>
   </div>
 
 
