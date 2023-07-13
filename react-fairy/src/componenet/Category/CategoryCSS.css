@@ -1,20 +1,17 @@
-@charset "UTF-8";
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+.ctgCtn {
+  width: 100%;
+  border: 1px solid #f00;
 }
 
-.Ctgitem {
+.ctgItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(320deg, rgb(250, 250, 250), rgb(95, 105, 242));
-  /* linear-gradient : 그라데이션 주기! */
+  background: linear-gradient(320deg, blue, red);
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  width: 20%;
+  width: 27.5%;
   padding: 2%;
   margin: 0.5%;
 }
@@ -39,6 +36,7 @@ td {
 tr > td:nth-child(1) {
   width: 30%;
 }
+
 tr > td:nth-child(2) {
   width: 70%;
 }/*# sourceMappingURL=CategoryCSS.css.map */

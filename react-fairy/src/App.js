@@ -70,17 +70,18 @@ function App() {
 
   const [check, setCheck] = useState(0);
   return (
-    <div id='con'>
-      <div id='untilMain'>
-        <div className='HN'>
-          <header>
+    <div id='con' >
+      <div id='untilMain'  >
+        <div className='HN' >
+          <header >
             <Head />
           </header>
           <nav>
             <NavList chCheck={() => setCheck(check + 1)} />
           </nav>
         </div>
-        </div>
+      </div>
+      <main>
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/signup' element={<SignUp />} />
@@ -107,11 +108,10 @@ function App() {
           <Route path='/categories/1000' element={<Interior check={check} />} />
           <Route path='/categories/1100' element={<DailySupplies check={check} />} />
         </Routes>
-        
-      <footer>
-        <Footer />
-      </footer>
-
+        </main>
+        <footer>
+          <Footer />
+        </footer>
     </div>
 
 
