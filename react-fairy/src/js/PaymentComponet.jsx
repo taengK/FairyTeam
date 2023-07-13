@@ -61,7 +61,7 @@ const PaymentComponet = () => {
     <div class="button">
       <input type="button" class="cart" value="장바구니" />
       <input type="button" class="order" value="결제하기" onClick={requestPay}/>
-      <Link to= '/Chat'><input type="button" class="order" value="채팅하기" /></Link>
+      <Link to= '/Chat'><input type="button" class="order" value="채팅하기" />126516</Link>
     </div>
   </div>
 
