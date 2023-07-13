@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-
-// test
-
 import './CategoryCSS.css'
 import CategoryTable from './CategoryTable';
-const WomanClothes = () => {
-  
+import { useSearchParams } from 'react-router-dom';
+
+
+const ManClothes = () => {
+
+
+
   // useEffect(function, deps)
   // deps 가 없으면 항상
   // deps 가 빈 배열 [] 이면 렌더링 시에 동작함
@@ -16,14 +18,14 @@ const WomanClothes = () => {
 
   const [categorySeq, setCategorySeq] = useState();
   const [superCate, setSuperCate] = useState([]);
-  
-  
+
+
   // WomanClothes 첫 렌더링 시 데이터 가져오는 useEffect
 
-  useEffect(()=>{
-    
-    axios.post('http://localhost:8888/db/categories',{
-      categorySeq : categorySeq
+  useEffect(() => {
+
+    axios.post('http://localhost:8888/db/categories', {
+      categorySeq: categorySeq
     })
     .then((res)=>{
       
@@ -32,6 +34,7 @@ const WomanClothes = () => {
         console.log(res.data.result);
         
         setSuperCate(res.data.result)
+        
         console.log(superCate);
         
 
@@ -46,35 +49,69 @@ const WomanClothes = () => {
 // 확인용 로그
 //  console.log(superCate);
 
- const superC = superCate.filter(item=>item.super_category === 200)
+  // }
+  // else if(/categories/100110){
+  //   const superC = superCate.filter(item=>item.category_seq >= 110 && item.category_seq < 119)
+  // }
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get('keyword'))
 
+  //     const [superC, setSuperC] = useState([])
+  //     setSuperC(새로운 바꿔야하는 배열 )
   
-  
-    return (
+  const [superC, setSuperC] = useState([])
+
+  // superCate에 값이 들어간 이후로 시점 변경 
+ 
+    
+    useEffect(()=>{
+      console.log('supercate', superCate)
+      setSuperC(superCate.filter(item => item.category_seq >= 200 && item.category_seq < 300))
       
-      //test start
-      <div>
-            
-        <div className='container'>
-            {superC.map(item=>
-                <CategoryTable key={item.prod_barcode}
-                name ={item.prod_name} 
-                price={item.prod_price}
-                photo={item.prod_photo}
-                ></CategoryTable>)}
-        </div>
-        
-       
+      
+      // let superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
+      
+      if (searchParams.get('keyword') == 210) {
+        // console.log('keyword 110 enter')
+        setSuperC(superCate.filter(item => item.category_seq >= 210 && item.category_seq < 219))
+      } else if (searchParams.get('keyword') == 120) {
+        setSuperC(superCate.filter(item => item.category_seq >= 220 && item.category_seq < 229))
+      } else if (searchParams.get('keyword') == 130) {
+        setSuperC(superCate.filter(item => item.category_seq >= 230 && item.category_seq < 239))
+      }
+      
+      
+    },[superCate])
+  
+    
 
-          {/* 중분류 선택 시 category_seq 가 100이 아니면서 */}
 
-     
+
+  return (
+
+    //test start
+    <div>
+
+      <div className='container'>
+        {superC.map(item =>
+          <CategoryTable key={item.prod_barcode}
+            name={item.prod_name}
+            price={item.prod_price}
+            photo={item.prod_photo}
+          ></CategoryTable>)}
+      </div>
+
+      {/* 
+
+          중분류 선택 시 category_seq 가 100이 아니면서
+
+        <h1>MF</h1>
+        <div className='container2'>
+            {barc2}
+        </div> */}
     </div>
-
-
-              // test end
 
   )
 }
 
-export default WomanClothes
+export default ManClothes

@@ -14,7 +14,7 @@ import Detaill from './page/Detaill';
 import Modification from './page/Modification';
 import PostForm from './page/PostForm';
 import Categories from './page/Categories';
-// import Chat from './page/Chat';
+import Chat from './page/Chat';
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
 // *************************CSS***********************************************
@@ -32,6 +32,7 @@ import './css/page/cart.css'
 import './css/page/Modification.css'
 import './css/page/myPage.css'
 import './css/page/PostForm.css'
+import './css/page/Kakaomap.css'
 
 
 import './css/page/chat.css'
@@ -50,12 +51,14 @@ import Interior from './componenet/Category/Interior';
 import DailySupplies from './componenet/Category/DailySupplies';
 
 
-
+import { useState } from 'react';
 
 
 
 
 function App() {
+
+  const [check, setCheck] = useState(0); 
   return (
     <div id='con'>
       <div id = 'untilMain'>
@@ -63,7 +66,7 @@ function App() {
           <Head/>
       </header>
       <nav>
-          <NavList/>
+          <NavList chCheck={()=>setCheck(check+1)}/>
       </nav>
       
       <Routes>
@@ -75,9 +78,10 @@ function App() {
         <Route path='/Detaill' element={<Detaill/>}/>
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/PostForm' element={<PostForm/>}/>
+        <Route path='/Chat' element={<Chat/>}/>
 {/*************************************Categories************************************************/}     
         <Route path='/Categories' element={<Categories/>}/>
-        <Route path='/categories/100' element ={<WomanClothes/>}/>
+        <Route path='/categories/100' element ={<WomanClothes check={check}/>}/>
         <Route path='/categories/200' element ={<ManClothes/>}/>
         <Route path='/categories/300' element ={<Shoes/>}/>
         <Route path='/categories/400' element ={<BagWallet/>}/>

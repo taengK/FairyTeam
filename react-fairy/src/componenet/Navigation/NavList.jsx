@@ -3,13 +3,16 @@ import { useRef, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-const NavList = () => {
+const NavList = (props) => {
   const hamElements = useRef(null);
   const [showHamNav, setShowHamNav] = useState(false);
+ let cnt = 0;
   const handleClick = () => {
     console.log('마우스 클릭 이벤트가 발생했습니다.');
     setShowHamNav(!showHamNav);
     // 추가 작업 수행
+    cnt++;
+    props.chCheck()
   };
 
  //<ul className={`hamNav ${showHamNav ? 'show' : ''}`}>
@@ -20,12 +23,12 @@ const NavList = () => {
           <i class="fa-solid fa-bars"></i><p>카테고리</p>
             </div>
             <ul class="gnb">
-              <li><Link to="/categories/100">여성의류</Link>
+              <li><Link to="/categories/100?keyword=100">여성의류</Link>
                   <div class="subBox">
                     <ul>
                       <li>
-                        <h4>아우터</h4>
-                        <p><a href="/categories">패딩</a></p>
+                      <Link to="/categories/100?keyword=110"><h4 >아우터</h4></Link>
+                        <p><a href="#">패딩</a></p>
                         <p><a href="#">점퍼</a></p>
                         <p><a href="#">코트</a></p>
                         <p><a href="#">자켓</a></p>
@@ -33,7 +36,7 @@ const NavList = () => {
                         <p><a href="#">조끼</a></p>
                       </li>
                       <li>
-                      <h4>상의</h4>
+                      <Link to="/categories/100?keyword=120"><h4 >상의</h4></Link>
                         <p><a href="#">니트/스웨터</a></p>
                         <p><a href="#">후드티/후드집업</a></p>
                         <p><a href="#">맨투맨</a></p>
@@ -43,7 +46,7 @@ const NavList = () => {
                         <p><a href="#">긴팔 티셔츠</a></p>
                       </li>
                       <li>
-                      <h4>하의</h4>
+                      <Link to="/categories/100?keyword=130"><h4>하의</h4></Link>
                         <p><a href="#">청바지</a></p>
                         <p><a href="#">슬랙스</a></p>
                         <p><a href="#">면바지</a></p>
@@ -54,11 +57,11 @@ const NavList = () => {
                     </ul>
                   </div>
               </li>
-              <li><Link to="/categories/200">남성의류</Link>
+              <li><Link to="/categories/200?keyword=200">남성의류</Link>
                   <div class="subBox">
                     <ul>
                       <li>
-                        <h4>아우터</h4>
+                      <Link to="/categories/200?keyword=210"><h4>아우터</h4></Link>
                         
                         <p><a href="#">패딩</a></p>
                         <p><a href="#">점퍼</a></p>
@@ -69,7 +72,7 @@ const NavList = () => {
                         
                       </li>
                       <li>
-                      <h4>상의</h4>
+                      <Link to="/categories/200?keyword=220"><h4>상의</h4></Link>
                         <p><a href="#">니트/스웨터</a></p>
                         <p><a href="#">후드티/후드집업</a></p>
                         <p><a href="#">맨투맨</a></p>
@@ -79,7 +82,7 @@ const NavList = () => {
                         <p><a href="#">긴팔 티셔츠</a></p>
                       </li>
                       <li>
-                      <h4>하의</h4>
+                      <Link to="/categories/200?keyword=230"><h4>하의</h4></Link>
                         <p><a href="#">청바지</a></p>
                         <p><a href="#">슬랙스</a></p>
                         <p><a href="#">면바지</a></p>
