@@ -43,7 +43,7 @@ const NavList = () => {
                         <p><a href="#">긴팔 티셔츠</a></p>
                       </li>
                       <li>
-                      <Link to="/categories/100?keyword=1130"><h4>하의</h4></Link>
+                      <Link to="/categories/100?keyword=130"><h4>하의</h4></Link>
                         <p><a href="#">청바지</a></p>
                         <p><a href="#">슬랙스</a></p>
                         <p><a href="#">면바지</a></p>
@@ -58,7 +58,7 @@ const NavList = () => {
                   <div class="subBox">
                     <ul>
                       <li>
-                      <Link to="/categories/100?keyword=210"><h4>아우터</h4></Link>
+                      <Link to="/categories/200?keyword=210"><h4>아우터</h4></Link>
                         
                         <p><a href="#">패딩</a></p>
                         <p><a href="#">점퍼</a></p>
@@ -69,7 +69,7 @@ const NavList = () => {
                         
                       </li>
                       <li>
-                      <h4>상의</h4>
+                      <Link to="/categories/200?keyword=220"><h4>상의</h4></Link>
                         <p><a href="#">니트/스웨터</a></p>
                         <p><a href="#">후드티/후드집업</a></p>
                         <p><a href="#">맨투맨</a></p>
@@ -79,7 +79,7 @@ const NavList = () => {
                         <p><a href="#">긴팔 티셔츠</a></p>
                       </li>
                       <li>
-                      <h4>하의</h4>
+                      <Link to="/categories/200?keyword=230"><h4>하의</h4></Link>
                         <p><a href="#">청바지</a></p>
                         <p><a href="#">슬랙스</a></p>
                         <p><a href="#">면바지</a></p>

@@ -70,12 +70,14 @@ const WomanClothes = () => {
     // let superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
 
     if (searchParams.get('keyword') == 110) {
-      console.log('keyword 110 enter')
+      // console.log('keyword 110 enter')
       setSuperC(superCate.filter(item => item.category_seq >= 110 && item.category_seq < 119))
-    } else if (searchParams.get('keyword') == 100) {
-      setSuperC(superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200))
+    } else if (searchParams.get('keyword') == 120) {
+      setSuperC(superCate.filter(item => item.category_seq >= 120 && item.category_seq < 129))
+    } else if (searchParams.get('keyword') == 130) {
+      setSuperC(superCate.filter(item => item.category_seq >= 130 && item.category_seq < 139))
     }
-
+      
 
   },[superCate])
 
