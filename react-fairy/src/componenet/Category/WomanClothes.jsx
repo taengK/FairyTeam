@@ -3,10 +3,19 @@ import axios from 'axios';
 
 import './CategoryCSS.css'
 import CategoryTable from './CategoryTable';
+import { useSearchParams } from 'react-router-dom';
 
 
 const WomanClothes = () => {
-  
+
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get('keyword'))
+
+  if(searchParams.get('keyword')){
+
+  }
+
   // useEffect(function, deps)
   // deps 가 없으면 항상
   // deps 가 빈 배열 [] 이면 렌더링 시에 동작함
@@ -15,14 +24,14 @@ const WomanClothes = () => {
 
   const [categorySeq, setCategorySeq] = useState();
   const [superCate, setSuperCate] = useState([]);
-  
-  
+
+
   // WomanClothes 첫 렌더링 시 데이터 가져오는 useEffect
 
-  useEffect(()=>{
-    
-    axios.post('http://localhost:8888/db/categories',{
-      categorySeq : categorySeq
+  useEffect(() => {
+
+    axios.post('http://localhost:8888/db/categories', {
+      categorySeq: categorySeq
     })
     .then((res)=>{
       
@@ -48,16 +57,16 @@ const WomanClothes = () => {
 
  const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
 
-  // console.log(superC[0].category_seq);
+  console.log(superC[0].category_seq);
   
     return (
       
       //test start
       <div>
-      
+            
         <div className='container'>
             
-           
+            if()
             
             {superC.map(item=>
                 <CategoryTable key={item.prod_barcode}
@@ -70,20 +79,11 @@ const WomanClothes = () => {
      
     </div>
 
-
-              // test end
-
+    
 
 
 
-
-
-
-
-
-
-   
   )
-}
+            }
 
 export default WomanClothes
