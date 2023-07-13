@@ -24,7 +24,7 @@ const NavList = () => {
                   <div class="subBox">
                     <ul>
                       <li>
-                        <h4>아우터</h4>
+                        <h4><Link to="/categories/100110">아우터</Link></h4>
                         <p><a href="/categories">패딩</a></p>
                         <p><a href="#">점퍼</a></p>
                         <p><a href="#">코트</a></p>
