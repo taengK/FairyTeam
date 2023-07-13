@@ -221,161 +221,161 @@ const NavList = (props) => {
                       </li>
                     </ul></div>
               </li>
-              <li><Link to="/categories/700">스포츠/레저</Link>
+              <li><Link to="/categories/700?keyword=700">스포츠/레저</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>골프</h4>
-                        <p><a href="#">골프채</a></p>
-                        <p><a href="#">골프 남성 의류</a></p>
-                        <p><a href="#">골프 여성 의류</a></p>
-                        <p><a href="#">골프백</a></p>
-                        <p><a href="#">골프 공</a></p>
+                      <Link to="/categories/700?keyword=710"><h4>골프</h4></Link>
+                        <p><Link to="/categories/700?keyword=711">골프채</Link></p>
+                        <p><Link to="/categories/700?keyword=712">골프 남성 의류</Link></p>
+                        <p><Link to="/categories/700?keyword=713">골프 여성 의류</Link></p>
+                        <p><Link to="/categories/700?keyword=714">골프백</Link></p>
+                        <p><Link to="/categories/700?keyword=715">골프 공</Link></p>
                       </li>
                       <li>
-                      <h4>캠핑</h4>
-                        <p><a href="#">캠핑 의자/테이블</a></p>
-                        <p><a href="#">캠핑 취사용품</a></p>
-                        <p><a href="#">캠핑 랜턴</a></p>
-                        <p><a href="#">침낭/매트/해먹</a></p>
-                        <p><a href="#">텐트/그늘막</a></p>                      
-                        <p><a href="#">기타 캠핑 용품</a></p>                      
+                      <Link to="/categories/700?keyword=720"><h4>캠핑</h4></Link>
+                        <p><Link to="/categories/700?keyword=721">캠핑 의자/테이블</Link></p>
+                        <p><Link to="/categories/700?keyword=722">캠핑 취사용품</Link></p>
+                        <p><Link to="/categories/700?keyword=723">캠핑 랜턴</Link></p>
+                        <p><Link to="/categories/700?keyword=724">침낭/매트/해먹</Link></p>
+                        <p><Link to="/categories/700?keyword=725">텐트/그늘막</Link></p>                      
+                        <p><Link to="/categories/700?keyword=726">기타 캠핑 용품</Link></p>                      
                       </li>
                       <li>
-                      <h4>낚시</h4>
-                        <p><a href="#">공통 낚시 장비</a></p>
-                        <p><a href="#">바다 낚시</a></p>
-                        <p><a href="#">민물 낚시</a></p>
-                        <p><a href="#">낚시 의류 및 기타 용품</a></p>
+                      <Link to="/categories/700?keyword=730"><h4>낚시</h4></Link>
+                        <p><Link to="/categories/700?keyword=731">공통 낚시 장비</Link></p>
+                        <p><Link to="/categories/700?keyword=732">바다 낚시</Link></p>
+                        <p><Link to="/categories/700?keyword=733">민물 낚시</Link></p>
+                        <p><Link to="/categories/700?keyword=734">낚시 의류 및 기타 용품</Link></p>
                     
                       </li>
                       <li>
-                      <h4>등산/클라이밍</h4>
-                        <p><a href="#">남성 등산복</a></p>
-                        <p><a href="#">여성 등산복</a></p>
-                        <p><a href="#">등산 가방</a></p>
-                        <p><a href="#">암벽/클라이밍</a></p>
-                        <p><a href="#">기타 등산 용품</a></p>
+                      <Link to="/categories/700?keyword=740"><h4>등산/클라이밍</h4></Link>
+                        <p><Link to="/categories/700?keyword=741">남성 등산복</Link></p>
+                        <p><Link to="/categories/700?keyword=742">여성 등산복</Link></p>
+                        <p><Link to="/categories/700?keyword=743">등산 가방</Link></p>
+                        <p><Link to="/categories/700?keyword=744">암벽/클라이밍</Link></p>
+                        <p><Link to="/categories/700?keyword=745">기타 등산 용품</Link></p>
                     
                       </li>
                     </ul></div>
               </li>
 
-              <li><Link to="/categories/800">도서/티켓/문구</Link>
+              <li><Link to="/categories/800?keyword=800">도서/티켓/문구</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>도서</h4>
-                        <p><a href="#">시/소설</a></p>
-                        <p><a href="#">자기계발</a></p>
-                        <p><a href="#">교양/인문</a></p>
-                        <p><a href="#">경제/경영</a></p>
-                        <p><a href="#">예술/디자인</a></p>
-                        <p><a href="#">여행/취미/레저/건강</a></p>
-                        <p><a href="#">과학/IT</a></p>
-                        <p><a href="#">기타</a></p>
+                      <Link to="/categories/800?keyword=810"><h4>도서</h4></Link>
+                        <p><Link to="/categories/800?keyword=811">시/소설</Link></p>
+                        <p><Link to="/categories/800?keyword=812">자기계발</Link></p>
+                        <p><Link to="/categories/800?keyword=813">교양/인문</Link></p>
+                        <p><Link to="/categories/800?keyword=814">경제/경영</Link></p>
+                        <p><Link to="/categories/800?keyword=815">예술/디자인</Link></p>
+                        <p><Link to="/categories/800?keyword=816">여행/취미/레저/건강</Link></p>
+                        <p><Link to="/categories/800?keyword=817">과학/IT</Link></p>
+                        <p><Link to="/categories/800?keyword=818">기타</Link></p>
                       </li>
                       <li>
-                      <h4>상품권</h4>
-                        <p><a href="#">문화/도서</a></p>
-                        <p><a href="#">백화점</a></p>
-                        <p><a href="#">기타 상품권</a></p>
+                      <Link to="/categories/800?keyword=820"><h4>상품권</h4></Link>
+                        <p><Link to="/categories/800?keyword=821">문화/도서</Link></p>
+                        <p><Link to="/categories/800?keyword=822">백화점</Link></p>
+                        <p><Link to="/categories/800?keyword=823">기타 상품권</Link></p>
                      
                       </li>
                     </ul></div>
               </li>
 
-              <li><Link to="/categories/900">뷰티/미용</Link>
+              <li><Link to="/categories/900?keyword=900">뷰티/미용</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>스킨케어</h4>
-                        <p><a href="#">클렌징/스크럽</a></p>
-                        <p><a href="#">스킨/토너/미스트</a></p>
-                        <p><a href="#">로션/에멀젼</a></p>
-                        <p><a href="#">에센스/크림</a></p>
-                        <p><a href="#">팩/마스크</a></p>
-                        <p><a href="#">썬케어</a></p>
+                      <Link to="/categories/900?keyword=910"><h4>스킨케어</h4></Link>
+                        <p><Link to="/categories/900?keyword=911">클렌징/스크럽</Link></p>
+                        <p><Link to="/categories/900?keyword=912">스킨/토너/미스트</Link></p>
+                        <p><Link to="/categories/900?keyword=913">로션/에멀젼</Link></p>
+                        <p><Link to="/categories/900?keyword=914">에센스/크림</Link></p>
+                        <p><Link to="/categories/900?keyword=915">팩/마스크</Link></p>
+                        <p><Link to="/categories/900?keyword=916">썬케어</Link></p>
                       </li>
                       <li>
-                      <h4>색조 메이크업</h4>
-                        <p><a href="#">아이라이너/브로우</a></p>
-                        <p><a href="#">아이섀도우</a></p>
-                        <p><a href="#">마스카라</a></p>
-                        <p><a href="#">립틴트</a></p>
-                        <p><a href="#">립밤/립글로즈</a></p>                      
-                        <p><a href="#">립스틱</a></p>                      
-                        <p><a href="#">치크/블러셔</a></p>                      
-                        <p><a href="#">기타</a></p>                      
+                      <Link to="/categories/900?keyword=920"><h4>색조 메이크업</h4></Link>
+                        <p><Link to="/categories/900?keyword=921">아이라이너/브로우</Link></p>
+                        <p><Link to="/categories/900?keyword=922">아이섀도우</Link></p>
+                        <p><Link to="/categories/900?keyword=923">마스카라</Link></p>
+                        <p><Link to="/categories/900?keyword=924">립틴트</Link></p>
+                        <p><Link to="/categories/900?keyword=925">립밤/립글로즈</Link></p>                      
+                        <p><Link to="/categories/900?keyword=926">립스틱</Link></p>                      
+                        <p><Link to="/categories/900?keyword=927">치크/블러셔</Link></p>                      
+                        <p><Link to="/categories/900?keyword=928">기타</Link></p>                      
                       </li>
                       <li>
-                      <h4>베이스 메이크업</h4>
-                        <p><a href="#">메이크업베이스</a></p>
-                        <p><a href="#">BB/CC크림</a></p>
-                        <p><a href="#">쿠션팩트</a></p>
-                        <p><a href="#">파운데이션</a></p>
-                        <p><a href="#">파우더/팩트</a></p>                      
-                        <p><a href="#">프라이머/컨실러</a></p>                                         
-                        <p><a href="#">기타</a></p>                      
+                      <Link to="/categories/900?keyword=930"><h4>베이스 메이크업</h4></Link>
+                        <p><Link to="/categories/900?keyword=931">메이크업베이스</Link></p>
+                        <p><Link to="/categories/900?keyword=932">BB/CC크림</Link></p>
+                        <p><Link to="/categories/900?keyword=933">쿠션팩트</Link></p>
+                        <p><Link to="/categories/900?keyword=934">파운데이션</Link></p>
+                        <p><Link to="/categories/900?keyword=935">파우더/팩트</Link></p>                      
+                        <p><Link to="/categories/900?keyword=936">프라이머/컨실러</Link></p>                                         
+                        <p><Link to="/categories/900?keyword=937">기타</Link></p>                      
                       </li>
                       <li>
-                      <h4>바디/헤어케어</h4>
-                        <p><a href="#">샴푸/린스</a></p>
-                        <p><a href="#">헤어에센스/트리트먼트</a></p>
-                        <p><a href="#">헤어스타일링</a></p>
-                        <p><a href="#">염색</a></p>
-                        <p><a href="#">바디클렌저/로션</a></p>                      
-                        <p><a href="#">핸드/풋케어</a></p>                                         
+                      <Link to="/categories/900?keyword=940"><h4>바디/헤어케어</h4></Link>
+                        <p><Link to="/categories/900?keyword=941">샴푸/린스</Link></p>
+                        <p><Link to="/categories/900?keyword=942">헤어에센스/트리트먼트</Link></p>
+                        <p><Link to="/categories/900?keyword=943">헤어스타일링</Link></p>
+                        <p><Link to="/categories/900?keyword=944">염색</Link></p>
+                        <p><Link to="/categories/900?keyword=945">바디클렌저/로션</Link></p>                      
+                        <p><Link to="/categories/900?keyword=946">핸드/풋케어</Link></p>                                         
                    
                       </li>
                       <li>
-                      <h4>네일아트</h4>
-                        <p><a href="#">네일아트/스티커</a></p>
-                        <p><a href="#">매니큐어/페디큐어</a></p>
-                        <p><a href="#">네일케어도구</a></p>                                       
+                      <Link to="/categories/900?keyword=950"><h4>네일아트</h4></Link>
+                        <p><Link to="/categories/900?keyword=951">네일아트/스티커</Link></p>
+                        <p><Link to="/categories/900?keyword=952">매니큐어/페디큐어</Link></p>
+                        <p><Link to="/categories/900?keyword=953">네일케어도구</Link></p>                                       
                    
                       </li>
                     </ul></div>
               </li>
 
-              <li><Link to="/categories/1000">가구/인테리어</Link>
+              <li><Link to="/categories/1000?keyword=1000">가구/인테리어</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>가구</h4>
-                        <p><a href="#">거실가구</a></p>
-                        <p><a href="#">침실가구</a></p>
-                        <p><a href="#">학생/서재/사무용가구</a></p>
-                        <p><a href="#">선반/수납 가구</a></p>
-                        <p><a href="#">주방가구</a></p>
+                      <Link to="/categories/1000?keyword=1010"><h4>가구</h4></Link>
+                        <p><Link to="/categories/1000?keyword=1011">거실가구</Link></p>
+                        <p><Link to="/categories/1000?keyword=1012">침실가구</Link></p>
+                        <p><Link to="/categories/1000?keyword=1013">학생/서재/사무용가구</Link></p>
+                        <p><Link to="/categories/1000?keyword=1014">선반/수납 가구</Link></p>
+                        <p><Link to="/categories/1000?keyword=1015">주방가구</Link></p>
                         
                       </li>
                       <li>
-                      <h4>인테리어 소품</h4>
-                        <p><a href="#">포스터/그림/액자</a></p>
-                        <p><a href="#">디퓨저/캔들</a></p>
-                        <p><a href="#">쿠션/방석</a></p>
-                        <p><a href="#">탁상/벽시계</a></p>
-                        <p><a href="#">거울</a></p>                      
-                        <p><a href="#">기타 인테리어 소품</a></p>                      
+                      <Link to="/categories/1000?keyword=1020"><h4>인테리어소품</h4></Link>
+                        <p><Link to="/categories/1000?keyword=1021">포스터/그림/액자</Link></p>
+                        <p><Link to="/categories/1000?keyword=1022">디퓨저/캔들</Link></p>
+                        <p><Link to="/categories/1000?keyword=1023">쿠션/방석</Link></p>
+                        <p><Link to="/categories/1000?keyword=1024">탁상/벽시계</Link></p>
+                        <p><Link to="/categories/1000?keyword=1025">거울</Link></p>                      
+                        <p><Link to="/categories/1000?keyword=1026">기타 인테리어 소품</Link></p>                      
                       </li>
                     </ul></div>
               </li>
 
-              <li><Link to="/categories/1100">생활/주방용품</Link>
+              <li><Link to="/categories/1100?keyword=1100">생활/주방용품</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>주방용품</h4>
-                        <p><a href="#">그릇/홈세트</a></p>
-                        <p><a href="#">잔/컵</a></p>
-                        <p><a href="#">텀블러/물병</a></p>
-                        <p><a href="#">냄비/프라이팬</a></p>
-                        <p><a href="#">조리도구</a></p>
-                        <p><a href="#">보관/밀폐용기</a></p>
-                        <p><a href="#">커피용품</a></p>
+                      <Link to="/categories/1100?keyword=1110"><h4>주방용품</h4></Link>
+                        <p><Link to="/categories/1100?keyword=1111">그릇/홈세트</Link></p>
+                        <p><Link to="/categories/1100?keyword=1112">잔/컵</Link></p>
+                        <p><Link to="/categories/1100?keyword=1113">텀블러/물병</Link></p>
+                        <p><Link to="/categories/1100?keyword=1114">냄비/프라이팬</Link></p>
+                        <p><Link to="/categories/1100?keyword=1115">조리도구</Link></p>
+                        <p><Link to="/categories/1100?keyword=1116">보관/밀폐용기</Link></p>
+                        <p><Link to="/categories/1100?keyword=1117">커피용품</Link></p>
                       </li>
                       <li>
-                      <h4>욕실용품</h4>
-                        <p><a href="#">구강/면도용품</a></p>
-                        <p><a href="#">샤워/목욕용품</a></p>
-                        <p><a href="#">수건/타월</a></p>
-                        <p><a href="#">욕실수납/정리</a></p>
+                      <Link to="/categories/1100?keyword=1120"><h4>욕실용품</h4></Link>
+                        <p><Link to="/categories/1100?keyword=1121">구강/면도용품</Link></p>
+                        <p><Link to="/categories/1100?keyword=1122">샤워/목욕용품</Link></p>
+                        <p><Link to="/categories/1100?keyword=1123">수건/타월</Link></p>
+                        <p><Link to="/categories/1100?keyword=1124">욕실수납/정리</Link></p>
                                            
                       </li>
                     </ul></div>
