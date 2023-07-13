@@ -1,88 +1,144 @@
-/*global kakao*/
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
+const { kakao } = window;
 
-const Kakaomap = () => {
-  console.log('1. kakao map constructor')
+const MapContainer = ({ searchPlace }) => {
+  const [Places, setPlaces] = useState([]);
+
   useEffect(() => {
+    const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
+    const markers = [];
+    const container = document.getElementById('myMap');
+    const options = {
+      center: new kakao.maps.LatLng(33.450701, 126.570667),
+      level: 3,
+    };
+    const map = new kakao.maps.Map(container, options);
 
-    console.log('3. kakao map mounted')
-    const script = document.createElement('script');
-    script.src = '//dapi.kakao.com/v2/maps/sdk.js?appkey=046b47dda6cb5fbbdc7101fa8b4008e7&libraries=services';
-    script.async = true;
-    document.body.appendChild(script);
+    const ps = new kakao.maps.services.Places();
 
-    
-    script.onload = () => {
-      
-      // Kakao 지도 API 라이브러리가 로드된 후 실행될 코드
-      const container = document.getElementById('map');
-      const options = {
-        center: new kakao.maps.LatLng(37.365264512305174, 127.10676860117488),
-        level: 3
-      };
-      
-      console.log('onload')
-      const map = new kakao.maps.Map(container, options);
-      const markerPosition = new kakao.maps.LatLng(37.365264512305174, 127.0676860117488);
-      const marker = new kakao.maps.Marker({
-        position: markerPosition
-      });
-      marker.setMap(map);
+    ps.keywordSearch(searchPlace, placesSearchCB);
 
-      const ps = new kakao.maps.services.Places();
+    function placesSearchCB(data, status, pagination) {
+      if (status === kakao.maps.services.Status.OK) {
+        let bounds = new kakao.maps.LatLngBounds();
 
-      ps.keywordSearch('이태원 맛집', placesSearchCB);
-
-      function placesSearchCB(data, status, pagination) {
-        if (status === kakao.maps.services.Status.OK) {
-          const bounds = new kakao.maps.LatLngBounds();
-
-          for (let i = 0; i < data.length; i++) {
-            displayMarker(data[i]);
-            bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
-          }
-
-          map.setBounds(bounds);
+        for (let i = 0; i < data.length; i++) {
+          displayMarker(data[i]);
+          bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
         }
+
+        map.setBounds(bounds);
+        displayPagination(pagination);
+        setPlaces(data);
+      }
+    }
+
+    function displayPagination(pagination) {
+      const paginationEl = document.getElementById('pagination');
+      const fragment = document.createDocumentFragment();
+
+      while (paginationEl.hasChildNodes()) {
+        paginationEl.removeChild(paginationEl.lastChild);
       }
 
-      function displayMarker(place) {
-        const marker = new kakao.maps.Marker({
-          map: map,
-          position: new kakao.maps.LatLng(place.y, place.x)
-        });
+      for (let i = 1; i <= pagination.last; i++) {
+        const el = document.createElement('a');
+        el.href = '#';
+        el.innerHTML = i;
 
-        kakao.maps.event.addListener(marker, 'click', function () {
-          infowindow.setContent(
-            '<div style="padding:5px;font-size:12px;">' +
+        if (i === pagination.current) {
+          el.className = 'on';
+        } else {
+          el.onclick = (function (i) {
+            return function () {
+              pagination.gotoPage(i);
+            };
+          })(i);
+        }
+
+        fragment.appendChild(el);
+      }
+      paginationEl.appendChild(fragment);
+    }
+
+    function displayMarker(place) {
+      const marker = new kakao.maps.Marker({
+        map: map,
+        position: new kakao.maps.LatLng(place.y, place.x),
+      });
+
+      kakao.maps.event.addListener(marker, 'click', function () {
+        infowindow.setContent(
+          '<div style="padding:5px;font-size:12px;">' +
             place.place_name +
             '</div>'
-          );
-          infowindow.open(map, marker);
-        });
-      }
-
-      const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
-
-      return () => {
-        kakao.maps.event.clearListeners(map, 'click');
-      };
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+        );
+        infowindow.open(map, marker);
+      });
+    }
+  }, [searchPlace]);
 
   return (
     <div>
-      {console.log('2. kakao map rendering')}
-      <div id="map" style={{ width: "500px", height: "400px" }}></div>
-      <input type="text" />
+      <div
+        id="myMap"
+        style={{
+          width: '500px',
+          height: '500px',
+        }}
+      ></div>
+      <div id="result-list">
+        {Places.map((item, i) => (
+          <div key={i} style={{ marginTop: '20px' }}>
+            <span>{i + 1}</span>
+            <div>
+              <h5>{item.place_name}</h5>
+              {item.road_address_name ? (
+                <div>
+                  <span>{item.road_address_name}</span>
+                  <span>{item.address_name}</span>
+                </div>
+              ) : (
+                <span>{item.address_name}</span>
+              )}
+              <span>{item.phone}</span>
+            </div>
+          </div>
+        ))}
+        <div id="pagination"></div>
+      </div>
     </div>
   );
 };
 
-export default Kakaomap;
+const LandingPage = () => {
+  const [InputText, setInputText] = useState('');
+  const [Place, setPlace] = useState('');
+
+  const onChange = (e) => {
+    setInputText(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setPlace(InputText);
+    setInputText('');
+  };
+
+  return (
+    <>
+      <form className="inputForm" onSubmit={handleSubmit}>
+        <input
+          placeholder="검색어를 입력하세요"
+          onChange={onChange}
+          value={InputText}
+        />
+        <button type="submit">검색</button>
+      </form>
+      <MapContainer searchPlace={Place} />
+    </>
+  );
+};
+
+export default LandingPage;
