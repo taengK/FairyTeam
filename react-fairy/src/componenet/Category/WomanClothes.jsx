@@ -56,8 +56,6 @@ const WomanClothes = () => {
 //  console.log(superCate);
 
  const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
-
-  console.log(superC[0].category_seq);
   
     return (
       
@@ -65,8 +63,6 @@ const WomanClothes = () => {
       <div>
             
         <div className='container'>
-            
-            if()
             
             {superC.map(item=>
                 <CategoryTable key={item.prod_barcode}
@@ -76,14 +72,9 @@ const WomanClothes = () => {
                 ></CategoryTable>)}
         </div>
         
-     
     </div>
 
-    
-
-
-
   )
-            }
+}
 
 export default WomanClothes
