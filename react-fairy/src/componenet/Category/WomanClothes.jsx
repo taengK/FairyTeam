@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-
-// test
-
 import './CategoryCSS.css'
 import CategoryTable from './CategoryTable';
+
+
 const WomanClothes = () => {
   
   // useEffect(function, deps)
@@ -32,6 +31,7 @@ const WomanClothes = () => {
         console.log(res.data.result);
         
         setSuperCate(res.data.result)
+        
         console.log(superCate);
         
 
@@ -46,7 +46,7 @@ const WomanClothes = () => {
 // 확인용 로그
 //  console.log(superCate);
 
- const superC = superCate.filter(item=>item.super_category === 100)
+ const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
 
   
   

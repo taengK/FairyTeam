@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-
-// test
-
 import './CategoryCSS.css'
 import CategoryTable from './CategoryTable';
-const WomanClothes = () => {
+
+
+const ManClothes = () => {
   
   // useEffect(function, deps)
   // deps 가 없으면 항상
@@ -77,4 +76,4 @@ const WomanClothes = () => {
   )
 }
 
-export default WomanClothes
+export default ManClothes
