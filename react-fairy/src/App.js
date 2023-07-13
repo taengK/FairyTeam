@@ -14,7 +14,7 @@ import Detaill from './page/Detaill';
 import Modification from './page/Modification';
 import PostForm from './page/PostForm';
 import Categories from './page/Categories';
-// import Chat from './page/Chat';
+import Chat from './page/Chat';
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
 // *************************CSS***********************************************
@@ -75,6 +75,7 @@ function App() {
         <Route path='/Detaill' element={<Detaill/>}/>
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/PostForm' element={<PostForm/>}/>
+        <Route path='/Chat' element={<Chat/>}/>
 {/*************************************Categories************************************************/}     
         <Route path='/Categories' element={<Categories/>}/>
         <Route path='/categories/100' element ={<WomanClothes/>}/>
