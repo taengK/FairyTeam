@@ -9,12 +9,6 @@ import { useSearchParams } from 'react-router-dom';
 const WomanClothes = () => {
 
 
-  const [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams.get('keyword'))
-
-  if(searchParams.get('keyword')){
-
-  }
 
   // useEffect(function, deps)
   // deps 가 없으면 항상
@@ -60,7 +54,30 @@ const WomanClothes = () => {
   // else if(/categories/100110){
   //   const superC = superCate.filter(item=>item.category_seq >= 110 && item.category_seq < 119)
   // }
-  const superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get('keyword'))
+
+  //     const [superC, setSuperC] = useState([])
+  //     setSuperC(새로운 바꿔야하는 배열 )
+  
+  const [superC, setSuperC] = useState([])
+
+  // superCate에 값이 들어간 이후로 시점 변경 
+  useEffect(()=>{
+    console.log('supercate', superCate)
+    setSuperC(superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200))
+
+
+    // let superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
+
+    if (searchParams.get('keyword') == 110) {
+      console.log('keyword 110 enter')
+      setSuperC(superCate.filter(item => item.category_seq >= 110 && item.category_seq < 119))
+    }
+
+
+  },[superCate])
+
 
 
 
