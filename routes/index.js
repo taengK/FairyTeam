@@ -95,8 +95,9 @@ router.post('/user/login',(req, res)=>{
 // 카테고리 ------------------------- 시작
 
 router.post('/db/categories', (req, res)=>{
-    let sql = "select A.super_category, B.prod_photo, B.prod_name, B.prod_price, B.prod_barcode from prod_category_info A, product_info B where A.category_seq = B.category_seq"
-    
+    // let sql = "select A.super_category, B.prod_photo, B.prod_name, B.prod_price, B.prod_barcode from prod_category_info A, product_info B where A.category_seq = B.category_seq"
+    let sql = 'select * from product_info'
+
     conn.query(sql, [req.body.categorySeq], (err, rows)=>{
         if (rows){
             console.log('super_category')
