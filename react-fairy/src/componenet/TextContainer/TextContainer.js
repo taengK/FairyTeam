@@ -9,7 +9,7 @@ function TextContainer({ users }) {
 
     <div className='textContainer' color='yellow'>
 
-      <div>
+      <div >
         <h2>
           실시간 채팅 프로그램{' '}
           <span role='img' aria-label='emoji'>
