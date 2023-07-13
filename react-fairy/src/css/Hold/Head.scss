@@ -1,10 +1,10 @@
 .head{
-    
     display: flex;
     align-items: center;
+    border: 1px solid #000;
     .LogoBox {
-        width: 100px;
-        
+        width: 200px;
+        border: 1px solid #000;
         .LogoImg {
             width: 100%;
         }
@@ -12,7 +12,7 @@
     .inputBox {
         width: 50%;
         margin-left: 50px;
-        
+        border: 1px solid #000;
         .search {
             width: 100%; height: 50px;
             padding: 25px;
@@ -34,6 +34,16 @@
             }
         }
     }
+}
+
+@media all and ( max-width : 468px) {
+    .head {
+        flex-wrap: wrap;
+    .LogoBox {
+        width: 100%;
+    }
+}
+
 }
    
    
