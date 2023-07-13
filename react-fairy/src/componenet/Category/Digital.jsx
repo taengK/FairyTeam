@@ -46,7 +46,7 @@ const Digital = () => {
 // 확인용 로그
 //  console.log(superCate);
 
- const superC = superCate.filter(item=>item.super_category === 500)
+ const superC = superCate.filter(item=>item.category_seq >= 500 && item.category_seq < 600)
 
   
   

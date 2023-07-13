@@ -48,7 +48,7 @@ const WomanClothes = () => {
 
  const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
 
-  
+  console.log(superC[0].category_seq);
   
     return (
       
@@ -56,6 +56,9 @@ const WomanClothes = () => {
       <div>
             
         <div className='container'>
+            
+            if()
+            
             {superC.map(item=>
                 <CategoryTable key={item.prod_barcode}
                 name ={item.prod_name} 
