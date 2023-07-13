@@ -1,18 +1,16 @@
 .ctgCtn {
-  width: 100%;
-  border: 1px solid #f00;
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
 }
 
 .ctgItem {
+  background-color: palegreen;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: linear-gradient(320deg, blue, red);
-  color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  width: 27.5%;
-  padding: 2%;
   margin: 0.5%;
 }
 

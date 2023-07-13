@@ -17,9 +17,6 @@ const CategoryTable = ( {name, price, photo} ) => {
                 <tr>
                     <td>{price}</td>
                 </tr>
-                <tr>
-                    <td>{price}</td>
-                </tr>
             </tbody>
         </table>
     </div>
