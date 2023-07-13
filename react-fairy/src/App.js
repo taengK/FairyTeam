@@ -80,7 +80,7 @@ function App() {
         <Route path='/PostForm' element={<PostForm/>}/>
         <Route path='/Chat' element={<Chat/>}/>
 {/*************************************Categories************************************************/}     
-        <Route path='/Categories' element={<Categories/>}/>
+        {/* <Route path='/Categories' element={<Categories/>}/> */}
         <Route path='/categories/100' element ={<WomanClothes check={check}/>}/>
         <Route path='/categories/200' element ={<ManClothes/>}/>
         <Route path='/categories/300' element ={<Shoes/>}/>

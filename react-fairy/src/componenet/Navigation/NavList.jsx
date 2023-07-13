@@ -28,31 +28,31 @@ const NavList = (props) => {
                     <ul>
                       <li>
                       <Link to="/categories/100?keyword=110"><h4 >아우터</h4></Link>
-                        <p><a href="#">패딩</a></p>
-                        <p><a href="#">점퍼</a></p>
-                        <p><a href="#">코트</a></p>
-                        <p><a href="#">자켓</a></p>
-                        <p><a href="#">가디건</a></p>
-                        <p><a href="#">조끼</a></p>
+                        <p><Link to="/categories/100?keyword=111">패딩</Link></p>
+                        <p><Link to="/categories/100?keyword=112">점퍼</Link></p>
+                        <p><Link to="/categories/100?keyword=113">코트</Link></p>
+                        <p><Link to="/categories/100?keyword=114">자켓</Link></p>
+                        <p><Link to="/categories/100?keyword=115">가디건</Link></p>
+                        <p><Link to="/categories/100?keyword=116">조끼</Link></p>
                       </li>
                       <li>
                       <Link to="/categories/100?keyword=120"><h4 >상의</h4></Link>
-                        <p><a href="#">니트/스웨터</a></p>
-                        <p><a href="#">후드티/후드집업</a></p>
-                        <p><a href="#">맨투맨</a></p>
-                        <p><a href="#">블라우스</a></p>
-                        <p><a href="#">셔츠</a></p>
-                        <p><a href="#">반팔 티셔츠</a></p>
-                        <p><a href="#">긴팔 티셔츠</a></p>
+                        <p><Link to="/categories/100?keyword=121">니트/스웨터</Link></p>
+                        <p><Link to="/categories/100?keyword=122">후드티/후드집업</Link></p>
+                        <p><Link to="/categories/100?keyword=123">맨투맨</Link></p>
+                        <p><Link to="/categories/100?keyword=124">블라우스</Link></p>
+                        <p><Link to="/categories/100?keyword=125">셔츠</Link></p>
+                        <p><Link to="/categories/100?keyword=126">반팔 티셔츠</Link></p>
+                        <p><Link to="/categories/100?keyword=127">긴팔 티셔츠</Link></p>
                       </li>
                       <li>
                       <Link to="/categories/100?keyword=130"><h4>하의</h4></Link>
-                        <p><a href="#">청바지</a></p>
-                        <p><a href="#">슬랙스</a></p>
-                        <p><a href="#">면바지</a></p>
-                        <p><a href="#">반바지</a></p>
-                        <p><a href="#">트레이닝</a></p>
-                        <p><a href="#">레깅스</a></p>
+                        <p><Link to="/categories/100?keyword=131">청바지</Link></p>
+                        <p><Link to="/categories/100?keyword=132">슬랙스</Link></p>
+                        <p><Link to="/categories/100?keyword=133">면바지</Link></p>
+                        <p><Link to="/categories/100?keyword=134">반바지</Link></p>
+                        <p><Link to="/categories/100?keyword=135">트레이닝</Link></p>
+                        <p><Link to="/categories/100?keyword=136">레깅스</Link></p>
                       </li>
                     </ul>
                   </div>
@@ -63,161 +63,160 @@ const NavList = (props) => {
                       <li>
                       <Link to="/categories/200?keyword=210"><h4>아우터</h4></Link>
                         
-                        <p><a href="#">패딩</a></p>
-                        <p><a href="#">점퍼</a></p>
-                        <p><a href="#">코트</a></p>
-                        <p><a href="#">자켓</a></p>
-                        <p><a href="#">가디건</a></p>
-                        <p><a href="#">조끼</a></p>
+                        <p><Link to="/categories/200?keyword=211">패딩</Link></p>
+                        <p><Link to="/categories/200?keyword=212">점퍼</Link></p>
+                        <p><Link to="/categories/200?keyword=213">코트</Link></p>
+                        <p><Link to="/categories/200?keyword=214">자켓</Link></p>
+                        <p><Link to="/categories/200?keyword=215">가디건</Link></p>
+                        <p><Link to="/categories/200?keyword=216">조끼</Link></p>
                         
                       </li>
                       <li>
                       <Link to="/categories/200?keyword=220"><h4>상의</h4></Link>
-                        <p><a href="#">니트/스웨터</a></p>
-                        <p><a href="#">후드티/후드집업</a></p>
-                        <p><a href="#">맨투맨</a></p>
-                        <p><a href="#">블라우스</a></p>
-                        <p><a href="#">셔츠</a></p>
-                        <p><a href="#">반팔 티셔츠</a></p>
-                        <p><a href="#">긴팔 티셔츠</a></p>
+                        <p><Link to="/categories/200?keyword=221">니트/스웨터</Link></p>
+                        <p><Link to="/categories/200?keyword=222">후드티/후드집업</Link></p>
+                        <p><Link to="/categories/200?keyword=223">맨투맨</Link></p>
+                        <p><Link to="/categories/200?keyword=224">블라우스</Link></p>
+                        <p><Link to="/categories/200?keyword=225">셔츠</Link></p>
+                        <p><Link to="/categories/200?keyword=226">반팔 티셔츠</Link></p>
+                        <p><Link to="/categories/200?keyword=227">긴팔 티셔츠</Link></p>
                       </li>
                       <li>
                       <Link to="/categories/200?keyword=230"><h4>하의</h4></Link>
-                        <p><a href="#">청바지</a></p>
-                        <p><a href="#">슬랙스</a></p>
-                        <p><a href="#">면바지</a></p>
-                        <p><a href="#">반바지</a></p>
-                        <p><a href="#">트레이닝</a></p>
-                        <p><a href="#">레깅스</a></p>
+                        <p><Link to="/categories/200?keyword=231">청바지</Link></p>
+                        <p><Link to="/categories/200?keyword=232">슬랙스</Link></p>
+                        <p><Link to="/categories/200?keyword=233">면바지</Link></p>
+                        <p><Link to="/categories/200?keyword=234">반바지</Link></p>
+                        <p><Link to="/categories/200?keyword=235">트레이닝</Link></p>
                       </li>
                     </ul>
                   </div>
               </li>
 
-              <li><Link to="/categories/300">신발</Link>
+              <li><Link to="/categories/300?keyword=300">신발</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>남성화</h4>
-                        <p><a href="#">샌들/슬리퍼</a></p>
-                        <p><a href="#">구두/로퍼</a></p>
-                        <p><a href="#">워커/부츠</a></p>
-                        <p><a href="#">기타 남성화</a></p>
+                      <Link to="/categories/300?keyword=310"><h4>남성화</h4></Link>
+                        <p><Link to="/categories/300?keyword=311">샌들/슬리퍼</Link></p>
+                        <p><Link to="/categories/300?keyword=312">구두/로퍼</Link></p>
+                        <p><Link to="/categories/300?keyword=313">워커/부츠</Link></p>
+                        <p><Link to="/categories/300?keyword=314">기타 남성화</Link></p>
                       </li>
                       <li>
-                      <h4>여성화</h4>
-                        <p><a href="#">샌들/슬리퍼</a></p>
-                        <p><a href="#">구두</a></p>
-                        <p><a href="#">단화/플랫슈즈</a></p>
-                        <p><a href="#">워커/부츠</a></p>
-                        <p><a href="#">기타 여성화</a></p>                      
+                      <Link to="/categories/300?keyword=320"><h4>여성화</h4></Link>
+                        <p><Link to="/categories/300?keyword=321">샌들/슬리퍼</Link></p>
+                        <p><Link to="/categories/300?keyword=322">구두</Link></p>
+                        <p><Link to="/categories/300?keyword=323">단화/플랫슈즈</Link></p>
+                        <p><Link to="/categories/300?keyword=324">워커/부츠</Link></p>
+                        <p><Link to="/categories/300?keyword=325">기타 여성화</Link></p>                      
                       </li>
                       <li>
-                      <h4>스포츠화</h4>
-                        <p><a href="#">축구/풋살화</a></p>
-                        <p><a href="#">테니스화</a></p>
-                        <p><a href="#">등산/트레킹화</a></p>
-                        <p><a href="#">야구화</a></p>
-                        <p><a href="#">기타 스포츠화</a></p>
+                      <Link to="/categories/300?keyword=330"><h4>스포츠화</h4></Link>
+                        <p><Link to="/categories/300?keyword=331">축구/풋살화</Link></p>
+                        <p><Link to="/categories/300?keyword=332">테니스화</Link></p>
+                        <p><Link to="/categories/300?keyword=333">등산/트레킹화</Link></p>
+                        <p><Link to="/categories/300?keyword=334">야구화</Link></p>
+                        <p><Link to="/categories/300?keyword=335">기타 스포츠화</Link></p>
                       </li>
                     </ul></div>
               </li>
 
-              <li><Link to="/categories/400">가방/지갑</Link>
+              <li><Link to="/categories/400?keyword=400">가방/지갑</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>여성가방</h4>
-                        <p><a href="#">클러치백</a></p>
-                        <p><a href="#">숄더백</a></p>
-                        <p><a href="#">크로스백</a></p>
-                        <p><a href="#">토트백</a></p>
-                        <p><a href="#">백팩</a></p>
-                        <p><a href="#">기타여성가방</a></p>
+                      <Link to="/categories/400?keyword=410"><h4>여성가방</h4></Link>
+                        <p><Link to="/categories/400?keyword=411">클러치백</Link></p>
+                        <p><Link to="/categories/400?keyword=412">숄더백</Link></p>
+                        <p><Link to="/categories/400?keyword=413">크로스백</Link></p>
+                        <p><Link to="/categories/400?keyword=414">토트백</Link></p>
+                        <p><Link to="/categories/400?keyword=415">백팩</Link></p>
+                        <p><Link to="/categories/400?keyword=416">기타여성가방</Link></p>
                       </li>
                       <li>
-                      <h4>남성가방</h4>
-                        <p><a href="#">클러치백</a></p>
-                        <p><a href="#">숄더백</a></p>
-                        <p><a href="#">크로스백</a></p>
-                        <p><a href="#">브리프케이스</a></p>
-                        <p><a href="#">백팩</a></p>                      
-                        <p><a href="#">기타남성가방</a></p>                      
+                      <Link to="/categories/400?keyword=420"><h4>남성가방</h4></Link>
+                        <p><Link to="/categories/400?keyword=421">클러치백</Link></p>
+                        <p><Link to="/categories/400?keyword=422">숄더백</Link></p>
+                        <p><Link to="/categories/400?keyword=423">크로스백</Link></p>
+                        <p><Link to="/categories/400?keyword=424">브리프케이스</Link></p>
+                        <p><Link to="/categories/400?keyword=425">백팩</Link></p>                      
+                        <p><Link to="/categories/400?keyword=426">기타남성가방</Link></p>                      
                       </li>
                     </ul></div>
               </li>
-              <li><Link to="/categories/500">디지털</Link>
+              <li><Link to="/categories/500?keyword=500">디지털</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>휴대폰</h4>
-                        <p><a href="#">스마트폰</a></p>
-                        <p><a href="#">일반폰</a></p>
-                        <p><a href="#">케이스/보호필름/액세서리</a></p>
-                        <p><a href="#">케이블/충전기/주변기기</a></p>
-                        <p><a href="#">기타 휴대폰</a></p>
+                      <Link to="/categories/500?keyword=510"><h4>휴대폰</h4></Link>
+                        <p><Link to="/categories/500?keyword=511">스마트폰</Link></p>
+                        <p><Link to="/categories/500?keyword=512">일반폰</Link></p>
+                        <p><Link to="/categories/500?keyword=513">케이스/보호필름/액세서리</Link></p>
+                        <p><Link to="/categories/500?keyword=514">케이블/충전기/주변기기</Link></p>
+                        <p><Link to="/categories/500?keyword=515">기타 휴대폰</Link></p>
                       </li>
                       <li>
-                      <h4>태블릿</h4>
-                        <p><a href="#">태블릿</a></p>
-                        <p><a href="#">케이스/보호필름/액세서리</a></p>
-                        <p><a href="#">케이블/충전기/주변기기</a></p>
+                      <Link to="/categories/500?keyword=520"><h4>태블릿</h4></Link>
+                        <p><Link to="/categories/500?keyword=521">태블릿</Link></p>
+                        <p><Link to="/categories/500?keyword=522">케이스/보호필름/액세서리</Link></p>
+                        <p><Link to="/categories/500?keyword=523">케이블/충전기/주변기기</Link></p>
                    
                       </li>
                       <li>
-                      <h4>웨어러블</h4>
-                        <p><a href="#">스마트워치/밴드</a></p>
-                        <p><a href="#">케이스/보호필름/액세서리</a></p>
-                        <p><a href="#">케이블/충전기/주변기기</a></p>
+                      <Link to="/categories/500?keyword=530"><h4>웨어러블</h4></Link>
+                        <p><Link to="/categories/500?keyword=531">스마트워치/밴드</Link></p>
+                        <p><Link to="/categories/500?keyword=532">케이스/보호필름/액세서리</Link></p>
+                        <p><Link to="/categories/500?keyword=533">케이블/충전기/주변기기</Link></p>
                    
                       </li>
                       <li>
-                      <h4>오디오/영상</h4>
-                        <p><a href="#">이어폰</a></p>
-                        <p><a href="#">헤드폰</a></p>
-                        <p><a href="#">스피커/앰프</a></p>
-                        <p><a href="#">오디오/홈시어터</a></p>
+                      <Link to="/categories/500?keyword=540"><h4>오디오/영상</h4></Link>
+                        <p><Link to="/categories/500?keyword=541">이어폰</Link></p>
+                        <p><Link to="/categories/500?keyword=542">헤드폰</Link></p>
+                        <p><Link to="/categories/500?keyword=543">스피커/앰프</Link></p>
+                        <p><Link to="/categories/500?keyword=544">오디오/홈시어터</Link></p>
                    
                       </li>
                       <li>
-                      <h4>PC/노트북</h4>
-                        <p><a href="#">데스크탑</a></p>
-                        <p><a href="#">노트북/넷북</a></p>
-                        <p><a href="#">모니터</a></p>
-                        <p><a href="#">키보드</a></p>
-                        <p><a href="#">마우스</a></p>
-                        <p><a href="#">기타 PC 주변기기</a></p>
+                      <Link to="/categories/500?keyword=550"><h4>PC/노트북</h4></Link>
+                        <p><Link to="/categories/500?keyword=551">데스크탑</Link></p>
+                        <p><Link to="/categories/500?keyword=552">노트북/넷북</Link></p>
+                        <p><Link to="/categories/500?keyword=553">모니터</Link></p>
+                        <p><Link to="/categories/500?keyword=554">키보드</Link></p>
+                        <p><Link to="/categories/500?keyword=555">마우스</Link></p>
+                        <p><Link to="/categories/500?keyword=556">기타 PC 주변기기</Link></p>
                    
                       </li>
                       <li>
-                      <h4>카메라/DSLR</h4>
-                        <p><a href="#">필름카메라</a></p>
-                        <p><a href="#">DSLR/미러리스</a></p>
-                        <p><a href="#">렌즈/필터/컨버터</a></p>
-                        <p><a href="#">일반디카/토이카메라</a></p>
-                        <p><a href="#">삼각대/플래시/조명</a></p>
-                        <p><a href="#">메모리/배터리/가방</a></p>
+                      <Link to="/categories/500?keyword=560"><h4>카메라/DSLR</h4></Link>
+                        <p><Link to="/categories/500?keyword=561">필름카메라</Link></p>
+                        <p><Link to="/categories/500?keyword=562">DSLR/미러리스</Link></p>
+                        <p><Link to="/categories/500?keyword=563">렌즈/필터/컨버터</Link></p>
+                        <p><Link to="/categories/500?keyword=564">일반디카/토이카메라</Link></p>
+                        <p><Link to="/categories/500?keyword=565">삼각대/플래시/조명</Link></p>
+                        <p><Link to="/categories/500?keyword=566">메모리/배터리/가방</Link></p>
                    
                       </li>
                     </ul></div>
               </li>
 
-              <li><Link to="/categories/600">가전제품</Link>
+              <li><Link to="/categories/600?keyword=600">가전제품</Link>
                   <div class="subBox"><ul>
                       <li>
-                        <h4>생활가전</h4>
-                        <p><a href="#">가습기</a></p>
-                        <p><a href="#">청소기</a></p>
-                        <p><a href="#">공기청정기</a></p>
-                        <p><a href="#">선풍기/냉풍기</a></p>
-                        <p><a href="#">히터/온풍기</a></p>
-                        <p><a href="#">전기매트/장판</a></p>
+                        <Link to="/categories/600?keyword=610"><h4>생활가전</h4></Link>
+                        <p><Link to="/categories/600?keyword=611">가습기</Link></p>
+                        <p><Link to="/categories/600?keyword=612">청소기</Link></p>
+                        <p><Link to="/categories/600?keyword=613">공기청정기</Link></p>
+                        <p><Link to="/categories/600?keyword=614">선풍기/냉풍기</Link></p>
+                        <p><Link to="/categories/600?keyword=615">히터/온풍기</Link></p>
+                        <p><Link to="/categories/600?keyword=616">전기매트/장판</Link></p>
                       </li>
                       <li>
-                      <h4>주방가전</h4>
-                        <p><a href="#">인덕션/전기레인지</a></p>
-                        <p><a href="#">전기밥솥</a></p>
-                        <p><a href="#">커피머신</a></p>
-                        <p><a href="#">에어프라이어</a></p>
-                        <p><a href="#">토스터</a></p>                      
-                        <p><a href="#">전자레인지</a></p>                      
+                      <Link to="/categories/600?keyword=620"><h4>주방가전</h4></Link>
+                        <p><Link to="/categories/600?keyword=621">인덕션/전기레인지</Link></p>
+                        <p><Link to="/categories/600?keyword=622">전기밥솥</Link></p>
+                        <p><Link to="/categories/600?keyword=623">커피머신</Link></p>
+                        <p><Link to="/categories/600?keyword=624">에어프라이어</Link></p>
+                        <p><Link to="/categories/600?keyword=625">토스터</Link></p>                      
+                        <p><Link to="/categories/600?keyword=626">전자레인지</Link></p>                      
                       </li>
                     </ul></div>
               </li>
