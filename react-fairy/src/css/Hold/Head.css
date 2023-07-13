@@ -1,35 +1,60 @@
 .head {
+  width: 100%;
   display: flex;
   align-items: center;
+  gap: 30px;
 }
-.head .LogoBox {
-  width: 100px;
+.head .headBox {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #00f;
 }
-.head .LogoBox .LogoImg {
+.head .headBox .LogoBox {
+  width: 200px;
+}
+.head .headBox .inputBox {
   width: 100%;
 }
-.head .inputBox {
-  width: 50%;
-  margin-left: 50px;
-}
-.head .inputBox .search {
+.head .headBox .inputBox .search {
   width: 100%;
   height: 50px;
   padding: 25px;
   border-radius: 15px;
+  border: 1px solid #d3d3d3;
 }
-.head ul {
+.head > ul {
+  width: 50%;
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-.head ul li {
-  width: calc((100% - 10px) / 6);
+.head > ul > li {
+  width: calc((100% - 10px) / 7);
 }
-.head ul li p {
+.head > ul > li > p {
   margin: 0 1px 0 10px;
   transition: 0.7 all;
 }
-.head ul li p:hover {
+.head > ul > li > p:hover {
   color: #00f;
+}
+
+@media all and (max-width: 468px) {
+  .headBox {
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 0;
+  }
+  .headBox .LogoBox {
+    margin: 0 auto;
+    border: 1px solid #000;
+  }
+  .headBox .inputBox {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .headBox .inputBox .search {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Head.css.map */

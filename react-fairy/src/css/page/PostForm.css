@@ -24,7 +24,7 @@
   width: 100%;
   margin: 30px auto 30px auto;
 }
-.PostFormBox > form h1 {
+.PostFormBox > form > h1 {
   margin-bottom: 30px;
   border-bottom: 1px solid #000;
 }
