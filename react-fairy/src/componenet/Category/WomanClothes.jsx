@@ -76,14 +76,18 @@ const WomanClothes = () => {
     // 전체 물품 superCate 중에서
     // category_seq 가 100~199인 (여성의류인) 물품을 superC로 설정
 
-    
-      setSuperC(superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200))
-      console.log(superC);
+
+    // let superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
+
+    if (searchParams.get('keyword') == 110) {
+      // console.log('keyword 110 enter')
+      setSuperC(superCate.filter(item => item.category_seq >= 110 && item.category_seq < 119))
+    } else if (searchParams.get('keyword') == 120) {
+      setSuperC(superCate.filter(item => item.category_seq >= 120 && item.category_seq < 129))
+    } else if (searchParams.get('keyword') == 130) {
+      setSuperC(superCate.filter(item => item.category_seq >= 130 && item.category_seq < 139))
+    }
       
-      if (searchParams.get('keyword') == 100110) {
-        console.log('keyword 110 enter')
-        setSuperC(superCate.filter(item => item.category_seq >= 110 && item.category_seq < 119))
-      } 
 
   },[superCate])
 
