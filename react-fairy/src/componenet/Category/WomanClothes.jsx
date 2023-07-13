@@ -3,10 +3,19 @@ import axios from 'axios';
 
 import './CategoryCSS.css'
 import CategoryTable from './CategoryTable';
+import { useSearchParams } from 'react-router-dom';
 
 
 const WomanClothes = () => {
-  
+
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get('keyword'))
+
+  if(searchParams.get('keyword')){
+
+  }
+
   // useEffect(function, deps)
   // deps 가 없으면 항상
   // deps 가 빈 배열 [] 이면 렌더링 시에 동작함
@@ -15,35 +24,35 @@ const WomanClothes = () => {
 
   const [categorySeq, setCategorySeq] = useState();
   const [superCate, setSuperCate] = useState([]);
-  
-  
+
+
   // WomanClothes 첫 렌더링 시 데이터 가져오는 useEffect
 
-  useEffect(()=>{
-    
-    axios.post('http://localhost:8888/db/categories',{
-      categorySeq : categorySeq
-    })
-    .then((res)=>{
-      
-      if (res.data.result !== undefined) {
-        
-        console.log(res.data.result);
-        
-        setSuperCate(res.data.result)
-        console.log(superCate);
-        
+  useEffect(() => {
 
-      } else{
-        console.log('nono');
-      }
+    axios.post('http://localhost:8888/db/categories', {
+      categorySeq: categorySeq
     })
-    
-  },[])
-  
+      .then((res) => {
 
-// 확인용 로그
-//  console.log(superCate);
+        if (res.data.result !== undefined) {
+
+          console.log(res.data.result);
+
+          setSuperCate(res.data.result)
+          console.log(superCate);
+
+
+        } else {
+          console.log('nono');
+        }
+      })
+
+  }, [])
+
+
+  // 확인용 로그
+  //  console.log(superCate);
   // if(.ppp){
   //   const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
 
@@ -51,25 +60,25 @@ const WomanClothes = () => {
   // else if(/categories/100110){
   //   const superC = superCate.filter(item=>item.category_seq >= 110 && item.category_seq < 119)
   // }
-  const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
+  const superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
 
-  
-  
-    return (
-      
-      //test start
-      <div>
-            
-        <div className='container'>
-            {superC.map(item=>
-                <CategoryTable key={item.prod_barcode}
-                name ={item.prod_name} 
-                price={item.prod_price}
-                photo={item.prod_photo}
-                ></CategoryTable>)}
-        </div>
-        
-        {/* 
+
+
+  return (
+
+    //test start
+    <div>
+
+      <div className='container'>
+        {superC.map(item =>
+          <CategoryTable key={item.prod_barcode}
+            name={item.prod_name}
+            price={item.prod_price}
+            photo={item.prod_photo}
+          ></CategoryTable>)}
+      </div>
+
+      {/* 
 
           중분류 선택 시 category_seq 가 100이 아니면서
 
@@ -80,7 +89,7 @@ const WomanClothes = () => {
     </div>
 
 
-              // test end
+    // test end
 
 
 
@@ -93,12 +102,12 @@ const WomanClothes = () => {
 
     // <div className='Main'>
     //   <section className='Main-sec02'>
-     
 
-              
+
+
     //      <ul>
     //           <li>
-          
+
     //           <a href = "">
     //             <img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDhfMzgg%2FMDAxNjU3MjY0MjI5MjM1.MuPAFpxxCeTP-fOwcaL-3VapQqPSOc_uAX4AJQdxftMg.bHWQGqo4bdG9dq3BzdB5Nm5Q2Xt967Fl37-0_82mVX4g.JPEG.barbie8368%2F1657264225930.jpg&type=a340' width ={200}height={200}/>
     //             <h3 align="center">aaa</h3><p align="center">CTT</p>
@@ -181,10 +190,10 @@ const WomanClothes = () => {
     //             <a href="#!"><img src='https://picsum.photos/id/269/150/150' alt="준비중.." /></a>
     //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
     //           </li>
-              
+
     //       </ul>
 
-        
+
     //       </section>
     // </div>
   )
