@@ -94,7 +94,7 @@ router.post('/user/login',(req, res)=>{
 
 // 카테고리 ------------------------- 시작
 
-router.post('/db/category', (req, res)=>{
+router.post('/db/categories', (req, res)=>{
     let sql = "select category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info"
    
     
