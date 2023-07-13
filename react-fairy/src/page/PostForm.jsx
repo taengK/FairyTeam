@@ -8,6 +8,8 @@ import axios from 'axios'
 import { Await, useNavigate } from 'react-router-dom'
 import Logo from '../Images/Logo.png'
 
+
+
 // html로 회원정보 관리하는거 가능 (nunjucks) node Ex08DB
 // 아이디 중복체크 기능 ( 버튼식 또는 텍스트창 벗어나면 자동으로 체크 )
 //    >> DB에서 아이디를 PK? 로 등록해놔서 중복 알아서 걸러지긴 함..
@@ -29,9 +31,6 @@ function PostForm() {
   const nameRef = useRef()
   const nickRef = useRef()
   const addRef = useRef()
-
-
-
 
 
   const [userData, setUserData] = useState({})
@@ -175,13 +174,12 @@ function PostForm() {
 
 
 
-
-
   return (
     <div className='PostFormBox'>
 
       <Form onSubmit={handleJoin}>
         <h1>게시물작성</h1>
+        
 
         <ul className='PFInnerBox'>
           <li className='df'>
