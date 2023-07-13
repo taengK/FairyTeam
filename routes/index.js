@@ -100,7 +100,7 @@ router.post('/db/category', (req, res)=>{
     
     conn.query(sql, [req.body.categorySeq], (err, rows)=>{
         if (rows){
-            console.log('super_category')
+            console.log('데이터 송출 성공')
             res.json({result : rows})
         } else {
             console.log('error', err)

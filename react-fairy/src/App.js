@@ -61,12 +61,14 @@ import Interior from './componenet/Category/Interior';
 import DailySupplies from './componenet/Category/DailySupplies';
 
 
-
+import { useState } from 'react';
 
 
 
 
 function App() {
+
+  const [check, setCheck] = useState(0); 
   return (
     <div id='con'>
       <div id = 'untilMain'>
@@ -74,7 +76,7 @@ function App() {
           <Head/>
       </header>
       <nav>
-          <NavList/>
+          <NavList chCheck={()=>setCheck(check+1)}/>
       </nav>
       
       <Routes>
@@ -90,18 +92,18 @@ function App() {
         <Route path='/Join' element={<Join/>}/>
 
 {/*************************************Categories************************************************/}     
-        <Route path='/Categories' element={<Categories/>}/>
-        <Route path='/categories/100' element ={<WomanClothes/>}/>
+        {/* <Route path='/Categories' element={<Categories/>}/> */}
+        <Route path='/categories/100' element ={<WomanClothes check={check}/>}/>
         <Route path='/categories/200' element ={<ManClothes/>}/>
         <Route path='/categories/300' element ={<Shoes/>}/>
         <Route path='/categories/400' element ={<BagWallet/>}/>
         <Route path='/categories/500' element ={<Digital/>}/>
         <Route path='/categories/600' element ={<HomeApp/>}/>
-        <Route path='/categories/700' element ={<Sports/>}/>
-        <Route path='/categories/800' element ={<Book/>}/>
-        <Route path='/categories/900' element ={<Beauty/>}/>
-        <Route path='/categories/1000' element ={<Interior/>}/>
-        <Route path='/categories/1100' element ={<DailySupplies/>}/>
+        <Route path='/categories/700' element ={<Sports check={check}/>}/>
+        <Route path='/categories/800' element ={<Book check={check}/>}/>
+        <Route path='/categories/900' element ={<Beauty check={check}/>}/>
+        <Route path='/categories/1000' element ={<Interior check={check}/>}/>
+        <Route path='/categories/1100' element ={<DailySupplies check={check}/>}/>
       </Routes>
       </div>
       <footer>

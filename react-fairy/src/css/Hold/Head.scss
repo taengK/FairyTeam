@@ -1,33 +1,41 @@
-.head{
+.head {
+    width: 100%;
     display: flex;
     align-items: center;
-    border: 1px solid #000;
+    gap: 30px;
+    .headBox {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        border: 1px solid #00f;
+        
     .LogoBox {
         width: 200px;
-        border: 1px solid #000;
-        .LogoImg {
-            width: 100%;
-        }
+        
     }
+
     .inputBox {
-        width: 50%;
-        margin-left: 50px;
-        border: 1px solid #000;
+        width: 100%;
         .search {
-            width: 100%; height: 50px;
+            width: 100%;
+            height: 50px;
             padding: 25px;
             border-radius: 15px;
+            border: 1px solid #d3d3d3;
         }
     }
-    ul {
+}
+    >ul {
+        width: 50%;
         display: flex;
         align-items: center;
         margin-left: auto;
-        li {
-            width: calc((100% - 10px)/6);  //<<<<<<<<<<<<<<<<<수정들어가야해
-            p {
+        
+        >li {
+            width: calc((100% - 10px)/6); //<<<<<<<<<<<<<<<<<수정들어가야해
+            >p {
                 margin: 0 1px 0 10px;
-                transition: 0.7 all; 
+                transition: 0.7 all;
                 &:hover {
                     color: #00f;
                 }
@@ -37,14 +45,20 @@
 }
 
 @media all and ( max-width : 468px) {
-    .head {
+    .headBox {
         flex-wrap: wrap;
-    .LogoBox {
-        width: 100%;
+        justify-content: left;
+        gap: 0;
+        .LogoBox {
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        .inputBox {
+            margin-top: 20px;
+            width: 100%;
+            .search {
+                width: 100%;
+            }
+        }
     }
 }
-
-}
-   
-   
-
