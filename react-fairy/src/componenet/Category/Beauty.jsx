@@ -82,14 +82,104 @@ const Beauty = (props) => {
     if (searchParams.get('keyword') == 910) {
       // console.log('keyword 110 enter')
       setSuperC(superCate.filter(item => item.category_seq >= 910 && item.category_seq < 919))
+    } else if (searchParams.get('keyword') == 911) {
+      setSuperC(superCate.filter(item => item.category_seq==911))
+    } else if (searchParams.get('keyword') == 912) {
+      setSuperC(superCate.filter(item => item.category_seq==912))
+    } else if (searchParams.get('keyword') == 913) {
+      setSuperC(superCate.filter(item => item.category_seq==913))
+    } else if (searchParams.get('keyword') == 914) {
+      setSuperC(superCate.filter(item => item.category_seq==914))
+    } else if (searchParams.get('keyword') == 915) {
+      setSuperC(superCate.filter(item => item.category_seq==915))
+    } else if (searchParams.get('keyword') == 916) {
+      setSuperC(superCate.filter(item => item.category_seq==916))
+    } else if (searchParams.get('keyword') == 917) {
+      setSuperC(superCate.filter(item => item.category_seq==917))
+    } else if (searchParams.get('keyword') == 918) {
+      setSuperC(superCate.filter(item => item.category_seq==918))
+    } else if (searchParams.get('keyword') == 919) {
+      setSuperC(superCate.filter(item => item.category_seq==919))
     } else if (searchParams.get('keyword') == 920) {
       setSuperC(superCate.filter(item => item.category_seq >= 920 && item.category_seq < 929))
+    } else if (searchParams.get('keyword') == 921) {
+      setSuperC(superCate.filter(item => item.category_seq==921))
+    } else if (searchParams.get('keyword') == 922) {
+      setSuperC(superCate.filter(item => item.category_seq==922))
+    } else if (searchParams.get('keyword') == 923) {
+      setSuperC(superCate.filter(item => item.category_seq==923))
+    } else if (searchParams.get('keyword') == 924) {
+      setSuperC(superCate.filter(item => item.category_seq==924))
+    } else if (searchParams.get('keyword') == 925) {
+      setSuperC(superCate.filter(item => item.category_seq==925))
+    } else if (searchParams.get('keyword') == 926) {
+      setSuperC(superCate.filter(item => item.category_seq==926))
+    } else if (searchParams.get('keyword') == 927) {
+      setSuperC(superCate.filter(item => item.category_seq==927))
+    } else if (searchParams.get('keyword') == 928) {
+      setSuperC(superCate.filter(item => item.category_seq==928))
+    } else if (searchParams.get('keyword') == 929) {
+      setSuperC(superCate.filter(item => item.category_seq==929))
     } else if (searchParams.get('keyword') == 930) {
       setSuperC(superCate.filter(item => item.category_seq >= 930 && item.category_seq < 939))
+    } else if (searchParams.get('keyword') == 931) {
+      setSuperC(superCate.filter(item => item.category_seq==931))
+    } else if (searchParams.get('keyword') == 932) {
+      setSuperC(superCate.filter(item => item.category_seq==932))
+    } else if (searchParams.get('keyword') == 933) {
+      setSuperC(superCate.filter(item => item.category_seq==933))
+    } else if (searchParams.get('keyword') == 934) {
+      setSuperC(superCate.filter(item => item.category_seq==934))
+    } else if (searchParams.get('keyword') == 935) {
+      setSuperC(superCate.filter(item => item.category_seq==935))
+    } else if (searchParams.get('keyword') == 936) {
+      setSuperC(superCate.filter(item => item.category_seq==936))
+    } else if (searchParams.get('keyword') == 937) {
+      setSuperC(superCate.filter(item => item.category_seq==937))
+    } else if (searchParams.get('keyword') == 938) {
+      setSuperC(superCate.filter(item => item.category_seq==938))
+    } else if (searchParams.get('keyword') == 939) {
+      setSuperC(superCate.filter(item => item.category_seq==939))
     } else if (searchParams.get('keyword') == 940) {
       setSuperC(superCate.filter(item => item.category_seq >= 940 && item.category_seq < 949))
+    } else if (searchParams.get('keyword') == 941) {
+      setSuperC(superCate.filter(item => item.category_seq==941))
+    } else if (searchParams.get('keyword') == 942) {
+      setSuperC(superCate.filter(item => item.category_seq==942))
+    } else if (searchParams.get('keyword') == 943) {
+      setSuperC(superCate.filter(item => item.category_seq==943))
+    } else if (searchParams.get('keyword') == 944) {
+      setSuperC(superCate.filter(item => item.category_seq==944))
+    } else if (searchParams.get('keyword') == 945) {
+      setSuperC(superCate.filter(item => item.category_seq==945))
+    } else if (searchParams.get('keyword') == 946) {
+      setSuperC(superCate.filter(item => item.category_seq==946))
+    } else if (searchParams.get('keyword') == 947) {
+      setSuperC(superCate.filter(item => item.category_seq==947))
+    } else if (searchParams.get('keyword') == 948) {
+      setSuperC(superCate.filter(item => item.category_seq==948))
+    } else if (searchParams.get('keyword') == 949) {
+      setSuperC(superCate.filter(item => item.category_seq==949))
     } else if (searchParams.get('keyword') == 950) {
       setSuperC(superCate.filter(item => item.category_seq >= 960 && item.category_seq < 969))
+    } else if (searchParams.get('keyword') == 951) {
+      setSuperC(superCate.filter(item => item.category_seq==961))
+    } else if (searchParams.get('keyword') == 952) {
+      setSuperC(superCate.filter(item => item.category_seq==962))
+    } else if (searchParams.get('keyword') == 953) {
+      setSuperC(superCate.filter(item => item.category_seq==963))
+    } else if (searchParams.get('keyword') == 954) {
+      setSuperC(superCate.filter(item => item.category_seq==964))
+    } else if (searchParams.get('keyword') == 955) {
+      setSuperC(superCate.filter(item => item.category_seq==965))
+    } else if (searchParams.get('keyword') == 956) {
+      setSuperC(superCate.filter(item => item.category_seq==966))
+    } else if (searchParams.get('keyword') == 957) {
+      setSuperC(superCate.filter(item => item.category_seq==967))
+    } else if (searchParams.get('keyword') == 958) {
+      setSuperC(superCate.filter(item => item.category_seq==968))
+    } else if (searchParams.get('keyword') == 959) {
+      setSuperC(superCate.filter(item => item.category_seq==969))
     }
     
       

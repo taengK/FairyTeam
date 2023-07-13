@@ -82,8 +82,44 @@ const Interior = (props) => {
     if (searchParams.get('keyword') == 1010) {
       // console.log('keyword 110 enter')
       setSuperC(superCate.filter(item => item.category_seq >= 1010 && item.category_seq < 1019))
+    } else if (searchParams.get('keyword') == 1011) {
+      setSuperC(superCate.filter(item => item.category_seq==1011))
+    } else if (searchParams.get('keyword') == 1012) {
+      setSuperC(superCate.filter(item => item.category_seq==1012))
+    } else if (searchParams.get('keyword') == 1013) {
+      setSuperC(superCate.filter(item => item.category_seq==1013))
+    } else if (searchParams.get('keyword') == 1014) {
+      setSuperC(superCate.filter(item => item.category_seq==1014))
+    } else if (searchParams.get('keyword') == 1015) {
+      setSuperC(superCate.filter(item => item.category_seq==1015))
+    } else if (searchParams.get('keyword') == 1016) {
+      setSuperC(superCate.filter(item => item.category_seq==1016))
+    } else if (searchParams.get('keyword') == 1017) {
+      setSuperC(superCate.filter(item => item.category_seq==1017))
+    } else if (searchParams.get('keyword') == 1018) {
+      setSuperC(superCate.filter(item => item.category_seq==1018))
+    } else if (searchParams.get('keyword') == 1019) {
+      setSuperC(superCate.filter(item => item.category_seq==1019))
     } else if (searchParams.get('keyword') == 1020) {
       setSuperC(superCate.filter(item => item.category_seq >= 1030 && item.category_seq < 1039))
+    } else if (searchParams.get('keyword') == 1021) {
+      setSuperC(superCate.filter(item => item.category_seq==1031))
+    } else if (searchParams.get('keyword') == 1022) {
+      setSuperC(superCate.filter(item => item.category_seq==1032))
+    } else if (searchParams.get('keyword') == 1023) {
+      setSuperC(superCate.filter(item => item.category_seq==1033))
+    } else if (searchParams.get('keyword') == 1024) {
+      setSuperC(superCate.filter(item => item.category_seq==1034))
+    } else if (searchParams.get('keyword') == 1025) {
+      setSuperC(superCate.filter(item => item.category_seq==1035))
+    } else if (searchParams.get('keyword') == 1026) {
+      setSuperC(superCate.filter(item => item.category_seq==1036))
+    } else if (searchParams.get('keyword') == 1027) {
+      setSuperC(superCate.filter(item => item.category_seq==1037))
+    } else if (searchParams.get('keyword') == 1028) {
+      setSuperC(superCate.filter(item => item.category_seq==1038))
+    } else if (searchParams.get('keyword') == 1029) {
+      setSuperC(superCate.filter(item => item.category_seq==1039))
     
     }
       
