@@ -31,7 +31,6 @@ const WomanClothes = () => {
         console.log(res.data.result);
         
         setSuperCate(res.data.result)
-        
         console.log(superCate);
         
 
@@ -45,8 +44,14 @@ const WomanClothes = () => {
 
 // 확인용 로그
 //  console.log(superCate);
+  // if(.ppp){
+  //   const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
 
- const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
+  // }
+  // else if(/categories/100110){
+  //   const superC = superCate.filter(item=>item.category_seq >= 110 && item.category_seq < 119)
+  // }
+  const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
 
   
   
