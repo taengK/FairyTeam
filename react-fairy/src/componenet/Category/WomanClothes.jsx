@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+
 
 // test
 
@@ -29,7 +29,7 @@ const WomanClothes = () => {
       
       if (res.data.result !== undefined) {
         
-        // console.log(res.data.result);
+        console.log(res.data.result);
         
         setSuperCate(res.data.result)
         console.log(superCate);
@@ -46,7 +46,8 @@ const WomanClothes = () => {
 // 확인용 로그
 //  console.log(superCate);
 
- 
+ const superC = superCate.filter(item=>item.super_category === 100)
+
   
   
     return (
@@ -55,7 +56,7 @@ const WomanClothes = () => {
       <div>
             
         <div className='container'>
-            {superCate.map(item=>
+            {superC.map(item=>
                 <CategoryTable key={item.prod_barcode}
                 name ={item.prod_name} 
                 price={item.prod_price}
@@ -65,7 +66,7 @@ const WomanClothes = () => {
         
         {/* 
 
-          중분류 선택 시 category_seq 가 100이 아니면서            
+          중분류 선택 시 category_seq 가 100이 아니면서
 
         <h1>MF</h1>
         <div className='container2'>
