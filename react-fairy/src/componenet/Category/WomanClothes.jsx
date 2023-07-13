@@ -46,7 +46,7 @@ const WomanClothes = () => {
 // 확인용 로그
 //  console.log(superCate);
 
- const superC = superCate.filter(item=>item.super_category === 100)
+ const superC = superCate.filter(item=>item.item.category_seq>=100&&item.category_seq<200)
 
   
   
