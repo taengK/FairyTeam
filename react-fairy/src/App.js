@@ -4,6 +4,13 @@ import './App.css'
 import Head from './componenet/Head/Head';
 import NavList from './componenet/Navigation/NavList';
 import Footer from './componenet/Footer/Footer';
+
+//**************************** */
+import InfoBar from './componenet/InfoBar/infoBar'
+import Input from './componenet/Input/Input';
+import Messages from './componenet/Messages/Messages'
+import TextContainer from './componenet/TextContainer/TextContainer'
+
 // *******page.jsx******
 import Main from './page/Main';
 import SignUp from './page/SignUp';
@@ -15,6 +22,7 @@ import Modification from './page/Modification';
 import PostForm from './page/PostForm';
 import Categories from './page/Categories';
 import Chat from './page/Chat';
+import Join from './page/Join';
 // *************************install*******************************************
 import {Routes,Route} from 'react-router-dom' //라우터돔
 // *************************CSS***********************************************
@@ -33,8 +41,10 @@ import './css/page/Modification.css'
 import './css/page/myPage.css'
 import './css/page/PostForm.css'
 import './css/page/Kakaomap.css'
-
-
+import './componenet/InfoBar/infoBar.css'
+import'./componenet/Input/Input.css';
+import './componenet/Messages/Messages.css'
+import './componenet/TextContainer/TextContainer.css'
 import './css/page/chat.css'
 
 // Category
@@ -79,6 +89,8 @@ function App() {
         <Route path='/Modification' element={<Modification/>}/>
         <Route path='/PostForm' element={<PostForm/>}/>
         <Route path='/Chat' element={<Chat/>}/>
+        <Route path='/Join' element={<Join/>}/>
+
 {/*************************************Categories************************************************/}     
         {/* <Route path='/Categories' element={<Categories/>}/> */}
         <Route path='/categories/100' element ={<WomanClothes check={check}/>}/>

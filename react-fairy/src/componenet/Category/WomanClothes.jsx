@@ -19,7 +19,7 @@ const WomanClothes = (props) => {
   const [categorySeq, setCategorySeq] = useState();
   const [superCate, setSuperCate] = useState([]);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  
   
   // WomanClothes 첫 렌더링 시 데이터 가져오는 useEffect
   
@@ -48,6 +48,19 @@ const WomanClothes = (props) => {
     
   },[props.check])
   
+
+// 확인용 로그
+//  console.log(superCate);
+
+  // }
+  // else if(/categories/100110){
+  //   const superC = superCate.filter(item=>item.category_seq >= 110 && item.category_seq < 119)
+  // }
+
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get('keyword'))
+
   
   //     const [superC, setSuperC] = useState([])
   //     setSuperC(새로운 바꿔야하는 배열 )
