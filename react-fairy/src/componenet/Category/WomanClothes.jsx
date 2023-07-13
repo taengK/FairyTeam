@@ -19,7 +19,7 @@ const WomanClothes = (props) => {
   const [categorySeq, setCategorySeq] = useState();
   const [superCate, setSuperCate] = useState([]);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  
   
   // WomanClothes 첫 렌더링 시 데이터 가져오는 useEffect
   
@@ -58,8 +58,8 @@ const WomanClothes = (props) => {
   // }
 
 
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // console.log(searchParams.get('keyword'))
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get('keyword'))
 
   
   //     const [superC, setSuperC] = useState([])
