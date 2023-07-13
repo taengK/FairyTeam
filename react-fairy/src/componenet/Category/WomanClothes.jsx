@@ -19,11 +19,13 @@ const WomanClothes = (props) => {
   const [categorySeq, setCategorySeq] = useState();
   const [superCate, setSuperCate] = useState([]);
 
-
+  const [searchParams, setSearchParams] = useSearchParams();
+  
   // WomanClothes 첫 렌더링 시 데이터 가져오는 useEffect
-
+  
   useEffect(() => {
-
+    
+    console.log(searchParams.get('keyword'))
     axios.post('http://localhost:8888/db/categories', {
       categorySeq: categorySeq
     })
@@ -34,7 +36,8 @@ const WomanClothes = (props) => {
         console.log(res.data.result);
         
         setSuperCate(res.data.result)
-        
+        ``
+        // 모든 품목 가져오기
         console.log(superCate);
         
 
@@ -53,9 +56,12 @@ const WomanClothes = (props) => {
   // else if(/categories/100110){
   //   const superC = superCate.filter(item=>item.category_seq >= 110 && item.category_seq < 119)
   // }
-  const [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams.get('keyword'))
 
+
+  // const [searchParams, setSearchParams] = useSearchParams();
+  // console.log(searchParams.get('keyword'))
+
+  
   //     const [superC, setSuperC] = useState([])
   //     setSuperC(새로운 바꿔야하는 배열 )
   
@@ -63,8 +69,12 @@ const WomanClothes = (props) => {
 
   // superCate에 값이 들어간 이후로 시점 변경 
   useEffect(()=>{
+    
+
     console.log('supercate', superCate)
-    setSuperC(superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200))
+    
+    // 전체 물품 superCate 중에서
+    // category_seq 가 100~199인 (여성의류인) 물품을 superC로 설정
 
 
     // let superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
