@@ -7,15 +7,17 @@ const CategoryTable = ( {name, price, photo} ) => {
     */
     return (
    
-        <div className='ctgItem'>
-        <img src={photo}></img>
+    <div className='ctgItem'>
         <table>
             <tbody>
                 <tr>
-                    <td>{name}</td>
+                    <td className='ctgImgBox' style={{backgroundImage:`url(${photo})`}}></td>
                 </tr>
                 <tr>
-                    <td>{price}</td>
+                    <td className='ctgCttBox'>{name}</td>
+                </tr>
+                <tr>
+                    <td className='ctgPriBox'>{price}</td>
                 </tr>
             </tbody>
         </table>
