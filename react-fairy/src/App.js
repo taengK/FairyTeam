@@ -87,11 +87,11 @@ function App() {
         <Route path='/categories/400' element ={<BagWallet/>}/>
         <Route path='/categories/500' element ={<Digital/>}/>
         <Route path='/categories/600' element ={<HomeApp/>}/>
-        <Route path='/categories/700' element ={<Sports/>}/>
-        <Route path='/categories/800' element ={<Book/>}/>
-        <Route path='/categories/900' element ={<Beauty/>}/>
-        <Route path='/categories/1000' element ={<Interior/>}/>
-        <Route path='/categories/1100' element ={<DailySupplies/>}/>
+        <Route path='/categories/700' element ={<Sports check={check}/>}/>
+        <Route path='/categories/800' element ={<Book check={check}/>}/>
+        <Route path='/categories/900' element ={<Beauty check={check}/>}/>
+        <Route path='/categories/1000' element ={<Interior check={check}/>}/>
+        <Route path='/categories/1100' element ={<DailySupplies check={check}/>}/>
       </Routes>
       </div>
       <footer>
