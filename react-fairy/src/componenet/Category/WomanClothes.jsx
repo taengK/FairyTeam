@@ -72,6 +72,8 @@ const WomanClothes = () => {
     if (searchParams.get('keyword') == 110) {
       console.log('keyword 110 enter')
       setSuperC(superCate.filter(item => item.category_seq >= 110 && item.category_seq < 119))
+    } else if (searchParams.get('keyword') == 100) {
+      setSuperC(superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200))
     }
 
 
