@@ -32,6 +32,7 @@ import './css/page/cart.css'
 import './css/page/Modification.css'
 import './css/page/myPage.css'
 import './css/page/PostForm.css'
+import './css/page/Kakaomap.css'
 
 
 import './css/page/chat.css'

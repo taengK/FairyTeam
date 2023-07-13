@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 const { kakao } = window;
 
 const MapContainer = ({ searchPlace }) => {
@@ -80,15 +79,14 @@ const MapContainer = ({ searchPlace }) => {
   }, [searchPlace]);
 
   return (
-    <div>
-      <div
-        id="myMap"
-        style={{
-          width: '500px',
-          height: '500px',
-        }}
-      ></div>
-      <div id="result-list">
+    <>
+    <ul className='yeaun' style={{display:"flex", justifyContent:"space-between"}}>
+      <li style={{border:"1px solid #f00"}}>
+      <div id="myMap" style={{ width: '500px',height: '500px', }}></div>
+      </li>
+      
+      <li style={{border:"1px solid #00f"}}>
+      <div id="result-list" >
         {Places.map((item, i) => (
           <div key={i} style={{ marginTop: '20px' }}>
             <span>{i + 1}</span>
@@ -105,10 +103,13 @@ const MapContainer = ({ searchPlace }) => {
               <span>{item.phone}</span>
             </div>
           </div>
+          
         ))}
         <div id="pagination"></div>
       </div>
-    </div>
+      </li>
+    </ul>
+    </>
   );
 };
 
