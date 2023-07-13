@@ -82,11 +82,11 @@ function App() {
 {/*************************************Categories************************************************/}     
         {/* <Route path='/Categories' element={<Categories/>}/> */}
         <Route path='/categories/100' element ={<WomanClothes check={check}/>}/>
-        <Route path='/categories/200' element ={<ManClothes/>}/>
-        <Route path='/categories/300' element ={<Shoes/>}/>
-        <Route path='/categories/400' element ={<BagWallet/>}/>
-        <Route path='/categories/500' element ={<Digital/>}/>
-        <Route path='/categories/600' element ={<HomeApp/>}/>
+        <Route path='/categories/200' element ={<ManClothes check={check}/>}/>
+        <Route path='/categories/300' element ={<Shoes check={check}/>}/>
+        <Route path='/categories/400' element ={<BagWallet check={check}/>}/>
+        <Route path='/categories/500' element ={<Digital check={check}/>}/>
+        <Route path='/categories/600' element ={<HomeApp check={check}/>}/>
         <Route path='/categories/700' element ={<Sports check={check}/>}/>
         <Route path='/categories/800' element ={<Book check={check}/>}/>
         <Route path='/categories/900' element ={<Beauty check={check}/>}/>

@@ -48,19 +48,6 @@ const WomanClothes = (props) => {
     
   },[props.check])
   
-
-// 확인용 로그
-//  console.log(superCate);
-
-  // }
-  // else if(/categories/100110){
-  //   const superC = superCate.filter(item=>item.category_seq >= 110 && item.category_seq < 119)
-  // }
-
-
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // console.log(searchParams.get('keyword'))
-
   
   //     const [superC, setSuperC] = useState([])
   //     setSuperC(새로운 바꿔야하는 배열 )
@@ -77,15 +64,53 @@ const WomanClothes = (props) => {
     // category_seq 가 100~199인 (여성의류인) 물품을 superC로 설정
 
 
-    // let superC = superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200)
-
-    if (searchParams.get('keyword') == 110) {
+    if (searchParams.get('keyword') === '110') {
       // console.log('keyword 110 enter')
-      setSuperC(superCate.filter(item => item.category_seq >= 110 && item.category_seq < 119))
-    } else if (searchParams.get('keyword') == 120) {
-      setSuperC(superCate.filter(item => item.category_seq >= 120 && item.category_seq < 129))
-    } else if (searchParams.get('keyword') == 130) {
-      setSuperC(superCate.filter(item => item.category_seq >= 130 && item.category_seq < 139))
+      setSuperC(superCate.filter(item => item.category_seq >= 110 && item.category_seq < 120))
+    } else if (searchParams.get('keyword') === '111') {
+      setSuperC(superCate.filter(item => item.category_seq === 111))
+    } else if (searchParams.get('keyword') === '112') {
+      setSuperC(superCate.filter(item => item.category_seq === 112))
+    } else if (searchParams.get('keyword') === '113') {
+      setSuperC(superCate.filter(item => item.category_seq === 113))
+    } else if (searchParams.get('keyword') === '114') {
+      setSuperC(superCate.filter(item => item.category_seq === 114))
+    } else if (searchParams.get('keyword') === '115') {
+      setSuperC(superCate.filter(item => item.category_seq === 115))
+    } else if (searchParams.get('keyword') === '116') {
+      setSuperC(superCate.filter(item => item.category_seq === 116))
+    }
+    else if (searchParams.get('keyword') === '120') {
+      setSuperC(superCate.filter(item => item.category_seq >= 120 && item.category_seq < 130))
+    } else if (searchParams.get('keyword') === '121') {
+      setSuperC(superCate.filter(item => item.category_seq === 121))
+    } else if (searchParams.get('keyword') === '122') {
+      setSuperC(superCate.filter(item => item.category_seq === 122))
+    } else if (searchParams.get('keyword') === '123') {
+      setSuperC(superCate.filter(item => item.category_seq === 123))
+    } else if (searchParams.get('keyword') === '124') {
+      setSuperC(superCate.filter(item => item.category_seq === 124))
+    } else if (searchParams.get('keyword') === '125') {
+      setSuperC(superCate.filter(item => item.category_seq === 125))
+    } else if (searchParams.get('keyword') === '126'){
+      setSuperC(superCate.filter(item => item.category_seq === 126))
+    } else if (searchParams.get('keyword') === '127'){
+      setSuperC(superCate.filter(item => item.category_seq === 127))
+    }
+     else if (searchParams.get('keyword') === '130') {
+      setSuperC(superCate.filter(item => item.category_seq >= 130 && item.category_seq < 140))
+    } else if (searchParams.get('keyword') === '131') {
+      setSuperC(superCate.filter(item => item.category_seq === 131))
+    } else if (searchParams.get('keyword') === '132') {
+      setSuperC(superCate.filter(item => item.category_seq === 132))
+    } else if (searchParams.get('keyword') === '133') {
+      setSuperC(superCate.filter(item => item.category_seq === 133))
+    } else if (searchParams.get('keyword') === '134') {
+      setSuperC(superCate.filter(item => item.category_seq === 134))
+    } else if (searchParams.get('keyword') === '135') {
+      setSuperC(superCate.filter(item => item.category_seq === 135))
+    } else if (searchParams.get('keyword') === '136') {
+      setSuperC(superCate.filter(item => item.category_seq === 136))
     }
       
 
@@ -108,14 +133,6 @@ const WomanClothes = (props) => {
           ></CategoryTable>)}
       </div>
 
-      {/* 
-
-          중분류 선택 시 category_seq 가 100이 아니면서
-
-        <h1>MF</h1>
-        <div className='container2'>
-            {barc2}
-        </div> */}
     </div>
 
   )
