@@ -6,23 +6,18 @@ const CategoryTable = ( {name, price, photo} ) => {
         tbody태그를 넣어주어야 개발자모드에서 에러가 나오지 않음
     */
     return (
-        <div>
-            <div>
-                <span width="200">공간1</span>
-                <span width="200">공간1</span>
-                <span width="200">공간1</span>
-                <span width="200">공간1</span>
-            </div>
-        <div className='ctgItem'>
-            
-        <img src={photo}></img>
+   
+    <div className='ctgItem'>
         <table>
             <tbody>
                 <tr>
-                    <td>{name}</td>
+                    <td className='ctgImgBox' style={{backgroundImage:`url(${photo})`}}></td>
                 </tr>
                 <tr>
-                    <td>{price}</td>
+                    <td className='ctgCttBox'>{name}</td>
+                </tr>
+                <tr>
+                    <td className='ctgPriBox'>{price}</td>
                 </tr>
             </tbody>
         </table>
