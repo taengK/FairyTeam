@@ -6,7 +6,7 @@ const Chat = () => {
     <div>
        <Kakaomap/>
 
-        채팅창이다
+       <h1>채팅창이다</h1> 
 
 
     </div>

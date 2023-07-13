@@ -27,28 +27,27 @@ const WomanClothes = () => {
     axios.post('http://localhost:8888/db/categories', {
       categorySeq: categorySeq
     })
-      .then((res) => {
+    .then((res)=>{
+      
+      if (res.data.result !== undefined) {
+        
+        console.log(res.data.result);
+        
+        setSuperCate(res.data.result)
+        
+        console.log(superCate);
+        
 
-        if (res.data.result !== undefined) {
+      } else{
+        console.log('nono');
+      }
+    })
+    
+  },[])
+  
 
-          console.log(res.data.result);
-
-          setSuperCate(res.data.result)
-          console.log(superCate);
-
-
-        } else {
-          console.log('nono');
-        }
-      })
-
-  }, [])
-
-
-  // 확인용 로그
-  //  console.log(superCate);
-  // if(.ppp){
-  //   const superC = superCate.filter(item=>item.category_seq >= 100 && item.category_seq < 200)
+// 확인용 로그
+//  console.log(superCate);
 
   // }
   // else if(/categories/100110){
@@ -105,114 +104,6 @@ const WomanClothes = () => {
         </div> */}
     </div>
 
-
-    // test end
-
-
-
-
-
-
-
-
-
-
-    // <div className='Main'>
-    //   <section className='Main-sec02'>
-
-
-
-    //      <ul>
-    //           <li>
-
-    //           <a href = "">
-    //             <img src='https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDhfMzgg%2FMDAxNjU3MjY0MjI5MjM1.MuPAFpxxCeTP-fOwcaL-3VapQqPSOc_uAX4AJQdxftMg.bHWQGqo4bdG9dq3BzdB5Nm5Q2Xt967Fl37-0_82mVX4g.JPEG.barbie8368%2F1657264225930.jpg&type=a340' width ={200}height={200}/>
-    //             <h3 align="center">aaa</h3><p align="center">CTT</p>
-    //           </a>
-    //           </li>
-
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/251/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/252/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/253/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/254/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/255/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/256/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/257/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/258/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/259/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/260/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/261/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/270/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/263/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/264/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/265/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/266/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/267/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/268/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-    //           <li>
-    //             <a href="#!"><img src='https://picsum.photos/id/269/150/150' alt="준비중.." /></a>
-    //             <a href="#!" data-name="VIEW MORE" className="btn"><h3>TIT</h3><p>CTT</p></a>
-    //           </li>
-
-    //       </ul>
-
-
-    //       </section>
-    // </div>
   )
 }
 
