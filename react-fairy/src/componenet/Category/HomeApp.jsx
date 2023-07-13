@@ -19,7 +19,7 @@ const HomeApp = (props) => {
   const [categorySeq, setCategorySeq] = useState();
   const [superCate, setSuperCate] = useState([]);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  
   
   // WomanClothes 첫 렌더링 시 데이터 가져오는 useEffect
   
@@ -54,6 +54,8 @@ const HomeApp = (props) => {
   
   const [superC, setSuperC] = useState([])
 
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams.get('keyword'));
   // superCate에 값이 들어간 이후로 시점 변경 
   useEffect(()=>{
     
@@ -64,20 +66,20 @@ const HomeApp = (props) => {
     // category_seq 가 100~199인 (여성의류인) 물품을 superC로 설정
 
 
-    if (searchParams.get('keyword') === '610') {
+    if (searchParams.get('keyword') == 610) {
       // console.log('keyword 610 enter')
       setSuperC(superCate.filter(item => item.category_seq >= 610 && item.category_seq < 620))
-    } else if (searchParams.get('keyword') === '611') {
+    } else if (searchParams.get('keyword') == 611) {
       setSuperC(superCate.filter(item => item.category_seq === 611))
-    } else if (searchParams.get('keyword') === '612') {
+    } else if (searchParams.get('keyword') == 612) {
       setSuperC(superCate.filter(item => item.category_seq === 612))
-    } else if (searchParams.get('keyword') === '613') {
+    } else if (searchParams.get('keyword') == 613) {
       setSuperC(superCate.filter(item => item.category_seq === 613))
-    } else if (searchParams.get('keyword') === '614') {
+    } else if (searchParams.get('keyword') == 614) {
       setSuperC(superCate.filter(item => item.category_seq === 614))
-    } else if (searchParams.get('keyword') === '615') {
+    } else if (searchParams.get('keyword') == 615) {
       setSuperC(superCate.filter(item => item.category_seq === 615))
-    } else if (searchParams.get('keyword') === '616') {
+    } else if (searchParams.get('keyword') == 616) {
       setSuperC(superCate.filter(item => item.category_seq === 616))
     }
     else if (searchParams.get('keyword') === '620') {
