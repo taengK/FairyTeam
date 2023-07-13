@@ -36,7 +36,7 @@ const WomanClothes = (props) => {
         console.log(res.data.result);
         
         setSuperCate(res.data.result)
-        ``
+        
         // 모든 품목 가져오기
         console.log(superCate);
         
@@ -72,7 +72,7 @@ const WomanClothes = (props) => {
     
 
     console.log('supercate', superCate)
-    
+    setSuperC(superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200))
     // 전체 물품 superCate 중에서
     // category_seq 가 100~199인 (여성의류인) 물품을 superC로 설정
 
