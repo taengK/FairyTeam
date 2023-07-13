@@ -181,7 +181,7 @@ function PostForm() {
     <div className='PostFormBox'>
 
       <Form onSubmit={handleJoin}>
-        <h1>게시물작성</h1>
+        <h1 className='fad'>게시물작성</h1>
 
         <ul className='PFInnerBox'>
           <li className='df'>
@@ -284,7 +284,7 @@ function PostForm() {
                     <li><p>내위치</p></li>
                     <li><p>최근검색</p></li>
                     <li><p>주소검색</p></li>
-                    <li><p>지역설정안함</p></li>
+                    <li><p>카카오맵설정이곳에다넣어야해</p></li>
                   </ul>
                   <input type="text" placeholder='거래장소를 입력하세요' />
                 </div>

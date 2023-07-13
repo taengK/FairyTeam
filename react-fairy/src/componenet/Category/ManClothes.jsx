@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-
-// test
-
 import './CategoryCSS.css'
 import CategoryTable from './CategoryTable';
+
+
 const ManClothes = () => {
   
   // useEffect(function, deps)
