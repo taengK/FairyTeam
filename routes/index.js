@@ -162,6 +162,20 @@ router.post('/db/Detaill', (req, res)=>{
 // 채팅 ------------------------- 종료
 
 
+router.post('/db/recent', (req, res)=>{
+    
+    let sql = "select prod_name, prod_price, prod_photo, prod_seq from product_info order by prod_seq desc limit 10"
+    
+    conn.query(sql, (err, rows)=>{
+        if (rows){
+            console.log('ㅇ', rows)
+            res.json({recent : rows})
+        } else {
+            console.log('ㄴ')
+            res.json({recent : 'none'})
+        }
+    })
+})
 
 
 

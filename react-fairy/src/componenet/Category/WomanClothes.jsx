@@ -7,6 +7,7 @@ import { useSearchParams } from 'react-router-dom';
 
 
 
+
 const WomanClothes = (props) => {
 
 
@@ -130,7 +131,7 @@ const WomanClothes = (props) => {
   },[superCate])
 
 
-console.log(superC);
+// console.log(superC);
 
   
 
@@ -145,13 +146,16 @@ console.log(superC);
     <div>
       <div className='ctgCtn'>
         {superC.map(item =>
+        
           <CategoryTable
             name={item.prod_name}
             price={item.prod_price}
             photo={item.prod_photo}
             barc={item.prod_barcode}
             seq={item.prod_seq}
-          ></CategoryTable>)}
+          ></CategoryTable>
+          )}
+          
       </div>
     </div>
 

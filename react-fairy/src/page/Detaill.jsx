@@ -25,6 +25,8 @@ useEffect(() => {
   
   // get방식으로도 만들어보기
 
+
+  
   if (params.seq!== undefined) {
     axios.post('http://localhost:8888/db/Detaill', {    
       seq : seq
