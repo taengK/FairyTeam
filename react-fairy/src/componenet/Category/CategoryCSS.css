@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /***********************상위컴포넌트****************************/
 .ctgCtn {
-  border: 1px solid #000;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 30px 30px 0 30px;

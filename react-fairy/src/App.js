@@ -13,6 +13,7 @@ import TextContainer from './componenet/TextContainer/TextContainer'
 
 // *******page.jsx******
 import Main from './page/Main';
+import SignUpLogin from './page/SignUpLogin';
 import SignUp from './page/SignUp';
 import Login from './page/Login';
 import Mypage from './page/Mypage';
@@ -20,7 +21,6 @@ import Cart from './page/Cart';
 import Detaill from './page/Detaill';
 import Modification from './page/Modification';
 import PostForm from './page/PostForm';
-import Categories from './page/Categories';
 import Chat from './page/Chat';
 import Join from './page/Join';
 // *************************install*******************************************
@@ -73,6 +73,7 @@ function App() {
     <div id='con' >
       <div id='untilMain'  >
         <div className='HN' >
+          <div className='GNB'></div>
           <header >
             <Head />
           </header>
@@ -83,7 +84,8 @@ function App() {
       </div>
       <main>
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/' element={<Main />} /> 
+          <Route path='/SignUpLogin' element={<SignUpLogin />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Mypage' element={<Mypage />} />

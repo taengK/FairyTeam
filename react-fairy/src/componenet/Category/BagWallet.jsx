@@ -106,7 +106,7 @@ const BagWallet = (props) => {
 
     //test start
     <div>
-
+      <h2>가방</h2>
       <div className='ctgCtn'>
         {superC.map(item =>
           <CategoryTable key={item.prod_barcode}
