@@ -25,82 +25,43 @@ function PostForm() {
 
   const nav = useNavigate()
 
-  const idRef = useRef()
-  const pwRef = useRef()
-  const cpwRef = useRef()
   const nameRef = useRef()
-  const nickRef = useRef()
-  const addRef = useRef()
+  const contentRef = useRef()
+  const priceRef = useRef()
+  const statusRef = useRef()
+  const photoRef = useRef()
+  const categoryRef = useRef()
 
 
   const [userData, setUserData] = useState({})
-  const [userId, setUserId] = useState({})
+  // const [userId, setUserId] = useState({})
 
 
 
 
-  // ID 중복체크
-  const idCheck1 = (e) => {
-    e.preventDefault();
-
-    setUserId({ id: idRef.current.value })
-
-  }
-
-  useEffect(() => {   // 중복체크
-    console.log('userId : ', userId.id)
-
-    // console.log('중복체크 idCheck 값 : ', idCheck)
-    // 초기 id 가 undefined가 아닐 때 글자 수가 5 이상이면 전송함
-    if (userId.id !== undefined) {
-      if (userId.id.length >= 5) {
-        axios.post('http://localhost:8888/user/idcheck', {
-          userId: userId
-        })
-          .then((res) => {
-
-            console.log('아이디 중복 검사 :', res.data.idCheck);
-            if (res.data.idCheck === 'existed') {
-              alert('이미 등록된 아이디입니다',)
-              idRef.current.value = ''
-              idRef.current.focus()
-
-            } else if (res.data.idCheck === 'none') {
-              alert('가입이 가능한 아이디입니다')
-              pwRef.current.focus()
-              console.log('가입 가능, res.data.idCheck :', res.data.idCheck);
-              console.log('회원가입 가능? res.data.result :', res.data.result)
-
-            }
-          })
-        // undefined가 아니더라도 짧으면 전송하지 않음
-      } else if (userId.id.length < 5) {
-        alert('아이디가 너무 짧습니다')
-        idRef.current.focus()
-      }
-    }
-  }, [userId])
+   
 
   // ... 코드 아니고 함수 접은거임
   const handleJoin = (e) => {
     console.log('handle Join Function'
-      , idRef.current.value
-      , pwRef.current.value
       , nameRef.current.value
-      , nickRef.current.value
-      , addRef.current.value);
+      , contentRef.current.value
+      , priceRef.current.value
+      , statusRef.current.value
+      , photoRef.current.value
+      , categoryRef.current.value);
 
     // form이 submit 되지 못하도록 작업
     e.preventDefault();
 
 
     setUserData({
-      id: idRef.current.value,
-      pw: pwRef.current.value,
-      cpw: cpwRef.current.value,
       name: nameRef.current.value,
-      nick: nickRef.current.value,
-      add: addRef.current.value
+      content: contentRef.current.value,
+      price: priceRef.current.value,
+      status: statusRef.current.value,
+      photo: photoRef.current.value,
+      category: categoryRef.current.value
     })
 
 
@@ -109,33 +70,31 @@ function PostForm() {
 
 
   useEffect(() => {
-    console.log('userData : ', userData.id)
+    console.log('userData : ', userData.name)
     /*useEffect의 특성 상, 무조건 화면의 첫 갱신 때 함수가 호출될 수 밖에 없다.
     비어있는 값을 가지고 회원가입을 하면 안되니까 
     화면의 첫 갱신때는 회원가입 로직이 
     실행되지 않도록 조건을 걸어둔 것!*/
 
 
-    if (userData.id !== undefined && userData.pw === userData.cpw) {
-      if (userData.id.length >= 5
-        && userData.id.length <= 20 && userData.pw.length >= 6
-        && userData.name.length >= 2 && userData.nick.length >= 2 && userData.add.length >= 5) {
+    if (userData.name !== undefined) {
+      
 
         //  id 값이 초기상태인 undefined가 아니면서 pw, cpw가 일치할 때만 값을 전송함
-        axios.post('http://localhost:8888/user/signup', {
+        axios.post('http://localhost:8888/user/postForm', {
           userData: userData
         })
 
           .then((res) => {
-            console.log('회원가입 res', res.data.result);
+            console.log('게시물 작성 res', res.data.result);
             if (res.data.result === 'success') {
-              alert('회원가입을 축하드립니다')
+              alert('게시물이 작성 되었습니다.')
               nav('/')
             } else if (res.data.result === 'duplicated') {
               alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
-              console.log('아이디 중복 확인')
+              console.log('문제')
 
-              idRef.current.focus()
+              // idRef.current.focus()
             }
 
 
@@ -144,30 +103,7 @@ function PostForm() {
             console.error('실패!')
           })
         // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
-      } else if (userData.id.length < 5) {
-        alert('아이디가 너무 짧아요!')
-        idRef.current.focus()
-      } else if (userData.pw.length < 6) {
-        alert('비밀번호가 너무 짧아요!')
-        pwRef.current.value = ''
-        cpwRef.current.value = ''
-        pwRef.current.focus()
-      } else if (userData.name.length < 2) {
-        alert('이름이 너무 짧아요!')
-        nameRef.current.focus()
-      } else if (userData.nick.length < 2) {
-        alert('닉네임이 너무 짧아요!')
-        nickRef.current.focus()
-      } else if (userData.add.length < 5) {
-        alert('이메일이 잘못됐음')
-        addRef.current.focus()
-      }
-    } else if (userData.id !== undefined && userData.pw !== userData.cpw) {
-      // id가 초기상태가 아니면서 pw, cpw가 일치하지 않으면 비밀번호를 다시 입력하게
-      alert('비밀번호가 일치하지 않습니다')
-      pwRef.current.value = ''
-      cpwRef.current.value = ''
-      pwRef.current.focus()
+      
     }
   }, [userData])
 
@@ -188,7 +124,7 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1 rowch' >
                 <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Control type="text" placeholder="상품 이름을 입력해주세요" ref={idRef} />
+                  <Form.Control type="text" placeholder="상품 이름을 입력해주세요" ref={nameRef} />
                 </Form.Group>
               </Row>
             </div>
@@ -201,7 +137,7 @@ function PostForm() {
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridNick">
                   <textarea className='PFTextArea' 
-                  placeholder="여러 장의 상품 사진과 구입 연도, 브랜드, 사용감, 하자 유무 등 구매자에게 필요한 정보를 꼭 포함해 주세요.(10자이상)" ></textarea>
+                  placeholder="구입 연도, 브랜드, 사용감, 하자 유무 등 구매자에게 필요한 정보를 꼭 포함해 주세요.(10자이상)"  ref={contentRef}></textarea>
                 </Form.Group>
               </Row>
             </div>
@@ -213,7 +149,7 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridName">
-                  <Form.Control className='PFPrice' type="number" placeholder="숫자만 입력하세요" ref={nameRef} />
+                  <Form.Control className='PFPrice' type="number" placeholder="숫자만 입력하세요" ref={priceRef} />
                 </Form.Group>
               </Row>
             </div>
@@ -264,7 +200,7 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1' >
                 <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Control className='PFCtegory' type="textarea" placeholder="카테고리 이거 또 어떻게만드냐 이 멍멍이같은 자식같으니라구 멍청이같은 컴퓨터ㄹㄷㅁㄷㄻㄷㄹㅁㅜㄹ" ref={pwRef} />
+                  <Form.Control className='PFCtegory' type="textarea" placeholder="카테고리 이거 또 어떻게만드냐 이 멍멍이같은 자식같으니라구 멍청이같은 컴퓨터ㄹㄷㅁㄷㄻㄷㄹㅁㅜㄹ" ref={categoryRef} />
                 </Form.Group>
               </Row>
             </div>
