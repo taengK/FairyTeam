@@ -116,7 +116,7 @@ const Shoes = (props) => {
 
       <div className='ctgCtn'>
         {superC.map(item =>
-          <CategoryTable key={item.prod_barcode}
+          <CategoryTable seq={item.prod_seq}
             name={item.prod_name}
             price={item.prod_price}
             photo={item.prod_photo}

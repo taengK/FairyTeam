@@ -99,7 +99,7 @@ router.post('/user/login',(req, res)=>{
 // 카테고리 ------------------------- 시작
 
 router.post('/db/categories', (req, res)=>{
-    let sql = "select category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info"
+    let sql = "select prod_seq, category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info"
    
     
     conn.query(sql, [req.body.categorySeq], (err, rows)=>{
@@ -115,27 +115,56 @@ router.post('/db/categories', (req, res)=>{
 
 
 
-// 물품등록 ----------------------------- 시작      미완
+// 상세페이지 ----------------------------- 시작      미완
 
-router.post('/db/product', (req, res)=>{
+router.post('/db/Detaill', (req, res)=>{
     
-    let sql = "select prod_barcode from product_info where prod_name = ?"
+    let sql = "select * from product_info where prod_seq = ?"
     
-    conn.query(sql, [req.body.userId.id], (err, rows)=>{
+    conn.query(sql, [req.body.seq], (err, rows)=>{
         if (rows){
             console.log('ㅇ', rows)
-            res.json({idCheck : rows})
+            res.json({prodInfo : rows})
         } else {
             console.log('ㄴ')
-            res.json({idCheck : 'none'})
+            res.json({prodInfo : 'none'})
         }
     })
 })
 
-// 물품등록 ----------------------------------- 종료
 
 
+// 상세페이지 ----------------------------------- 종료
 
+
+// 게시물 작성 ---------------------------------
+router.post('/user/postForm', (req, res)=>{
+    console.log('postForm Router', req.body);
+    
+    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, category_seq, prod_barcode, prod_status, prod_photo, user_id) VALUES (?,?,?,이건,몰라,애매, ?, 유저이름?)"
+    // id, pw, name, nick, email
+   
+    conn.query(sql
+        , [req.body.userData.name
+            , req.body.userData.connect
+            , req.body.userData.price
+            , req.body.userData.category
+            , req.body.userData.status
+            , req.body.userData.photo
+            ]
+        , (err, rows)=>{
+            if(rows) {
+                console.log('success signup')
+                res.json({result : 'success'})
+            } else {
+                console.log('faild to signup', err);
+                res.json({result : 'duplicated'})
+            }
+    })
+} 
+)
+
+// 게시물 작성 --------------------------------- 종료
 
 
 

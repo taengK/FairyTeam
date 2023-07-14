@@ -101,7 +101,7 @@ function App() {
           <Route path='/' element={<Main />} /> 
           <Route path='/Mypage' element={<Mypage />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/Detaill' element={<Detaill />} />
+          <Route path='/Detaill/:seq' element={<Detaill />} />
           <Route path='/Modification' element={<Modification />} />
           <Route path='/PostForm' element={<PostForm />} />
           <Route path='/Chat' element={<Chat />} />

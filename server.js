@@ -39,6 +39,9 @@
   socket.join(user.room)
   callback()
 })
+
+
+
 socket.on('sendMessage', (message, callback) => {
   const user = getUser(socket.id)
   // console.log(user)
@@ -50,8 +53,13 @@ socket.on('sendMessage', (message, callback) => {
   callback()
 })
 
+
+
+
   socket.on('disconnect', () => {
     const user = removeUser(socket.id)
+
+    
     if (user) {
       io.to(user.room).emit('message', {
         user: 'admin',
@@ -66,11 +74,20 @@ socket.on('sendMessage', (message, callback) => {
   })
 })
 
+
+
+
  app.use(bodyParser.urlencoded({extended:true}))
  
  app.use(express.json())
  
+ app.set('views',__dirname+'/views')
+ app.set('view engine','jsx')
 
+ nunjucks.configure('views',{
+  express : app, //app 객체 연결
+  watch : true //html 파일이 연결되면 템플릿 엔진을 다시 렌더링
+})
 
  app.use(express.static(path.join(__dirname,'react-fairy/build')))
  

@@ -10,15 +10,15 @@
 //     const idRef = useRef()
 //     const testRef= useRef()
 
-//     const [userId, setUserId] = useState({})
-//     const [cateSeq, setCateSeq] = useState({})
+    // const [userId, setUserId] = useState({})
+    // const [cateSeq, setCateSeq] = useState({})
 
-//     const test =(e)=>{
-//         e.preventDefault();
+    // const test =(e)=>{
+    //     e.preventDefault();
         
-//         setUserId({id : idRef.current.value})
+    //     setUserId({id : idRef.current.value})
         
-//     }
+    // }
     
 
 //   useEffect(() => {

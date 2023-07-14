@@ -6,6 +6,7 @@ import CategoryTable from './CategoryTable';
 import { useSearchParams } from 'react-router-dom';
 
 
+
 const WomanClothes = (props) => {
 
 
@@ -33,12 +34,12 @@ const WomanClothes = (props) => {
       
       if (res.data.result !== undefined) {
         
-        console.log(res.data.result);
+        // console.log(res.data.result);
         
         setSuperCate(res.data.result)
         
         // 모든 품목 가져오기
-        console.log(superCate);
+        // console.log(superCate);
         
 
       } else{
@@ -59,7 +60,7 @@ const WomanClothes = (props) => {
 
 
   const [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams.get('keyword'))
+  // console.log(searchParams.get('keyword'))
 
   
   //     const [superC, setSuperC] = useState([])
@@ -71,7 +72,7 @@ const WomanClothes = (props) => {
   useEffect(()=>{
     
 
-    console.log('supercate', superCate)
+    // console.log('supercate', superCate)
     setSuperC(superCate.filter(item => item.category_seq >= 100 && item.category_seq < 200))
     // 전체 물품 superCate 중에서
     // category_seq 가 100~199인 (여성의류인) 물품을 superC로 설정
@@ -126,27 +127,35 @@ const WomanClothes = (props) => {
       setSuperC(superCate.filter(item => item.category_seq == 136))
     }
       
-
   },[superCate])
 
 
 console.log(superC);
 
-  return (
+  
 
-    //test start
+
+
+
+  return (
+    
+    // <Context.Provider value = {{superC}}>
+      
+
     <div>
       <div className='ctgCtn'>
         {superC.map(item =>
-          <CategoryTable key={item.prod_barcode}
+          <CategoryTable
             name={item.prod_name}
             price={item.prod_price}
             photo={item.prod_photo}
             barc={item.prod_barcode}
+            seq={item.prod_seq}
           ></CategoryTable>)}
       </div>
     </div>
 
+    // {/* </Context.Provider> */}
   )
 }
 

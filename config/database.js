@@ -14,8 +14,8 @@ module.exports = {
     },
     connect : function(conn){
         conn.connect(function(err){
-            if(err) console.log('연결 실패', err);
-            else console.log('연결 성공!');
+            if(err) console.log('DB 연결 실패', err);
+            else console.log('DB 연결 성공!');
         })
     }
 }
