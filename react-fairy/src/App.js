@@ -11,11 +11,13 @@ import Input from './componenet/Input/Input';
 import Messages from './componenet/Messages/Messages'
 import TextContainer from './componenet/TextContainer/TextContainer'
 
-// *******page.jsx******
+// **************************************page.jsx*************************************
+// *******SignUp.jsx******
+import SignUp from './page/01_SignIn_Login/SignUp';
+import Login from './page/01_SignIn_Login/Login';
+import SignUpLogin from './page/01_SignIn_Login/SignUpLogin';
+// *******SignUp.jsx******
 import Main from './page/Main';
-import SignUpLogin from './page/SignUpLogin';
-import SignUp from './page/SignUp';
-import Login from './page/Login';
 import Mypage from './page/Mypage';
 import Cart from './page/Cart';
 import Detaill from './page/Detaill';
@@ -32,9 +34,14 @@ import './css/Hold/Head.css'
 import './css/Hold/NavList.css'
 import './css/Hold/Footer.css'
 // *******Page.css******
+// *******SignUp_Login.css******
+import './css/page/01_SignIn_Login/SignUpLogin.css'
+import './css/page/01_SignIn_Login/Signup.css'
+import './css/page/01_SignIn_Login/Login.css'
+// *******SignUp_Login.css******
+
+
 import './css/page/Main.css'
-import './css/page/Login.css'
-import './css/page/Signup.css'
 import './css/page/Detaill.css'
 import './css/page/cart.css'
 import './css/page/Modification.css'
@@ -84,10 +91,14 @@ function App() {
       </div>
       <main>
         <Routes>
-          <Route path='/' element={<Main />} /> 
+          {/*******************SignUp_Login**************************/}
           <Route path='/SignUpLogin' element={<SignUpLogin />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/Login' element={<Login />} />
+          {/*******************SignUp_Login**************************/}
+
+
+          <Route path='/' element={<Main />} /> 
           <Route path='/Mypage' element={<Mypage />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/Detaill' element={<Detaill />} />

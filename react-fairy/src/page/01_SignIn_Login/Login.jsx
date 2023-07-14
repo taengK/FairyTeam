@@ -57,7 +57,17 @@ const Login = () => {
   return (
     <div className='LoginBox'>
       <Form onSubmit={handleLogin} className='LoginMx'>
+      <h1>Sign In</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>or use your account</span>
 
+
+
+      <Row className='row1' >
     <Form.Group as={Col} controlId="formGridEmail">
       <Form.Label style={{fontWeight:"bold", margin:"30px 0 10px 10px"}}>ID</Form.Label>
       <Form.Control type="text" placeholder="Enter Id" ref={idRef} className='LoginId' />
@@ -66,11 +76,13 @@ const Login = () => {
     <Form.Group as={Col} controlId="formGridPassword">
       <Form.Label style={{fontWeight:"bold", margin:"30px 0 10px 10px"}}>Password</Form.Label>
       <Form.Control type="password" placeholder="Password" ref={pwRef} className='LoginPw'/>
-      <a href="#" className='idOverlapLogin' style={{display:"block", margin:"10px 0 10px 10px"}}>아이디/비밀번호찾기</a>
+      <a href="#"style={{display:"block", margin:"10px 0 10px 10px"}}>아이디/비밀번호찾기</a>
     </Form.Group>
-  <Button variant="primary" type="submit" className='LoginSubmit'>
+
+  <Button variant="primary" type="submit"  className='SLBtn'>
     Submit
   </Button>
+  </Row>
 </Form>
 </div>
   )
