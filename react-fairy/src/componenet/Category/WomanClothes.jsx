@@ -130,13 +130,12 @@ const WomanClothes = (props) => {
   },[superCate])
 
 
-
+console.log(superC);
 
   return (
 
     //test start
     <div>
-
       <div className='ctgCtn'>
         {superC.map(item =>
           <CategoryTable key={item.prod_barcode}
@@ -146,7 +145,6 @@ const WomanClothes = (props) => {
             barc={item.prod_barcode}
           ></CategoryTable>)}
       </div>
-
     </div>
 
   )

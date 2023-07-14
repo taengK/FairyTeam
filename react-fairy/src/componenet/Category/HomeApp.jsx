@@ -114,6 +114,7 @@ const HomeApp = (props) => {
             name={item.prod_name}
             price={item.prod_price}
             photo={item.prod_photo}
+            barc={item.prod_barcode}
           ></CategoryTable>)}
       </div>
 
