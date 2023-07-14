@@ -28,8 +28,8 @@ const CategoryTable = ( {name, price, photo ,barc,seq} ) => {
                 </tr>
             </tbody>
         </table>
-        </Link>
-    </div>
+    </Link>
+</div>
     // </Context.Provider>
     )
 }
