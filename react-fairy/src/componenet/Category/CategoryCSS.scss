@@ -1,39 +1,69 @@
-
-.ctgCtn{
+/***********************상위컴포넌트****************************/
+.ctgCtn {
   border: 1px solid #000;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 30px 30px 0 30px;
   gap: 20px;
 }
-.ctgItem{
+
+/***********************상위컴포넌트****************************/
+
+
+/***********************하위컴포넌트****************************/
+.ctgItem {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   cursor: pointer;
-}
-table{
-  text-align: center;
-}
-
-td{
-  padding-bottom: 10%;  
-  font-weight: bold;
-  font-size: 1.1rem;
-  
-}
-.ctgImgBox {
-  border-radius: 15px;
-  width: 100%;height: 200px;
-  background-size:cover;
-}
-.ctgCttBox {
-  
-  border: 1px solid #00f;
+  position: relative;
   
   
+  tbody {
+    &:hover {
+      transform: translateY(-3%);
+      transition: .3s;
+    }
+    
+    &:hover .ctgbtn::after {
+      content: attr(data-name);
+    }
+    
+    .ctgImgBox {
+      border-radius: 15px;
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+    }
+    
+    .ctgbtn {
+      
+      width: 100%;
+      height: 80px;
+      line-height: 40px;
+      border-radius: 10px;
+      margin-top: 10px;
+      text-align: center;
+      
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+    
+    .ctgbtn::after {
+      content: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 300px;
+      line-height: 300px;
+      text-align: center;
+      background-color: #000;
+      opacity: 0.5;
+      border-radius: 10px;
+      color: #eee;
+    }
+  }
 }
-
-
-  
-
+/***********************하위컴포넌트****************************/

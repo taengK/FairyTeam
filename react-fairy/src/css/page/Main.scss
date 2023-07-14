@@ -21,6 +21,7 @@
     ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        
         li {
             width: calc((100% - 58px)/1);
             border-radius: 15px;
