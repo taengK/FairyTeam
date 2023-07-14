@@ -23,7 +23,7 @@ const CategoryTable = ( {name, price, photo} ) => {
             </tbody>
         </table>
     </div>
-       
+   
     )
 }
 
