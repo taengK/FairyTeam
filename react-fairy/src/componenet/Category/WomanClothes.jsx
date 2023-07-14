@@ -145,7 +145,7 @@ console.log(superC);
     <div>
       <div className='ctgCtn'>
         {superC.map(item =>
-          <CategoryTable key={item.prod_seq}
+          <CategoryTable
             name={item.prod_name}
             price={item.prod_price}
             photo={item.prod_photo}

@@ -121,7 +121,7 @@ router.post('/db/Detaill', (req, res)=>{
     
     let sql = "select * from product_info where prod_barcode = ?"
     
-    conn.query(sql, [req.body.barcode], (err, rows)=>{
+    conn.query(sql, [req.body.seq], (err, rows)=>{
         if (rows){
             console.log('ㅇ', rows)
             res.json({prodInfo : rows})

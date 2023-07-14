@@ -11,23 +11,23 @@ const Detaill = () => {
   // const {superC} = useContext(Context);
   
   const params = useParams();
-console.log('params :', params.prod_barcode);
+console.log('params :', params.seq);
 
 
 
-const [barcode, setBarcode] = useState(params.prod_barcode)
+const [seq, setSeq] = useState(params.seq)
 
 const [data, setData] = useState({})
-  console.log(barcode);
+  console.log(seq);
 
 
 useEffect(() => {
   
   // get방식으로도 만들어보기
 
-  if (params.prod_barcode !== undefined) {
+  if (params.seq!== undefined) {
     axios.post('http://localhost:8888/db/Detaill', {    
-      barcode : barcode
+      seq : seq
     })
       .then((res) => {
 
