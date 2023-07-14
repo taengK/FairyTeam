@@ -4,16 +4,20 @@ const path = require('path');
 
 const db_config = require('../config/database');
 
+
 let conn =db_config.init()
 db_config.connect(conn)
 
 
+
+
 // 메인 ----------------------------- 시작      <완료>
+
 router.get('/',(req, res)=>{
     console.log('index Router');
     res.render('/')
-    // res.send(path.join(__dirname, "react-fairy/build/index.html"))
 })
+
 // 메인 ----------------------------- 종료
 
 
@@ -129,6 +133,8 @@ router.post('/db/product', (req, res)=>{
 })
 
 // 물품등록 ----------------------------------- 종료
+
+
 
 
 

@@ -1,6 +1,7 @@
  const express = require('express')
  const socketio = require('socket.io')
  const http = require('http')
+ const nunjucks = require('nunjucks')
 
  const cors = require('cors')
  const router = require('./routes/router')
@@ -12,11 +13,12 @@
  const app = express()
  const server = http.createServer(app)
  const io = socketio(server)
+
+
  app.use(cors())
-  app.use(router)
+ app.use(router)
 
  app.set('port',process.env.PORT || 8888)
-
 
 
  io.on('connection', (socket) => {
@@ -77,23 +79,4 @@ socket.on('sendMessage', (message, callback) => {
  server.listen(app.get('port'),()=>{
    console.log(app.get('port'),'번 포트에서 서버연결 대기중..');
 })
-
-
-//  app.use('/', userRouter)
-
-//  app.use('/', prodRouter)
- 
-//  app.use('/', cateRouter)
-
- // category test
-//  app.get('/path/:id', (req, res)=>{
-//    // query String(주소창에 ?id=aaaa&pw=bbbb) 사용하여 요청하는 방법
-//    // req.query
-//    console.log(req.query);
-//    console.log(req.query.id);
-//    console.log(req.query.pw);
-//    res.send('11')
-// })
-
-
 
