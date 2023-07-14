@@ -10,7 +10,7 @@ const Detaill = () => {
   
   // const {superC} = useContext(Context);
   
-  const params = useParams();
+const params = useParams();
 console.log('params :', params.seq);
 
 
@@ -35,7 +35,7 @@ useEffect(() => {
 
         if (res.data.prodInfo !== 'none') {
 
-          console.log(res.data.prodInfo[0].prod_at);
+          // console.log(res.data.prodInfo[0].prod_at);
           setData({
             prod_name : res.data.prodInfo[0].prod_name,
             prod_price : res.data.prodInfo[0].prod_price,

@@ -119,7 +119,7 @@ router.post('/db/categories', (req, res)=>{
 
 router.post('/db/Detaill', (req, res)=>{
     
-    let sql = "select * from product_info where prod_barcode = ?"
+    let sql = "select * from product_info where prod_seq = ?"
     
     conn.query(sql, [req.body.seq], (err, rows)=>{
         if (rows){
