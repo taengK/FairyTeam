@@ -68,7 +68,7 @@ const PaymentComponet = () => {
         <i class="fa-solid fa-cart-shopping"></i>
       </li>
       
-      <li><Link to= '/Chat'><input type="button" class="DtChat" value="채팅하기" /></Link>
+      <li><Link to= '/Join'><input type="button" class="DtChat" value="채팅하기" /></Link>
       <i class="fa-solid fa-comment"></i></li>
     </ul>
   </div>
