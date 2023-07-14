@@ -133,7 +133,7 @@ const NavList = (props) => {
                         <p><Link to="/categories/400?keyword=421">클러치백</Link></p>
                         <p><Link to="/categories/400?keyword=422">숄더백</Link></p>
                         <p><Link to="/categories/400?keyword=423">크로스백</Link></p>
-                        <p><Link to="/categories/400?keyword=424">브리프케이스</Link></p>
+                        {/* <p><Link to="/categories/400?keyword=424">브리프케이스</Link></p> */}
                         <p><Link to="/categories/400?keyword=425">백팩</Link></p>                      
                    
                       </li>
@@ -147,7 +147,7 @@ const NavList = (props) => {
                         <p><Link to="/categories/500?keyword=512">일반폰</Link></p>
                         <p><Link to="/categories/500?keyword=513">케이스/보호필름/액세서리</Link></p>
                         <p><Link to="/categories/500?keyword=514">케이블/충전기/주변기기</Link></p>
-                        <p><Link to="/categories/500?keyword=515">기타 휴대폰</Link></p>
+                        {/* <p><Link to="/categories/500?keyword=515">기타 휴대폰</Link></p> */}
                       </li>
                       <li>
                       <Link to="/categories/500?keyword=520"><h4>태블릿</h4></Link>
@@ -262,16 +262,16 @@ const NavList = (props) => {
                         <p><Link to="/categories/800?keyword=812">자기계발</Link></p>
                         <p><Link to="/categories/800?keyword=813">교양/인문</Link></p>
                         <p><Link to="/categories/800?keyword=814">경제/경영</Link></p>
-                        <p><Link to="/categories/800?keyword=815">예술/디자인</Link></p>
+                        {/* <p><Link to="/categories/800?keyword=815">예술/디자인</Link></p>
                         <p><Link to="/categories/800?keyword=816">여행/취미/레저/건강</Link></p>
                         <p><Link to="/categories/800?keyword=817">과학/IT</Link></p>
-                        <p><Link to="/categories/800?keyword=818">기타</Link></p>
+                        <p><Link to="/categories/800?keyword=818">기타</Link></p> */}
                       </li>
                       <li>
                       <Link to="/categories/800?keyword=820"><h4>상품권</h4></Link>
                         <p><Link to="/categories/800?keyword=821">문화/도서</Link></p>
                         <p><Link to="/categories/800?keyword=822">백화점</Link></p>
-                        <p><Link to="/categories/800?keyword=823">기타 상품권</Link></p>
+                        {/* <p><Link to="/categories/800?keyword=823">기타 상품권</Link></p> */}
                      
                       </li>
                     </ul></div>
@@ -297,7 +297,7 @@ const NavList = (props) => {
                         <p><Link to="/categories/900?keyword=925">립밤/립글로즈</Link></p>                      
                         <p><Link to="/categories/900?keyword=926">립스틱</Link></p>                      
                         <p><Link to="/categories/900?keyword=927">치크/블러셔</Link></p>                      
-                        <p><Link to="/categories/900?keyword=928">기타</Link></p>                      
+                        {/* <p><Link to="/categories/900?keyword=928">기타</Link></p>                       */}
                       </li>
                       <li>
                       <Link to="/categories/900?keyword=930"><h4>베이스 메이크업</h4></Link>
@@ -307,22 +307,22 @@ const NavList = (props) => {
                         <p><Link to="/categories/900?keyword=934">파운데이션</Link></p>
                         <p><Link to="/categories/900?keyword=935">파우더/팩트</Link></p>                      
                         <p><Link to="/categories/900?keyword=936">프라이머/컨실러</Link></p>                                         
-                        <p><Link to="/categories/900?keyword=937">기타</Link></p>                      
+                        {/* <p><Link to="/categories/900?keyword=937">기타</Link></p>                       */}
                       </li>
                       <li>
                       <Link to="/categories/900?keyword=940"><h4>바디/헤어케어</h4></Link>
                         <p><Link to="/categories/900?keyword=941">샴푸/린스</Link></p>
                         <p><Link to="/categories/900?keyword=942">헤어에센스/트리트먼트</Link></p>
                         <p><Link to="/categories/900?keyword=943">헤어스타일링</Link></p>
-                        <p><Link to="/categories/900?keyword=944">염색</Link></p>
-                        <p><Link to="/categories/900?keyword=945">바디클렌저/로션</Link></p>                      
+                        {/* <p><Link to="/categories/900?keyword=944">염색</Link></p> */}
+                        {/* <p><Link to="/categories/900?keyword=945">바디클렌저/로션</Link></p>                       */}
                         <p><Link to="/categories/900?keyword=946">핸드/풋케어</Link></p>                                         
                    
                       </li>
                       <li>
                       <Link to="/categories/900?keyword=950"><h4>네일아트</h4></Link>
                         <p><Link to="/categories/900?keyword=951">네일아트/스티커</Link></p>
-                        <p><Link to="/categories/900?keyword=952">매니큐어/페디큐어</Link></p>
+                        {/* <p><Link to="/categories/900?keyword=952">매니큐어/페디큐어</Link></p> */}
                         <p><Link to="/categories/900?keyword=953">네일케어도구</Link></p>                                       
                    
                       </li>
