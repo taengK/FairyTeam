@@ -99,7 +99,7 @@ router.post('/user/login',(req, res)=>{
 // 카테고리 ------------------------- 시작
 
 router.post('/db/categories', (req, res)=>{
-    let sql = "select category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info"
+    let sql = "select prod_seq, category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info"
    
     
     conn.query(sql, [req.body.categorySeq], (err, rows)=>{
@@ -132,7 +132,25 @@ router.post('/db/product', (req, res)=>{
     })
 })
 
+
+
 // 물품등록 ----------------------------------- 종료
+
+// 물품 눌렀을때 상세페이지
+router.get('/db/:barc',(req,res)=>{
+    console.log('되니?');
+    let  sql = 'select * from product_info where prod_barcode = ?'
+    conn.query(sql,[req.params.barc],(err,rows)=>{
+        if(rows){
+            console.log('굿잡')
+            res.json({product:rows})
+        }else{
+            console.log('망함');
+        }
+    })
+    
+})
+// 물품 눌렀을때 상세페이지 끝
 
 
 

@@ -88,7 +88,9 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/Mypage' element={<Mypage />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/Detaill' element={<Detaill />} />
+
+          {/* useParams 사용해서 num 가져와서 해당 데이터 map으로 띄워주기! */}
+          <Route path='/Detaill/:barc' element={<Detaill />} />
           <Route path='/Modification' element={<Modification />} />
           <Route path='/PostForm' element={<PostForm />} />
           <Route path='/Chat' element={<Chat />} />

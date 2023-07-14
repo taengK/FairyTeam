@@ -1,13 +1,44 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import PaymentComponet from '../js/PaymentComponet';
+import { useParams } from 'react-router-dom';
 
 const Detaill = () => {
 
-  // useEffect(()=>{
-  // },[])
+  const {barc} = useParams()
+  const [product,setProduct] = useState(); 
 
+  useEffect(()=>{
+    
+    console.log('barc',barc)
 
+    axios.get(`/db/${barc}`,{
+      
+      
+    })
+    .then((res)=>{
+      if (res.data.product !== undefined) {
+
+        setProduct(res.data.product)
+        console.log(product);
+      }
+    })
+    
+  
+  
+  
+  
+  
+  },[])
+
+  
+  
+  
+ 
+
+ 
+    
+    
 
 
 
@@ -21,30 +52,30 @@ const Detaill = () => {
   <p>
     HOME 
     <span>패션·의류·뷰티</span>
-    <strong>남성의류</strong>
+    <strong>11</strong>
   </p>
 </nav>
 <article class="info">
   <div class="image">
-    <img src="https://via.placeholder.com/460x460" alt="상품이미지"/>
+    <div>1</div>
   </div>
   <div class="summary">
     <nav>
       <h1>(주)판매자명</h1>
       <h2>
         상품번호 : 
-        <span>11111111111</span>
+        <span>111111</span>
       </h2>
     </nav>
     <nav>
-      <h3>상품명</h3>
+      <h3>1</h3>
       <p>상품설명 출력</p>
-      <p>내용내용내용</p>
+      <p>2</p>
     </nav>
     <nav>
       
       <div class="dis_price">
-        <ins>27,000</ins>
+        <ins>3</ins>
       </div>
     </nav>
     <nav>
@@ -79,5 +110,6 @@ const Detaill = () => {
      
   );
 };
+
 
 export default Detaill;
