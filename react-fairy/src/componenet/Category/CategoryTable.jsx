@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import Detaill from '../../page/Detaill'
+
 
 
 const CategoryTable = ( {name, price, photo ,barc} ) => {
@@ -11,42 +11,47 @@ const CategoryTable = ( {name, price, photo ,barc} ) => {
     */
     const nav = useNavigate()
 
-
-  
-
-    // const [prodInfo, setProdInfo] = useState([])
-
+    
+    
+    
 
     // useEffect(()=>{
-    //     setProdInfo({
-    //         name
-    //         // prodPrice : {price},
-    //         // prodPhoto : {photo},
-    //         // prodBarc : {barc}
-    // })
 
-    // },[])
+        // setDetailProd({
+        //     name : {name},
+        //     price : {price},
+        //     photo : {photo},
+        //     barc : {barc}
+
+        // })
+    // }, [])
+    
+    // console.log(name);
+  
 
     // console.log([name]);
 
-    const sendInfo = (e)=>{
-        nav(`/Detaill/?keyword=${barc}`)
+    // const sendInfo = (e)=>{
+    //     nav(`/Detaill/?keyword=${barc}`)
 
-        // {prodInfo.map(item =>
-        //     <Detaill key={item.prodBarc}
-        //     name = {item.prodName}
-        //     price = {item.prodPrice}
-        //     photo = {item.prodPhoto}
-        //     barc = {item.prodBarc}>
-        //     </Detaill>)}
-        // nav(`/Detaill/${barc}`)
-    }
+    //     // {prodInfo.map(item =>
+    //     //     <Detaill key={item.prodBarc}
+    //     //     name = {item.prodName}
+    //     //     price = {item.prodPrice}
+    //     //     photo = {item.prodPhoto}
+    //     //     barc = {item.prodBarc}>
+    //     //     </Detaill>)}
+    //     // nav(`/Detaill/${barc}`)
+    // }
 
     return (
 
         
-   
-    <div className='ctgItem' onClick={sendInfo}>
+//    <Context.Provider value = {{prodInfo, setProdInfo}}>
+<div className='ctgItem'>
+
+    <Link to = {`/Detaill/${barc}`} key={barc}>
+
         <table>
             <tbody>
                 <tr>
@@ -61,8 +66,10 @@ const CategoryTable = ( {name, price, photo ,barc} ) => {
                 </tr>
             </tbody>
         </table>
-    </div>
+    </Link>
     
+    </div>
+    // </Context.Provider>
     )
 }
 

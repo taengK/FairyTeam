@@ -115,24 +115,24 @@ router.post('/db/categories', (req, res)=>{
 
 
 
-// 물품등록 ----------------------------- 시작      미완
+// 상세페이지 ----------------------------- 시작      미완
 
-router.post('/db/product', (req, res)=>{
+router.post('/db/Detaill', (req, res)=>{
     
-    let sql = "select prod_barcode from product_info where prod_name = ?"
+    let sql = "select * from product_info where prod_barcode = ?"
     
-    conn.query(sql, [req.body.userId.id], (err, rows)=>{
+    conn.query(sql, [req.body.barcode], (err, rows)=>{
         if (rows){
             console.log('ㅇ', rows)
-            res.json({idCheck : rows})
+            res.json({prodInfo : rows})
         } else {
             console.log('ㄴ')
-            res.json({idCheck : 'none'})
+            res.json({prodInfo : 'none'})
         }
     })
 })
 
-// 물품등록 ----------------------------------- 종료
+// 상세페이지 ----------------------------------- 종료
 
 
 

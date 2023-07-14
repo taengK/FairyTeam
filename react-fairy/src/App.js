@@ -88,7 +88,7 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/Mypage' element={<Mypage />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/Detaill' element={<Detaill />} />
+          <Route path='/Detaill/:prod_barcode' element={<Detaill />} />
           <Route path='/Modification' element={<Modification />} />
           <Route path='/PostForm' element={<PostForm />} />
           <Route path='/Chat' element={<Chat />} />

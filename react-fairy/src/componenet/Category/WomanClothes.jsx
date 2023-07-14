@@ -6,6 +6,7 @@ import CategoryTable from './CategoryTable';
 import { useSearchParams } from 'react-router-dom';
 
 
+
 const WomanClothes = (props) => {
 
 
@@ -132,9 +133,16 @@ const WomanClothes = (props) => {
 
 console.log(superC);
 
-  return (
+  
 
-    //test start
+
+
+
+  return (
+    
+    // <Context.Provider value = {{superC}}>
+      
+
     <div>
       <div className='ctgCtn'>
         {superC.map(item =>
@@ -147,6 +155,7 @@ console.log(superC);
       </div>
     </div>
 
+    // {/* </Context.Provider> */}
   )
 }
 
