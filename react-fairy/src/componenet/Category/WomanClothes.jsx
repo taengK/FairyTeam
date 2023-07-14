@@ -137,12 +137,13 @@ const WomanClothes = (props) => {
     //test start
     <div>
 
-      <div className='container'>
+      <div className='ctgCtn'>
         {superC.map(item =>
           <CategoryTable key={item.prod_barcode}
             name={item.prod_name}
             price={item.prod_price}
             photo={item.prod_photo}
+            barc={item.prod_barcode}
           ></CategoryTable>)}
       </div>
 
