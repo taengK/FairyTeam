@@ -39,6 +39,9 @@
   socket.join(user.room)
   callback()
 })
+
+
+
 socket.on('sendMessage', (message, callback) => {
   const user = getUser(socket.id)
   // console.log(user)
@@ -50,8 +53,13 @@ socket.on('sendMessage', (message, callback) => {
   callback()
 })
 
+
+
+
   socket.on('disconnect', () => {
     const user = removeUser(socket.id)
+
+    
     if (user) {
       io.to(user.room).emit('message', {
         user: 'admin',
@@ -65,6 +73,9 @@ socket.on('sendMessage', (message, callback) => {
     console.log('유저가 나갔습니다.')
   })
 })
+
+
+
 
  app.use(bodyParser.urlencoded({extended:true}))
  

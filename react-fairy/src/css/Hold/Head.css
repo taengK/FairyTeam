@@ -1,61 +1,68 @@
+.HeadGnb {
+  text-align: right;
+  color: #a3a3a3;
+}
+.HeadGnb:hover {
+  color: rgb(26, 26, 216);
+  font-weight: bold;
+}
+
 .head {
-  width: 100%;
+  margin-top: 10px;
   display: flex;
+}
+
+.headBox {
+  display: flex;
+  width: 40%;
   align-items: center;
   gap: 30px;
-  border: 1px solid #000;
 }
-.head .headBox {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  border: 1px solid #00f;
+.headBox .LogoBox {
+  width: 100px;
 }
-.head .headBox .LogoBox {
-  width: 200px;
-}
-.head .headBox .inputBox {
+.headBox .LogoBox .LogoImg {
   width: 100%;
 }
-.head .headBox .inputBox .search {
+.headBox .inputBox {
+  width: 70%;
+}
+.headBox .inputBox > input {
   width: 100%;
-  height: 50px;
-  padding: 25px;
+  padding: 10px;
   border-radius: 15px;
   border: 1px solid #d3d3d3;
 }
-.head > ul {
-  width: 50%;
+
+.headNv {
+  width: 60%;
   display: flex;
+}
+.headNv > ul {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: right;
   align-items: center;
-  margin-left: auto;
 }
-.head > ul > li {
-  width: calc((100% - 10px) / 7);
+.headNv > ul > li {
+  width: 100%;
+  margin-left: -1px;
 }
-.head > ul > li > p {
-  margin: 0 1px 0 10px;
-  transition: 0.7 all;
+.headNv > ul > li:last-child {
+  margin-right: -1px;
 }
-.head > ul > li > p:hover {
-  color: #00f;
+.headNv > ul > li p {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #392f2f;
+  font-weight: bold;
+}
+.headNv > ul > li p:hover {
+  color: rgb(26, 26, 216);
 }
 
-@media all and (max-width: 468px) {
-  .headBox {
-    flex-wrap: wrap;
-    justify-content: left;
-    gap: 0;
-  }
-  .headBox .LogoBox {
-    margin: 0 auto;
-    border: 1px solid #000;
-  }
-  .headBox .inputBox {
-    margin-top: 20px;
-    width: 100%;
-  }
-  .headBox .inputBox .search {
-    width: 100%;
-  }
+.btn2 {
+  display: none;
 }/*# sourceMappingURL=Head.css.map */

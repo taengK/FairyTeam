@@ -13,7 +13,7 @@ import TextContainer from "../componenet/TextContainer/TextContainer.js"
 import Input from "../componenet/Input/Input.js"
 
 
-const ENDPOINT = 'http://localhost:3000';
+const ENDPOINT = 'http://localhost:8888';
 let socket;
 
 const Chat = ({ location }) => {
@@ -56,12 +56,12 @@ const Chat = ({ location }) => {
     })
   }, [])
 
-  const sendMessage = (event) => {
-    event.preventDefault()
+  const sendMessage = (message1) => {
+    // message1.preventDefault()
 
-    if (message) {
+    if (message1) {
       // console.log(message)
-      socket.emit('sendMessage', message, () => setMessage(''))
+      socket.emit('sendMessage', message1, () => setMessage(''))
     }
   }
 

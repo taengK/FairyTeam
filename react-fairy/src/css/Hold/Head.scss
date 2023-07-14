@@ -1,65 +1,147 @@
+.HeadGnb {
+    text-align: right;
+    color: #a3a3a3;
+    &:hover {
+        color: rgb(26, 26, 216);
+        font-weight: bold;
+    }
+}
 .head {
-    width: 100%;
+    margin-top: 10px;
     display: flex;
+}
+
+
+
+.headBox {
+    display: flex;
+    width: 40%;
     align-items: center;
     gap: 30px;
-    border: 1px solid #000;
-    .headBox {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        border: 1px solid #00f;
-        
+
     .LogoBox {
-        width: 200px;
-        
+        width: 100px;
+
+        .LogoImg {
+            width: 100%;
+        }
     }
 
     .inputBox {
-        width: 100%;
-        .search {
+        width: 70%;
+
+        >input {
             width: 100%;
-            height: 50px;
-            padding: 25px;
+            padding: 10px;
             border-radius: 15px;
             border: 1px solid #d3d3d3;
         }
     }
 }
+
+
+.headNv {
+    width: 60%;
+    display: flex;
+    
+
     >ul {
-        width: 50%;
+        width: 100%;
         display: flex;
+        gap: 10px;
+        justify-content: right;
         align-items: center;
-        margin-left: auto;
-        
+
         >li {
-            width: calc((100% - 10px)/7); //<<<<<<<<<<<<<<<<<수정들어가야해
-            >p {
-                margin: 0 1px 0 10px;
-                transition: 0.7 all;
+            width: 100%;
+            
+            margin-left: -1px;
+
+            &:last-child {
+                margin-right: -1px;
+            }
+
+            p {
+                display: block;
+                text-align: center;
+                font-size: 1.2rem;
+                color: #392f2f;
+                font-weight: bold;
                 &:hover {
-                    color: #00f;
+                    color: rgb(26, 26, 216);
                 }
             }
         }
     }
 }
 
-@media all and ( max-width : 468px) {
-    .headBox {
-        flex-wrap: wrap;
-        justify-content: left;
-        gap: 0;
-        .LogoBox {
-            margin: 0 auto;
-            border: 1px solid #000;
-        }
-        .inputBox {
-            margin-top: 20px;
-            width: 100%;
-            .search {
-                width: 100%;
-            }
-        }
-    }
+.btn2 {
+    display: none;
 }
+
+
+
+
+
+// .head {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     gap: 30px;
+//     border: 1px solid #000;
+//     .headBox {
+//         width: 50%;
+//         display: flex;
+//         align-items: center;
+//         border: 1px solid #00f;
+
+
+
+//     .inputBox {
+//         width: 100%;
+//         .search {
+//             width: 100%;
+//             height: 50px;
+//             padding: 25px;
+//             border-radius: 15px;
+//             border: 1px solid #d3d3d3;
+//         }
+//     }
+// }
+//     >ul {
+//         width: 50%;
+//         display: flex;
+//         align-items: center;
+//         margin-left: auto;
+
+//         >li {
+//             width: calc((100% - 10px)/7); //<<<<<<<<<<<<<<<<<수정들어가야해
+//             >p {
+//                 margin: 0 1px 0 10px;
+//                 transition: 0.7 all;
+//                 &:hover {
+//                     color: #00f;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media all and ( max-width : 468px) {
+//     .headBox {
+//         flex-wrap: wrap;
+//         justify-content: left;
+//         gap: 0;
+//         .LogoBox {
+//             margin: 0 auto;
+//             border: 1px solid #000;
+//         }
+//         .inputBox {
+//             margin-top: 20px;
+//             width: 100%;
+//             .search {
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }
