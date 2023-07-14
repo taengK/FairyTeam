@@ -3,10 +3,10 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useRef,useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import axios from 'axios'
-import {Await, useNavigate} from 'react-router-dom'
-import Logo from '../Images/Logo.png'
+import { Await, useNavigate } from 'react-router-dom'
+
 
 // html로 회원정보 관리하는거 가능 (nunjucks) node Ex08DB
 // 아이디 중복체크 기능 ( 버튼식 또는 텍스트창 벗어나면 자동으로 체크 )
@@ -22,92 +22,92 @@ import Logo from '../Images/Logo.png'
 function Join() {
 
   const nav = useNavigate()
-  
-  const idRef =useRef()
-  const pwRef =useRef()
+
+  const idRef = useRef()
+  const pwRef = useRef()
   const cpwRef = useRef()
-  const nameRef=useRef()
-  const nickRef=useRef()
-  const addRef=useRef()
+  const nameRef = useRef()
+  const nickRef = useRef()
+  const addRef = useRef()
 
-  
-  
 
-  
-  const [userData,setUserData]=useState({})
+
+
+
+  const [userData, setUserData] = useState({})
   const [userId, setUserId] = useState({})
 
-  
-  
-  
+
+
+
   // ID 중복체크
-  const idCheck1 = (e)=>{
+  const idCheck1 = (e) => {
     e.preventDefault();
-    
-    setUserId({id : idRef.current.value})
-    
+
+    setUserId({ id: idRef.current.value })
+
   }
 
-  useEffect(()=>{   // 중복체크
-    console.log('userId : ' , userId.id)
-    
+  useEffect(() => {   // 중복체크
+    console.log('userId : ', userId.id)
+
     // console.log('중복체크 idCheck 값 : ', idCheck)
     // 초기 id 가 undefined가 아닐 때 글자 수가 5 이상이면 전송함
-    if(userId.id !== undefined ){
-      if(userId.id.length >= 5){
-    axios.post('http://localhost:8888/user/idcheck',{
-      userId : userId
-    })
-    .then((res)=>{
+    if (userId.id !== undefined) {
+      if (userId.id.length >= 5) {
+        axios.post('http://localhost:8888/user/idcheck', {
+          userId: userId
+        })
+          .then((res) => {
 
-      console.log('아이디 중복 검사 :' ,res.data.idCheck);
-      if(res.data.idCheck === 'existed'){
-        alert('이미 등록된 아이디입니다', )
-        idRef.current.value=''
+            console.log('아이디 중복 검사 :', res.data.idCheck);
+            if (res.data.idCheck === 'existed') {
+              alert('이미 등록된 아이디입니다',)
+              idRef.current.value = ''
+              idRef.current.focus()
+
+            } else if (res.data.idCheck === 'none') {
+              alert('가입이 가능한 아이디입니다')
+              pwRef.current.focus()
+              console.log('가입 가능, res.data.idCheck :', res.data.idCheck);
+              console.log('회원가입 가능? res.data.result :', res.data.result)
+
+            }
+          })
+        // undefined가 아니더라도 짧으면 전송하지 않음
+      } else if (userId.id.length < 5) {
+        alert('아이디가 너무 짧습니다')
         idRef.current.focus()
-        
-      } else if(res.data.idCheck === 'none') {
-        alert('가입이 가능한 아이디입니다')
-        pwRef.current.focus()
-        console.log('가입 가능, res.data.idCheck :',res.data.idCheck);
-        console.log('회원가입 가능? res.data.result :', res.data.result)
-        
       }
-    })
-    // undefined가 아니더라도 짧으면 전송하지 않음
-  }else if ( userId.id.length < 5){
-    alert('아이디가 너무 짧습니다')
-    idRef.current.focus()
-  }
-  }
-},[userId])
+    }
+  }, [userId])
 
   // ... 코드 아니고 함수 접은거임
-  const handleJoin = (e)=>{
+  const handleJoin = (e) => {
     console.log('handle Join Function'
-    ,idRef.current.value
-    ,pwRef.current.value
-    ,nameRef.current.value
-    ,nickRef.current.value
-    ,addRef.current.value);
-      
+      , idRef.current.value
+      , pwRef.current.value
+      , nameRef.current.value
+      , nickRef.current.value
+      , addRef.current.value);
+
     // form이 submit 되지 못하도록 작업
     e.preventDefault();
-    
-    
+
+
     setUserData({
-      id : idRef.current.value, 
-      pw : pwRef.current.value,
-      cpw : cpwRef.current.value,
-      name : nameRef.current.value,
-      nick : nickRef.current.value,
-      add : addRef.current.value
+      id: idRef.current.value,
+      pw: pwRef.current.value,
+      cpw: cpwRef.current.value,
+      name: nameRef.current.value,
+      nick: nickRef.current.value,
+      add: addRef.current.value
     })
-    
-    
+
+
   }
 
-  
+
 
   useEffect(() => {
     console.log('userData : ', userData.id)
@@ -115,7 +115,7 @@ function Join() {
     비어있는 값을 가지고 회원가입을 하면 안되니까 
     화면의 첫 갱신때는 회원가입 로직이 
     실행되지 않도록 조건을 걸어둔 것!*/
-      
+
 
     if (userData.id !== undefined && userData.pw === userData.cpw) {
       if (userData.id.length >= 5
@@ -135,10 +135,10 @@ function Join() {
             } else if (res.data.result === 'duplicated') {
               alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
               console.log('아이디 중복 확인')
-             
+
               idRef.current.focus()
             }
-           
+
 
           })
           .catch(() => {
@@ -169,7 +169,7 @@ function Join() {
       pwRef.current.value = ''
       cpwRef.current.value = ''
       pwRef.current.focus()
-    } 
+    }
   }, [userData])
 
 
@@ -178,7 +178,94 @@ function Join() {
 
 
   return (
-    <div className='main-box info-box'>
+    <div>
+      <Form onSubmit={handleJoin}>
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <Row className='row1' >
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>아이디</Form.Label>
+            <Form.Control className='SLinput' type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef} />
+            <Button onClick={idCheck1} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridPassword">
+            <Form.Label><p>비밀번호 입력</p></Form.Label>
+            <Form.Control className='SLinput' type="password" placeholder="비밀번호를 입력하세요 (6자 이상)" ref={pwRef} />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridPasswordck">
+            <Form.Label><p>비밀번호 확인</p></Form.Label>
+            <Form.Control className='SLinput' type="password" placeholder="비밀번호를 다시 입력하세요" ref={cpwRef} />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridName">
+            <Form.Label><p>이름</p></Form.Label>
+            <Form.Control className='SLinput' type="text" placeholder="이름을 입력하세요" ref={nameRef} />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formGridAddress1">
+            <Form.Label><p>e-mail</p></Form.Label>
+            <Form.Control className='SLinput' placeholder="" ref={addRef} />
+          </Form.Group>
+          <Form.Group id="formGridCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group>
+
+          <Button variant="primary" type="submit" className='SLBtn'>
+            Submit
+          </Button>
+        </Row>
+
+      </Form>
+
+    </div>
+
+  );
+}
+
+export default Join;
+/*<Row className='row1' >
+        <Form.Group as={Col} controlId="formGridPassword">
+          <Form.Label><p>비밀번호 입력</p></Form.Label>
+          <Form.Control type="password" placeholder="비밀번호를 입력하세요 (6자 이상)" ref={pwRef}/>
+        </Form.Group>
+      </Row>
+
+      <Row className='row1'>
+        <Form.Group as={Col} controlId="formGridPasswordck">
+          <Form.Label><p>비밀번호 확인</p></Form.Label>
+          <Form.Control type="password" placeholder="비밀번호를 다시 입력하세요" ref={cpwRef}/>
+        </Form.Group>
+      </Row>
+      
+      <Row className='row1'>
+        <Form.Group as={Col} controlId="formGridName">
+          <Form.Label><p>이름</p></Form.Label>
+          <Form.Control type="text" placeholder="이름을 입력하세요" ref={nameRef}/>
+        </Form.Group>
+      </Row>
+
+      <Row className='row1'>
+        <Form.Group as={Col} controlId="formGridNick">
+          <Form.Label><p>닉네임</p></Form.Label>
+          <Form.Control type="text" placeholder="닉네임을 입력하세요" ref={nickRef}/>
+        </Form.Group>
+      </Row>
+
+      <Row className='row1'>
+      <Form.Group className="mb-3" controlId="formGridAddress1">
+        <Form.Label><p>e-mail</p></Form.Label>
+        <Form.Control placeholder="" ref={addRef}/>
+      </Form.Group>
+      </Row>* */
+
+/*<div className='main-box info-box'>
     <Form onSubmit={handleJoin}>
       <div className='SignUpImgBox'>
         <img src={Logo} alt="" className='SignUpImg'/>이미지바꿔야함.svg파일로 찾아야해,누군가찾겠지
@@ -187,8 +274,6 @@ function Join() {
         <Form.Group as={Col} controlId="formGridEmail">
           <Form.Label>아이디</Form.Label>
           <Form.Control type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef}/>
-          {/* <button className='idOverLap' style={{width:"150px",height:"37px",marginTop:"10px",padding:"5px", borderRadius:'25px', backgroundColor:"red", color:'white',border:"none" }}>아이디 중복 체크</button>
-          이건 나중에 해볼래... */}
           <Button onClick= {idCheck1} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>      
         </Form.Group>
       </Row>
@@ -236,8 +321,4 @@ function Join() {
         Submit
       </Button>
     </Form>
-    </div>
-  );
-}
-
-export default Join;
+    </div>*/
