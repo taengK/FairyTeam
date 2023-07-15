@@ -55,8 +55,8 @@ const Login = () => {
 
 
   return (
-    <div className='LoginBox form-container sign-in-container'>
-      <Form onSubmit={handleLogin} className='LoginMx'>
+    <div>
+      <Form onSubmit={handleLogin} className='SignUpForm'>
       <h1>Sign In</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -67,7 +67,7 @@ const Login = () => {
 
 
 
-      <Row className='row1 LoginRow2' >
+      <Row className='LoginRow2' >
     <Form.Group as={Col} controlId="formGridEmail">
       <Form.Label style={{fontWeight:"bold", margin:"30px 0 10px 10px"}}>ID</Form.Label>
       <Form.Control type="text" placeholder="Enter Id" ref={idRef} className='LoginId' />
@@ -79,7 +79,7 @@ const Login = () => {
       <a href="#"style={{display:"block", margin:"10px 0 10px 10px"}}>아이디/비밀번호찾기</a>
     </Form.Group>
 
-  <Button variant="primary" type="submit"  className='SLBtn'>
+  <Button variant="primary" type="submit" className='idOverlap SLBtn'>
     Submit
   </Button>
   </Row>
