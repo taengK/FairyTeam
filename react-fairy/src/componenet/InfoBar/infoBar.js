@@ -1,8 +1,8 @@
 import React from 'react'
 import './infoBar.css';
 
-import onlineIcon from '../InfoBar/closeIcon.png'
-import closeIcon from '../InfoBar/onlineIcon.png'
+import onlineIcon from '../InfoBar/onlineIcon.png'
+import closeIcon from  '../InfoBar/closeIcon.png'
 
 
 
@@ -10,14 +10,17 @@ const infoBar = () => {
   return (
     <div className='infoBar'>
       <div className='leftInnerContainer'>
-        {/* <img className='onlineIcon' src={onlineIcon} alt='online icon' /> */}
-        <h3>채팅방</h3>
+        <img className='onlineIcon' src={onlineIcon} alt='online icon' />
+        {/* <h4>CHAT ROOM</h4> */}
       </div>
+
+
       <div className='rightInnerContainer'>
         <a href='/'>
-          {/* <img src={closeIcon} alt='close icon' /> */}
+          <img src={closeIcon} alt='close icon' />
         </a>
       </div>
+
     </div>
   );
 }
