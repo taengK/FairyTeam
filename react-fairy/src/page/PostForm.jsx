@@ -70,7 +70,7 @@ function PostForm() {
 
 
   useEffect(() => {
-    console.log('userData : ', userData.name)
+    console.log('userData : ', userData)
     /*useEffect의 특성 상, 무조건 화면의 첫 갱신 때 함수가 호출될 수 밖에 없다.
     비어있는 값을 가지고 회원가입을 하면 안되니까 
     화면의 첫 갱신때는 회원가입 로직이 
@@ -84,28 +84,28 @@ function PostForm() {
         axios.post('http://localhost:8888/user/postForm', {
           userData: userData
         })
+        .then((res) => {
+          console.log('게시물 작성 res', res.data.result);
+          if (res.data.result === 'success') {
+            alert('게시물이 작성 되었습니다.')
+            nav('/')
+          } else if (res.data.result === 'duplicated') {
+            alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
+            console.log('문제')
 
-          .then((res) => {
-            console.log('게시물 작성 res', res.data.result);
-            if (res.data.result === 'success') {
-              alert('게시물이 작성 되었습니다.')
-              nav('/')
-            } else if (res.data.result === 'duplicated') {
-              alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
-              console.log('문제')
-
-              // idRef.current.focus()
-            }
+            // idRef.current.focus()
+          }
 
 
-          })
-          .catch(() => {
-            console.error('실패!')
-          })
-        // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
-      
-    }
-  }, [userData])
+        })
+        .catch(() => {
+          console.error('실패!')
+        })
+      // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
+    
+  }
+}, [userData])
+
 
 
 
@@ -161,9 +161,9 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <ul class="PFCheck">
                 <li>
-                    <input type="radio" id="PFCheckbuy1" name="buy1"/>
+                    <input type="radio" id="PFCheckbuy1" name="buy1" ref={statusRef}/>
                     <label for="PFCheckbuy1">새상품</label>
-                    <input type="radio" id="PFCheckbuy2" name="buy1"/>
+                    <input type="radio" id="PFCheckbuy2" name="buy1" ref={statusRef}/>
                     <label for="PFCheckbuy2">중고상품</label>
                 </li>
                
@@ -177,7 +177,7 @@ function PostForm() {
             <div className='PostFormLabel2 PFL2Box'>
               <ul className='df'>
                 <li className='PFImgBox'>
-                  <input type="file" accept='image/jpg, image/jpeg, image/png' />
+                  <input type="file" accept='image/jpg, image/jpeg, image/png'  ref={photoRef}/>
                 </li>
                 <li>
                   <p>
@@ -199,9 +199,24 @@ function PostForm() {
             </div>
             <div className='PostFormLabel2'>
               <Row className='row1' >
-                <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Control className='PFCtegory' type="textarea" placeholder="카테고리 이거 또 어떻게만드냐 이 멍멍이같은 자식같으니라구 멍청이같은 컴퓨터ㄹㄷㅁㄷㄻㄷㄹㅁㅜㄹ" ref={categoryRef} />
-                </Form.Group>
+                {/* <Form.Group as={Col} controlId="formGridPassword">
+                  <Form.Control className='PFCtegory' type="textarea" placeholder="하 그냥 머신러닝 딥러닝같은거 돼서 이미지 보고 알아서 카테고리 나눠졌으면 좋겠다" ref={categoryRef} />
+                </Form.Group> */}
+                
+              <ul>
+                <li><button>여성의류</button></li>
+                <li><button>남성의류</button></li>
+                <li><button>신발</button></li>
+                <li><button>가방/지갑</button></li>
+                <li><button>디지털</button></li>
+                <li><button>가전제품</button></li>
+                <li><button>스포츠/레저</button></li>
+                <li><button>도서/티켓/문구</button></li>
+                <li><button>뷰티/미용</button></li>
+                <li><button>가구/인테리어</button></li>
+                <li><button>생활/주방용품</button></li>
+              </ul>
+
               </Row>
             </div>
           </li>
