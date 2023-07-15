@@ -106,7 +106,6 @@ const BagWallet = (props) => {
 
     //test start
     <div>
-      <h2>가방</h2>
       <div className='MainCtgCtn'>
         {superC.map(item =>
           <CategoryTable seq={item.prod_seq}

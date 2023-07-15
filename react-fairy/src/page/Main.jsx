@@ -45,12 +45,6 @@ const Main = () => {
 },[])
 
 
-  
-
-
-
-
-
 
 
   return (

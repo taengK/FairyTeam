@@ -1,3 +1,4 @@
+/***********************상위컴포넌트****************************/
 .Main-sec01 {
     width: 100%;
     margin-top: 10px;
@@ -14,8 +15,6 @@
     }
 }
 
-
-/***********************상위컴포넌트****************************/
 .MainCtgCtn {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -32,13 +31,14 @@
     flex-direction: column;
     cursor: pointer;
     position: relative;
-    
+    table {
+        width: 100%;
     
     tbody {
       &:hover {
         transform: translateY(-3%);
         transition: .3s;
-      }
+    }
       
       &:hover .MainCtgbtn::after {
         content: attr(data-name);
@@ -82,6 +82,8 @@
       }
     }
   }
+}
+    
   /***********************하위컴포넌트****************************/
 
 

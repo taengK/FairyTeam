@@ -1,6 +1,6 @@
 .overlay-container {
   position: absolute;
-  top: 0;
+  top: 0%;
   left: 50%;
   width: 50%;
   height: 100%;
@@ -10,6 +10,7 @@
 }
 .overlay-container .overlay {
   background: #FF416C;
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
   background: linear-gradient(to right, #FF4B2B, #FF416C);
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,4 +39,4 @@
 }
 .overlay-container .overlay .overlay-left {
   transform: translateX(-20%);
-}/*# sourceMappingURL=SLOverlay.css.map */
+}
