@@ -146,7 +146,7 @@ router.post('/user/postForm', (req, res)=>{
    
     conn.query(sql
         , [req.body.userData.name
-            , req.body.userData.connect
+            , req.body.userData.content
             , req.body.userData.price
             , req.body.userData.category
             , req.body.userData.status

@@ -29,8 +29,58 @@ function PostForm() {
   const contentRef = useRef()
   const priceRef = useRef()
   const statusRef = useRef()
+  // const status2Ref = useRef()
   const photoRef = useRef()
   const categoryRef = useRef()
+
+  const imgUrlRef = useRef()
+  
+  
+  const [category, setCategory]=useState()
+
+
+
+// 사진 주소 업로드 
+
+  const [showPhoto, setShowPhoto] = useState()
+  const photoUpload = (e)=>{
+    e.preventDefault();
+    setShowPhoto(imgUrlRef.current.value)
+    
+    imgUrlRef.current.value=''
+    // console.log(imgUrlRef.current.value);
+  }
+
+
+
+  // 카테고리 변화
+  const [select1, setSelect1] = useState();
+  const [select2, setSelect2] = useState();
+  const [select3, setSelect3] = useState();
+
+  const handelChangeSelect1 = (e)=>{
+    setSelect1(e.target.value)
+    setSelect2()
+    setSelect3()
+    
+  }
+  
+  const handelChangeSelect2 = (e)=>{
+    setSelect2(e.target.value)
+    setSelect3();
+  }
+  
+  const handelChangeSelect3 = (e)=>{
+    setSelect3(e.target.value);
+    setCategory(e.target.value);
+  }
+  
+  
+
+
+
+
+
 
 
   const [userData, setUserData] = useState({})
@@ -162,9 +212,9 @@ function PostForm() {
               <ul class="PFCheck">
                 <li>
                     <input type="radio" id="PFCheckbuy1" name="buy1" ref={statusRef}/>
-                    <label for="PFCheckbuy1">새상품</label>
+                    <label for="PFCheckbuy1" >새상품</label>
                     <input type="radio" id="PFCheckbuy2" name="buy1" ref={statusRef}/>
-                    <label for="PFCheckbuy2">중고상품</label>
+                    <label for="PFCheckbuy2" >중고상품</label>
                 </li>
                
               </ul>
@@ -177,10 +227,12 @@ function PostForm() {
             <div className='PostFormLabel2 PFL2Box'>
               <ul className='df'>
                 <li className='PFImgBox'>
-                  <input type="file" accept='image/jpg, image/jpeg, image/png'  ref={photoRef}/>
+                  <img src = {showPhoto} ></img>
+                  {/* <input type="file" accept='image/jpg, image/jpeg, image/png' /> */}
                 </li>
                 <li>
                   <p>
+                    <input type="text" ref={imgUrlRef}/><button onClick={photoUpload}>업로드</button><br/>
                     <b>* 상품 이미지는 640x640에 최적화 되어 있습니다.</b><br />
                     - 상품 이미지는 PC에서는 1:1, 모바일에서는 1:1.23 비율로 보여집니다.<br />
                     - 이미지는 상품 등록 시 정사각형으로 잘려서 등록됩니다.<br />
@@ -199,24 +251,268 @@ function PostForm() {
             </div>
             <div className='PostFormLabel2'>
               <Row className='row1' >
-                {/* <Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Control className='PFCtegory' type="textarea" placeholder="하 그냥 머신러닝 딥러닝같은거 돼서 이미지 보고 알아서 카테고리 나눠졌으면 좋겠다" ref={categoryRef} />
-                </Form.Group> */}
-                
-              <ul>
-                <li><button>여성의류</button></li>
-                <li><button>남성의류</button></li>
-                <li><button>신발</button></li>
-                <li><button>가방/지갑</button></li>
-                <li><button>디지털</button></li>
-                <li><button>가전제품</button></li>
-                <li><button>스포츠/레저</button></li>
-                <li><button>도서/티켓/문구</button></li>
-                <li><button>뷰티/미용</button></li>
-                <li><button>가구/인테리어</button></li>
-                <li><button>생활/주방용품</button></li>
-              </ul>
+                <Form.Group as={Col} controlId="formGridPassword">
+                  <select value= {select1} name ="category1" onChange={handelChangeSelect1} >
+                    <option value = "">대분류</option>
+                    <option value = "100">여성의류</option>
+                    <option value = "200">남성의류</option>
+                    <option value = "300">신발</option>
+                    <option value = "400">가방/지갑</option>
+                    <option value = "500">디지털</option>
+                    <option value = "600">가전제품</option>
+                    <option value = "700">스포츠/레저</option>
+                    <option value = "800">도서/티켓/문구</option>
+                    <option value = "900">뷰티/미용</option>
+                    <option value = "1000">가구/인테리어</option>
+                    <option value = "1100">생활/주방용품</option>
+                  </select>
+               
+                  <select value = {select2} name ="category2" onChange={handelChangeSelect2}>
+                    <option value = "">중분류</option>
+                    {select1 === '100' && <option value = "110">아우터</option>}
+                    {select1 === '100' && <option value = "120">상의</option>}
+                    {select1 === '100' && <option value = "130">하의</option>}
+                    {select1 === '200' && <option value = "210">아우터</option>}
+                    {select1 === '200' && <option value = "220">상의</option>}
+                    {select1 === '200' && <option value = "230">하의</option>}
+                    {select1 === '300' && <option value = "310">남성화</option>}
+                    {select1 === '300' && <option value = "320">여성화</option>}
+                    {select1 === '300' && <option value = "330">스포츠화</option>}
+                    {select1 === '400' && <option value = "410">여성가방</option>}
+                    {select1 === '400' && <option value = "420">남성가방</option>}
+                    {select1 === '500' && <option value = "510">휴대폰</option>}
+                    {select1 === '500' && <option value = "520">태블릭</option>}
+                    {select1 === '500' && <option value = "530">웨어러블</option>}
+                    {select1 === '500' && <option value = "540">오디오/영상</option>}
+                    {select1 === '500' && <option value = "550">PC/노트북</option>}
+                    {select1 === '500' && <option value = "560">카메라/DSLR</option>}
+                    {select1 === '600' && <option value = "610">생활가전</option>}
+                    {select1 === '600' && <option value = "620">주방가전</option>}
+                    {select1 === '700' && <option value = "710">골프</option>}
+                    {select1 === '700' && <option value = "720">캠핑</option>}
+                    {select1 === '700' && <option value = "730">낚시</option>}
+                    {select1 === '700' && <option value = "740">등산/클라이밍</option>}
+                    {select1 === '800' && <option value = "810">도서</option>}
+                    {select1 === '800' && <option value = "830">상품권</option>}
+                    {select1 === '900' && <option value = "910">스킨케어</option>}
+                    {select1 === '900' && <option value = "920">색조 메이크업</option>}
+                    {select1 === '900' && <option value = "930">베이스 메이크업</option>}
+                    {select1 === '900' && <option value = "940">바디/헤어케어</option>}
+                    {select1 === '900' && <option value = "950">네일아트</option>}
+                    {select1 === '1000' && <option value = "1010">가구</option>}
+                    {select1 === '1000' && <option value = "1020">인테리어소품</option>}
+                    {select1 === '1100' && <option value = "1110">주방용품</option>}
+                    {select1 === '1100' && <option value = "1120">욕실용품</option>}
+                  </select>
+                  
+                  <select value={select3} name ="category3" onChange={handelChangeSelect3} ref ={categoryRef}>
+                    <option value = "">소분류</option>
+                    {select2 === '110' && <option value = "111">패딩</option>}
+                    {select2 === '110' && <option value = "112">점퍼</option>}
+                    {select2 === '110' && <option value = "113">코트</option>}
+                    {select2 === '110' && <option value = "114">자켓</option>}
+                    {select2 === '110' && <option value = "115">가디건</option>}
+                    {select2 === '110' && <option value = "116">조끼</option>}
+                    
+                    {select2 === '120' && <option value = "121">니트/스웨터</option>}
+                    {select2 === '120' && <option value = "122">후드티/후드집업</option>}
+                    {select2 === '120' && <option value = "123">맨투맨</option>}
+                    {select2 === '120' && <option value = "124">블라우스</option>}
+                    {select2 === '120' && <option value = "125">셔츠</option>}
+                    {select2 === '120' && <option value = "126">반팔 티셔츠</option>}
+                    {select2 === '120' && <option value = "127">긴팔 티셔츠</option>}
+                    
+                    {select2 === '130' && <option value = "131">청바지</option>}
+                    {select2 === '130' && <option value = "132">슬랙스</option>}
+                    {select2 === '130' && <option value = "133">면바지</option>}
+                    {select2 === '130' && <option value = "134">반바지</option>}
+                    {select2 === '130' && <option value = "135">트레이닝</option>}
+                    {select2 === '130' && <option value = "136">레깅스</option>}
+                                
+                    {select2 === '210' && <option value = "211">패딩</option>}
+                    {select2 === '210' && <option value = "212">점퍼</option>}
+                    {select2 === '210' && <option value = "213">코트</option>}
+                    {select2 === '210' && <option value = "214">자켓</option>}
+                    {select2 === '210' && <option value = "215">가디건</option>}
+                    {select2 === '210' && <option value = "216">조끼</option>}
 
+                    {select2 === '220' && <option value = "221">니트/스웨터</option>}
+                    {select2 === '220' && <option value = "222">후드티/후드집업</option>}
+                    {select2 === '220' && <option value = "223">맨투맨</option>}
+                    {select2 === '220' && <option value = "224">셔츠</option>}
+                    {select2 === '220' && <option value = "225">반팔 티셔츠</option>}
+                    {select2 === '220' && <option value = "226">긴팔 티셔츠</option>}
+
+                    {select2 === '230' && <option value = "231">청바지</option>}
+                    {select2 === '230' && <option value = "232">슬랙스</option>}
+                    {select2 === '230' && <option value = "233">면바지</option>}
+                    {select2 === '230' && <option value = "234">반바지</option>}
+                    {select2 === '230' && <option value = "235">트레이닝</option>}
+                    
+                    {select2 === '310' && <option value = "311">샌들/슬리퍼</option>}
+                    {select2 === '310' && <option value = "312">구두/로퍼</option>}
+                    {select2 === '310' && <option value = "313">워커/부츠</option>}
+
+                    {select2 === '320' && <option value = "321">샌들/슬리퍼</option>}
+                    {select2 === '320' && <option value = "322">구두</option>}
+                    {select2 === '320' && <option value = "323">단화/플랫슈즈</option>}
+                    {select2 === '320' && <option value = "324">워커/부츠</option>}
+                    {select2 === '320' && <option value = "325">기타 여성화</option>}
+                    
+                    {select2 === '330' && <option value = "331">축구/풋살화</option>}
+                    {select2 === '330' && <option value = "333">등산/트래킹화</option>}
+                    {select2 === '330' && <option value = "335">기타 스포츠화</option>}
+                    
+                    {select2 === '410' && <option value = "411">클러치백</option>}
+                    {select2 === '410' && <option value = "412">숄더백</option>}
+                    {select2 === '410' && <option value = "413">크로스백</option>}
+                    {select2 === '410' && <option value = "414">토트백</option>}
+                    {select2 === '410' && <option value = "415">백팩</option>}
+                    
+                    {select2 === '420' && <option value = "421">클러치백</option>}
+                    {select2 === '420' && <option value = "422">숄더백</option>}
+                    {select2 === '420' && <option value = "423">크로스백</option>}
+                    {select2 === '420' && <option value = "425">백팩</option>}
+                    
+                    {select2 === '510' && <option value = "511">스마트폰</option>}
+                    {select2 === '510' && <option value = "512">일반폰</option>}
+                    {select2 === '510' && <option value = "513">케이스/보호필름/액세서리</option>}
+                    {select2 === '510' && <option value = "514">케이블/충전기/주변기기</option>}
+                    
+                    {select2 === '520' && <option value = "521">태블릿</option>}
+                    {select2 === '520' && <option value = "522">케이스/보호필름/액세서리</option>}
+                    {select2 === '520' && <option value = "523">케이블/충전기/주변기기</option>}
+
+                    {select2 === '530' && <option value = "531">스마트워치/밴드</option>}
+                    {select2 === '530' && <option value = "532">케이스/보호필름/액세서리</option>}
+                    {select2 === '530' && <option value = "533">케이블/충전기/주변기기</option>}
+
+                    {select2 === '540' && <option value = "541">이어폰</option>}
+                    {select2 === '540' && <option value = "542">헤드폰</option>}
+                    {select2 === '540' && <option value = "543">스피커/앰프</option>}
+                    {select2 === '540' && <option value = "544">오디오/홈시어터</option>}
+
+                    {select2 === '550' && <option value = "551">데스크탑</option>}
+                    {select2 === '550' && <option value = "552">노트북/넷북</option>}
+                    {select2 === '550' && <option value = "553">모니터</option>}
+                    {select2 === '550' && <option value = "554">키보드</option>}
+                    {select2 === '550' && <option value = "555">마우스</option>}
+                    {select2 === '550' && <option value = "556">기타 PC 주변기기</option>}
+
+                    {select2 === '560' && <option value = "561">필름카메라</option>}
+                    {select2 === '560' && <option value = "562">DSLR/미러리스</option>}
+                    {select2 === '560' && <option value = "563">렌즈/필터/컨버터</option>}
+                    {select2 === '560' && <option value = "564">일반디카/토이카메라</option>}
+                    {select2 === '560' && <option value = "565">삼각대/플래시/조명</option>}
+                    
+                    {select2 === '610' && <option value = "611">가습기</option>}
+                    {select2 === '610' && <option value = "612">청소기</option>}
+                    {select2 === '610' && <option value = "613">공기청정기</option>}
+                    {select2 === '610' && <option value = "614">선풍기/냉풍기</option>}
+                    {select2 === '610' && <option value = "615">히터/온풍기</option>}
+                    {select2 === '610' && <option value = "616">전기매트/장판</option>}
+                    
+                    {select2 === '620' && <option value = "621">인덕션/전기레인지</option>}
+                    {select2 === '620' && <option value = "622">전기밥솥</option>}
+                    {select2 === '620' && <option value = "623">커피머신</option>}
+                    {select2 === '620' && <option value = "624">에어프라이어</option>}
+                    {select2 === '620' && <option value = "625">토스터</option>}
+                    {select2 === '620' && <option value = "626">전자레인지</option>}
+                    
+                    {select2 === '710' && <option value = "711">골프채</option>}
+                    {select2 === '710' && <option value = "712">골프 남성 의류</option>}
+                    {select2 === '710' && <option value = "713">골프 여성 의류</option>}
+                    {select2 === '710' && <option value = "714">골프백</option>}
+                    {select2 === '710' && <option value = "715">골프 공</option>}
+                    
+                    {select2 === '720' && <option value = "721">캠핑 의자/테이블</option>}
+                    {select2 === '720' && <option value = "722">캠핑 취사용품</option>}
+                    {select2 === '720' && <option value = "723">캠핑 랜턴</option>}
+                    {select2 === '720' && <option value = "724">침낭/매트/해먹</option>}
+                    {select2 === '720' && <option value = "725">텐트/그늘막</option>}
+                    {select2 === '720' && <option value = "726">기타 캠핑 용품</option>}
+                    
+                    {select2 === '730' && <option value = "731">공통 낚시 장비</option>}
+                    {select2 === '730' && <option value = "732">바다 낚시</option>}
+                    {select2 === '730' && <option value = "733">민물 낚시</option>}
+                    {select2 === '730' && <option value = "734">낚시 의류 및 기타 용품</option>}
+                    
+                    {select2 === '740' && <option value = "741">남성 등산복</option>}
+                    {select2 === '740' && <option value = "742">여성 등산복</option>}
+                    {select2 === '740' && <option value = "743">등산 가방</option>}
+                    {select2 === '740' && <option value = "744">암벽/클라이밍</option>}
+                    {select2 === '740' && <option value = "745">기타 등산 용품</option>}
+                    
+                    {select2 === '810' && <option value = "811">시/소설</option>}
+                    {select2 === '810' && <option value = "812">자기계발</option>}
+                    {select2 === '810' && <option value = "813">교양/인문</option>}
+                    {select2 === '810' && <option value = "814">경제/경영</option>}
+                    
+                    {select2 === '820' && <option value = "821">문화/도서</option>}
+                    {select2 === '820' && <option value = "821">백화점</option>}
+
+                    {select2 === '910' && <option value = "911">클렌징/스크럽</option>}
+                    {select2 === '910' && <option value = "912">스킨/토너/미스트</option>}
+                    {select2 === '910' && <option value = "913">로션/에멀젼</option>}
+                    {select2 === '910' && <option value = "914">에센스/크림</option>}
+                    {select2 === '910' && <option value = "915">팩/마스크</option>}
+                    {select2 === '910' && <option value = "916">썬케어</option>}
+
+                    {select2 === '920' && <option value = "921">아이라이너/브로우</option>}
+                    {select2 === '920' && <option value = "922">아이섀도우</option>}
+                    {select2 === '920' && <option value = "923">마스카라</option>}
+                    {select2 === '920' && <option value = "924">립틴트</option>}
+                    {select2 === '920' && <option value = "925">립밤/립글로즈</option>}
+                    {select2 === '920' && <option value = "926">립스틱</option>}
+                    {select2 === '920' && <option value = "927">치크/블러셔</option>}
+
+                    {select2 === '930' && <option value = "931">메이크업베이스</option>}
+                    {select2 === '930' && <option value = "932">BB/CC크림</option>}
+                    {select2 === '930' && <option value = "933">쿠션팩트</option>}
+                    {select2 === '930' && <option value = "934">파운데이션</option>}
+                    {select2 === '930' && <option value = "935">파우더/팩트</option>}
+                    {select2 === '930' && <option value = "936">프라이머/컨실러</option>}
+
+                    {select2 === '940' && <option value = "941">샴푸/린스</option>}
+                    {select2 === '940' && <option value = "942">헤어에센스/트리트먼트</option>}
+                    {select2 === '940' && <option value = "943">헤어스타일링</option>}
+                    {select2 === '940' && <option value = "946">핸드/풋케어</option>}
+
+                    {select2 === '950' && <option value = "951">네일아트/스티커</option>}
+                    {select2 === '950' && <option value = "953">네일케어도구</option>}
+
+                    {select2 === '1010' && <option value = "1011">거실가구</option>}
+                    {select2 === '1010' && <option value = "1012">침실가구</option>}
+                    {select2 === '1010' && <option value = "1013">학생/서재/사무용가구</option>}
+                    {select2 === '1010' && <option value = "1014">선반/수납 가구</option>}
+                    {select2 === '1010' && <option value = "1015">주방가구</option>}
+                    
+                    {select2 === '1020' && <option value = "1021">포스터/그림/액자</option>}
+                    {select2 === '1020' && <option value = "1022">디퓨저/캔들</option>}
+                    {select2 === '1020' && <option value = "1023">쿠션/방석</option>}
+                    {select2 === '1020' && <option value = "1024">탁상/벽시계</option>}
+                    {select2 === '1020' && <option value = "1025">거울</option>}
+                    {select2 === '1020' && <option value = "1026">기타 인테리어 소품</option>}
+
+                    {select2 === '1110' && <option value = "1111">그릇/홈세트</option>}
+                    {select2 === '1110' && <option value = "1112">잔/컵</option>}
+                    {select2 === '1110' && <option value = "1113">텀블러/물병</option>}
+                    {select2 === '1110' && <option value = "1114">냄비/프라이팬</option>}
+                    {select2 === '1110' && <option value = "1115">조리도구</option>}
+                    {select2 === '1110' && <option value = "1116">보관/밀폐용기</option>}
+                    {select2 === '1110' && <option value = "1117">커피용품</option>}
+
+                    {select2 === '1120' && <option value = "1121">구강/면도용품</option>}
+                    {select2 === '1120' && <option value = "1122">샤워/목욕용품</option>}
+                    {select2 === '1120' && <option value = "1123">수건/타월</option>}
+                    {select2 === '1120' && <option value = "1124">욕실수납/정리</option>}
+
+
+
+                  </select>
+                  
+                <p>{category}</p>
+                </Form.Group>
               </Row>
             </div>
           </li>
