@@ -91,39 +91,46 @@ function PostForm() {
   // 물품 상태 설정 --------------------------------
 
 
-  // 물품 등록 시간 체크 -----------------------------------------------------
+  // 바코드 등록 체크 -----------------------------------------------------
   const [barcodeTime, setBarcodeTime] = useState(new Date().getTime());
-      
-  const [currentTime, setCurrentTime] = useState(new Date(barcodeTime).toLocaleString())
-  // 물품 등록 시간 체크 -----------------------------------------------------
+  // 바코드 등록 체크 -----------------------------------------------------
 
 
-  // 정보 입력시 모든 값들 저장할 데이터
+  // 가격 입력 시 , 입력 -------------------------------
+  const [number, setNumber] = useState('');
+  const [price, setPrice] = useState();
+  const [price2, setPrice2] = useState();
+  
+  const handleNumberChange = (e) => {
+    
+    setNumber(e.target.value);
+    // setPrice(parseInt(number).toLocaleString())
+  };
+
+
+ console.log(parseInt(number).toLocaleString()+'원');
+
+  
+
+// 정보 입력시 모든 값들 저장할 데이터
 
   const [userData, setUserData] = useState({})
 
   // 작성 완료시 데이터 저장 작업
   const handleJoin = (e) => {
-    // console.log('handle Join Function'
-    //   , nameRef.current.value
-    //   , contentRef.current.value
-    //   , priceRef.current.value
-    //   , selectedOption
-    //   , 
-    //   , category);
+   
 
     e.preventDefault();
 
-    // setCurrentTime(new Date().getTime());
+   
 
     setUserData({
       name: nameRef.current.value,
       content: contentRef.current.value,
-      price: priceRef.current.value,
+      price: (parseInt(number).toLocaleString()+'원'),
       category: category,
       status: selectedOption,
       photo: showPhoto,
-      // time : currentTime,
       barcode : barcodeTime,
       id : ''
     })
@@ -177,31 +184,7 @@ function PostForm() {
 
  
 
-// class CurrentTime extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       currentTime: new Date()
-//     };
-//   }
 
-//   componentDidMount() {
-//     this.timerID = setInterval(() => {
-//       this.tick();
-//     }, 100);
-//   }
-
-//   componentWillUnmount() {
-//     clearInterval(this.timerID);
-//   }
-
-//   tick() {
-//     this.setState({
-//       currentTime: new Date()
-//     });
-//   }
-// }
-  
   
 
 
@@ -246,7 +229,8 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridName">
-                  <Form.Control className='PFPrice' type="text" placeholder="숫자만 입력하세요" ref={priceRef} />
+                
+                  <Form.Control className='PFPrice' type="text" placeholder="숫자만 입력하세요" value={number} onChange={handleNumberChange} />
                 </Form.Group>
               </Row>
             </div>

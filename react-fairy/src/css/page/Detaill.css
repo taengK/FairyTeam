@@ -63,7 +63,7 @@
   text-decoration: none;
 }
 .view .dis_price > ins::after {
-  content: "원";
+  content: "";
 }
 .view .delivery {
   font-size: 16px;
@@ -147,7 +147,7 @@
   letter-spacing: -0.5px;
 }
 .view .total > span::after {
-  content: "원";
+  content: "";
 }
 .view .total > em {
   float: right;

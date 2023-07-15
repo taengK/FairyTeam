@@ -81,7 +81,7 @@
         text-decoration: none;
 
         &::after {
-          content: "원";
+          content: "";
         }
       }
 
@@ -183,7 +183,7 @@
             letter-spacing: -0.5px;
 
             &::after {
-              content: "원";
+              content: "";
             }
           }
 
