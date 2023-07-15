@@ -189,23 +189,23 @@ function Join() {
 
         <Row className='row1' >
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label><p>아이디</p></Form.Label>
+            <Form.Label><p>ID</p></Form.Label>
             <Form.Control className='SLinput' type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef} />
             <Button onClick={idCheck1} className='idOverlap ' variant="primary" type="button" >아이디 중복 확인</Button>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label><p>비밀번호 입력</p></Form.Label>
+            <Form.Label><p>Password</p></Form.Label>
             <Form.Control className='SLinput' type="password" placeholder="비밀번호를 입력하세요 (6자 이상)" ref={pwRef} />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPasswordck">
-            <Form.Label><p>비밀번호 확인</p></Form.Label>
+            <Form.Label><p>Double Check</p></Form.Label>
             <Form.Control className='SLinput' type="password" placeholder="비밀번호를 다시 입력하세요" ref={cpwRef} />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridName">
-            <Form.Label><p>이름</p></Form.Label>
+            <Form.Label><p>NAME</p></Form.Label>
             <Form.Control className='SLinput' type="text" placeholder="이름을 입력하세요" ref={nameRef} />
           </Form.Group>
 
