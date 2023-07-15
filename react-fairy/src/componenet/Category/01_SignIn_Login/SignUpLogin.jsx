@@ -1,18 +1,34 @@
-import React from 'react'
-import SignUp from './SignUp'
-import Login from './Login'
-import SLOverlay from './SLOverlay'
+import React, { useEffect, useRef, useState } from 'react';
+import SignUp from './SignUp';
+import Login from './Login';
 
-import { useEffect, useRef, useState } from 'react';
-
-import "../../../css/Hold/01_SignIn_Login/SLOverlay.css"
-import "../../../css/Hold/01_SignIn_Login/Signup.css"
-import "../../../css/Hold/01_SignIn_Login/Login.css"
-
+import "../../../css/Hold/01_SignIn_Login/SLOverlay.css";
+import "../../../css/Hold/01_SignIn_Login/Signup.css";
+import "../../../css/Hold/01_SignIn_Login/Login.css";
 
 const SignUpLogin = () => {
+    const overlayRef = useRef(null);
+    const [activePanel, setActivePanel] = useState('sign-in');
+
+    useEffect(() => {
+        const overlay = overlayRef.current;
+
+        const handleSignUpClick = () => {
+            setActivePanel('sign-up');
+        };
+
+        const handleSignInClick = () => {
+            setActivePanel('sign-in');
+        };
+
+        const signUpButton = overlay.querySelector('.overlay-panel.overlay-right #signUp');
+        const signInButton = overlay.querySelector('.overlay-panel.overlay-left #signIn');
 
 
+        if (signUpButton && signInButton) {
+            signUpButton.addEventListener('click', handleSignUpClick);
+            signInButton.addEventListener('click', handleSignInClick);
+        }
 
   return (
     <div className='SLBody' style={{backgroundColor:"green"}}>
@@ -32,4 +48,4 @@ const SignUpLogin = () => {
   )
 }
 
-export default SignUpLogin
+export default SignUpLogin;

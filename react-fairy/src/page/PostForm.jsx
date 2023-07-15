@@ -120,7 +120,7 @@ function PostForm() {
 
 
   useEffect(() => {
-    console.log('userData : ', userData.name)
+    console.log('userData : ', userData)
     /*useEffect의 특성 상, 무조건 화면의 첫 갱신 때 함수가 호출될 수 밖에 없다.
     비어있는 값을 가지고 회원가입을 하면 안되니까 
     화면의 첫 갱신때는 회원가입 로직이 
@@ -134,28 +134,28 @@ function PostForm() {
         axios.post('http://localhost:8888/user/postForm', {
           userData: userData
         })
+        .then((res) => {
+          console.log('게시물 작성 res', res.data.result);
+          if (res.data.result === 'success') {
+            alert('게시물이 작성 되었습니다.')
+            nav('/')
+          } else if (res.data.result === 'duplicated') {
+            alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
+            console.log('문제')
 
-          .then((res) => {
-            console.log('게시물 작성 res', res.data.result);
-            if (res.data.result === 'success') {
-              alert('게시물이 작성 되었습니다.')
-              nav('/')
-            } else if (res.data.result === 'duplicated') {
-              alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
-              console.log('문제')
-
-              // idRef.current.focus()
-            }
+            // idRef.current.focus()
+          }
 
 
-          })
-          .catch(() => {
-            console.error('실패!')
-          })
-        // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
-      
-    }
-  }, [userData])
+        })
+        .catch(() => {
+          console.error('실패!')
+        })
+      // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
+    
+  }
+}, [userData])
+
 
 
 

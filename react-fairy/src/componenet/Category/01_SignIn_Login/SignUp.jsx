@@ -179,7 +179,7 @@ function Join() {
 
   return (
     <div>
-      <Form onSubmit={handleJoin}>
+      <Form onSubmit={handleJoin} className='SignUpForm'>
         <h1>Create Account</h1>
         <div class="social-container">
           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -191,7 +191,7 @@ function Join() {
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>아이디</Form.Label>
             <Form.Control className='SLinput' type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef} />
-            <Button onClick={idCheck1} className='idOverlap' variant="primary" type="button" >아이디 중복 확인</Button>
+            <Button onClick={idCheck1} className='idOverlap ' variant="primary" type="button" >아이디 중복 확인</Button>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
@@ -217,7 +217,7 @@ function Join() {
             <Form.Check type="checkbox" label="Check me out" />
           </Form.Group>
 
-          <Button variant="primary" type="submit" className='SLBtn'>
+          <Button variant="primary" type="submit" className='idOverlap SLBtn'>
             Submit
           </Button>
         </Row>

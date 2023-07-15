@@ -1,49 +1,34 @@
-.social-container {
-  margin: 20px 0;
-  display: flex;
-  border: 1px solid #000;
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 1;
+  z-index: 1;
 }
-.social-container > a {
-  border: 1px solid #DDDDDD;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
+
+.SignUpForm {
+  display: flex;
   align-items: center;
-  margin: 0 5px;
-  height: 40px;
-  width: 40px;
+  flex-direction: column;
+  padding: 0 20px;
+  height: 100%;
 }
 
 .row1 {
+  background-color: #fc0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid #fc0;
 }
 .row1 .SLinput {
-  background-color: pink;
-  border: none;
-  padding: 12px 15px;
   margin: 8px 0;
-  width: 100%;
+}
+.row1 .idOverlap {
+  border-radius: 15px;
+  margin-top: 10px;
 }
 
 .LoginRow2 {
+  background-color: #ff0;
   width: 100%;
-  display: flex;
   flex-direction: column;
-  border: 1px solid #fc0;
-}
-.LoginRow2 .SLinput {
-  background-color: pink;
-  border: none;
-  padding: 12px 15px;
-  margin: 8px 0;
-  width: 100%;
-}
-
-.idOverlap {
-  width: 150px;
-  border-radius: 15px;
-  margin-top: 10px;
 }/*# sourceMappingURL=Signup.css.map */

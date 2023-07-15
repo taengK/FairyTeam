@@ -14,7 +14,7 @@ db_config.connect(conn)
 // 메인 ----------------------------- 시작      <완료>
 
 router.get('/',(req, res)=>{
-    console.log('index Router');
+    console.log('index Router'); 
     res.render('/')
 })
 
