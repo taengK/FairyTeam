@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-import './CategoryCSS.css'
+import '../../css/page/Main.css'
 import CategoryTable from './CategoryTable';
 import { useSearchParams } from 'react-router-dom';
 
@@ -108,7 +108,7 @@ const HomeApp = (props) => {
     //test start
     <div>
 
-      <div className='ctgCtn'>
+      <div className='MainCtgCtn'>
         {superC.map(item =>
           <CategoryTable seq={item.prod_seq}
             name={item.prod_name}

@@ -1,9 +1,14 @@
 import './App.css'
+import { Routes, Route } from 'react-router-dom' //라우터돔
 // *************************jsx***********************************************
-// *******cpnt.jsx******
+// *******Hold.jsx******
 import Head from './componenet/Head/Head';
 import NavList from './componenet/Navigation/NavList';
 import Footer from './componenet/Footer/Footer';
+// *******SignUp.jsx******
+import SignUp from './componenet/Category/01_SignIn_Login/SignUp';
+import Login from './componenet/Category/01_SignIn_Login/Login';
+import SignUpLogin from './componenet/Category/01_SignIn_Login/SignUpLogin';
 
 //**************************** */
 import InfoBar from './componenet/InfoBar/infoBar'
@@ -12,11 +17,7 @@ import Messages from './componenet/Messages/Messages'
 import TextContainer from './componenet/TextContainer/TextContainer'
 
 // **************************************page.jsx*************************************
-// *******SignUp.jsx******
-import SignUp from './page/01_SignIn_Login/SignUp';
-import Login from './page/01_SignIn_Login/Login';
-import SignUpLogin from './page/01_SignIn_Login/SignUpLogin';
-// *******SignUp.jsx******
+// *******page.jsx******
 import Main from './page/Main';
 import Mypage from './page/Mypage';
 import Cart from './page/Cart';
@@ -25,22 +26,26 @@ import Modification from './page/Modification';
 import PostForm from './page/PostForm';
 import Chat from './page/Chat';
 import Join from './page/Join';
-// *************************install*******************************************
-import { Routes, Route } from 'react-router-dom' //라우터돔
+
+
+
+
+
 // *************************CSS***********************************************
 // *******Hold.css******
 import './css/Common.css'
 import './css/Hold/Head.css'
 import './css/Hold/NavList.css'
 import './css/Hold/Footer.css'
+// *******SignUp_Login.css******
+import './css/Hold/01_SignIn_Login/SignUpLogin.css'
+import './css/Hold/01_SignIn_Login/Signup.css'
+import './css/Hold/01_SignIn_Login/Login.css'
+// *******SignUp_Login.css******
+
+
+
 // *******Page.css******
-// *******SignUp_Login.css******
-import './css/page/01_SignIn_Login/SignUpLogin.css'
-import './css/page/01_SignIn_Login/Signup.css'
-import './css/page/01_SignIn_Login/Login.css'
-// *******SignUp_Login.css******
-
-
 import './css/page/Main.css'
 import './css/page/Detaill.css'
 import './css/page/cart.css'
