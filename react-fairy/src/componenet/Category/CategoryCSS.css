@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /***********************상위컴포넌트****************************/
-.ctgCtn {
+.MainCtgCtn {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 30px 30px 0 30px;
@@ -9,26 +9,26 @@
 
 /***********************상위컴포넌트****************************/
 /***********************하위컴포넌트****************************/
-.ctgItem {
+.MainCtgItem {
   display: flex;
   flex-direction: column;
   cursor: pointer;
   position: relative;
 }
-.ctgItem tbody:hover {
+.MainCtgItem tbody:hover {
   transform: translateY(-3%);
   transition: 0.3s;
 }
-.ctgItem tbody:hover .ctgbtn::after {
+.MainCtgItem tbody:hover .MainCtgbtn::after {
   content: attr(data-name);
 }
-.ctgItem tbody .ctgImgBox {
+.MainCtgItem tbody .MainCtgImgBox {
   border-radius: 15px;
   width: 100%;
   height: 200px;
   background-size: cover;
 }
-.ctgItem tbody .ctgbtn {
+.MainCtgItem tbody .MainCtgbtn {
   width: 100%;
   height: 80px;
   line-height: 40px;
@@ -36,11 +36,11 @@
   margin-top: 10px;
   text-align: center;
 }
-.ctgItem tbody .ctgbtn h3,
-.ctgItem tbody .ctgbtn p {
+.MainCtgItem tbody .MainCtgbtn h3,
+.MainCtgItem tbody .MainCtgbtn p {
   text-align: center;
 }
-.ctgItem tbody .ctgbtn::after {
+.MainCtgItem tbody .MainCtgbtn::after {
   content: none;
   position: absolute;
   left: 0;
@@ -55,4 +55,4 @@
   color: #eee;
 }
 
-/***********************하위컴포넌트****************************//*# sourceMappingURL=CategoryCSS.css.map */
+/***********************하위컴포넌트****************************/

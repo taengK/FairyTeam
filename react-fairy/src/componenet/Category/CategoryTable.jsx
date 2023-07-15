@@ -10,21 +10,21 @@ const CategoryTable = ( {name, price, photo ,seq} ) => {
 
         
 //    <Context.Provider value = {{prodInfo, setProdInfo}}>
-<div className='ctgItem'>
+<div className='MainCtgItem'>
 
     <Link to = {`/Detaill/${seq}`} key={seq}>
 
         <table>
             <tbody>
                 <tr>
-                    <td className='ctgImgBox' style={{backgroundImage:`url(${photo})`}}></td>
+                    <td className='MainCtgImgBox' style={{backgroundImage:`url(${photo})`}}></td>
                 </tr>
                 {/* <tr className='ctgCPBox'>
                     <td className='ctgCttBox'>{name}</td>
                     <td className='ctgPriBox'>{price}</td>
                 </tr> */}
                 <tr>
-                    <td data-name="VIEW MORE" className='ctgbtn'><h6>{name}</h6><p>{price}</p></td>
+                    <td data-name="VIEW MORE" className='MainCtgbtn'><h6>{name}</h6><p>{price}</p></td>
                 </tr>
             </tbody>
         </table>

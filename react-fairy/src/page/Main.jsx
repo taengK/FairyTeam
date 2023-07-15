@@ -58,7 +58,7 @@ const Main = () => {
       <section className='Main-sec01'>
         <Swiper1></Swiper1>
       </section>
-      <section className='Main-sec02'>
+      <section className='Main-sec02 MainCtgCtn'>
 
       {data.map(item =>
         <TodayProd

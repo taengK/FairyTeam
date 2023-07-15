@@ -133,7 +133,7 @@ const Book = (props) => {
     //test start
     <div>
 
-      <div className='ctgCtn'>
+      <div className='MainCtgCtn'>
         {superC.map(item =>
           <CategoryTable seq={item.prod_seq}
             name={item.prod_name}

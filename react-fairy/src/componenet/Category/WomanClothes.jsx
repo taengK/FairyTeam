@@ -144,7 +144,7 @@ const WomanClothes = (props) => {
       
 
     <div>
-      <div className='ctgCtn'>
+      <div className='MainCtgCtn'>
         {superC.map(item =>
         
           <CategoryTable
