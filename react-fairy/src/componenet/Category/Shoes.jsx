@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-import './CategoryCSS.css'
+import '../../css/page/Main.css'
 import CategoryTable from './CategoryTable';
 import { useSearchParams } from 'react-router-dom';
 

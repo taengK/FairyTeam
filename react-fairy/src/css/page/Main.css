@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .Main-sec01 {
   width: 100%;
   margin-top: 10px;
@@ -13,69 +14,60 @@
   width: 100%;
 }
 
-.Main-sec02 {
-  width: 100%;
-}
-.Main-sec02 h2 {
-  margin-bottom: 30px;
-}
-.Main-sec02 ul {
+/***********************상위컴포넌트****************************/
+.MainCtgCtn {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  padding: 30px 30px 0 30px;
+  gap: 20px;
 }
-.Main-sec02 ul li {
-  width: calc((100% - 58px) / 1);
-  border-radius: 15px;
-  overflow: hidden;
-  border: 1px solid #bbb;
-  transition: all 0.7s ease;
-  margin: 0 -1px 30px 30px;
+
+/***********************상위컴포넌트****************************/
+/***********************하위컴포넌트****************************/
+.MainCtgItem {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
   position: relative;
 }
-.Main-sec02 ul li:hover {
+.MainCtgItem tbody:hover {
   transform: translateY(-3%);
+  transition: 0.3s;
 }
-.Main-sec02 ul li a {
-  display: block;
-  width: 150px;
-  margin: 0 auto;
-  overflow: hidden;
+.MainCtgItem tbody:hover .MainCtgbtn::after {
+  content: attr(data-name);
+}
+.MainCtgItem tbody .MainCtgImgBox {
   border-radius: 15px;
-}
-.Main-sec02 ul li a:nth-child(1) {
-  width: 180px;
-}
-.Main-sec02 ul li a:nth-child(1) > img {
   width: 100%;
+  height: 200px;
+  background-size: cover;
 }
-.Main-sec02 ul .btn {
-  background-color: #fff;
-  display: block;
+.MainCtgItem tbody .MainCtgbtn {
   width: 100%;
   height: 80px;
   line-height: 40px;
   border-radius: 10px;
   margin-top: 10px;
-  text-align: left;
-  position: relative;
-}
-.Main-sec02 ul .btn h3, .Main-sec02 ul .btn p {
   text-align: center;
 }
-.Main-sec02 ul .btn::after {
+.MainCtgItem tbody .MainCtgbtn h3,
+.MainCtgItem tbody .MainCtgbtn p {
+  text-align: center;
+}
+.MainCtgItem tbody .MainCtgbtn::after {
   content: none;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 80px;
-  line-height: 80px;
+  height: 300px;
+  line-height: 300px;
   text-align: center;
   background-color: #000;
   opacity: 0.5;
   border-radius: 10px;
   color: #eee;
 }
-.Main-sec02 ul li:hover .btn::after {
-  content: attr(data-name);
-}/*# sourceMappingURL=Main.css.map */
+
+/***********************하위컴포넌트****************************/

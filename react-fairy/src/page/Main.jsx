@@ -58,8 +58,8 @@ const Main = () => {
       <section className='Main-sec01'>
         <Swiper1></Swiper1>
       </section>
-      <section className='Main-sec02 MainCtgCtn'>
-
+      <h2>오늘의 물품상품</h2>
+      <section className='MainCtgCtn'>
       {data.map(item =>
         <TodayProd
           name={item.prod_name}
