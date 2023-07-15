@@ -30,22 +30,41 @@ const SignUpLogin = () => {
             signInButton.addEventListener('click', handleSignInClick);
         }
 
-  return (
-    <div className='SLBody' style={{backgroundColor:"green"}}>
-        <h2 className='SLH2'>Weekly Coding Challenge #1: Sign in/up Form</h2>
-        <ul className='container' id="container">
-            <li class="form-container sign-up-container">
-                <SignUp/>
-            </li>
-            <li class="form-container sign-in-container">
-                <Login/>
-            </li>
-            <li className='overlay-container' >
-                <SLOverlay />
-            </li>
-        </ul>
-    </div>
-  )
+        return () => {
+            if (signUpButton && signInButton) {
+                signUpButton.removeEventListener('click', handleSignUpClick);
+                signInButton.removeEventListener('click', handleSignInClick);
+            }
+        };
+    }, []);
+
+    return (
+        <div className='SLBody'>
+            <h2 className='SLH2'>문구 생각해보자</h2>
+            <ul className='container' id="container">
+                <li className="form-container sign-up-container">
+                    <SignUp />
+                </li>
+                <li className="form-container sign-in-container">
+                    <Login />
+                </li>
+                <li className='overlay-container' style={{ display: "none" }}>
+                    <div className="overlay" ref={overlayRef}>
+                        <div className={`overlay-panel overlay-left ${activePanel === 'sign-in' ? 'active' : ''}`}>
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us, please login with your personal info.</p>
+                            <button className="ghost" id="signIn">Sign In</button>
+                        </div>
+                        <div className={`overlay-panel overlay-right ${activePanel === 'sign-up' ? 'active' : ''}`}>
+                            <h1>Hello, Friend!</h1>
+                            <p>Enter your personal details and start your journey with us.</p>
+                            <button className="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    );
 }
 
 export default SignUpLogin;
