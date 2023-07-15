@@ -9,23 +9,23 @@ const Mypage = () => {
   return (
 
     
-    <div className='myPage' style={{backgroundColor:"#fc0"}} >
+    <div className='myPage' style={{backgroundColor:"#f00"}} >
  
 
       <div class="wrap">
+
+        
         <div class="blueContainer">
           <i class="fa-solid fa-circle-user"></i>
+            
           <div className='myPageIden'>
             <div class="grade">GOLD</div>
-            
             <div class="name">ID</div>
-            <br />
             <Link to='/Modification'><button>수정하기</button></Link>
           </div>
-          <div class="modify">i</div>
         </div>
-        <div class="summaryContainer">
      
+        <div class="summaryContainer">
           <div class="item">
             <div class="number">354</div> 
             {/* 숫자는 임의의 수 입니다 */}
@@ -126,18 +126,7 @@ const Mypage = () => {
           </a>
         </div>
         <div class="infoContainer">
-          <a href="#" class="item">
-            <div>icon</div>
-            <div>공지사항</div>
-          </a>
-          <a href="#" class="item">
-            <div>icos</div>
-            <div>이용안내</div>
-          </a>
-          <a href="#" class="item">
-            <div>icon</div>
-            <div>고객센터</div>
-          </a>
+          
         </div>
       </div>
     </div>
