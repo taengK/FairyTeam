@@ -1,13 +1,13 @@
 import React from 'react'
-import SignUp from '../01_SignIn_Login/SignUp'
-import Login from '../01_SignIn_Login/Login'
-import SLOverlay from '../01_SignIn_Login/SLOverlay'
+import SignUp from './SignUp'
+import Login from './Login'
+import SLOverlay from './SLOverlay'
 
 import { useEffect, useRef, useState } from 'react';
 
-import "../../css/page/01_SignIn_Login/SLOverlay.css"
-import "../../css/page/01_SignIn_Login/Signup.css"
-import "../../css/page/01_SignIn_Login/Login.css"
+import "../../../css/Hold/01_SignIn_Login/SLOverlay.css"
+import "../../../css/Hold/01_SignIn_Login/Signup.css"
+import "../../../css/Hold/01_SignIn_Login/Login.css"
 
 
 const SignUpLogin = () => {
@@ -24,8 +24,8 @@ const SignUpLogin = () => {
             <li class="form-container sign-in-container">
                 <Login/>
             </li>
-            <li className='overlay-container'>
-                <SLOverlay/>
+            <li className='overlay-container' style={{display:"none"}}>
+                <SLOverlay style={{display:"none"}}/>
             </li>
         </ul>
     </div>

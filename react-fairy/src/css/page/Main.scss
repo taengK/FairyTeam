@@ -1,3 +1,4 @@
+/***********************상위컴포넌트****************************/
 .Main-sec01 {
     width: 100%;
     margin-top: 10px;
@@ -13,69 +14,76 @@
         }
     }
 }
-.Main-sec02 {
-    width: 100%;
-    h2 {
-        margin-bottom: 30px;
+
+.MainCtgCtn {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 30px 30px 0 30px;
+    gap: 20px;
+  }
+  
+  /***********************상위컴포넌트****************************/
+  
+  
+  /***********************하위컴포넌트****************************/
+  .MainCtgItem {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    table {
+        width: 100%;
+    
+    tbody {
+      &:hover {
+        transform: translateY(-3%);
+        transition: .3s;
     }
-    ul {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+      
+      &:hover .MainCtgbtn::after {
+        content: attr(data-name);
+      }
+      
+      .MainCtgImgBox {
+        border-radius: 15px;
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+      }
+      
+      .MainCtgbtn {
         
-        li {
-            width: calc((100% - 58px)/1);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid #bbb;
-            transition: all .7s ease;
-            margin: 0 -1px 30px 30px;
-            position: relative;
-            &:hover{
-                transform: translateY(-3%);
-            }
-            a {
-                display: block;
-                width: 150px;
-                margin: 0 auto;
-                overflow: hidden;
-                border-radius: 15px;
-                &:nth-child(1){
-                    width: 180px;
-                    >img {
-                        width: 100%;
-                    }
-                }
-            }
+        width: 100%;
+        height: 80px;
+        line-height: 40px;
+        border-radius: 10px;
+        margin-top: 10px;
+        text-align: center;
+        
+        h3,
+        p {
+          text-align: center;
         }
-        .btn {
-            background-color: #fff;
-            display: block;
-            width: 100%;
-            height: 80px;
-            line-height: 40px;
-            border-radius: 10px;
-            margin-top: 10px;
-            text-align: left;
-            position: relative;
-            h3,p {
-                text-align: center;
-            }
-        }
-        .btn::after {
-            content: none;
-            position: absolute;
-            left:0; top:0;
-            width:100%; height: 80px;
-            line-height: 80px;
-            text-align: center;
-            background-color: #000;
-            opacity: 0.5;
-            border-radius: 10px;
-            color:#eee;
-        }
-        li:hover .btn::after {
-            content: attr(data-name);
-        }
+      }
+      
+      .MainCtgbtn::after {
+        content: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+        background-color: #000;
+        opacity: 0.5;
+        border-radius: 10px;
+        color: #eee;
+      }
     }
+  }
 }
+    
+  /***********************하위컴포넌트****************************/
+
 

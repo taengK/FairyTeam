@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
-import './CategoryCSS.css'
+import '../../css/page/Main.css'
 import CategoryTable from './CategoryTable';
 import { useSearchParams } from 'react-router-dom';
+
 
 
 
@@ -130,7 +131,7 @@ const WomanClothes = (props) => {
   },[superCate])
 
 
-console.log(superC);
+// console.log(superC);
 
   
 
@@ -143,15 +144,18 @@ console.log(superC);
       
 
     <div>
-      <div className='ctgCtn'>
+      <div className='MainCtgCtn'>
         {superC.map(item =>
+        
           <CategoryTable
             name={item.prod_name}
             price={item.prod_price}
             photo={item.prod_photo}
             barc={item.prod_barcode}
             seq={item.prod_seq}
-          ></CategoryTable>)}
+          ></CategoryTable>
+          )}
+          
       </div>
     </div>
 

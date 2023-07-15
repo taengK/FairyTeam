@@ -55,7 +55,7 @@ const Login = () => {
 
 
   return (
-    <div className='LoginBox'>
+    <div className='LoginBox form-container sign-in-container'>
       <Form onSubmit={handleLogin} className='LoginMx'>
       <h1>Sign In</h1>
       <div class="social-container">
@@ -67,7 +67,7 @@ const Login = () => {
 
 
 
-      <Row className='row1' >
+      <Row className='row1 LoginRow2' >
     <Form.Group as={Col} controlId="formGridEmail">
       <Form.Label style={{fontWeight:"bold", margin:"30px 0 10px 10px"}}>ID</Form.Label>
       <Form.Control type="text" placeholder="Enter Id" ref={idRef} className='LoginId' />
