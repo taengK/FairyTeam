@@ -1,8 +1,4 @@
 @charset "UTF-8";
-.blue {
-  color: #3b72de;
-}
-
 .myPage {
   margin-top: 30px;
 }
@@ -26,30 +22,43 @@
   width: 5px;
   height: 5px;
   border-radius: 2.5px;
-  background-color: skyblue;
   position: absolute;
   top: -5px;
   left: 110%;
 }
-.myPage .wrap .myPageIden {
-  margin-left: 20px;
-}
 .myPage .wrap .blueContainer {
   height: 100px;
-  background-color: #3b72de;
   display: flex;
-  align-items: flex-end;
-  padding: 16px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 15px;
 }
-.myPage .wrap .blueContainer .grade {
+.myPage .wrap .blueContainer .fa-circle-user {
+  font-size: 5rem;
+  color: wheat;
+}
+.myPage .wrap .blueContainer .myPageIden {
+  margin-left: 20px;
+}
+.myPage .wrap .blueContainer .myPageIden > li {
   font-weight: bold;
-  color: gold;
-}
-.myPage .wrap .blueContainer .name {
   font-size: 20px;
+  color: #000;
+  margin-top: 3px;
+}
+.myPage .wrap .blueContainer .myPageIden > li:first-child {
+  color: #fc0;
+}
+.myPage .wrap .blueContainer .myPageIden > li:last-child button {
+  background-color: #0D6EFD;
+  border-radius: 5px;
+  padding: 5px;
   font-weight: bold;
-  color: #ffffff;
-  margin-top: 10px;
+  border: none;
+}
+.myPage .wrap .blueContainer .myPageIden > li:last-child button:hover {
+  background-color: #0B5ED7;
+  color: whitesmoke;
 }
 .myPage .wrap .blueContainer .modify {
   margin-left: auto;
@@ -107,6 +116,10 @@
   padding: 20px;
   width: 16px;
   height: 16px;
+}
+.myPage .wrap .listContainer1 {
+  display: flex;
+  justify-content: space-between;
 }
 .myPage .wrap .listContainer {
   padding: 0;
@@ -166,8 +179,4 @@
 .myPage .wrap .listContainer .item:hover,
 .myPage .wrap .infoContainer .item:hover {
   /*   background-color: #f8f8f8; */
-}
-.myPage .wrap .fa-circle-user {
-  font-size: 5rem;
-  color: white;
 }

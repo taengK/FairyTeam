@@ -7,22 +7,17 @@ import { Link } from 'react-router-dom'
 
 const Mypage = () => {
   return (
-
-    
     <div className='myPage' style={{backgroundColor:"#f00"}} >
- 
-
       <div class="wrap">
 
-        
+
         <div class="blueContainer">
-          <i class="fa-solid fa-circle-user"></i>
-            
-          <div className='myPageIden'>
-            <div class="grade">GOLD</div>
-            <div class="name">ID</div>
-            <Link to='/Modification'><button>수정하기</button></Link>
-          </div>
+            <i class="fa-solid fa-circle-user"></i>
+          <ul className='myPageIden'>
+            <li class="grade">GOLD</li>
+            <li class="name">ID</li>
+            <li className='MPtoMO'><Link to='/Modification'><button>수정하기</button></Link></li>
+          </ul>
         </div>
      
         <div class="summaryContainer">
@@ -36,6 +31,12 @@ const Mypage = () => {
             <div>적립금(BLCT)</div>
           </div>
         </div>
+
+
+
+
+
+
         <div class="shippingStatusContainer">
           <div class="title">
             주문/배송조회
@@ -70,35 +71,50 @@ const Mypage = () => {
                 <div class="text">구매확정</div>
               </div>
             </div>
-
           </div>
-
         </div>
-        <div class="listContainer">
-          <a href="#" class="item">
+
+
+
+        <ul class="listContainer listContainer1">
+          <li> <a href="#" class="item">
             <div class="icon">ii</div>
             <div class="text">주문목록<span class="circle"></span></div>
             <div class="right"> </div>
           </a>
+          </li>
+
+          <li>
           <a href="#" class="item">
             <div class="icon">ii</div>
             <div class="text">상품후기</div>
             <div class="right"> </div>
-
           </a>
+          </li>
+
+          <li>
           <a href="#" class="item">
             
             <div class="icon">ii</div>
             <div class="text">상품문의</div>
             <div class="right"> </div>
           </a>
+          </li>
  
+
+          <li>
           <a href="#" class="item">
             <div class="icon">ii</div>
             <Link to ='/Cart'><div class="text">찜한상품</div></Link>
             <div class="right"> </div>
           </a>
-        </div>
+          </li>
+        </ul>
+
+
+
+
+
         <div class="listContainer">
           <a href="#" class="item">
             <div class="icon">ii</div>
