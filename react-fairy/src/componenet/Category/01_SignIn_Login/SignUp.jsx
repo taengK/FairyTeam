@@ -182,14 +182,14 @@ function Join() {
       <Form onSubmit={handleJoin} className='SignUpForm'>
         <h1>Create Account</h1>
         <div class="social-container">
-          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.google.com/" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="https://www.instagram.com/" class="social"><i class="fab fa-square-instagram"></i></a>
         </div>
 
         <Row className='row1' >
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>아이디</Form.Label>
+            <Form.Label><p>아이디</p></Form.Label>
             <Form.Control className='SLinput' type="text" placeholder="아이디를 입력하세요 (5자 이상)" ref={idRef} />
             <Button onClick={idCheck1} className='idOverlap ' variant="primary" type="button" >아이디 중복 확인</Button>
           </Form.Group>

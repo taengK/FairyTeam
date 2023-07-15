@@ -10,25 +10,28 @@
   align-items: center;
   flex-direction: column;
   padding: 0 20px;
-  height: 100%;
 }
 
 .row1 {
-  background-color: #fc0;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.row1 .SLinput {
-  margin: 8px 0;
+.row1 p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
 }
-.row1 .idOverlap {
+
+.idOverlap {
   border-radius: 15px;
   margin-top: 10px;
 }
 
 .LoginRow2 {
-  background-color: #ff0;
   width: 100%;
   flex-direction: column;
-}/*# sourceMappingURL=Signup.css.map */
+}
+.LoginRow2 span {
+  text-align: center;
+}

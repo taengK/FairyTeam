@@ -59,15 +59,15 @@ const Login = () => {
       <Form onSubmit={handleLogin} className='SignUpForm'>
       <h1>Sign In</h1>
       <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <span>or use your account</span>
+          <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.google.com/" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="https://www.instagram.com/" class="social"><i class="fab fa-square-instagram"></i></a>
+        </div>
 
 
 
       <Row className='LoginRow2' >
+      <span>or use your account</span>
     <Form.Group as={Col} controlId="formGridEmail">
       <Form.Label style={{fontWeight:"bold", margin:"30px 0 10px 10px"}}>ID</Form.Label>
       <Form.Control type="text" placeholder="Enter Id" ref={idRef} className='LoginId' />
