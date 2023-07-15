@@ -19,10 +19,6 @@ const CategoryTable = ( {name, price, photo ,seq} ) => {
                 <tr>
                     <td className='ctgImgBox' style={{backgroundImage:`url(${photo})`}}></td>
                 </tr>
-                {/* <tr className='ctgCPBox'>
-                    <td className='ctgCttBox'>{name}</td>
-                    <td className='ctgPriBox'>{price}</td>
-                </tr> */}
                 <tr>
                     <td data-name="VIEW MORE" className='ctgbtn'><h6>{name}</h6><p>{price}</p></td>
                 </tr>

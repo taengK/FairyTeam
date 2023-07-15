@@ -24,8 +24,8 @@ const SignUpLogin = () => {
             <li class="form-container sign-in-container">
                 <Login/>
             </li>
-            <li className='overlay-container'>
-                <SLOverlay/>
+            <li className='overlay-container' style={{display:"none"}}>
+                <SLOverlay style={{display:"none"}}/>
             </li>
         </ul>
     </div>

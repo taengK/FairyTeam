@@ -63,7 +63,7 @@
   text-decoration: none;
 }
 .view .dis_price > ins::after {
-  content: "";
+  content: "원";
 }
 .view .delivery {
   font-size: 16px;
