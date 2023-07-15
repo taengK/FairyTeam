@@ -10,6 +10,7 @@ import Logo from '../Images/Logo.png'
 
 
 
+
 // html로 회원정보 관리하는거 가능 (nunjucks) node Ex08DB
 // 아이디 중복체크 기능 ( 버튼식 또는 텍스트창 벗어나면 자동으로 체크 )
 //    >> DB에서 아이디를 PK? 로 등록해놔서 중복 알아서 걸러지긴 함..
@@ -28,32 +29,31 @@ function PostForm() {
   const nameRef = useRef()
   const contentRef = useRef()
   const priceRef = useRef()
-  const statusRef = useRef()
-  // const status2Ref = useRef()
   const photoRef = useRef()
-  const categoryRef = useRef()
-
   const imgUrlRef = useRef()
-  
+ 
   
   const [category, setCategory]=useState()
 
 
 
-// 사진 주소 업로드 
+  // 사진 주소 업로드 ----------------
 
   const [showPhoto, setShowPhoto] = useState()
+
   const photoUpload = (e)=>{
     e.preventDefault();
     setShowPhoto(imgUrlRef.current.value)
     
     imgUrlRef.current.value=''
-    // console.log(imgUrlRef.current.value);
   }
 
+  // 사진 주소 업로드 ---------------- 
+  
 
 
-  // 카테고리 변화
+  // 카테고리 대 중 소 분류 ----------------------------------------
+
   const [select1, setSelect1] = useState();
   const [select2, setSelect2] = useState();
   const [select3, setSelect3] = useState();
@@ -75,43 +75,57 @@ function PostForm() {
     setCategory(e.target.value);
   }
   
-  
+  // 카테고리 대 중 소 분류 ----------------------------------------
 
 
 
 
+  // 물품 상태 설정 --------------------------------
+
+  const [selectedOption, setSelectedOption] = useState();
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  // 물품 상태 설정 --------------------------------
 
 
+  // 물품 등록 시간 체크 -----------------------------------------------------
+  const [barcodeTime, setBarcodeTime] = useState(new Date().getTime());
+      
+  const [currentTime, setCurrentTime] = useState(new Date(barcodeTime).toLocaleString())
+  // 물품 등록 시간 체크 -----------------------------------------------------
+
+
+  // 정보 입력시 모든 값들 저장할 데이터
 
   const [userData, setUserData] = useState({})
-  // const [userId, setUserId] = useState({})
 
-
-
-
-   
-
-  // ... 코드 아니고 함수 접은거임
+  // 작성 완료시 데이터 저장 작업
   const handleJoin = (e) => {
-    console.log('handle Join Function'
-      , nameRef.current.value
-      , contentRef.current.value
-      , priceRef.current.value
-      , statusRef.current.value
-      , photoRef.current.value
-      , categoryRef.current.value);
+    // console.log('handle Join Function'
+    //   , nameRef.current.value
+    //   , contentRef.current.value
+    //   , priceRef.current.value
+    //   , selectedOption
+    //   , 
+    //   , category);
 
-    // form이 submit 되지 못하도록 작업
     e.preventDefault();
 
+    // setCurrentTime(new Date().getTime());
 
     setUserData({
       name: nameRef.current.value,
       content: contentRef.current.value,
       price: priceRef.current.value,
-      status: statusRef.current.value,
-      photo: photoRef.current.value,
-      category: categoryRef.current.value
+      category: category,
+      status: selectedOption,
+      photo: showPhoto,
+      // time : currentTime,
+      barcode : barcodeTime,
+      id : ''
     })
 
 
@@ -128,7 +142,8 @@ function PostForm() {
 
 
     if (userData.name !== undefined) {
-      
+      if (userData.content, userData.price ,userData.price, userData.category, userData.status,userData.photo,userData.time,
+        userData.barcode !== undefined){
 
         //  id 값이 초기상태인 undefined가 아니면서 pw, cpw가 일치할 때만 값을 전송함
         axios.post('http://localhost:8888/user/postForm', {
@@ -137,13 +152,13 @@ function PostForm() {
         .then((res) => {
           console.log('게시물 작성 res', res.data.result);
           if (res.data.result === 'success') {
-            alert('게시물이 작성 되었습니다.')
+            alert('게시물이 등록 되었습니다.')
             nav('/')
           } else if (res.data.result === 'duplicated') {
-            alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
+            alert('문제 발생') 
             console.log('문제')
 
-            // idRef.current.focus()
+      
           }
 
 
@@ -151,18 +166,50 @@ function PostForm() {
         .catch(() => {
           console.error('실패!')
         })
-      // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
+      
     
+
+      }
   }
 }, [userData])
 
 
 
+ 
+
+// class CurrentTime extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       currentTime: new Date()
+//     };
+//   }
+
+//   componentDidMount() {
+//     this.timerID = setInterval(() => {
+//       this.tick();
+//     }, 100);
+//   }
+
+//   componentWillUnmount() {
+//     clearInterval(this.timerID);
+//   }
+
+//   tick() {
+//     this.setState({
+//       currentTime: new Date()
+//     });
+//   }
+// }
+  
+  
+
 
 
   return (
     <div className='PostFormBox'>
-
+      {/* <p>{new Date(currentTime).toLocaleString()}</p> */}
+      {/* <p>{currentTime.toLocaleTimeString()}</p> */}
       <Form onSubmit={handleJoin}>
         <h1 className='fad'>게시물작성</h1>
 
@@ -199,7 +246,7 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridName">
-                  <Form.Control className='PFPrice' type="number" placeholder="숫자만 입력하세요" ref={priceRef} />
+                  <Form.Control className='PFPrice' type="text" placeholder="숫자만 입력하세요" ref={priceRef} />
                 </Form.Group>
               </Row>
             </div>
@@ -211,9 +258,14 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <ul class="PFCheck">
                 <li>
-                    <input type="radio" id="PFCheckbuy1" name="buy1" ref={statusRef}/>
+
+        
+
+                    {/* <input type="radio" id="PFCheckbuy1" name="buy1" ref={statusRef}/> */}
+                    <input type="radio" value="N" checked={selectedOption === 'N'} onChange={handleOptionChange}/>
                     <label for="PFCheckbuy1" >새상품</label>
-                    <input type="radio" id="PFCheckbuy2" name="buy1" ref={statusRef}/>
+                    <input type="radio" value="O" checked={selectedOption === 'O'} onChange={handleOptionChange}/>
+                    {/* <input type="radio" id="PFCheckbuy2" name="buy1" ref={statusRef}/> */}
                     <label for="PFCheckbuy2" >중고상품</label>
                 </li>
                
@@ -305,7 +357,7 @@ function PostForm() {
                     {select1 === '1100' && <option value = "1120">욕실용품</option>}
                   </select>
                   
-                  <select value={select3} name ="category3" onChange={handelChangeSelect3} ref ={categoryRef}>
+                  <select value={select3} name ="category3" onChange={handelChangeSelect3} >
                     <option value = "">소분류</option>
                     {select2 === '110' && <option value = "111">패딩</option>}
                     {select2 === '110' && <option value = "112">점퍼</option>}
@@ -511,7 +563,7 @@ function PostForm() {
 
                   </select>
                   
-                <p>{category}</p>
+                
                 </Form.Group>
               </Row>
             </div>
@@ -542,7 +594,7 @@ function PostForm() {
           </li>
         </ul>
 
-
+        
         <Button className='row1 PFButton' variant="primary" type="submit" >
           Submit
         </Button>

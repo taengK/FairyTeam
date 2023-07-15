@@ -117,7 +117,7 @@ useEffect(() => {
               <button class="increase">+</button>
             </div>
             <div class="total">
-              <span>35,000</span>
+              <span>{data.prod_price}</span>
               <em>총 상품금액</em>
             </div>
           </div>

@@ -99,7 +99,7 @@ router.post('/user/login',(req, res)=>{
 // 카테고리 ------------------------- 시작
 
 router.post('/db/categories', (req, res)=>{
-    let sql = "select prod_seq, category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info"
+    let sql = "select prod_seq, category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info order by prod_seq desc"
    
     
     conn.query(sql, [req.body.categorySeq], (err, rows)=>{
@@ -141,7 +141,7 @@ router.post('/db/Detaill', (req, res)=>{
 router.post('/user/postForm', (req, res)=>{
     console.log('postForm Router', req.body);
     
-    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, category_seq, prod_barcode, prod_status, prod_photo, user_id) VALUES (?,?,?,이건,몰라,애매, ?, 유저이름?)"
+    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, category_seq, prod_status, prod_photo, prod_at, prod_barcode, user_id) VALUES (?,?,?,?,?,?, current_timestamp ,?,'admin')"
     // id, pw, name, nick, email
    
     conn.query(sql
@@ -151,13 +151,16 @@ router.post('/user/postForm', (req, res)=>{
             , req.body.userData.category
             , req.body.userData.status
             , req.body.userData.photo
+            // , req.body.userData.time
+            , req.body.userData.barcode
+            , req.body.userData.id
             ]
         , (err, rows)=>{
             if(rows) {
-                console.log('success signup')
+                console.log('success upload')
                 res.json({result : 'success'})
             } else {
-                console.log('faild to signup', err);
+                console.log('faild to upload', err);
                 res.json({result : 'duplicated'})
             }
     })
