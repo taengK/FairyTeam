@@ -146,6 +146,7 @@ const NavList = (props) => {
           <li><Link to="/categories/800?keyword=800">할인상품</Link></li>
           <li><Link to="/categories/1100?keyword=1123">장마철</Link></li>
           <li><Link to="/categories/900?keyword=900">뜨는상품.</Link></li>
+          
         </ul>
     </div>
   )
