@@ -6,8 +6,7 @@ import ChatStart from '../js/ChatStart';
 import LoveAdd from '../js/LoveAdd';
 
 import { useParams } from 'react-router-dom';
-import Favorites from '../js/LoveAdd';
-import Chat from '../js/ChatStart';
+
 
 
 const Detaill = () => {
@@ -145,13 +144,13 @@ useEffect(() => {
         </article>
         <ul className='DTButtonBox'>
           <li>
-            <button className='DTBtn'><Favorites/></button>
+            <button className='DTBtn'><LoveAdd/></button>
           </li>
           <li>
             <button className='DTBtn'><PaymentComponet /></button>
           </li>
           <li>
-            <button className='DTBtn'><Chat/></button>
+            <button className='DTBtn'><ChatStart/></button>
           </li>
         </ul>
       </div>
