@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
-import PaymentComponet from '../js/PaymentComponet';
-
 import { useParams } from 'react-router-dom';
-import Favorites from '../js/LoveAdd';
-import Chat from '../js/ChatStart';
 
-import "../css/page/Detaill.css"
+import PaymentComponet from '../js/PaymentComponet';
+import ChatStart from '../js/ChatStart';
+import LoveAdd from '../js/LoveAdd';
+
+import axios from 'axios';
+
 
 
 const Detaill = () => {
@@ -144,13 +144,18 @@ useEffect(() => {
         </article>
         <ul className='DTButtonBox'>
           <li>
-            <button className='DTBtn'><Favorites/></button>
+            <button className='DTBtn'>
+              <LoveAdd 
+              prod_name={data.prod_name}
+              prod_photo={data.prod_photo}
+              prod_price={data.prod_price}
+              prod_seq={data.prod_seq}/></button>
           </li>
           <li>
             <button className='DTBtn'><PaymentComponet /></button>
           </li>
           <li>
-            <button className='DTBtn'><Chat/></button>
+            <button className='DTBtn'><ChatStart/></button>
           </li>
         </ul>
       </div>

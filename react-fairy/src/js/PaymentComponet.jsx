@@ -8,16 +8,6 @@ const PaymentComponet = () => {
 
   // 장바구니
 
-    const favorites = ()=>{
-      sessionStorage.setItem('name', )
-
-    }
-
-
-
-
-
-
 
     useEffect(() => {
         const script1 = document.createElement('script');
