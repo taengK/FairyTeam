@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import  {useNavigate} from 'react-router-dom'
-import { render } from 'nunjucks';
+
 
 
 // 로그인 상태 유지 세션?
@@ -45,7 +45,8 @@ const Login = () => {
 
         sessionStorage.getItem('id')
         nav('/')
-
+        window.location.reload();
+        
       } else if ( res.data.result =='id err'){
         alert('등록된 아이디가 아닙니다')
       } else if (res.data.result == 'password err') {
@@ -53,7 +54,8 @@ const Login = () => {
       } 
     })
   },[userData])
-
+  
+  
  
 
 
