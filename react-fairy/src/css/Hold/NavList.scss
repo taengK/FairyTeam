@@ -1,4 +1,4 @@
-.Navi {
+.NaviCtgBox {
     display: flex;
     height: 40px;
     .ham {
@@ -18,7 +18,7 @@
             }
         }
     }
-    .gnb {
+    .NaviCtgGnb {
         z-index: 4;
         width: 150px;
         top: -40px; 
@@ -77,7 +77,7 @@
             display: block;
         }
     }
-    .gnb:hover li {
+    .NaviCtgGnb:hover li {
         display: block;
     }
     .active {

@@ -70,12 +70,12 @@ const NavList = (props) => {
 
  //<ul className={`hamNav ${showHamNav ? 'show' : ''}`}>
   return (
-    <div className='Navi'>
+    <div className='NaviCtgBox'>
       <div className={`ham ${showHamNav ? 'active' : ''}`} ref={hamElements} onClick={handleClick}>
         <div className='realHam'>
           <i class="fa-solid fa-bars"></i><p>카테고리</p>
             </div>
-            <ul class="gnb">
+            <ul class="NaviCtgGnb">
             
         <li><Link to="/categories/100?keyword=100">여성의류</Link>
                   <div class="subBox">

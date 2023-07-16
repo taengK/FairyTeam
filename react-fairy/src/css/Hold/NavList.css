@@ -1,11 +1,11 @@
-.Navi {
+.NaviCtgBox {
   display: flex;
   height: 40px;
 }
-.Navi .ham {
+.NaviCtgBox .ham {
   width: 150px;
 }
-.Navi .ham .realHam {
+.NaviCtgBox .ham .realHam {
   background-color: #6a6e45;
   display: flex;
   justify-content: center;
@@ -14,22 +14,22 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
-.Navi .ham .realHam .fa-bars {
+.NaviCtgBox .ham .realHam .fa-bars {
   line-height: 40px;
   font-size: 1.5rem;
   text-align: center;
 }
-.Navi .gnb {
+.NaviCtgBox .NaviCtgGnb {
   z-index: 4;
   width: 150px;
   top: -40px;
   padding-top: 40px;
   position: relative;
 }
-.Navi .gnb > li {
+.NaviCtgBox .NaviCtgGnb > li {
   display: none;
 }
-.Navi .gnb > li > a {
+.NaviCtgBox .NaviCtgGnb > li > a {
   background-color: #57074c;
   display: block;
   height: 41px;
@@ -37,7 +37,7 @@
   text-align: center;
   color: #efefef;
 }
-.Navi .gnb .subBox {
+.NaviCtgBox .NaviCtgGnb .subBox {
   width: 1200px;
   height: 450px;
   background-color: #fff;
@@ -46,65 +46,65 @@
   left: 100%;
   display: none;
 }
-.Navi .gnb .subBox > ul {
+.NaviCtgBox .NaviCtgGnb .subBox > ul {
   display: flex;
   width: 100%;
   height: 328px;
 }
-.Navi .gnb .subBox > ul > li {
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li {
   height: 450px;
   border-right: 1px solid #000;
   padding: 30px;
 }
-.Navi .gnb .subBox > ul > li > h4 {
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li > h4 {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #000;
   color: #555;
 }
-.Navi .gnb .subBox > ul > li > p {
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li > p {
   margin-top: 10px;
 }
-.Navi .gnb .subBox > ul > li > p > a {
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li > p > a {
   font-size: 10px;
   display: block;
   font-size: 1.2rem;
   margin: 10px 0 0 10px;
   color: #555;
 }
-.Navi .gnb .subBox > ul > li > p > a:hover {
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li > p > a:hover {
   color: #0abb26;
   border-bottom: 1px solid #0abb26;
 }
-.Navi .gnb > li:hover .subBox {
+.NaviCtgBox .NaviCtgGnb > li:hover .subBox {
   display: block;
 }
-.Navi .gnb:hover li {
+.NaviCtgBox .NaviCtgGnb:hover li {
   display: block;
 }
-.Navi .active {
+.NaviCtgBox .active {
   border: 1px solid #000;
   background-color: pink;
 }
-.Navi .active .show {
+.NaviCtgBox .active .show {
   background-color: pink;
 }
-.Navi > ul {
+.NaviCtgBox > ul {
   width: 40%;
   display: flex;
   justify-content: right;
   align-items: center;
 }
-.Navi > ul > li {
+.NaviCtgBox > ul > li {
   width: 100%;
 }
-.Navi > ul > li > a {
+.NaviCtgBox > ul > li > a {
   display: block;
   padding: 10px;
   text-align: center;
   position: relative;
 }
-.Navi > ul > li > a::after {
+.NaviCtgBox > ul > li > a::after {
   position: absolute;
   content: "";
   width: 0;
@@ -114,7 +114,7 @@
   bottom: 0;
   transition: width 0.5s ease-in-out;
 }
-.Navi > ul > li > a:hover::after {
+.NaviCtgBox > ul > li > a:hover::after {
   width: 70%;
   transition: 0.3s all ease-in-out;
   transform: translateX(20%);
