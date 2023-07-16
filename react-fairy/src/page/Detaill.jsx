@@ -11,14 +11,14 @@ const Detaill = () => {
   // const {superC} = useContext(Context);
   
 const params = useParams();
-console.log('params :', params.seq);
+// console.log('params :', params.seq);
 
 
 
 const [seq, setSeq] = useState(params.seq)
 
 const [data, setData] = useState({})
-  console.log(seq);
+  // console.log(seq);
 
 
 useEffect(() => {
@@ -33,7 +33,7 @@ useEffect(() => {
     })
       .then((res) => {
 
-        console.log('정보는 :', res.data.prodInfo);
+        // console.log('정보는 :', res.data.prodInfo);
 
         if (res.data.prodInfo !== 'none') {
           if (res.data.prodInfo[0].prod_status == 'N') {
