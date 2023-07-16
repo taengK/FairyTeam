@@ -144,7 +144,12 @@ useEffect(() => {
         </article>
         <ul className='DTButtonBox'>
           <li>
-            <button className='DTBtn'><LoveAdd/></button>
+            <button className='DTBtn'>
+              <LoveAdd 
+              prod_name={prod_name}
+              prod_photo={prod_photo}
+              prod_price={prod_price}
+              prod_seq={prod_seq}/></button>
           </li>
           <li>
             <button className='DTBtn'><PaymentComponet /></button>
