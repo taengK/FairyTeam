@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
-import PaymentComponet from '../js/PaymentComponet';
-
 import { useParams } from 'react-router-dom';
-import Favorites from '../js/LoveAdd';
-import Chat from '../js/ChatStart';
 
+import PaymentComponet from '../js/PaymentComponet';
+import ChatStart from '../js/ChatStart';
+import LoveAdd from '../js/LoveAdd';
+
+import axios from 'axios';
 
 const Detaill = () => {
 
@@ -140,9 +140,16 @@ useEffect(() => {
             </div>
           </div>
         </article>
-        <Favorites/>
-        <PaymentComponet />
-        <Chat/>
+        <div>
+          <ul class="DtButton">
+            <LoveAdd prod_name={data.prod_name}
+            prod_seq={data.prod_seq}
+            prod_photo={data.prod_photo}
+            prod_price={data.prod_price}></LoveAdd>
+            <PaymentComponet />
+            <ChatStart />
+          </ul>
+        </div>
       </div>
     </div>
 

@@ -8,16 +8,6 @@ const PaymentComponet = () => {
 
   // 장바구니
 
-    const favorites = ()=>{
-      sessionStorage.setItem('name', )
-
-    }
-
-
-
-
-
-
 
     useEffect(() => {
         const script1 = document.createElement('script');
@@ -72,24 +62,23 @@ const PaymentComponet = () => {
       };
       
   return (
-  <div>
+  
     
-    <ul class="DtButton">
-      {/* <li><input type="button" class="cart" value="장바구니🖤" onClick={favorites}/> */}
-      {/* <i class="fa-solid fa-heart"></i> */}
-      {/* </li> */}
+      // {/* <li><input type="button" class="cart" value="장바구니🖤" onClick={favorites}/> */}
+      // {/* <i class="fa-solid fa-heart"></i> */}
+      // {/* </li> */}
 
       <li>
-        {/* <RealPayment/> */}
+        
         <input type="button" class="order" value="결제하기🛒" onClick={RealPayment}/> 
-        {/* {/* <i class="fa-solid fa-cart-shopping"></i> */}
+        
       </li>
       
-      {/* <li><Link to= '/Chat'><input type="button" class="DtChat" value="채팅하기💬" /></Link> */}
-      {/* <i class="fa-solid fa-comment"></i>*/}
-      {/* </li> */}
-    </ul>
-  </div>
+      // {/* <li><Link to= '/Chat'><input type="button" class="DtChat" value="채팅하기💬" /></Link> */}
+      // {/* <i class="fa-solid fa-comment"></i>*/}
+      // {/* </li> */}
+    
+  
 
 
 
