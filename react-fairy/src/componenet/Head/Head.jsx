@@ -85,13 +85,13 @@ const Head = () => {
         <li className='headNv'>
           <ul>
 
-            <li>
+            {/* <li>
               {userId ? (
                 <Link to='/PostForm'>게시물작성</Link>
               ) : (
                 null
               )}
-            </li>
+            </li> */}
           </ul>
         </li>
         <li>
