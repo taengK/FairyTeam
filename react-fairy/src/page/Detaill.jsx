@@ -11,14 +11,14 @@ const Detaill = () => {
   // const {superC} = useContext(Context);
   
 const params = useParams();
-console.log('params :', params.seq);
+// console.log('params :', params.seq);
 
 
 
 const [seq, setSeq] = useState(params.seq)
 
 const [data, setData] = useState({})
-  console.log(seq);
+  // console.log(seq);
 
 
 useEffect(() => {
@@ -33,21 +33,35 @@ useEffect(() => {
     })
       .then((res) => {
 
-        console.log('정보는 :', res.data.prodInfo);
+        // console.log('정보는 :', res.data.prodInfo);
 
         if (res.data.prodInfo !== 'none') {
-
-          // console.log(res.data.prodInfo[0].prod_at);
-          setData({
-            prod_name : res.data.prodInfo[0].prod_name,
-            prod_price : res.data.prodInfo[0].prod_price,
-            prod_photo : res.data.prodInfo[0].prod_photo,
-            prod_content : res.data.prodInfo[0].prod_content,
-            prod_at : res.data.prodInfo[0].prod_at,
-            prod_seq : res.data.prodInfo[0].prod_seq,
-            user_id : res.data.prodInfo[0].user_id
+          if (res.data.prodInfo[0].prod_status == 'N') {
+            setData({
+              prod_name: res.data.prodInfo[0].prod_name,
+              prod_price: res.data.prodInfo[0].prod_price,
+              prod_photo: res.data.prodInfo[0].prod_photo,
+              prod_content: res.data.prodInfo[0].prod_content,
+              prod_at: res.data.prodInfo[0].prod_at,
+              prod_seq: res.data.prodInfo[0].prod_seq,
+              user_id: res.data.prodInfo[0].user_id,
+              user_nick : res.data.prodInfo[0].user_nick,
+              prod_status: '새 상품'
           })
-      
+        } else {
+            setData({
+              prod_name: res.data.prodInfo[0].prod_name,
+              prod_price: res.data.prodInfo[0].prod_price,
+              prod_photo: res.data.prodInfo[0].prod_photo,
+              prod_content: res.data.prodInfo[0].prod_content,
+              prod_at: res.data.prodInfo[0].prod_at,
+              prod_seq: res.data.prodInfo[0].prod_seq,
+              user_id: res.data.prodInfo[0].user_id,
+              user_nick : res.data.prodInfo[0].user_nick,
+              prod_status: '중고 상품'
+            })
+
+        }
         } 
       })
   }
@@ -79,7 +93,7 @@ useEffect(() => {
           </div>
           <div class="summary">
             <nav>
-              <h1>{data.user_id}</h1>
+              <h1>닉네임 ====== {data.user_nick}</h1>
               <h2>
                 상품번호 :
                 <span>{data.prod_seq}</span>
@@ -87,7 +101,8 @@ useEffect(() => {
             </nav>
             <nav>
               <h3>{data.prod_name}</h3>
-              <p>aa</p>
+              <p> prod_status로 새 상품 중고 상품 구분 ===== {data.prod_status} </p>
+              <p> 물품 등록 시간인데 시간 방식이 자동으로 외국으로 적용됨 왜이럼===={data.prod_at} </p>
               <p>{data.prod_content}</p>
             </nav>
             <nav>
@@ -117,7 +132,7 @@ useEffect(() => {
               <button class="increase">+</button>
             </div>
             <div class="total">
-              <span>35,000</span>
+              <span>{data.prod_price}</span>
               <em>총 상품금액</em>
             </div>
           </div>

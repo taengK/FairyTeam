@@ -26,7 +26,7 @@ const Main = () => {
     axios.post('http://localhost:8888/db/recent')
       .then((res) => {
 
-        console.log('정보는 :', res.data.recent);
+        // console.log('정보는 :', res.data.recent);
 
         if (res.data.recent !== 'none') {
 
@@ -40,7 +40,7 @@ const Main = () => {
       
         } 
       })
-      console.log(data);
+      // console.log(data);
 
 },[])
 

@@ -39,13 +39,17 @@ const Login = () => {
       if(res.data.result == 'success'){
         alert(res.data.id+' 님 , 환영합니다!')
 
-
-        sessionStorage.setItem('id',res.data.id)
+        sessionStorage.setItem('id', res.data.id)
 
         sessionStorage.getItem('id')
+        
         nav('/')
 
-      }
+      } else if ( res.data.result =='id err'){
+        alert('등록된 아이디가 아닙니다')
+      } else if (res.data.result == 'password err') {
+        alert('비밀번호를 다시 확인해주세요')
+      } 
     })
   },[userData])
 
