@@ -220,22 +220,22 @@ router.post('/db/recent', (req, res)=>{
 
 
 
-// NavList 4가지 ---------------------------- 시작
-router.post('/db/navlist', (req, res)=>{
+// 상세페이지 > 장바구니 ---------------------------- 시작
+router.post('/db/favorite', (req, res)=>{
+    console.log(req.body.userData);
+    let sql = "insert into favorites_info values (default, ?, ?, current_timestamp)"
     
-    let sql = "select prod_photo, prod_seq from product_info order by rand() limit 10"
-    
-    conn.query(sql, (err, rows)=>{
+    conn.query(sql, [req.body.userData.prod_seq, req.body.userData.user_id], (err, rows)=>{
         if (rows){
-            console.log('ㅇ', rows)
-            res.json({nav : rows})
+            console.log('즐찾추가', rows)
+            res.json({fav : 'success'})
         } else {
-            console.log('ㄴ')
-            res.json({nav : 'none'})
+            console.log('즐찾실패', err)
+            res.json({fav : 'none'})
         }
     })
 })
-// NavList 4가지 ---------------------------- 종료
+// 상세페이지 > 장바구니 ---------------------------- 종료
 
 
 
