@@ -4,7 +4,7 @@ import Login from './Login';
 
 import "../../../css/Hold/01_SignIn_Login/SLOverlay.css";
 import "../../../css/Hold/01_SignIn_Login/Signup.css";
-import "../../../css/Hold/01_SignIn_Login/Login.css";
+
 
 const SignUpLogin = () => {
     const overlayRef = useRef(null);

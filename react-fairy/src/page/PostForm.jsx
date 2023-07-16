@@ -10,6 +10,7 @@ import Logo from '../Images/Logo.png'
 
 
 
+
 // html로 회원정보 관리하는거 가능 (nunjucks) node Ex08DB
 // 아이디 중복체크 기능 ( 버튼식 또는 텍스트창 벗어나면 자동으로 체크 )
 //    >> DB에서 아이디를 PK? 로 등록해놔서 중복 알아서 걸러지긴 함..
@@ -28,32 +29,31 @@ function PostForm() {
   const nameRef = useRef()
   const contentRef = useRef()
   const priceRef = useRef()
-  const statusRef = useRef()
-  // const status2Ref = useRef()
   const photoRef = useRef()
-  const categoryRef = useRef()
-
   const imgUrlRef = useRef()
-  
+ 
   
   const [category, setCategory]=useState()
 
 
 
-// 사진 주소 업로드 
+  // 사진 주소 업로드 ----------------
 
   const [showPhoto, setShowPhoto] = useState()
+
   const photoUpload = (e)=>{
     e.preventDefault();
     setShowPhoto(imgUrlRef.current.value)
     
     imgUrlRef.current.value=''
-    // console.log(imgUrlRef.current.value);
   }
 
+  // 사진 주소 업로드 ---------------- 
+  
 
 
-  // 카테고리 변화
+  // 카테고리 대 중 소 분류 ----------------------------------------
+
   const [select1, setSelect1] = useState();
   const [select2, setSelect2] = useState();
   const [select3, setSelect3] = useState();
@@ -75,43 +75,65 @@ function PostForm() {
     setCategory(e.target.value);
   }
   
+  // 카테고리 대 중 소 분류 ----------------------------------------
+
+
+
+
+  // 물품 상태 설정 --------------------------------
+
+  const [selectedOption, setSelectedOption] = useState();
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  // 물품 상태 설정 --------------------------------
+
+
+  // 바코드 등록 체크 -----------------------------------------------------
+  const [barcodeTime, setBarcodeTime] = useState(new Date().getTime());
+  // 바코드 등록 체크 -----------------------------------------------------
+
+
+  // 가격 입력 시 , 입력 -------------------------------
+  const [number, setNumber] = useState('');
+  const [price, setPrice] = useState();
+  const [price2, setPrice2] = useState();
+  
+  const handleNumberChange = (e) => {
+    
+    setNumber(e.target.value);
+    // setPrice(parseInt(number).toLocaleString())
+  };
+
+
+ console.log(parseInt(number).toLocaleString()+'원');
+
   
 
-
-
-
-
-
+// 정보 입력시 모든 값들 저장할 데이터
 
   const [userData, setUserData] = useState({})
-  // const [userId, setUserId] = useState({})
 
-
-
-
+  // 작성 완료시 데이터 저장 작업
+  const handleJoin = (e) => {
    
 
-  // ... 코드 아니고 함수 접은거임
-  const handleJoin = (e) => {
-    console.log('handle Join Function'
-      , nameRef.current.value
-      , contentRef.current.value
-      , priceRef.current.value
-      , statusRef.current.value
-      , photoRef.current.value
-      , categoryRef.current.value);
-
-    // form이 submit 되지 못하도록 작업
     e.preventDefault();
+
+   
 
 
     setUserData({
       name: nameRef.current.value,
       content: contentRef.current.value,
-      price: priceRef.current.value,
-      status: statusRef.current.value,
-      photo: photoRef.current.value,
-      category: categoryRef.current.value
+      price: (parseInt(number).toLocaleString()+'원'),
+      category: category,
+      status: selectedOption,
+      photo: showPhoto,
+      barcode : barcodeTime,
+      id : sessionStorage.getItem('id')
     })
 
 
@@ -128,7 +150,8 @@ function PostForm() {
 
 
     if (userData.name !== undefined) {
-      
+      if (userData.content, userData.price ,userData.price, userData.category, userData.status,userData.photo,userData.time,
+        userData.barcode !== undefined){
 
         //  id 값이 초기상태인 undefined가 아니면서 pw, cpw가 일치할 때만 값을 전송함
         axios.post('http://localhost:8888/user/postForm', {
@@ -137,13 +160,13 @@ function PostForm() {
         .then((res) => {
           console.log('게시물 작성 res', res.data.result);
           if (res.data.result === 'success') {
-            alert('게시물이 작성 되었습니다.')
+            alert('게시물이 등록 되었습니다.')
             nav('/')
           } else if (res.data.result === 'duplicated') {
-            alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
+            alert('내용을 정확히 입력해주세요') 
             console.log('문제')
 
-            // idRef.current.focus()
+      
           }
 
 
@@ -151,18 +174,26 @@ function PostForm() {
         .catch(() => {
           console.error('실패!')
         })
-      // 최소 글자 수 조건 (아이디는 중복확인할 때 글자수 같이 검사)
+      
     
+
+      }
   }
 }, [userData])
 
 
 
+ 
+
+
+  
+
 
 
   return (
     <div className='PostFormBox'>
-
+      {/* <p>{new Date(currentTime).toLocaleString()}</p> */}
+      {/* <p>{currentTime.toLocaleTimeString()}</p> */}
       <Form onSubmit={handleJoin}>
         <h1 className='fad'>게시물작성</h1>
 
@@ -199,7 +230,8 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridName">
-                  <Form.Control className='PFPrice' type="number" placeholder="숫자만 입력하세요" ref={priceRef} />
+                
+                  <Form.Control className='PFPrice' type="text" placeholder="숫자만 입력하세요" value={number} onChange={handleNumberChange} />
                 </Form.Group>
               </Row>
             </div>
@@ -211,9 +243,14 @@ function PostForm() {
             <div className='PostFormLabel2'>
               <ul class="PFCheck">
                 <li>
-                    <input type="radio" id="PFCheckbuy1" name="buy1" ref={statusRef}/>
+
+        
+
+                    {/* <input type="radio" id="PFCheckbuy1" name="buy1" ref={statusRef}/> */}
+                    <input type="radio" value="N" checked={selectedOption === 'N'} onChange={handleOptionChange}/>
                     <label for="PFCheckbuy1" >새상품</label>
-                    <input type="radio" id="PFCheckbuy2" name="buy1" ref={statusRef}/>
+                    <input type="radio" value="O" checked={selectedOption === 'O'} onChange={handleOptionChange}/>
+                    {/* <input type="radio" id="PFCheckbuy2" name="buy1" ref={statusRef}/> */}
                     <label for="PFCheckbuy2" >중고상품</label>
                 </li>
                
@@ -232,7 +269,7 @@ function PostForm() {
                 </li>
                 <li>
                   <p>
-                    <input type="text" ref={imgUrlRef}/><button onClick={photoUpload}>업로드</button><br/>
+                    <input type="text" ref={imgUrlRef} placeholder='URL 주소를 입력하세요'/><button onClick={photoUpload}>업로드</button><br/>
                     <b>* 상품 이미지는 640x640에 최적화 되어 있습니다.</b><br />
                     - 상품 이미지는 PC에서는 1:1, 모바일에서는 1:1.23 비율로 보여집니다.<br />
                     - 이미지는 상품 등록 시 정사각형으로 잘려서 등록됩니다.<br />
@@ -291,21 +328,21 @@ function PostForm() {
                     {select1 === '700' && <option value = "710">골프</option>}
                     {select1 === '700' && <option value = "720">캠핑</option>}
                     {select1 === '700' && <option value = "730">낚시</option>}
-                    {select1 === '700' && <option value = "740">등산/클라이밍</option>}
+                    {select1 === '700' && <option value = "750">등산/클라이밍</option>}
                     {select1 === '800' && <option value = "810">도서</option>}
                     {select1 === '800' && <option value = "830">상품권</option>}
                     {select1 === '900' && <option value = "910">스킨케어</option>}
                     {select1 === '900' && <option value = "920">색조 메이크업</option>}
                     {select1 === '900' && <option value = "930">베이스 메이크업</option>}
                     {select1 === '900' && <option value = "940">바디/헤어케어</option>}
-                    {select1 === '900' && <option value = "950">네일아트</option>}
+                    {select1 === '900' && <option value = "960">네일아트</option>}
                     {select1 === '1000' && <option value = "1010">가구</option>}
-                    {select1 === '1000' && <option value = "1020">인테리어소품</option>}
+                    {select1 === '1000' && <option value = "1030">인테리어소품</option>}
                     {select1 === '1100' && <option value = "1110">주방용품</option>}
                     {select1 === '1100' && <option value = "1120">욕실용품</option>}
                   </select>
                   
-                  <select value={select3} name ="category3" onChange={handelChangeSelect3} ref ={categoryRef}>
+                  <select value={select3} name ="category3" onChange={handelChangeSelect3} >
                     <option value = "">소분류</option>
                     {select2 === '110' && <option value = "111">패딩</option>}
                     {select2 === '110' && <option value = "112">점퍼</option>}
@@ -437,11 +474,11 @@ function PostForm() {
                     {select2 === '730' && <option value = "733">민물 낚시</option>}
                     {select2 === '730' && <option value = "734">낚시 의류 및 기타 용품</option>}
                     
-                    {select2 === '740' && <option value = "741">남성 등산복</option>}
-                    {select2 === '740' && <option value = "742">여성 등산복</option>}
-                    {select2 === '740' && <option value = "743">등산 가방</option>}
-                    {select2 === '740' && <option value = "744">암벽/클라이밍</option>}
-                    {select2 === '740' && <option value = "745">기타 등산 용품</option>}
+                    {select2 === '750' && <option value = "751">남성 등산복</option>}
+                    {select2 === '750' && <option value = "752">여성 등산복</option>}
+                    {select2 === '750' && <option value = "753">등산 가방</option>}
+                    {select2 === '750' && <option value = "754">암벽/클라이밍</option>}
+                    {select2 === '750' && <option value = "755">기타 등산 용품</option>}
                     
                     {select2 === '810' && <option value = "811">시/소설</option>}
                     {select2 === '810' && <option value = "812">자기계발</option>}
@@ -478,8 +515,8 @@ function PostForm() {
                     {select2 === '940' && <option value = "943">헤어스타일링</option>}
                     {select2 === '940' && <option value = "946">핸드/풋케어</option>}
 
-                    {select2 === '950' && <option value = "951">네일아트/스티커</option>}
-                    {select2 === '950' && <option value = "953">네일케어도구</option>}
+                    {select2 === '960' && <option value = "961">네일아트/스티커</option>}
+                    {select2 === '960' && <option value = "963">네일케어도구</option>}
 
                     {select2 === '1010' && <option value = "1011">거실가구</option>}
                     {select2 === '1010' && <option value = "1012">침실가구</option>}
@@ -487,12 +524,12 @@ function PostForm() {
                     {select2 === '1010' && <option value = "1014">선반/수납 가구</option>}
                     {select2 === '1010' && <option value = "1015">주방가구</option>}
                     
-                    {select2 === '1020' && <option value = "1021">포스터/그림/액자</option>}
-                    {select2 === '1020' && <option value = "1022">디퓨저/캔들</option>}
-                    {select2 === '1020' && <option value = "1023">쿠션/방석</option>}
-                    {select2 === '1020' && <option value = "1024">탁상/벽시계</option>}
-                    {select2 === '1020' && <option value = "1025">거울</option>}
-                    {select2 === '1020' && <option value = "1026">기타 인테리어 소품</option>}
+                    {select2 === '1030' && <option value = "1031">포스터/그림/액자</option>}
+                    {select2 === '1030' && <option value = "1032">디퓨저/캔들</option>}
+                    {select2 === '1030' && <option value = "1033">쿠션/방석</option>}
+                    {select2 === '1030' && <option value = "1034">탁상/벽시계</option>}
+                    {select2 === '1030' && <option value = "1035">거울</option>}
+                    {select2 === '1030' && <option value = "1036">기타 인테리어 소품</option>}
 
                     {select2 === '1110' && <option value = "1111">그릇/홈세트</option>}
                     {select2 === '1110' && <option value = "1112">잔/컵</option>}
@@ -511,7 +548,7 @@ function PostForm() {
 
                   </select>
                   
-                <p>{category}</p>
+                
                 </Form.Group>
               </Row>
             </div>
@@ -542,7 +579,7 @@ function PostForm() {
           </li>
         </ul>
 
-
+        
         <Button className='row1 PFButton' variant="primary" type="submit" >
           Submit
         </Button>

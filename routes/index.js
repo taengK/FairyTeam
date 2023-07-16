@@ -77,19 +77,26 @@ router.post('/user/signup', (req, res)=>{
 
 router.post('/user/login',(req, res)=>{
     console.log('login router~!');
-    let sql = "select * from user_info where user_id=? and user_pw=?"
+    let sql = "select * from user_info where user_id=?"
     conn.query(sql,
-        [req.body.userData.id, req.body.userData.pw]
+        [req.body.userData.id]
         , (err, rows)=>{
-            console.log(rows);
-            if(rows.length > 0){
-                res.json({result : 'success', id : req.body.userData.id})
+            if (rows[0] !== undefined){
+                if(rows[0].user_id === req.body.userData.id){
+                    if(rows[0].user_pw === req.body.userData.pw){
+                        console.log(rows);   
+                        res.json({result : 'success', id : req.body.userData.id})
+                } else if (rows[0].user_pw !== req.body.userData.pw){
+                    res.json({result : 'password err'})
+                }
+            }
             } else {
-                res.json({result : 'failed'})
+                console.log('에러' ,err);
+                res.json({result : 'id err'})
             }
         })
 })
-    // 로그인 ----------------------- 종료
+// 로그인 ----------------------- 종료
 
 // 회원 ----------------------------- 종료
 
@@ -99,7 +106,7 @@ router.post('/user/login',(req, res)=>{
 // 카테고리 ------------------------- 시작
 
 router.post('/db/categories', (req, res)=>{
-    let sql = "select prod_seq, category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info"
+    let sql = "select prod_seq, category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info order by prod_seq desc"
    
     
     conn.query(sql, [req.body.categorySeq], (err, rows)=>{
@@ -119,7 +126,7 @@ router.post('/db/categories', (req, res)=>{
 
 router.post('/db/Detaill', (req, res)=>{
     
-    let sql = "select * from product_info where prod_seq = ?"
+    let sql = "select A.*, B.user_nick from product_info A, user_info B where A.user_id = B.user_id and A.prod_seq =?"
     
     conn.query(sql, [req.body.seq], (err, rows)=>{
         if (rows){
@@ -141,7 +148,7 @@ router.post('/db/Detaill', (req, res)=>{
 router.post('/user/postForm', (req, res)=>{
     console.log('postForm Router', req.body);
     
-    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, category_seq, prod_barcode, prod_status, prod_photo, user_id) VALUES (?,?,?,이건,몰라,애매, ?, 유저이름?)"
+    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, category_seq, prod_status, prod_photo, prod_at, prod_barcode, user_id) VALUES (?,?,?,?,?,?, current_timestamp ,?,?)"
     // id, pw, name, nick, email
    
     conn.query(sql
@@ -151,13 +158,16 @@ router.post('/user/postForm', (req, res)=>{
             , req.body.userData.category
             , req.body.userData.status
             , req.body.userData.photo
+            // , req.body.userData.time
+            , req.body.userData.barcode
+            , req.body.userData.id
             ]
         , (err, rows)=>{
             if(rows) {
-                console.log('success signup')
+                console.log('success upload')
                 res.json({result : 'success'})
             } else {
-                console.log('faild to signup', err);
+                console.log('faild to upload', err);
                 res.json({result : 'duplicated'})
             }
     })
