@@ -8,12 +8,16 @@ import { Link } from 'react-router-dom'
 
 const Head = () => {
 
+  
   const [userId, setUserId] = useState('');
 
   // 쿠키에서 id 값을 가져와서 상태 변수에 설정하는 함수
   const checkLogin = () => {
-    const id = sessionStorage.getItem('id')
-    setUserId(id);
+    if (sessionStorage.getItem('id') !== null) {
+      setUserId(true);
+     } else {
+      setUserId(false)
+     }
   };
 
 
@@ -27,11 +31,10 @@ const Head = () => {
 
   // 컴포넌트가 마운트될 때 쿠키의 id 값을 확인하여 상태 변수를 설정
   useEffect(() => {
-    // checkLogin();
+    checkLogin();
   }, [userId]);
   
   // useEffect(()=>{
-  //   // window.location.reload();
 
   // },[userId])
   
