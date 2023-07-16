@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import RealPayment from './RealPayment';
+
 
 const PaymentComponet = () => {
 
@@ -73,22 +73,7 @@ const PaymentComponet = () => {
       
   return (
   <div>
-    
-    <ul class="DtButton">
-      {/* <li><input type="button" class="cart" value="장바구니🖤" onClick={favorites}/> */}
-      {/* <i class="fa-solid fa-heart"></i> */}
-      {/* </li> */}
-
-      <li>
-        {/* <RealPayment/> */}
-        <input type="button" class="order" value="결제하기🛒" onClick={RealPayment}/> 
-        {/* {/* <i class="fa-solid fa-cart-shopping"></i> */}
-      </li>
-      
-      {/* <li><Link to= '/Chat'><input type="button" class="DtChat" value="채팅하기💬" /></Link> */}
-      {/* <i class="fa-solid fa-comment"></i>*/}
-      {/* </li> */}
-    </ul>
+    <input type="button" class="order" value="결제하기🛒" onClick={RealPayment}/> 
   </div>
 
 

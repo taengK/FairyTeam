@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom';
 import Favorites from '../js/LoveAdd';
 import Chat from '../js/ChatStart';
 
+import "../css/page/Detaill.css"
+
 
 const Detaill = () => {
 
@@ -140,9 +142,17 @@ useEffect(() => {
             </div>
           </div>
         </article>
-        <Favorites/>
-        <PaymentComponet />
-        <Chat/>
+        <ul className='DTButtonBox'>
+          <li>
+            <button className='DTBtn'><Favorites/></button>
+          </li>
+          <li>
+            <button className='DTBtn'><PaymentComponet /></button>
+          </li>
+          <li>
+            <button className='DTBtn'><Chat/></button>
+          </li>
+        </ul>
       </div>
     </div>
 
