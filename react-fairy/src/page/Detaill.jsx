@@ -3,6 +3,9 @@ import axios from 'axios';
 import PaymentComponet from '../js/PaymentComponet';
 
 import { useParams } from 'react-router-dom';
+import Favorites from '../js/Favorites';
+import Chat from '../js/Chat';
+
 
 const Detaill = () => {
 
@@ -137,7 +140,9 @@ useEffect(() => {
             </div>
           </div>
         </article>
+        <Favorites/>
         <PaymentComponet />
+        <Chat/>
       </div>
     </div>
 

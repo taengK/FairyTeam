@@ -4,6 +4,20 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const PaymentComponet = () => {
+
+  // 장바구니
+
+    const favorites = ()=>{
+      sessionStorage.setItem('name', )
+
+    }
+
+
+
+
+
+
+
     useEffect(() => {
         const script1 = document.createElement('script');
         script1.src = 'https://code.jquery.com/jquery-1.12.4.min.js';
@@ -60,18 +74,18 @@ const PaymentComponet = () => {
   <div>
     
     <ul class="DtButton">
-      <li><input type="button" class="cart" value="장바구니🖤" />
+      {/* <li><input type="button" class="cart" value="장바구니🖤" onClick={favorites}/> */}
       {/* <i class="fa-solid fa-heart"></i> */}
-      </li>
+      {/* </li> */}
 
       <li>
         <input type="button" class="order" value="결제하기🛒" onClick={requestPay}/>
         {/* <i class="fa-solid fa-cart-shopping"></i> */}
       </li>
       
-      <li><Link to= '/Chat'><input type="button" class="DtChat" value="채팅하기💬" /></Link>
+      {/* <li><Link to= '/Chat'><input type="button" class="DtChat" value="채팅하기💬" /></Link> */}
       {/* <i class="fa-solid fa-comment"></i>*/}
-      </li>
+      {/* </li> */}
     </ul>
   </div>
 
