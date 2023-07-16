@@ -10,24 +10,29 @@
 
  const indexRouter = require('./routes')
  const path = require('path')
+ 
+ 
  const app = express()
+ app.set('port',process.env.PORT || 8888)
+ 
  const server = http.createServer(app)
  const io = socketio(server)
-
-
+ 
  app.use(cors())
  app.use(router)
 
- app.set('port',process.env.PORT || 8888)
-
-
  io.on('connection', (socket) => {
-  console.log('새로운 유저가 접속했습니다.')
 
-  socket.on('join', ({name, room}, callback) => {
-    const { error, user } = addUser({ id: socket.id, name, room })
-    if (error) callback({error : '에러가 발생했습니다.'})
+   console.log('새로운 유저가 접속했습니다.')
 
+
+   
+   
+   socket.on('join', ({name, room}, callback) => {
+     const { error, user } = addUser({ id: socket.id, name, room })
+     if (error) callback({error : '에러가 발생했습니다.'})
+     
+     
     socket.emit('message', {
       user: 'admin',
       text: `${user.name}, ${user.room}에 오신 것을 환영합니다.`,

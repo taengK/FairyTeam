@@ -7,16 +7,19 @@ import BasicScrollToBottom from "react-scroll-to-bottom";
 
 
 function Messages({ messages, name }) {
+
   useEffect(() => {
     console.log(messages);
-  }, [messages]);
+    }, [messages]);
 
   return (
+    
     <BasicScrollToBottom className="messages">
       {messages.map((message, i) => {
         return <div key={i}><Message message={message} name={name} /></div>
       })}
     </BasicScrollToBottom>
+  
   );
 }
 
