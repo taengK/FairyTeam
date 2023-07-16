@@ -214,7 +214,7 @@ function Join() {
             <Form.Control className='SLinput' placeholder="" ref={addRef} />
           </Form.Group>
           <Form.Group id="formGridCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
+            <Form.Check type="checkbox" label="개인정보 수집 및 이용에 동의합니다." />
           </Form.Group>
 
           <Button variant="primary" type="submit" className='idOverlap SLBtn'>

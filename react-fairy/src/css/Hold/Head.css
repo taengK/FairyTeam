@@ -1,10 +1,24 @@
-.HeadGnb {
-  text-align: right;
+.HeadGnbBox {
+  display: flex;
+  justify-content: right;
+}
+.HeadGnbBox > li {
+  width: 10%;
+  text-align: center;
   color: #a3a3a3;
 }
-.HeadGnb:hover {
+.HeadGnbBox > li:hover {
   color: rgb(26, 26, 216);
   font-weight: bold;
+}
+.HeadGnbBox > li:nth-child(1) {
+  width: 7%;
+}
+.HeadGnbBox > li:nth-child(2) {
+  width: 7%;
+}
+.HeadGnbBox > li:nth-child(3) {
+  width: 7%;
 }
 
 .head {
@@ -35,6 +49,7 @@
 }
 
 .headNv {
+  border: 1px solid #000;
   width: 60%;
   display: flex;
 }

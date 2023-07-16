@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .myPage {
+  height: 100vh;
   margin-top: 30px;
 }
 .myPage .wrap {
@@ -121,6 +122,9 @@
   display: flex;
   justify-content: space-between;
 }
+.myPage .wrap .listContainer1 > li {
+  width: 100%;
+}
 .myPage .wrap .listContainer {
   padding: 0;
   background-color: #ffffff;
@@ -142,20 +146,16 @@
   font-size: 16px;
   position: relative;
 }
+.myPage .wrap .listContainer .text:hover {
+  font-size: 1.2rem;
+}
 .myPage .wrap .listContainer .right {
   margin-left: auto;
-}
-.myPage .wrap .listContainer .smallLight {
-  font-size: 14px;
-  color: #c2c2c2;
-}
-.myPage .wrap .listContainer .smallLight > span {
-  margin-left: 10px;
 }
 .myPage .wrap .listContainer .right .blct {
   font-size: 14px;
   font-weight: bold;
-  margin-right: 5px;
+  margin-left: 20px;
 }
 .myPage .wrap .infoContainer {
   background-color: white;

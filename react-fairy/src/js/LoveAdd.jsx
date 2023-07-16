@@ -3,13 +3,7 @@ import React from 'react'
 const LoveAdd = () => {
   return (
     <div>
-      <input type="button" class="cart" value="장바구니🖤" 
-        style={{
-          backgroundColor:"white",
-          color:"black",
-          width:"400px"
-        }}
-      />
+      <input type="button" class="cart" value="장바구니🖤" />
     </div>
   )
 }

@@ -63,7 +63,7 @@ const Mypage = () => {
   };
 
   return (
-    <div className='myPage' style={{backgroundColor:"#f00"}} >
+    <div className='myPage'>
       <div class="wrap">
 
 
@@ -135,7 +135,7 @@ const Mypage = () => {
         <ul class="listContainer listContainer1">
           <li> <a href="#" class="item">
             <div class="icon">ii</div>
-            <div class="text" onClick={RealPayment}>주문목록<span class="circle"></span></div>
+            <div class="text" onClick={RealPayment}>당편페이충전<span class="circle"></span></div>
             <div class="right"> </div>
           </a>
           </li>
@@ -143,13 +143,13 @@ const Mypage = () => {
           <li>
           <a href="#" class="item">
             <div class="icon">ii</div>
-            <div class="text">상품후기</div>
+            <div class="text">거래완료[3]</div>
             <div class="right"> </div>
           </a>
           </li>
 
           <li>
-          <a href="#" class="item">
+          <a href="#footer1" class="item">
             
             <div class="icon">ii</div>
             <div class="text">상품문의</div>
@@ -176,14 +176,9 @@ const Mypage = () => {
             <div class="icon">ii</div>
             <div class="text">
               <span>내지갑</span>
-              <span class="smallLight">
-                <span>|</span>
-                <span>보유 적립금</span>
+              <span class="right">
+              <span class="blct">350000 COIN</span>
               </span>
-            </div>
-            <div class="right">
-              <span class="blct">175 BLCT</span>
-
             </div>
           </a>
           <a href="#" class="item">

@@ -2,6 +2,7 @@
 }
 
 .myPage {
+    height: 100vh;
     margin-top: 30px;
     .wrap {
         background-color: #F8F8F8;
@@ -146,6 +147,9 @@
 .listContainer1 {
     display: flex;
     justify-content: space-between;
+    >li {
+        width: 100%;
+    }
 }
 .listContainer {
     padding: 0;
@@ -169,25 +173,20 @@
     .text {
         font-size: 16px;
         position: relative;
+        &:hover {
+            font-size: 1.2rem;
+        }
     }
 
     .right {
         margin-left: auto;
     }
 
-    .smallLight {
-        font-size: 14px;
-        color: #c2c2c2;
-
-        >span {
-            margin-left: 10px;
-        }
-    }
 
     .right .blct {
         font-size: 14px;
         font-weight: bold;
-        margin-right: 5px;
+        margin-left: 20px;
     }
 }
 
