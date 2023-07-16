@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const Chat = () => {
+const ChatStart = () => {
   return (
 
       <ul class="DtButton">
@@ -14,4 +14,4 @@ const Chat = () => {
   )
 }
 
-export default Chat 
+export default ChatStart

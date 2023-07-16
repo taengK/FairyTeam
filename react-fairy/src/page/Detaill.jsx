@@ -3,8 +3,8 @@ import axios from 'axios';
 import PaymentComponet from '../js/PaymentComponet';
 
 import { useParams } from 'react-router-dom';
-import Favorites from '../js/Favorites';
-import Chat from '../js/Chat';
+import Favorites from '../js/LoveAdd';
+import Chat from '../js/ChatStart';
 
 
 const Detaill = () => {
