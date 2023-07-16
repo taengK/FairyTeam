@@ -29,32 +29,39 @@
    
    
    socket.on('join', ({name, room}, callback) => {
+
+    console.log('조인성공');
+    console.log(name, room);
+
      const { error, user } = addUser({ id: socket.id, name, room })
      if (error) callback({error : '에러가 발생했습니다.'})
      
      
-    socket.emit('message', {
-      user: 'admin',
-      text: `${user.name}, ${user.room}에 오신 것을 환영합니다.`,
-  })
-  io.to(user.room).emit('roomData', {
-    room: user.room,
-    users: getUsersInRoom(user.room),
-  })
-  socket.join(user.room)
-  callback()
+    socket.emit('message', { user: '당신편',text: `${user.name}, ${user.room}에 오신 것을 환영합니다.`})
+  
+  
+    socket.join(user.room)
+  
+  io.to(user.room).emit('roomData', {room: user.room, users: getUsersInRoom(user.room)})
+  
+  
+  callback();
+
+
 })
 
 
 
 socket.on('sendMessage', (message, callback) => {
+
+  console.log('샌드메세지 성공');
+
   const user = getUser(socket.id)
-  // console.log(user)
-  // console.log(typeof message, message)
-  io.to(user.room).emit('message', {
-    user: user.name,
-    text: message,
-  })
+   
+  io.to(user.room).emit('message', {user: user.name,text: message})
+  io.to(user.room).emit('roomData', {room: user.room,users: getUsersInRoom(user.room)})
+
+
   callback()
 })
 
@@ -67,16 +74,15 @@ socket.on('sendMessage', (message, callback) => {
     
     if (user) {
       io.to(user.room).emit('message', {
-        user: 'admin',
-        text: `${user.name}님이 퇴장하셨습니다.`,
-      })
-      io.to(user.room).emit('roomData', {
-        room: user.room,
-        users: getUsersInRoom(user.room),
+        user: '관리자',
+        text: `${user.name}님이 퇴장하셨습니다.`
       })
     }
+    
     console.log('유저가 나갔습니다.')
-  })
+    }
+  )
+
 })
 
 
@@ -93,6 +99,12 @@ socket.on('sendMessage', (message, callback) => {
   express : app, //app 객체 연결
   watch : true //html 파일이 연결되면 템플릿 엔진을 다시 렌더링
 })
+
+
+
+app.use(router)
+
+
 
  app.use(express.static(path.join(__dirname,'react-fairy/build')))
  

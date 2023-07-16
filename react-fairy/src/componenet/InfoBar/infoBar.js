@@ -6,12 +6,12 @@ import closeIcon from  '../InfoBar/closeIcon.png'
 
 
 
-const infoBar = () => {
+const infoBar = ({room}) => {
   return (
     <div className='infoBar'>
       <div className='leftInnerContainer'>
         <img className='onlineIcon' src={onlineIcon} alt='online icon' />
-        {/* <h4>CHAT ROOM</h4> */}
+        <h4>{room}</h4>
       </div>
 
 

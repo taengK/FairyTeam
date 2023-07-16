@@ -36,28 +36,31 @@ const Chat = ({ location }) => {
     setName(name)
 
     socket.emit('join', { name, room }, (error) => {
-      if (error) {
-        alert(error)
-      }
+      if (error) {alert(error)}
     })
+
   }, [ENDPOINT, window.location.search])
+
+
 
   useEffect(() => {
     socket.on('message', (message) => {
       setMessages((messages) => [...messages, message])
     })
-
+ 
     socket.on('roomData', ({ users }) => {
       setUsers(users)
     })
-  }, [])
+  }, [messages])
 
-  const sendMessage = (message1) => {
-    // message1.preventDefault()
 
-    if (message1) {
-      // console.log(message)
-      socket.emit('sendMessage', message1, () => setMessage(''))
+
+  const sendMessage = (event) => {
+    event.preventDefault()
+
+    if (message) {
+      console.log(message)
+      socket.emit('sendMessage', message, () => setMessage(''))
     }
   }
 
@@ -67,6 +70,7 @@ const Chat = ({ location }) => {
         <InfoBar room={room} />
         <Messages messages={messages} name={name} />
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+    
       </div>
       <TextContainer users={users} />
     </div>
@@ -75,27 +79,6 @@ const Chat = ({ location }) => {
 
 export default Chat
 
-// const Chat = () => {
 
-//   const [name, setName] = useState('');
-//   const [room, setRoom] = useState('');
-//   const [users, setUsers] = useState('');
-//   const [message, setMessage] = useState('');
-//   const [messages, setMessages] = useState([]);
-
-
-//   return (
-//     <div>
-//        <Kakaomap/>
-
-//        <h1>채팅창이다</h1> 
-
-
-//     </div>
-//   )
-
-// }
-
-// export default Chat
 
  

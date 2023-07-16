@@ -4,9 +4,10 @@ import '../Messages/Messages.css'
 import Message from "../Messages/Message.js"
 
 import BasicScrollToBottom from "react-scroll-to-bottom";
+import ScrollToBottom from 'react-scroll-to-bottom';
 
-
-function Messages({ messages, name }) {
+//{ messages, name }
+const Messages = ({messages, name}) => {
 
   useEffect(() => {
     console.log(messages);
@@ -21,6 +22,10 @@ function Messages({ messages, name }) {
     </BasicScrollToBottom>
   
   );
+
+  // <ScrollToBottom className='messages '>
+  //   {Messages.map((message,i)=> <div key={i}><Message message={message} name={name}/></div>)}
+  // </ScrollToBottom>
 }
 
 export default Messages;
