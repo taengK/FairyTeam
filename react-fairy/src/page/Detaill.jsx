@@ -66,7 +66,7 @@ useEffect(() => {
 },[])
 
 
-let kr = data.prod_at.toLocaleString("ko-KR", {timeZone: "Asia/Seoul"});
+
 
 
 
