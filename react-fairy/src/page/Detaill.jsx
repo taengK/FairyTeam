@@ -146,10 +146,10 @@ useEffect(() => {
           <li>
             <button className='DTBtn'>
               <LoveAdd 
-              prod_name={prod_name}
-              prod_photo={prod_photo}
-              prod_price={prod_price}
-              prod_seq={prod_seq}/></button>
+              prod_name={data.prod_name}
+              prod_photo={data.prod_photo}
+              prod_price={data.prod_price}
+              prod_seq={data.prod_seq}/></button>
           </li>
           <li>
             <button className='DTBtn'><PaymentComponet /></button>
