@@ -199,6 +199,8 @@ router.post('/user/postForm', (req, res)=>{
 // 채팅 ------------------------- 종료
 
 
+// 오늘의 물품 --------------------------- 시작
+
 router.post('/db/recent', (req, res)=>{
     
     let sql = "select prod_name, prod_price, prod_photo, prod_seq from product_info order by prod_seq desc limit 10"
@@ -213,6 +215,27 @@ router.post('/db/recent', (req, res)=>{
         }
     })
 })
+// 오늘의 물품 --------------------------- 종료
+
+
+
+
+// NavList 4가지 ---------------------------- 시작
+router.post('/db/navlist', (req, res)=>{
+    
+    let sql = "select prod_photo, prod_seq from product_info order by rand() limit 10"
+    
+    conn.query(sql, (err, rows)=>{
+        if (rows){
+            console.log('ㅇ', rows)
+            res.json({nav : rows})
+        } else {
+            console.log('ㄴ')
+            res.json({nav : 'none'})
+        }
+    })
+})
+// NavList 4가지 ---------------------------- 종료
 
 
 
