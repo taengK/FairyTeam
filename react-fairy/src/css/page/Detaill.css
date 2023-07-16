@@ -160,39 +160,45 @@
   color: #5e636d;
   letter-spacing: -1px;
 }
-.view .DtButton {
+.view .DTButtonBox {
   display: flex;
   justify-content: space-between;
   gap: 10px;
   margin-top: 16px;
-  height: 50px;
 }
-.view .DtButton > li {
+.view .DTButtonBox > li {
   width: 100%;
   text-align: center;
+  border: none;
 }
-.view .DtButton > li > input {
+.view .DTButtonBox > li > button {
+  width: 100%;
+  border: none;
+}
+.view .DTButtonBox > li > button:hover {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.view .DTButtonBox > li .cart {
+  height: 50px;
   border-radius: 15px;
   width: 100%;
-  height: 50px;
-}
-.view .DtButton > li .cart {
-  background: white;
-  border: 1px solid #217fd7;
+  background-color: #fff;
   color: black;
 }
-.view .DtButton > li .order {
-  background: #2e8de5;
-  border: 1px solid #217fd7;
+.view .DTButtonBox > li .order {
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #2e8de5;
   color: #fff;
 }
-.view .DtButton > li .DtChat {
-  background: black;
-  border: 17px solid #0266c4;
-  width: 400px;
+.view .DTButtonBox > li .DtChat {
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
   color: #fff;
   background-color: #0266c4;
-  border-radius: 15px;
 }
 
 .review > .paging > .num > a.on {

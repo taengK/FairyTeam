@@ -5,7 +5,10 @@ import PaymentComponet from '../js/PaymentComponet';
 import ChatStart from '../js/ChatStart';
 import LoveAdd from '../js/LoveAdd';
 
-import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import Favorites from '../js/LoveAdd';
+import Chat from '../js/ChatStart';
+
 
 const Detaill = () => {
 
@@ -140,16 +143,17 @@ useEffect(() => {
             </div>
           </div>
         </article>
-        <div>
-          <ul class="DtButton">
-            <LoveAdd prod_name={data.prod_name}
-            prod_seq={data.prod_seq}
-            prod_photo={data.prod_photo}
-            prod_price={data.prod_price}></LoveAdd>
-            <PaymentComponet />
-            <ChatStart />
-          </ul>
-        </div>
+        <ul className='DTButtonBox'>
+          <li>
+            <button className='DTBtn'><Favorites/></button>
+          </li>
+          <li>
+            <button className='DTBtn'><PaymentComponet /></button>
+          </li>
+          <li>
+            <button className='DTBtn'><Chat/></button>
+          </li>
+        </ul>
       </div>
     </div>
 
