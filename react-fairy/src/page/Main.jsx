@@ -50,7 +50,13 @@ const Main = () => {
   return (
     <div className='Main'>
       <section className='Main-sec01'>
-        <Swiper1></Swiper1>
+      {data.map(item =>
+        <Swiper1 
+        photo={item.prod_photo}
+          seq={item.prod_seq}>
+
+        </Swiper1>
+        )}
       </section>
       <h2>오늘의 물품상품</h2>
       <section className='MainCtgCtn'>
