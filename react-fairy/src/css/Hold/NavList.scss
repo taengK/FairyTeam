@@ -90,15 +90,16 @@
     }
 // ******************이벤트 이달의행사 넌 필요없어 끄지셈
     >ul {
-        width: 40%;
+        width: 100%;
         display: flex;
-        justify-content: right;
+        justify-content: left;
         align-items: center;
 
         >li {
-            width: 100%;
-            >a {
-                display: block;
+            width: 10%;
+            
+            .NaviCtt {
+                width: 100%;
                 padding: 10px;
                 text-align: center;
                 position: relative;
@@ -120,6 +121,36 @@
                     transform: translateX(20%);
                 }
             }
+            
         }
     }
-}
+} 
+// .CPCtt {
+//     text-align: center;
+//     padding: 20px;
+//     background-color: rgb(180, 206, 204);
+//     border-radius: 5px;
+//     font-size: 1.2rem;
+//     font-weight: bold;
+//     color: rgb(55, 62, 63);
+//     position: relative;
+//     &::after {
+//        position: absolute;
+//        content: '';
+//        width: 0; height: 100%;
+//        top: 0; left: 0;
+//        background-image: linear-gradient(to right, pink, yellow); 
+//        transition: width 0.5s ease-in-out;
+//     }
+//     &:hover::after {
+//         width: 100%;
+//         opacity: 0.8;
+//     }
+//     .fa-plus {
+//         font-size: 1.7rem;
+//         margin-left: 10px;
+//     }
+// }
+// &:hover {
+//                     background-image: linear-gradient(to right, black,#d5d5d5);
+//                 }

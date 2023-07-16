@@ -219,7 +219,9 @@
             }
           }          
           .cart {
+            border: 1px solid #000;
             height: 50px;
+            line-height: 50px;
             border-radius: 15px;
             width: 100%;
             background-color: #fff;
@@ -227,6 +229,7 @@
           }
           .order {
             height: 50px;
+            line-height: 50px;
             width: 100%;
             border-radius: 15px;
             background-color: #2e8de5;
@@ -234,6 +237,7 @@
           }
           .DtChat {
             height: 50px;
+            line-height: 50px;
             width: 100%;
             border-radius: 15px;
             color: #fff;

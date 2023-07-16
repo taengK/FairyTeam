@@ -90,21 +90,21 @@
   background-color: pink;
 }
 .NaviCtgBox > ul {
-  width: 40%;
+  width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: left;
   align-items: center;
 }
 .NaviCtgBox > ul > li {
-  width: 100%;
+  width: 10%;
 }
-.NaviCtgBox > ul > li > a {
-  display: block;
+.NaviCtgBox > ul > li .NaviCtt {
+  width: 100%;
   padding: 10px;
   text-align: center;
   position: relative;
 }
-.NaviCtgBox > ul > li > a::after {
+.NaviCtgBox > ul > li .NaviCtt::after {
   position: absolute;
   content: "";
   width: 0;
@@ -114,7 +114,7 @@
   bottom: 0;
   transition: width 0.5s ease-in-out;
 }
-.NaviCtgBox > ul > li > a:hover::after {
+.NaviCtgBox > ul > li .NaviCtt:hover::after {
   width: 70%;
   transition: 0.3s all ease-in-out;
   transform: translateX(20%);
