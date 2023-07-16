@@ -21,7 +21,7 @@ const PaymentComponet = () => {
         };
       }, []);
     
-      const requestPay = () => {
+      const RequestPay = () => {
         const IMP = window.IMP;
         IMP.request_pay(
           {
@@ -65,7 +65,7 @@ const PaymentComponet = () => {
       </li>
 
       <li>
-        <input type="button" class="order" value="결제하기🛒" onClick={requestPay}/>
+        <input type="button" class="order" value="결제하기🛒" onClick={RequestPay}/>
         {/* <i class="fa-solid fa-cart-shopping"></i> */}
       </li>
       
