@@ -45,6 +45,7 @@ useEffect(() => {
               prod_at: res.data.prodInfo[0].prod_at,
               prod_seq: res.data.prodInfo[0].prod_seq,
               user_id: res.data.prodInfo[0].user_id,
+              user_nick : res.data.prodInfo[0].user_nick,
               prod_status: '새 상품'
           })
         } else {
@@ -56,6 +57,7 @@ useEffect(() => {
               prod_at: res.data.prodInfo[0].prod_at,
               prod_seq: res.data.prodInfo[0].prod_seq,
               user_id: res.data.prodInfo[0].user_id,
+              user_nick : res.data.prodInfo[0].user_nick,
               prod_status: '중고 상품'
             })
 
@@ -91,7 +93,7 @@ useEffect(() => {
           </div>
           <div class="summary">
             <nav>
-              <h1>아이디 ====== {data.user_id}</h1>
+              <h1>닉네임 ====== {data.user_nick}</h1>
               <h2>
                 상품번호 :
                 <span>{data.prod_seq}</span>

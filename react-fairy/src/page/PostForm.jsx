@@ -124,6 +124,7 @@ function PostForm() {
 
    
 
+
     setUserData({
       name: nameRef.current.value,
       content: contentRef.current.value,
@@ -132,7 +133,7 @@ function PostForm() {
       status: selectedOption,
       photo: showPhoto,
       barcode : barcodeTime,
-      id : ''
+      id : sessionStorage.getItem('id')
     })
 
 
@@ -162,7 +163,7 @@ function PostForm() {
             alert('게시물이 등록 되었습니다.')
             nav('/')
           } else if (res.data.result === 'duplicated') {
-            alert('문제 발생') 
+            alert('내용을 정확히 입력해주세요') 
             console.log('문제')
 
       
@@ -327,16 +328,16 @@ function PostForm() {
                     {select1 === '700' && <option value = "710">골프</option>}
                     {select1 === '700' && <option value = "720">캠핑</option>}
                     {select1 === '700' && <option value = "730">낚시</option>}
-                    {select1 === '700' && <option value = "740">등산/클라이밍</option>}
+                    {select1 === '700' && <option value = "750">등산/클라이밍</option>}
                     {select1 === '800' && <option value = "810">도서</option>}
                     {select1 === '800' && <option value = "830">상품권</option>}
                     {select1 === '900' && <option value = "910">스킨케어</option>}
                     {select1 === '900' && <option value = "920">색조 메이크업</option>}
                     {select1 === '900' && <option value = "930">베이스 메이크업</option>}
                     {select1 === '900' && <option value = "940">바디/헤어케어</option>}
-                    {select1 === '900' && <option value = "950">네일아트</option>}
+                    {select1 === '900' && <option value = "960">네일아트</option>}
                     {select1 === '1000' && <option value = "1010">가구</option>}
-                    {select1 === '1000' && <option value = "1020">인테리어소품</option>}
+                    {select1 === '1000' && <option value = "1030">인테리어소품</option>}
                     {select1 === '1100' && <option value = "1110">주방용품</option>}
                     {select1 === '1100' && <option value = "1120">욕실용품</option>}
                   </select>
@@ -473,11 +474,11 @@ function PostForm() {
                     {select2 === '730' && <option value = "733">민물 낚시</option>}
                     {select2 === '730' && <option value = "734">낚시 의류 및 기타 용품</option>}
                     
-                    {select2 === '740' && <option value = "741">남성 등산복</option>}
-                    {select2 === '740' && <option value = "742">여성 등산복</option>}
-                    {select2 === '740' && <option value = "743">등산 가방</option>}
-                    {select2 === '740' && <option value = "744">암벽/클라이밍</option>}
-                    {select2 === '740' && <option value = "745">기타 등산 용품</option>}
+                    {select2 === '750' && <option value = "751">남성 등산복</option>}
+                    {select2 === '750' && <option value = "752">여성 등산복</option>}
+                    {select2 === '750' && <option value = "753">등산 가방</option>}
+                    {select2 === '750' && <option value = "754">암벽/클라이밍</option>}
+                    {select2 === '750' && <option value = "755">기타 등산 용품</option>}
                     
                     {select2 === '810' && <option value = "811">시/소설</option>}
                     {select2 === '810' && <option value = "812">자기계발</option>}
@@ -514,8 +515,8 @@ function PostForm() {
                     {select2 === '940' && <option value = "943">헤어스타일링</option>}
                     {select2 === '940' && <option value = "946">핸드/풋케어</option>}
 
-                    {select2 === '950' && <option value = "951">네일아트/스티커</option>}
-                    {select2 === '950' && <option value = "953">네일케어도구</option>}
+                    {select2 === '960' && <option value = "961">네일아트/스티커</option>}
+                    {select2 === '960' && <option value = "963">네일케어도구</option>}
 
                     {select2 === '1010' && <option value = "1011">거실가구</option>}
                     {select2 === '1010' && <option value = "1012">침실가구</option>}
@@ -523,12 +524,12 @@ function PostForm() {
                     {select2 === '1010' && <option value = "1014">선반/수납 가구</option>}
                     {select2 === '1010' && <option value = "1015">주방가구</option>}
                     
-                    {select2 === '1020' && <option value = "1021">포스터/그림/액자</option>}
-                    {select2 === '1020' && <option value = "1022">디퓨저/캔들</option>}
-                    {select2 === '1020' && <option value = "1023">쿠션/방석</option>}
-                    {select2 === '1020' && <option value = "1024">탁상/벽시계</option>}
-                    {select2 === '1020' && <option value = "1025">거울</option>}
-                    {select2 === '1020' && <option value = "1026">기타 인테리어 소품</option>}
+                    {select2 === '1030' && <option value = "1031">포스터/그림/액자</option>}
+                    {select2 === '1030' && <option value = "1032">디퓨저/캔들</option>}
+                    {select2 === '1030' && <option value = "1033">쿠션/방석</option>}
+                    {select2 === '1030' && <option value = "1034">탁상/벽시계</option>}
+                    {select2 === '1030' && <option value = "1035">거울</option>}
+                    {select2 === '1030' && <option value = "1036">기타 인테리어 소품</option>}
 
                     {select2 === '1110' && <option value = "1111">그릇/홈세트</option>}
                     {select2 === '1110' && <option value = "1112">잔/컵</option>}
