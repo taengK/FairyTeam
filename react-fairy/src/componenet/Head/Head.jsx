@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../../Images/Logo.svg'
 
 import { Link } from 'react-router-dom'
@@ -7,9 +7,47 @@ import { Link } from 'react-router-dom'
 
 
 const Head = () => {
+
+  const [userId, setUserId] = useState('');
+
+  // 쿠키에서 id 값을 가져와서 상태 변수에 설정하는 함수
+  const checkLogin = () => {
+    const id = sessionStorage.getItem('id')
+    setUserId(id);
+  };
+
+
+  // 로그인 버튼 클릭 시 쿠키에 id 값을 저장하고 상태 변수를 업데이트하는 함수
+ 
+  // 로그아웃 버튼 클릭 시 쿠키의 id 값을 제거하고 상태 변수를 업데이트하는 함수
+  const handleLogout = () => {
+    sessionStorage.removeItem('id');
+    setUserId('');
+  };
+
+  // 컴포넌트가 마운트될 때 쿠키의 id 값을 확인하여 상태 변수를 설정
+  useEffect(() => {
+    // checkLogin();
+  }, [userId]);
+  
+  // useEffect(()=>{
+  //   // window.location.reload();
+
+  // },[userId])
+  
+  
+  
   return (
     <>
-      <div className='HeadGnb'><Link to='/SignUpLogin'><p>회원가입/로그인</p></Link></div>
+    
+    {userId ? (
+      <Link to = '/' onClick={handleLogout}>로그아웃</Link>
+    ) : (
+      <Link to='/SignUpLogin' >회원가입/로그인</Link>
+    )}
+
+
+      {/* <div className='HeadGnb'><Link to='/SignUpLogin'><p>회원가입/로그인</p></Link></div> */}
       <ul className='head'>
         <li className='headBox'>
           <div className='LogoBox'><Link to='/'><img src={Logo} alt="" className='LogoImg' /></Link></div>

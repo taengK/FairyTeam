@@ -77,6 +77,7 @@ import { useState } from 'react';
 
 
 
+
 function App() {
 
   const [check, setCheck] = useState(0);
@@ -124,6 +125,12 @@ function App() {
           <Route path='/categories/900' element={<Beauty check={check} />} />
           <Route path='/categories/1000' element={<Interior check={check} />} />
           <Route path='/categories/1100' element={<DailySupplies check={check} />} />
+
+
+          {/* <Route path='/categories/list1' element={<List1 />} />
+          <Route path='/categories/list2' element={<List2 />} />
+          <Route path='/categories/list3' element={<List3 />} />
+          <Route path='/categories/list4' element={<List4 />} /> */}
         </Routes>
         </main>
         <footer>

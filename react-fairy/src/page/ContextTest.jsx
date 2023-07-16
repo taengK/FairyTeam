@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const BarcodeContext = createContext(null)
+export const ContextTest = createContext(null)

@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import  {useNavigate} from 'react-router-dom'
+import { render } from 'nunjucks';
+
 
 // 로그인 상태 유지 세션?
 // 로그인 유지 중에 메인화면에서 보여야 하는 화면 ( 회원가입, 로그인 >> 마이페이지, 장바구니, 채팅 뭐 그런.. )
@@ -42,7 +44,6 @@ const Login = () => {
         sessionStorage.setItem('id', res.data.id)
 
         sessionStorage.getItem('id')
-        
         nav('/')
 
       } else if ( res.data.result =='id err'){

@@ -1,0 +1,23 @@
+카테고리 목록
+
+Category1 : 여성의류
+
+Category2 : 남성의류
+
+Category3 : 신발
+
+Category4 : 가방/지갑
+
+Category5 : 디지털
+
+Category6 : 가전제품
+
+Category7 : 스포츠/레저
+
+Category8 : 도서/티켓/문구
+
+Category9 : 뷰티/미용
+
+Category10 : 가구/인테리어
+
+Category11 : 생활/주방용품

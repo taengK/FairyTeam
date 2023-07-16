@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,10 +14,15 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import SlideImg1 from '../Images/dog.jpg'
+
 const Swiper1 = () => {
+
+  
+
   return (
     <div>
          <h2>EVENT</h2>
+         
         <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -43,6 +49,7 @@ const Swiper1 = () => {
       <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
       <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
       <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
+      
     </Swiper>
     </div>
   )
