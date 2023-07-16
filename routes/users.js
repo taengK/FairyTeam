@@ -14,8 +14,7 @@ const addUser = ({id, name, room}) => {
 
   // Validate username
   if (existingUser) {
-    return {error: '이미 존재하는 이름입니다.'};
-  }
+    return {error: '이미 존재하는 이름입니다.'}; }
 
   // Store user
   const user = {id, name, room};
@@ -25,6 +24,9 @@ const addUser = ({id, name, room}) => {
 }
 
 // This is the function that will be called when a user leaves a room
+
+
+
 const removeUser = (id) => {
   const index = users.findIndex((user) => user.id === id);
 

@@ -142,11 +142,11 @@ const NavList = (props) => {
             </ul>
       </div>
         <ul>
-          <li><a href=""  ><p>이벤트</p></a></li>
-          <li><a href=""  ><p>가격조정물품</p></a></li>
-          <li><a href=""  ><p>나눔</p></a></li>
-          <li><a href=""  ><p>출석체크</p></a></li>
-
+          <li><Link to="/categories/1100?keyword=1120">EVENT</Link></li>
+          <li><Link to="/categories/1100?keyword=1100">할인상품</Link></li>
+          <li><Link to="/categories/1000?keyword=1020">나눔</Link></li>
+          <li><Link to="/categories/1100?keyword=1123">장마철</Link></li>
+          <li style={{marginTop:"70px"}}>네비를 클릭할경우 화면 페이지 이동이 아니라/<br/><br/>아래 개사진을 클릭한 화면으로 보이게끔해야함</li>
         </ul>
     </div>
   )

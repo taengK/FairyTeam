@@ -6,7 +6,7 @@
   .input {
     border: none;
     border-radius: 0;
-    padding: 5%;
+    padding: 3%;
     width: 80%;
     font-size: 1.2em;
   }
@@ -24,4 +24,18 @@
     display: inline-block;
     border: none;
     width: 20%;
+    border-radius: 5%;
+  }
+
+  .plusButton {
+
+    color: gray !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: white;
+    padding: 20px;
+    display: inline-block;
+    border: none;
+    width: 10%;
+    border-radius: 5%;
   }
