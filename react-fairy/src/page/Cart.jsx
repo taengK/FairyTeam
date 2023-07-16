@@ -28,6 +28,7 @@ const Cart = () => {
                             <tr class="empty">
                                 <td colspan="7">장바구니에 상품이 없습니다.</td>
                             </tr>
+                            
                             <tr>
                                 <td><input type="checkbox" name="1" /></td>
                                 <td><article>
@@ -42,48 +43,7 @@ const Cart = () => {
                                 <td>무료배송</td>
                                 <td>27,000</td>
                             </tr>
-                            <tr>
-                                <td><input type="checkbox" name="1" /></td>
-                                <td><article>
-                                    <a href="#">
-                                        <img src="	https://via.placeholder.com/80x80" alt="1" />
-                                    </a>
-                                    <div>
-                                        <h2><a href="#">상품명</a></h2>
-                                        <p>상품설명</p>
-                                    </div>
-                                </article></td>
-                                <td>무료배송</td>
-                                <td>27,000</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="1" /></td>
-                                <td><article>
-                                    <a href="#">
-                                        <img src="	https://via.placeholder.com/80x80" alt="1" />
-                                    </a>
-                                    <div>
-                                        <h2><a href="#">상품명</a></h2>
-                                        <p>상품설명</p>
-                                    </div>
-                                </article></td>
-                                <td>무료배송</td>
-                                <td>27,000</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="1" /></td>
-                                <td><article>
-                                    <a href="#">
-                                        <img src="	https://via.placeholder.com/80x80" alt="1" />
-                                    </a>
-                                    <div>
-                                        <h2><a href="#">상품명</a></h2>
-                                        <p>상품설명</p>
-                                    </div>
-                                </article></td>
-                                <td>무료배송</td>
-                                <td>27,000</td>
-                            </tr>
+                            
                         </table>
                         <input type="button" name="del" value="선택삭제" />
                     </form>
