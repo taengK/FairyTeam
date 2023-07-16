@@ -19,6 +19,7 @@ import Category8 from './CategoryList/Category8';
 import Category9 from './CategoryList/Category9';
 import Category10 from './CategoryList/Category10';
 
+import CreatePost from './CreatePost';
 
 
 
@@ -145,8 +146,8 @@ const NavList = (props) => {
           <li><Link to="/categories/400?keyword=400"><strong>EVENT</strong></Link></li>
           <li><Link to="/categories/800?keyword=800">할인상품</Link></li>
           <li><Link to="/categories/1100?keyword=1123">장마철</Link></li>
-          <li><Link to="/categories/900?keyword=900">뜨는상품.</Link></li>
-          
+          <li><Link to="/categories/900?keyword=900">뜨는상품</Link></li>
+          <CreatePost></CreatePost>
         </ul>
     </div>
   )
