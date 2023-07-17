@@ -55,14 +55,14 @@
             width: 100%;
             padding: 10px;
             border-radius: 15px;
-            border: 1px solid #d3d3d3;
+            border: 4px solid lightblue;
         }
     }
 }
 
 .CPCtt {
     padding: 10px;
-    background-color: #9AC5F4;
+    
     display: inline-block;
     font-size: 1.2rem;
     position: relative;
@@ -76,7 +76,7 @@
     content: attr(data-hover);
     width: 100%;
     height: 100%;
-    color: #E50056;
+    color: lightcoral;
     font-weight: bold;
     position: absolute;
     transform: translateX(100%);
@@ -97,9 +97,9 @@
 }
 
 .CPCttLove {
-    width: 120px;
+    width: 100px;
    padding: 10px;
-    background-color: #9AC5F4;
+    
     display: inline-block;
     font-size: 1.2rem;
     position: relative;
