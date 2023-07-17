@@ -22,8 +22,8 @@ const Swiper1 = () => {
 
   return (
     <div>
-         <a target='_blank' href="../../../EX_HTML/suminJJIM"><h2>EVENT</h2></a>
-         <a href="https://www.naver.com/"><h2>EVENT</h2></a>
+         <a target='_blank' href="http://127.0.0.1:5502/EX_HTML/suminJJIM.html"><h2>1EVENT</h2></a>
+         
          
         <Swiper className="mySwiper"
         slidesPerView={1}
@@ -31,7 +31,7 @@ const Swiper1 = () => {
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 1200,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -41,9 +41,10 @@ const Swiper1 = () => {
         modules={[Autoplay, Pagination, Navigation]}
         
       >
-      <SwiperSlide className='SlideBox'><a href="#" className='fkfk'></a></SwiperSlide>
-      <SwiperSlide className='SlideBox'><a href="#" className='fkfk'></a></SwiperSlide>
-      <SwiperSlide className='SlideBox'><a href="#" className='fkfk'></a></SwiperSlide>
+      <SwiperSlide className='SlideBox'><a href="http://127.0.0.1:5502/EX_HTML/suminJJIM.html" className='fkfk'></a></SwiperSlide>
+      <SwiperSlide className='SlideBox'><a href="http://127.0.0.1:5502/EX_HTML/suminJJIM.html" className='fkfk'></a></SwiperSlide>
+      <SwiperSlide className='SlideBox'><a href="http://127.0.0.1:5502/EX_HTML/suminJJIM.html" className='fkfk'></a></SwiperSlide>
+      
       
 
 
