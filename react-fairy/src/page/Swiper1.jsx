@@ -22,9 +22,6 @@ const Swiper1 = () => {
 
   return (
     <div>
-         <a target='_blank' href="http://127.0.0.1:5502/EX_HTML/suminJJIM.html"><h2>1EVENT</h2></a>
-         
-         
         <Swiper className="mySwiper"
         slidesPerView={3}
         spaceBetween={30}
