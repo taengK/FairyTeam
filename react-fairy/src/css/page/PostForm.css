@@ -11,8 +11,7 @@
 }
 .df .PostFormLabel1 > h5 {
   font-weight: bold;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
 }
 .df .PostFormLabel2 {
   width: 100%;
@@ -147,4 +146,4 @@
 .PFBtnBoxx .PFButton > p {
   width: 100%;
   text-align: center;
-}/*# sourceMappingURL=PostForm.css.map */
+}
