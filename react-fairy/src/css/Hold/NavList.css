@@ -6,7 +6,7 @@
   width: 150px;
 }
 .NaviCtgBox .ham .realHam {
-  background-color: white;
+  background-color: #6a6e45;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   display: none;
 }
 .NaviCtgBox .NaviCtgGnb > li > a {
-  background-color: lightskyblue;
+  background-color: #57074c;
   display: block;
   height: 41px;
   line-height: 41px;
@@ -53,13 +53,13 @@
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li {
   height: 450px;
-  border-right: 1px solid whitesmoke;
+  border-right: 1px solid #000;
   padding: 30px;
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li > h4 {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid beige;
+  border-bottom: 1px solid #000;
   color: #555;
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li > p {
@@ -73,9 +73,8 @@
   color: #555;
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li > p > a:hover {
-  color: lightseagreen;
-  /* border-bottom: 1px solid red; */
-  
+  color: #0abb26;
+  border-bottom: 1px solid #0abb26;
 }
 .NaviCtgBox .NaviCtgGnb > li:hover .subBox {
   display: block;
@@ -84,7 +83,7 @@
   display: block;
 }
 .NaviCtgBox .active {
-  border: 1px solid lightgray;
+  border: 1px solid #000;
   background-color: pink;
 }
 .NaviCtgBox .active .show {
@@ -119,4 +118,4 @@
   width: 70%;
   transition: 0.3s all ease-in-out;
   transform: translateX(20%);
-}
+}/*# sourceMappingURL=NavList.css.map */
