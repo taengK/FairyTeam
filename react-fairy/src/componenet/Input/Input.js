@@ -1,11 +1,17 @@
 import React from 'react'
 import './Input.css';
 
+const openNewWindow = () => {
+  window.open('https://www.naver.com', '_blank', 'width=400,height=300');
+};
+
 const Input = ({ setMessage, sendMessage, message }) => (
  
+
+
  <form className="form">
     
-    <button className='plusButton'><h1>➕</h1></button>
+    <button className='plusButton' onClick={openNewWindow}><h1>➕</h1></button>
 
     <input
       className="input"
