@@ -20,21 +20,30 @@
   height: 300px;
   border: 1px solid #000;
 }
-.mySwiper .SlideBox {
+.mySwiper .SlideBox1 {
+  background-image: url("https://ifh.cc/g/j9Q6Yg.png");
   background-repeat: no-repeat;
   background-position: center;
-  margin-left: 6px;
+  background-size: cover;
 }
-.mySwiper .SlideBox:nth-child(1) {
-  background-image: url("https://ifh.cc/g/TcAw1L.png");
+.mySwiper .SlideBox2 {
+  background-image: url("https://ifh.cc/g/shALWP.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.mySwiper .SlideBox:nth-child(2) {
-  background-image: url("https://ifh.cc/g/k7TaND.png");
+.mySwiper .SlideBox3 {
+  background-image: url("https://ifh.cc/g/VkJJGD.png ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.mySwiper .SlideBox:nth-child(3) {
-  background-image: url("https://ifh.cc/g/DVHMha.jpg ");
+.mySwiper .SlideBox4 {
+  background-image: url("https://ifh.cc/g/h7BrOG.png  ");
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.mySwiper .SlideBox .fkfk {
+.mySwiper .fkfk {
   width: 100%;
   height: 100%;
   padding: 100%;
