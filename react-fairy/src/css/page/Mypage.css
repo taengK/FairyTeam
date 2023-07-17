@@ -47,9 +47,6 @@
   color: #000;
   margin-top: 3px;
 }
-.myPage .wrap .blueContainer .myPageIden > li:first-child {
-  color: #fc0;
-}
 .myPage .wrap .blueContainer .myPageIden > li:last-child button {
   background-color: #0D6EFD;
   border-radius: 5px;
@@ -179,4 +176,4 @@
 .myPage .wrap .listContainer .item:hover,
 .myPage .wrap .infoContainer .item:hover {
   /*   background-color: #f8f8f8; */
-}/*# sourceMappingURL=myPage.css.map */
+}/*# sourceMappingURL=Mypage.css.map */
