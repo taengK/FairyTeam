@@ -129,7 +129,7 @@ function Join() {
 
           .then((res) => {
             console.log('회원가입 res', res.data.result);
-            if (res.data.result === 'success') {
+            if (res.data.result == 'success') {
               alert('회원가입을 축하드립니다')
               nav('/')
             } else if (res.data.result === 'duplicated') {
