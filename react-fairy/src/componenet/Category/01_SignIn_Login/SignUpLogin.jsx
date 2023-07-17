@@ -9,8 +9,8 @@ import "../../../css/Hold/01_SignIn_Login/Signup.css";
 const SignUpLogin = () => {
 
     // ref = DOM요소에 접근하는 방법 
-    let overlayRef =  useRef()
-    let containerRef =  useRef()
+    let overlayRef = useRef()
+    let containerRef = useRef()
 
     // state 변수와 똑같은 역할 (다만, 화면에서 바로 변해야하는 친구들을 관리)
     // const [변수이름, set변수이름] 
@@ -19,21 +19,21 @@ const SignUpLogin = () => {
 
     let activePanel = useState(true)
 
-    const signIn  = ()=>{
+    const signIn = () => {
         containerRef.current.classList.remove("right-panel-active")
 
     }
-    
-    const signUp= ()=>{
+
+    const signUp = () => {
         containerRef.current.classList.add("right-panel-active")
     }
 
 
-    
+
     // js 구조 
-    
+
     return (
-        <div className='SLBody'>
+        <div className='SLBody' >
             <h2 className='SLH2'>문구 생각해보자</h2>
             <ul className='container' id="container" ref={containerRef}>
                 <li className="form-container sign-up-container">
@@ -43,24 +43,21 @@ const SignUpLogin = () => {
                     <Login />
                 </li>
 
-                <li className='overlay-container' 
-                // style={{ display: "none" }}
-                >
-                    
+                <li className='overlay-container' >
                     <div className="overlay" ref={overlayRef}>
                         <div className={`overlay-panel overlay-left ${activePanel === 'sign-in' ? 'active' : ''}`}>
                             <h1>Welcome Back!</h1>
                             <p>To keep connected with us, please login with your personal info.</p>
                             <button className="ghost" id="signIn" onClick={signIn}>Sign In</button>
                         </div>
+
+
                         <div className={`overlay-panel overlay-right ${activePanel === 'sign-up' ? 'active' : ''}`}>
                             <h1>Hello, Friend!</h1>
                             <p>Enter your personal details and start your journey with us.</p>
-                            <button className="ghost" id="signUp" onClick={signUp}>Sign Up</button> 
+                            <button className="ghost" id="signUp" onClick={signUp}>Sign Up</button>
                         </div>
                     </div>
-                            
-
                 </li>
             </ul>
         </div>
