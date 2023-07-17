@@ -83,7 +83,7 @@
   display: block;
 }
 .NaviCtgBox .active {
-  border: 1px solid #000;
+  border: 1px solid white;
   background-color: pink;
 }
 .NaviCtgBox .active .show {
@@ -109,7 +109,7 @@
   content: "";
   width: 0;
   height: 5px;
-  background-color: #164e9b;
+  background-color: lightseagreen;
   left: 0;
   bottom: 0;
   transition: width 0.5s ease-in-out;
