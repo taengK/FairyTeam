@@ -2,25 +2,20 @@
     display: flex;
     justify-content: right;
     gap: 10px;
-
     >li {
         width: 10%;
         text-align: center;
         color: #a3a3a3;
-
         &:hover {
             color: rgb(26, 26, 216);
             font-weight: bold;
         }
-
         &:nth-child(1) {
             width: 7%;
         }
-
         &:nth-child(2) {
             width: 7%;
         }
-
         &:nth-child(3) {
             width: 7%;
         }
