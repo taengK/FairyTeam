@@ -9,25 +9,27 @@ const PaymentComponet = () => {
   // 장바구니
 
 
-    useEffect(() => {
-        const script1 = document.createElement('script');
-        script1.src = 'https://code.jquery.com/jquery-1.12.4.min.js';
-        script1.type = 'text/javascript';
-        document.head.appendChild(script1);
+    // useEffect(() => {
+    //     // const script1 = document.createElement('script');
+    //     // script1.src = 'https://code.jquery.com/jquery-1.12.4.min.js';
+    //     // script1.type = 'text/javascript';
+    //     // document.head.appendChild(script1);
     
-        const script2 = document.createElement('script');
-        script2.src = 'https://cdn.iamport.kr/js/iamport.payment-1.2.0.js';
-        script2.type = 'text/javascript';
-        document.head.appendChild(script2);
+    //     // const script2 = document.createElement('script');
+    //     // script2.src = 'https://cdn.iamport.kr/js/iamport.payment-1.2.0.js';
+    //     // script2.type = 'text/javascript';
+    //     // document.head.appendChild(script2);
     
-        script2.onload = () => {
-          const IMP = window.IMP;
-          IMP.init("imp31853445");
-        };
-      }, []);
+    //   //   script2.onload = () => {
+    //   //     const IMP = window.IMP;
+    //   //     IMP.init("imp31853445");
+    //   //   };
+    //   // }, []);
     
       const RealPayment = () => {
         const IMP = window.IMP;
+        IMP.init("imp31853445");
+        
         IMP.request_pay(
           {
             pg: 'kcp',
