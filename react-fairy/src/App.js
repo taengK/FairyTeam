@@ -138,6 +138,7 @@ function App() {
           <Route path='/categories/list4' element={<List4 />} /> */}
         </Routes>
         </main>
+        
         <footer>
           <Footer />
         </footer>
