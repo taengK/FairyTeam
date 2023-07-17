@@ -79,7 +79,7 @@ const LoveAdd = ({prod_name, prod_price, prod_seq, prod_photo}) => {
 
 
   return (
-    <div className='cart'>
+    <div onClick={favorite} className='cart' >
      장바구니🖤
     </div>
   )

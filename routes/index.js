@@ -223,7 +223,7 @@ router.post('/db/recent', (req, res)=>{
 // 상세페이지 > 장바구니 ---------------------------- 시작
 router.post('/db/favorite', (req, res)=>{
     console.log(req.body.userData);
-    let sql = "insert into favorites_info values (?, ?, current_timestamp)"
+    let sql = "insert into favorites_info (prod_seq, user_id, fav_at) values (?, ?, current_timestamp)"
     
     conn.query(sql, [req.body.userData.prod_seq, req.body.userData.user_id], (err, rows)=>{
         if (rows){
