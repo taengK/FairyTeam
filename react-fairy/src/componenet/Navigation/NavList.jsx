@@ -74,7 +74,7 @@ const NavList = (props) => {
     <div className='NaviCtgBox'>
       <div className={`ham ${showHamNav ? 'active' : ''}`} ref={hamElements} onClick={handleClick}>
         <div className='realHam'>
-          <i class="fa-solid fa-bars"></i><p>카테고리</p>
+          <i class="fa-solid fa-bars" ></i><p></p>
         </div>
         <ul class="NaviCtgGnb">
 
