@@ -26,6 +26,7 @@ import Modification from './page/Modification';
 import PostForm from './page/PostForm';
 import Chat from './page/Chat';
 import Join from './page/Join';
+import Kakao from './page/Kakao';
 
 
 
@@ -49,7 +50,7 @@ import './css/page/Main.css'
 import './css/page/Detaill.css'
 import './css/page/cart.css'
 import './css/page/Modification.css'
-import './css/page/Mypage.css'
+import './css/page/myPage.css'
 import './css/page/PostForm.css'
 import './css/page/Kakaomap.css'
 import './componenet/InfoBar/infoBar.css'
@@ -113,6 +114,8 @@ function App() {
           <Route path='/PostForm' element={<PostForm />} />
           <Route path='/Chat' element={<Chat />} />
           <Route path='/Join' element={<Join />} />
+          <Route path='/Kakao' element={<Kakao />} />
+
 
           {/*************************************Categories************************************************/}
           {/* <Route path='/Categories' element={<Categories/>}/> */}

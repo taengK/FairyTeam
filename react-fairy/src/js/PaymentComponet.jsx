@@ -9,37 +9,42 @@ const PaymentComponet = () => {
   // 장바구니
 
 
-    useEffect(() => {
-        const script1 = document.createElement('script');
-        script1.src = 'https://code.jquery.com/jquery-1.12.4.min.js';
-        script1.type = 'text/javascript';
-        document.head.appendChild(script1);
+    // useEffect(() => {
+    //     // const script1 = document.createElement('script');
+    //     // script1.src = 'https://code.jquery.com/jquery-1.12.4.min.js';
+    //     // script1.type = 'text/javascript';
+    //     // document.head.appendChild(script1);
     
-        const script2 = document.createElement('script');
-        script2.src = 'https://cdn.iamport.kr/js/iamport.payment-1.2.0.js';
-        script2.type = 'text/javascript';
-        document.head.appendChild(script2);
+    //     // const script2 = document.createElement('script');
+    //     // script2.src = 'https://cdn.iamport.kr/js/iamport.payment-1.2.0.js';
+    //     // script2.type = 'text/javascript';
+    //     // document.head.appendChild(script2);
     
-        script2.onload = () => {
-          const IMP = window.IMP;
-          IMP.init("imp31853445");
-        };
-      }, []);
+    //   //   script2.onload = () => {
+    //   //     const IMP = window.IMP;
+    //   //     IMP.init("imp31853445");
+    //   //   };
+    //   // }, []);
     
       const RealPayment = () => {
         const IMP = window.IMP;
+        IMP.init("imp31853445");
+
         IMP.request_pay(
           {
+
             pg: 'kcp',
             pay_method: 'card',
             merchant_uid: '57008833-33004',
-            name: '당근 10kg',
-            amount: 1004,
+            name: '당근 10kg', ///
+            amount: 1004, ////
             buyer_email: 'Iamport@chai.finance',
             buyer_name: '포트원 기술지원팀',
             buyer_tel: '010-1234-5678',
             buyer_addr: '서울특별시 강남구 삼성동',
             buyer_postcode: '123-456'
+
+
           }, function(rsp) {
             if (rsp.success) {   
               // axios로 HTTP 요청
