@@ -3,21 +3,19 @@
   height: 40px;
 }
 .NaviCtgBox .ham {
-  width: 150px;
+  width: 100px;
 }
 .NaviCtgBox .ham .realHam {
   background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 10px;
-  font-size: 1.5rem;
   font-weight: bold;
 }
 .NaviCtgBox .ham .realHam .fa-bars {
   line-height: 40px;
-  font-size: 1.5rem;
-  text-align: center;
+  font-size: 2rem;
 }
 .NaviCtgBox .NaviCtgGnb {
   z-index: 4;
@@ -35,7 +33,9 @@
   height: 41px;
   line-height: 41px;
   text-align: center;
-  color: #efefef;
+  color: #fff;
+  stroke: #000;
+  font-size: 1.2rem;
 }
 .NaviCtgBox .NaviCtgGnb .subBox {
   width: 1200px;

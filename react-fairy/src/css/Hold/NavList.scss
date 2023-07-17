@@ -2,19 +2,18 @@
     display: flex;
     height: 40px;
     .ham {
-        width: 150px;
+       
+        width: 100px;
         .realHam {
             background-color:white;
             display: flex;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
             gap: 10px;
-            font-size: 1.5rem;
             font-weight: bold;
             .fa-bars {
                 line-height: 40px;
-                font-size: 1.5rem;
-                text-align: center;
+                font-size: 2rem;
             }
         }
     }
@@ -29,11 +28,15 @@
             display: none;
             >a {
                 background-color: lightblue;
+                
                 display: block;
                 height: 41px;
                 line-height: 41px;
                 text-align: center;
-                color: #efefef;
+                color: #fff;
+                stroke: #000;
+                font-size: 1.2rem;
+
             }
         }
         .subBox {
