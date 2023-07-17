@@ -45,6 +45,7 @@
   top: 40px;
   left: 100%;
   display: none;
+  z-index: 2;
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul {
   display: flex;

@@ -66,9 +66,9 @@ const Login = () => {
       <Form onSubmit={handleLogin} className='SignUpForm'>
       <h1>Sign In</h1>
       <div class="social-container">
-          <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.google.com/" class="social"><i class="fab fa-google-plus-g"></i></a>
-          <a href="https://www.instagram.com/" class="social"><i class="fab fa-square-instagram"></i></a>
+          <a href="https://www.facebook.com/" target='_blind' class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.google.com/" target='_blind' class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="https://www.instagram.com/" target='_blind' class="social"><i class="fab fa-square-instagram"></i></a>
         </div>
 
 
