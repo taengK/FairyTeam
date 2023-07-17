@@ -18,28 +18,6 @@
 .mySwiper {
   width: 100%;
   height: 300px;
-  border: 1px solid #000;
-}
-.mySwiper .SlideBox {
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-left: 6px;
-}
-.mySwiper .SlideBox:nth-child(1) {
-  background-image: url("https://ifh.cc/g/TcAw1L.png");
-}
-.mySwiper .SlideBox:nth-child(2) {
-  background-image: url("https://ifh.cc/g/k7TaND.png");
-}
-.mySwiper .SlideBox:nth-child(3) {
-  background-image: url("https://ifh.cc/g/DVHMha.jpg ");
-}
-.mySwiper .SlideBox .fkfk {
-  width: 100%;
-  height: 100%;
-  padding: 100%;
-  background-color: #000;
-  opacity: 0.2;
 }
 
 .MainCtgCtn {

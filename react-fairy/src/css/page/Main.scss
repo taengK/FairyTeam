@@ -16,28 +16,48 @@
 }
 .mySwiper {
   width: 100%;height: 300px;
-  border: 1px solid #000;
-  .SlideBox {
-    background-repeat: no-repeat;
+ 
     
-    background-position: center;
-    margin-left: 6px;
-    &:nth-child(1){
-      background-image: url("https://ifh.cc/g/TcAw1L.png");
-    }
-    &:nth-child(2){
-      background-image: url("https://ifh.cc/g/k7TaND.png");
-    }
-    &:nth-child(3){
-      background-image: url("https://ifh.cc/g/DVHMha.jpg ");
-    }
-    .fkfk {
-      width: 100%; height: 100%; padding: 100%;
-      background-color: #000;
-      opacity: .2;
-    }
+
+    
+    
+    // 박충희 타이핑 절대 네버 지우지마 비장의 한수야
+    // .SlideBox1{
+    //   width: 100%; height: 100%;
+    //   background-image: url("https://ifh.cc/g/NAZPRg.jpg");
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-size: cover;
+      
+    // }
+    // .SlideBox2{
+    //   width: 100%; height: 100%;
+    //   background-image: url("https://ifh.cc/g/1RLdJ8.jpg");
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-size: cover;
+    // }
+    // .SlideBox3{
+    //   width: 100%; height: 100%;
+    //   background-image: url("https://ifh.cc/g/TyvrN1.jpg");
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-size: cover;
+    // }
+    // .SlideBox4{
+    //   width: 100%; height: 100%;
+    //   background-image: url("https://ifh.cc/g/ph7sKt.jpg");
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-size: cover;
+    // }
+    // .fkfk {
+    //   padding: 100%;
+    //   background-color: #000;
+    //   opacity: .2;
+    // }
   }
-}
+
 
 .MainCtgCtn {
     display: grid;
