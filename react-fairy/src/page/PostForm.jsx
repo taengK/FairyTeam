@@ -579,10 +579,9 @@ function PostForm() {
           </li>
         </ul>
 
-        
-        <Button className='row1 PFButton' variant="primary" type="submit" >
-          Submit
-        </Button>
+        <div className='PFBtnBoxx'>
+        <Button className=' PFButton' variant="primary"><p>예은조용해라</p></Button>
+        </div>
       </Form>
     </div>
   );
