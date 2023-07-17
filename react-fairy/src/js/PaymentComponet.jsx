@@ -62,8 +62,8 @@ const PaymentComponet = () => {
       };
       
   return (
-  <div>
-    <input type="button" class="order" value="결제하기🛒" onClick={RealPayment}/> 
+  <div onClick={RealPayment} className='order'>
+     결제하기🛒
   </div>
 
 

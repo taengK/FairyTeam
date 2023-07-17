@@ -3,6 +3,9 @@ import Logo from '../../Images/Logo.svg'
 
 import { Link } from 'react-router-dom'
 
+import CreatePost from '../Navigation/CreatePost';
+import ChatStart from '../../js/ChatStart';
+import Cart from '../../page/Cart';
 
 
 
@@ -54,23 +57,16 @@ const Head = () => {
         </li>
         <li>
           {userId ? (
-            <Link to='/Cart'>찜목록</Link>
-          ) : (
-            null
-          )}
-        </li>
-        <li>
-          {userId ? (
             <Link to='/Modification'>수정페이지</Link>
           ) : (
             null
           )}
         </li>
         {userId ? (
-        <li className='HeadGnb'><Link to='/' onClick={handleLogout}>로그아웃</Link></li>
-      ) : (
-        <li className='HeadGnb'><Link to='/SignUpLogin' >회원가입/로그인</Link></li>
-      )}
+          <li className='HeadGnb'><Link to='/' onClick={handleLogout}>로그아웃</Link></li>
+        ) : (
+          <li className='HeadGnb'><Link to='/SignUpLogin' >회원가입/로그인</Link></li>
+        )}
       </ul>
 
 
@@ -80,27 +76,26 @@ const Head = () => {
           <div className='LogoBox'><Link to='/'><img src={Logo} alt="" className='LogoImg' /></Link></div>
           <div className='inputBox'><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요' /></div>
         </li>
-
-
         <li className='headNv'>
-          <ul>
-
-            {/* <li>
-              {userId ? (
-                <Link to='/PostForm'>게시물작성</Link>
-              ) : (
-                null
-              )}
-            </li> */}
-          </ul>
+          <CreatePost />
         </li>
         <li>
-          <button class="btn2">햄버거</button>
+          <Link to='/Chat' ><p className='CPCtt' data-hover="채팅하기💬"><span>채팅하기💬</span></p></Link>
         </li>
-
+        <li>
+          <Link to='/cart'><p className='CPCtt CPCttLove' data-hover="찜목록💖"><span className='CPjjim'>찜목록💖</span></p></Link>
+        </li>
       </ul>
     </>
   )
 }
 
+{/* <button class="btn2"><i class="fa-solid fa-bars"></i></button> */ }
 export default Head
+{/* <li>
+  {userId ? (
+    <Link to='/PostForm'>게시물작성</Link>
+  ) : (
+    null
+  )}
+</li> */}

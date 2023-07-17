@@ -79,8 +79,8 @@ const LoveAdd = ({prod_name, prod_price, prod_seq, prod_photo}) => {
 
 
   return (
-    <div>
-      <input type="button" class="cart" value="장바구니🖤" onClick={favorite}/>
+    <div className='cart'>
+     장바구니🖤
     </div>
   )
 }
