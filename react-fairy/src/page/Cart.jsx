@@ -1,10 +1,46 @@
-import React from 'react'
-
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import MyFavo from '../componenet/Head/MyFavo'
 
 // 비회원 상태에서 찜목록이 창을 닫으면 날아가고 로그인을 하면 연결이 되게 ?
 
 const Cart = () => {
+    const [change, setChange] = useState({})
+    const [myFavo, setMyFavo] = useState({})
+    const [sendFav, setSendFav] = useState({})
+    
+    
+    const sessionid = sessionStorage.getItem('id');
+    console.log(sessionid);
+    
+    useEffect(()=>{
+        setChange({})
+        setMyFavo({user_id : sessionid})
+        
+    },[])
+ 
+ 
 
+    useEffect(() => {
+        myFavo !== undefined &&
+        axios.post('http://localhost:8888/db/myfavor', { myFavo: myFavo })
+            
+            .then((res) => {
+                console.log(res.data.myFav);
+                if (res.data.myFav !== undefined) {
+                    setSendFav(res.data.myFav)
+                    console.log(sendFav);
+                } else {
+
+                }
+                
+            })
+        
+    }, [setChange])
+  
+    
+
+    
     return (
         <div className='Cart'>
             <nav className='bucketNav'>
@@ -28,22 +64,34 @@ const Cart = () => {
                             <tr class="empty">
                                 <td colspan="7">장바구니에 상품이 없습니다.</td>
                             </tr>
-                            
-                            <tr>
+
+
+<MyFavo></MyFavo>
+                    {/* 컴포넌트 구간 */}
+
+                            {/* <tr>
                                 <td><input type="checkbox" name="1" /></td>
                                 <td><article>
                                     <a href="#">
                                         <img src="	https://via.placeholder.com/80x80" alt="1" />
                                     </a>
                                     <div>
-                                        <h2><a href="#">상품명</a></h2>
-                                        <p>상품설명</p>
-                                    </div>
+                                        <h2><a href="#">상품명</a></h2> */}
+                                        
+                                        
+                                        {/* 이거 칸 없애줘 설명 긴거 못넣어 <p>상품설명</p> */}
+
+
+
+                                    {/* </div>
                                 </article></td>
                                 <td>무료배송</td>
                                 <td>27,000</td>
-                            </tr>
-                            
+                            </tr> */}
+
+
+
+
                         </table>
                         <input type="button" name="del" value="선택삭제" />
                     </form>
