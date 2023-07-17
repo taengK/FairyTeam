@@ -223,7 +223,7 @@ router.post('/db/recent', (req, res)=>{
 // 상세페이지 > 장바구니 ---------------------------- 시작
 router.post('/db/favorite', (req, res)=>{
     console.log(req.body.userData);
-    let sql = "insert into favorites_info values (default, ?, ?, current_timestamp)"
+    let sql = "insert into favorites_info values (?, ?, current_timestamp)"
     
     conn.query(sql, [req.body.userData.prod_seq, req.body.userData.user_id], (err, rows)=>{
         if (rows){
@@ -237,6 +237,23 @@ router.post('/db/favorite', (req, res)=>{
 })
 // 상세페이지 > 장바구니 ---------------------------- 종료
 
+
+// 로그인 > 찜목록 --------------------- 시작
+router.post('/db/myfavor', (req, res)=>{
+    
+    let sql = "select A.prod_photo, A.prod_name, A.prod_price, B.prod_seq from product_info A, favorites_info B where A.prod_seq = B.prod_seq and B.user_id = ?"
+    
+    conn.query(sql, [req.body.myFavo.user_id], (err, rows)=>{
+        if (rows){
+            console.log('내 즐찾', rows)
+            res.json({myFav : rows})
+        } else {
+            console.log('즐찾실패', err)
+            res.json({myFav : 'none'})
+        }
+    })
+})
+// 로그인 > 찜목록 --------------------- 종료
 
 
 module.exports = router;
