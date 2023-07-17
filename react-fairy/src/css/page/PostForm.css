@@ -132,8 +132,19 @@
   margin-left: auto;
 }
 
-.PFButton {
-  width: 250px;
-  margin: 30px 0 0 40%;
+.PFBtnBoxx {
+  width: 100%;
   border: 1px solid #000;
+  margin: 0 auto;
+}
+.PFBtnBoxx .PFButton {
+  border: 1px solid #00f;
+  width: 250px;
+  border: none;
+  background-color: skyblue;
+  height: 40px;
+}
+.PFBtnBoxx .PFButton > p {
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=PostForm.css.map */

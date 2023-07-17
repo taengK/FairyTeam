@@ -137,11 +137,12 @@ function Modification() {
 
   return (
     <div className='main-box info-box ModiMainBox'>
-        <h3>수정페이지</h3>
+        
     <Form onSubmit={handleJoin}>
       <div className='SignUpImgBox ModificationImgBox' style={{width:"w10px"}}>
         <img src={Logo} alt="" className='SignUpImg ModificationImg'/>
       </div>
+      <h3 style={{textAlign : "center" }}>수정하기</h3>
       
 
       <Row className='row1' >
