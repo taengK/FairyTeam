@@ -75,6 +75,7 @@ const Head = () => {
         <li className='headBox'>
           <div className='LogoBox'><Link to='/'><img src={Logo} alt="" className='LogoImg' /></Link></div>
           <div className='inputBox'><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요' /></div>
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
         </li>
         <li className='headNv'>
           <CreatePost />

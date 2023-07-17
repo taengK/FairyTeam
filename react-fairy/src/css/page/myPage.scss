@@ -33,8 +33,11 @@
         > li {
             font-weight: bold;
             font-size: 20px;
-            color: #000;
             margin-top: 3px;
+            &:first-child {
+                color: rgb(194, 161, 31);
+
+            }
            
             &:last-child {
                 button {

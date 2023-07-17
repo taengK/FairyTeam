@@ -44,8 +44,10 @@
 .myPage .wrap .blueContainer .myPageIden > li {
   font-weight: bold;
   font-size: 20px;
-  color: #000;
   margin-top: 3px;
+}
+.myPage .wrap .blueContainer .myPageIden > li:first-child {
+  color: rgb(194, 161, 31);
 }
 .myPage .wrap .blueContainer .myPageIden > li:last-child button {
   background-color: #0D6EFD;

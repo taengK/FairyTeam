@@ -36,7 +36,7 @@
   width: 60%;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 .headBox .LogoBox {
   width: 100px;
@@ -44,13 +44,17 @@
 .headBox .LogoBox .LogoImg {
   width: 100%;
 }
+.headBox .fa-magnifying-glass {
+  color: rgb(48, 78, 88);
+  font-size: 1.5rem;
+}
 .headBox .inputBox {
-  margin-left: 25px;
   width: 80%;
 }
 .headBox .inputBox > input {
   width: 100%;
-  padding: 10px;
+  margin-left: 50px;
+  padding: 10px 0 10px 20px;
   border-radius: 15px;
   border: 4px solid lightblue;
 }
