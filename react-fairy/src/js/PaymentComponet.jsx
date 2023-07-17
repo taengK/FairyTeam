@@ -29,19 +29,22 @@ const PaymentComponet = () => {
       const RealPayment = () => {
         const IMP = window.IMP;
         IMP.init("imp31853445");
-        
+
         IMP.request_pay(
           {
+
             pg: 'kcp',
             pay_method: 'card',
             merchant_uid: '57008833-33004',
-            name: '당근 10kg',
-            amount: 1004,
+            name: '당근 10kg', ///
+            amount: 1004, ////
             buyer_email: 'Iamport@chai.finance',
             buyer_name: '포트원 기술지원팀',
             buyer_tel: '010-1234-5678',
             buyer_addr: '서울특별시 강남구 삼성동',
             buyer_postcode: '123-456'
+
+
           }, function(rsp) {
             if (rsp.success) {   
               // axios로 HTTP 요청

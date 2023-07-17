@@ -2,7 +2,7 @@ import React from 'react'
 import './Input.css';
 
 const openNewWindow = () => {
-  window.open('https://www.naver.com', '_blank', 'width=400,height=300');
+  window.open('http://localhost:3000/Kakao', '_blank', 'width=400,height=300');
 };
 
 const Input = ({ setMessage, sendMessage, message }) => (
