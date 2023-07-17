@@ -166,11 +166,11 @@ function Modification() {
       </Row>
 
 
-      <Form.Group className='row1' id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+      <Form.Group className='row1 row2' id="formGridCheckbox">
+        <Form.Check type="checkBox" label="Check me out" />
       </Form.Group>
 
-      <Button className='row1' variant="primary" type="submit" >
+      <Button className='row1 MoBtn'  variant="primary" type="submit" >
         Submit
       </Button>
     </Form>

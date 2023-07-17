@@ -1,5 +1,4 @@
 .ModiMainBox {
-  border: 1px solid #d3d3d3;
   width: 350px;
   margin: 30px auto;
 }
@@ -13,6 +12,7 @@
   border: 1px solid #d3d3d3;
   width: 130px;
   height: 130px;
+  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -23,4 +23,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.row2 {
+  margin-top: 20px;
+}
+
+.checkBox {
+  margin-top: 10px;
+  border: 1px solid #000;
+}
+
+.MoBtn {
+  width: 25%;
+  margin: 10px auto 10px;
 }/*# sourceMappingURL=Modification.css.map */
