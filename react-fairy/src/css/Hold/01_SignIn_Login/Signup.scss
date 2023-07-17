@@ -3,6 +3,8 @@
   width: 50%;
   opacity: 1; //이부분 0으로 맞춰야함
   z-index: 1;
+  position: relative;
+  
 }
 .SignUpForm {
     display: flex;
