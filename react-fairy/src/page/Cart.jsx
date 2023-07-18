@@ -2,25 +2,32 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import MyFavo from '../componenet/Head/MyFavo'
 import { Link } from 'react-router-dom'
+import ShowCart from '../componenet/Category/Cart/ShowCart'
 
 // 비회원 상태에서 찜목록이 창을 닫으면 날아가고 로그인을 하면 연결이 되게 ?
 
 const Cart = ({ name, price, photo, seq }) => {
-    const [change, setChange] = useState({})
+    
     const [myFavo, setMyFavo] = useState({})
-    const [sendFav, setSendFav] = useState({})
+    const [sendFav, setSendFav] = useState([])
 
 
     const sessionid = sessionStorage.getItem('id');
     console.log(sessionid);
 
     useEffect(() => {
-        setChange({})
-        setMyFavo({ user_id: sessionid })
+        
+            setMyFavo({ user_id: sessionid })
+        
+        }, [])
+        
+    //     const a = (e)=>{
+    //         e.preventDefault();
+    //         setMyFavo({ user_id: sessionid })
+        
+    // }
 
-    }, [])
-
-
+    console.log(myFavo);
 
     useEffect(() => {
         myFavo !== undefined &&
@@ -37,20 +44,32 @@ const Cart = ({ name, price, photo, seq }) => {
 
                 })
 
-    }, [setChange])
+    }, [myFavo])
 
 
 
 
     return (
-        <>
-            <div className='Cart'>
-                <nav className='bucketNav'>
-                    <h1>장바구니</h1>
-                </nav>
-            </div>
-            <div className='MainCtgItem'>
-                <Link to={`/Detaill/${seq}`} key={seq}>
+      <>
+        <div className="Cart">
+          <nav className="bucketNav">
+            <h1>장바구니</h1>
+            {/* <h1 onClick={a}>test</h1> */}
+          </nav>
+        </div>
+        
+
+        <div className="MainCtgItem">
+          {sendFav.map((item) => (
+            <ShowCart
+              name={item.prod_name}
+              price={item.prod_price}
+              photo={item.prod_photo}
+              seq={item.prod_seq}
+            ></ShowCart>
+          ))}
+</div>
+          {/* <Link to={`/Detaill/${seq}`} key={seq}>
                     <table>
                         <tbody>
                             <tr>
@@ -63,11 +82,10 @@ const Cart = ({ name, price, photo, seq }) => {
                             </tr>
                         </tbody>
                     </table>
-                </Link>
-            </div>
-        </>
-
-    )
+                </Link> */}
+        
+      </>
+    );
 }
 
 export default Cart
