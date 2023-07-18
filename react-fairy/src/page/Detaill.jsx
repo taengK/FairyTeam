@@ -24,7 +24,7 @@ const [seq, setSeq] = useState(params.seq)
 
 const [data, setData] = useState({})
   // console.log(seq);
-
+const [forPayPrice, setForPayPrice] = useState()
 
 useEffect(() => {
   
@@ -41,6 +41,8 @@ useEffect(() => {
         // console.log('정보는 :', res.data.prodInfo);
 
         if (res.data.prodInfo !== 'none') {
+          setForPayPrice(parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10))
+
           if (res.data.prodInfo[0].prod_status == 'N') {
             setData({
               prod_name: res.data.prodInfo[0].prod_name,
@@ -51,24 +53,27 @@ useEffect(() => {
               prod_seq: res.data.prodInfo[0].prod_seq,
               user_id: res.data.prodInfo[0].user_id,
               user_nick : res.data.prodInfo[0].user_nick,
-              prod_status: '새 상품'
-          })
-        } else {
-            setData({
-              prod_name: res.data.prodInfo[0].prod_name,
-              prod_price: res.data.prodInfo[0].prod_price,
-              prod_photo: res.data.prodInfo[0].prod_photo,
-              prod_content: res.data.prodInfo[0].prod_content,
-              prod_at: res.data.prodInfo[0].prod_at,
-              prod_seq: res.data.prodInfo[0].prod_seq,
-              user_id: res.data.prodInfo[0].user_id,
-              user_nick : res.data.prodInfo[0].user_nick,
-              prod_status: '중고 상품'
+              prod_status: '새 상품',
+              payPrice: parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10)
             })
-
+          } else {
+            setData({
+            prod_name: res.data.prodInfo[0].prod_name,
+            prod_price: res.data.prodInfo[0].prod_price,
+            prod_photo: res.data.prodInfo[0].prod_photo,
+            prod_content: res.data.prodInfo[0].prod_content,
+            prod_at: res.data.prodInfo[0].prod_at,
+            prod_seq: res.data.prodInfo[0].prod_seq,
+            user_id: res.data.prodInfo[0].user_id,
+            user_nick : res.data.prodInfo[0].user_nick,
+            prod_status: '중고 상품',
+            payPrice: parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10)
+          })
         }
-        } 
-      })
+        
+        
+      }       
+    })
   }
 },[])
 
@@ -76,9 +81,6 @@ useEffect(() => {
 
 
 
-
-
-  // console.log(superC);  
 
   return (
 
@@ -155,7 +157,7 @@ useEffect(() => {
             <button className='DTBtn'>
             <PaymentComponet
              prod_name={data.prod_name}
-             prod_price={parseInt(data.prod_price)*1000}/></button>
+             prod_price={data.payPrice}/></button>
           </li>
           <li>
             <button className='DTBtn'><ChatStart/></button>

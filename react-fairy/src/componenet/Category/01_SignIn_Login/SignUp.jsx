@@ -218,8 +218,8 @@ function Join() {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridNick2">
-            <Form.Label><p>NAME</p></Form.Label>
-            <Form.Control className='SLinput' type="text" placeholder="닉넴임을 입력하세요" ref={nickRef} />
+            <Form.Label><p>NICKNAME</p></Form.Label>
+            <Form.Control className='SLinput' type="text" placeholder="닉네임을 입력하세요" ref={nickRef} />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formGridAddress1">
