@@ -95,7 +95,7 @@
 
 .CPCttLove {
   width: 100px;
-  padding: 10px;
+  padding: 5px;
   display: inline-block;
   font-size: 1.2rem;
   position: relative;
@@ -128,19 +128,20 @@
 
 @media all and (max-width: 468px) {
   .headBox {
+    border: 1px solid #000;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     gap: 0;
   }
   .headBox .LogoBox {
-    margin: 0 auto;
     border: 1px solid #000;
   }
   .headBox .inputBox {
-    margin-top: 20px;
+    margin-top: 0;
     width: 100%;
+    margin-left: -50px;
   }
   .headBox .inputBox .search {
     width: 100%;
   }
-}/*# sourceMappingURL=Head.css.map */
+}

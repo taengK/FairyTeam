@@ -11,12 +11,12 @@
     }
   }
   
-  ul {
+  .bucketBox {
     width: 100%;
-    display: flex;
+    
     li {
       &:nth-child(1){
-        width: 80%;
+        width: 100%;
         >form {
         table {
           width: 100%;
@@ -43,7 +43,7 @@
           }
 
           .empty {
-            display: none;
+            display: node;
           }
 
           td {

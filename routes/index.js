@@ -176,9 +176,67 @@ router.post('/user/postForm', (req, res)=>{
 
 // 게시물 작성 --------------------------------- 종료
 
+//채팅 내역 ---------------------------------
+router.post('/user/chatting',(req, res)=>{
+    console.log('제발 돼라')
+    let sql = 'select talker,talk from chatting_info where talker = ? and talk =?'
 
+    conn.query(sql,[req.body.id,req.body.chat],(err,rows)=>{
+        if(rows){
+            res.json({result : rows})
+        }
+    })
+
+    
+})
+
+
+//채팅 내역 --------------------------------- 종료
 
 // 채팅 ------------------------- 시작
+
+router.post('/user/chat',(req, res)=>{
+    console.log('chat router~!');
+
+    console.log('이거뜸?'+req.body.userId)
+    console.log('ㄹㅇ??'+req.body.message)
+    //채팅방 번호 --> 1
+    //회원 ID
+    //입력한 내용
+    let sql = "insert into chatting_info(cr_seq,talker,talk, emoticon, talk_at) values (1,?,?,null,now());"
+    
+    conn.query(sql, [req.body.userId, req.body.message], (err, rows)=>{
+        if (rows){
+            let sql = 'select talker,talk from chatting_info'
+            conn.query(sql,(err,rows)=>{
+                if(rows){
+                    res.json({result:rows})
+                }
+            })
+            // console.log('이게나와야대'+req.body.userId);
+            // console.log('이게나와야대'+req.body.message);
+            // res.json({result:rows})
+            // res.json({id:req.body.userId,chat:req.body.message})
+        } else {
+            return 'err'           
+        }
+    })
+
+
+
+
+    //console.log(req.body.roomNuber)
+  
+})
+
+router.post('/user/INTOchat',(req, res)=>{
+    console.log('ㅋ~');
+
+    console.log(req.body.userName)
+    console.log(req.body.roomNum)
+
+})
+
 
 // router.post('/db/categories', (req, res)=>{
 //     let sql = "select category_seq, prod_name, prod_photo, prod_price, prod_barcode from product_info"

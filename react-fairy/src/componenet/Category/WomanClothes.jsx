@@ -39,6 +39,7 @@ const WomanClothes = (props) => {
         
         setSuperCate(res.data.result)
         
+        // console.log('sad'+res.data.result);
         // 모든 품목 가져오기
         // console.log(superCate);
         

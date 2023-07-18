@@ -152,7 +152,10 @@ useEffect(() => {
               prod_seq={data.prod_seq}/></button>
           </li>
           <li>
-            <button className='DTBtn'><PaymentComponet /></button>
+            <button className='DTBtn'>
+            <PaymentComponet
+             prod_name={data.prod_name}
+             prod_price={parseInt(data.prod_price)*1000}/></button>
           </li>
           <li>
             <button className='DTBtn'><ChatStart/></button>
@@ -165,4 +168,4 @@ useEffect(() => {
 };
 
 
-export default Detaill;
+export default Detaill; 
