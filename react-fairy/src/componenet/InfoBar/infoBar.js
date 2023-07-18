@@ -8,7 +8,7 @@ import closeIcon from  '../InfoBar/closeIcon.png'
 
 const infoBar = ({room}) => {
   return (
-    <div className='infoBar'>
+    <div className='infoBar' >
       <div className='leftInnerContainer'>
         <img className='onlineIcon' src={onlineIcon} alt='online icon' />
         <h4>{room}</h4>
@@ -26,3 +26,5 @@ const infoBar = ({room}) => {
 }
 
 export default infoBar
+
+// style={{backgroundColor:"red", position:"fixed"}}

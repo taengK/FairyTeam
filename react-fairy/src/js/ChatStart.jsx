@@ -6,7 +6,7 @@ const ChatStart = () => {
   return (
     
       <div className='DtChat'>
-        <Link to='/Chat' >채팅하기💬</Link>
+        <Link to='/Join' >채팅하기💬</Link>
       </div>
      
   )
