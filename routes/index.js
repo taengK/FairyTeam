@@ -194,6 +194,38 @@ router.post('/user/postForm', (req, res)=>{
 
 // 게시물 작성 --------------------------------- 종료
 
+// 게시물 수정 ---------------------------------- 시작
+
+router.post('/user/ChangePost', (req, res)=>{
+    console.log('postForm Router', req.body);
+    
+    let sql = "(update product_info set prod_name=?,prod_content=?,prod_price=?,category_seq=?,prod_status=?,prod_photo=? where prod_seq=?)"
+    // id, pw, name, nick, email
+   
+    conn.query(sql
+        , [req.body.userData.name
+            , req.body.userData.content
+            , req.body.userData.price
+            , req.body.userData.category
+            , req.body.userData.status
+            , req.body.userData.photo
+            // , req.body.userData.time
+            , req.body.userData.seq
+            
+            ]
+        , (err, rows)=>{
+            if(rows) {
+                console.log('success upload')
+                res.json({result : 'success'})
+            } else {
+                console.log('faild to upload', err);
+                res.json({result : 'duplicated'})
+            }
+    })
+} 
+)
+// 게시물 수정 ---------------------------------- 종료
+
 //채팅 내역 ---------------------------------
 router.post('/user/chatting',(req, res)=>{
     console.log('제발 돼라')
