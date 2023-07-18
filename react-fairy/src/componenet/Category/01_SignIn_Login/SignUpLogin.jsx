@@ -59,7 +59,7 @@ const SignUpLogin = () => {
                                 
                                 
                             }}
-                            onClick={signIn}>Sign In</button>
+                            onClick={signIn}>Sign Up</button>
                         </div>
 
 
@@ -75,7 +75,7 @@ const SignUpLogin = () => {
                                     borderRadius:"15px",
                                     color:"#fff"
                                 }}
-                            onClick={signUp}>Sign Up</button>
+                            onClick={signUp}>Sign In</button>
                         </div>
                     </div>
                 </li>
