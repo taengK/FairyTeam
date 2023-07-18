@@ -149,15 +149,20 @@
 }
 
 @media all and (max-width : 468px) {
+ 
+
+  .HN{
+    background-color: #fc0;
+  }
     .headBox {
-        
+        width: 100%;
         border: 1px solid #000;
         flex-wrap: wrap;
         justify-content: center;
         gap: 0;
 
         .LogoBox {
-            
+            background-color: red($color: red);
             border: 1px solid #000;
         }
 

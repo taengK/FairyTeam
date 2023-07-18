@@ -127,13 +127,18 @@
 }
 
 @media all and (max-width: 468px) {
+  .HN {
+    background-color: #fc0;
+  }
   .headBox {
+    width: 100%;
     border: 1px solid #000;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0;
   }
   .headBox .LogoBox {
+    background-color: 255;
     border: 1px solid #000;
   }
   .headBox .inputBox {
@@ -144,4 +149,4 @@
   .headBox .inputBox .search {
     width: 100%;
   }
-}
+}/*# sourceMappingURL=Head.css.map */
