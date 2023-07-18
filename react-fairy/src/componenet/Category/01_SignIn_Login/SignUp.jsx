@@ -186,10 +186,8 @@ function Join() {
   return (
     <div>
       <Form onSubmit={handleJoin} className='SignUpForm'>
-        <h1></h1>
-        <br />
-        <br />
-        <br />
+     
+       
         <br />
         {/* <div class="social-container">
           <a href="https://www.facebook.com/" target='_blind' class="social"><i class="fab fa-facebook-f"></i></a>
