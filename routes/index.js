@@ -98,6 +98,24 @@ router.post('/user/login',(req, res)=>{
 })
 // 로그인 ----------------------- 종료
 
+// 비밀번호 수정 ------------------------------------------ 시작
+
+router.post('/user/change',(req,res)=>{
+    console.log('change router');
+    let sql = 'update user_info set user_pw = ? ,user_nick=? where user_id=?'
+    conn.query(sql,[req.body.userData.pw,req.body.userData.nick,req.body.userData.id],(err,rows)=>{
+        if(rows){
+            res.json({result : 'success'})
+        }
+    })
+})
+
+
+
+
+
+// 비밀번호 수정 ------------------------------------------ 종료
+
 // 회원 ----------------------------- 종료
 
 
