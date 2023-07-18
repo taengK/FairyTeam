@@ -81,10 +81,10 @@ const Head = () => {
           <CreatePost />
         </li>
         <li>
-          <Link to='/Chat' ><p className='CPCtt' data-hover="채팅하기"><span>채팅하기</span></p></Link>
+          <Link to='/Chat' ><p className='CPCtt' data-hover="문의하기"><span>문의하기</span></p></Link>
         </li>
         <li>
-          <Link to='/cart'><p className='CPCtt CPCttLove' data-hover="찜목록"><span className='CPjjim'>찜목록</span></p></Link>
+          <Link to='/cart'><p className='CPCtt CPCttLove' data-hover="장바구니"><span className='CPjjim'>장바구니</span></p></Link>
         </li>
       </ul>
     </>
