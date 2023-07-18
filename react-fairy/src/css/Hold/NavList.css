@@ -3,21 +3,19 @@
   height: 40px;
 }
 .NaviCtgBox .ham {
-  width: 150px;
+  width: 100px;
 }
 .NaviCtgBox .ham .realHam {
   background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 10px;
-  font-size: 1.5rem;
   font-weight: bold;
 }
 .NaviCtgBox .ham .realHam .fa-bars {
   line-height: 40px;
-  font-size: 1.5rem;
-  text-align: center;
+  font-size: 2rem;
 }
 .NaviCtgBox .NaviCtgGnb {
   z-index: 4;
@@ -30,12 +28,14 @@
   display: none;
 }
 .NaviCtgBox .NaviCtgGnb > li > a {
-  background-color: lightskyblue;
+  background-color: lightblue;
   display: block;
   height: 41px;
   line-height: 41px;
   text-align: center;
-  color: #efefef;
+  color: #fff;
+  stroke: #000;
+  font-size: 1.2rem;
 }
 .NaviCtgBox .NaviCtgGnb .subBox {
   width: 1200px;
@@ -45,6 +45,7 @@
   top: 40px;
   left: 100%;
   display: none;
+  z-index: 2;
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul {
   display: flex;
@@ -59,7 +60,7 @@
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li > h4 {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid beige;
+  border-bottom: 1px solid #000;
   color: #555;
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li > p {
@@ -74,8 +75,6 @@
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li > p > a:hover {
   color: lightseagreen;
-  /* border-bottom: 1px solid red; */
-  
 }
 .NaviCtgBox .NaviCtgGnb > li:hover .subBox {
   display: block;
@@ -84,7 +83,7 @@
   display: block;
 }
 .NaviCtgBox .active {
-  border: 1px solid lightgray;
+  border: 1px solid white;
   background-color: pink;
 }
 .NaviCtgBox .active .show {
@@ -110,7 +109,7 @@
   content: "";
   width: 0;
   height: 5px;
-  background-color: #54c7f7;
+  background-color: lightseagreen;
   left: 0;
   bottom: 0;
   transition: width 0.5s ease-in-out;

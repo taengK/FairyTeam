@@ -75,15 +75,16 @@ const Head = () => {
         <li className='headBox'>
           <div className='LogoBox'><Link to='/'><img src={Logo} alt="" className='LogoImg' /></Link></div>
           <div className='inputBox'><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요' /></div>
+          <div><i class="fa-solid fa-magnifying-glass"></i></div>
         </li>
         <li className='headNv'>
           <CreatePost />
         </li>
         <li>
-          <Link to='/Chat' ><p className='CPCtt' data-hover="채팅하기💬"><span>채팅하기💬</span></p></Link>
+          <Link to='/Chat' ><p className='CPCtt' data-hover="채팅하기"><span>채팅하기</span></p></Link>
         </li>
         <li>
-          <Link to='/cart'><p className='CPCtt CPCttLove' data-hover="찜목록💖"><span className='CPjjim'>찜목록💖</span></p></Link>
+          <Link to='/cart'><p className='CPCtt CPCttLove' data-hover="찜목록"><span className='CPjjim'>찜목록</span></p></Link>
         </li>
       </ul>
     </>

@@ -3,17 +3,24 @@
   width: 50%;
   opacity: 1; //이부분 0으로 맞춰야함
   z-index: 1;
+  position: relative;
+  
 }
 .SignUpForm {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 0 20px;
+    >h1 {
+        
+        text-align: center;
+    }
   }
 
   
 
 .row1{
+    
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -26,8 +33,10 @@
 .idOverlap{
     border-radius: 15px;
     margin-top: 10px;
+    
 }
 .LoginRow2{
+    
     width: 100%; 
     flex-direction: column;
     span {

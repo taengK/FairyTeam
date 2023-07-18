@@ -58,6 +58,7 @@ import './componenet/Input/Input.css';
 import './componenet/Messages/Messages.css'
 import './componenet/TextContainer/TextContainer.css'
 import './css/page/chat.css'
+import './css/page/Modal.css'
 
 // Category
 import WomanClothes from './componenet/Category/WomanClothes';
@@ -74,6 +75,7 @@ import DailySupplies from './componenet/Category/DailySupplies';
 
 
 import { useState } from 'react';
+import { Modal } from 'bootstrap';
 
 
 
@@ -98,6 +100,7 @@ function App() {
         </div>
       </div>
       <main>
+        {/* <Modal/> */}
         <Routes>
           {/*******************SignUp_Login**************************/}
           <Route path='/SignUpLogin' element={<SignUpLogin />} />
@@ -138,6 +141,7 @@ function App() {
           <Route path='/categories/list4' element={<List4 />} /> */}
         </Routes>
         </main>
+        
         <footer>
           <Footer />
         </footer>

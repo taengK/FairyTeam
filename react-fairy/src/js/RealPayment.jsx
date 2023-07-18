@@ -66,7 +66,7 @@ const RealPayment = () => {
 
     <li> <a href="#" class="item">
     <div class="icon">ii</div>
-    <div class="text" onClick={RealPayment}>주문목록<span class="circle"></span></div>
+    <div class="text" onClick={RealPayment}>당편코인충전<span class="circle"></span></div>
     <div class="right"> </div>
   </a>
   </li>

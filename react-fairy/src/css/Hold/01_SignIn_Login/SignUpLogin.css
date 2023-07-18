@@ -1,6 +1,6 @@
 .SLH2 {
   text-align: center;
-  margin: 50px 0 50px 0;
+  margin: 30px 0 30px 0;
 }
 
 .container {
@@ -10,16 +10,17 @@
   overflow: hidden;
   width: 768px;
   max-width: 100%;
-  min-height: 720px;
+  min-height: 740px;
 }
 .container .form-container {
   position: absolute;
   top: 0;
   height: 100%;
+  margin-top: 20px;
   transition: all 0.6s ease-in-out;
 }
 .container .social-container {
-  margin: 20px 0;
+  margin: 10px 0;
   display: flex;
 }
 .container .social-container > a {
@@ -49,7 +50,8 @@
 .SLBtn:focus {
   outline: none;
 }
-.SLBtn.ghost {
+.SLBtn .ghost {
   background-color: transparent;
   border-color: #FFFFFF;
-}
+  padding: 30px;
+}/*# sourceMappingURL=SignUpLogin.css.map */

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*모달창 영역--------------*/
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+#modalBox {
+  width: 90%;
+  max-width: 1000px;
+  background: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+#videoBox {
+  /*유튜브 영상 박스*/
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+#videoBox iframe, #videoBox embed, #videoBox object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*유튜브 영상*/
+#modalText {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+#modalClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  background: #000;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  #title {
+    font-size: 1.2rem;
+  }
+  .list {
+    width: 100%;
+    margin-right: 0;
+  }
+}

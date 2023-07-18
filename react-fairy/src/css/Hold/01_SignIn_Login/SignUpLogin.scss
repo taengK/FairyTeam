@@ -1,6 +1,8 @@
 .SLH2{  //SginUpLoginh2 font
     text-align: center;
-    margin: 50px 0 50px 0;
+    margin: 30px 0 30px 0;
+    
+    
 }
  .container {
     border-radius: 10px;
@@ -8,16 +10,17 @@
     position: relative;
     overflow: hidden;
     width: 768px;
-    max-width: 100%;
-    min-height: 720px;
+    max-width: 100%; min-height: 740px;
     .form-container {
       position: absolute;
       top: 0;
       height: 100%;
+      margin-top: 20px;
       transition: all 0.6s ease-in-out;
     }
     .social-container {
-      margin: 20px 0;
+      margin: 10px 0;
+      
       display: flex;
       >a {
           border: 1px solid #DDDDDD;
@@ -39,9 +42,9 @@
   }
     
 
-.SLBtn {
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
+// .SLBtn {
+//     text-transform: uppercase;
+//     transition: transform 80ms ease-in;
   
     &:active {
       transform: scale(0.95);
@@ -51,8 +54,8 @@
       outline: none;
     }
   
-    &.ghost {
+     .ghost{
       background-color: transparent;
       border-color: #FFFFFF;
     }
-}
+// }

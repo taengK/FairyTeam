@@ -137,11 +137,12 @@ function Modification() {
 
   return (
     <div className='main-box info-box ModiMainBox'>
-        <h3>수정페이지</h3>
+        
     <Form onSubmit={handleJoin}>
       <div className='SignUpImgBox ModificationImgBox' style={{width:"w10px"}}>
         <img src={Logo} alt="" className='SignUpImg ModificationImg'/>
       </div>
+      <h3 style={{textAlign : "center" }}>수정하기</h3>
       
 
       <Row className='row1' >
@@ -166,11 +167,11 @@ function Modification() {
       </Row>
 
 
-      <Form.Group className='row1' id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+      <Form.Group className='row1 row2' id="formGridCheckbox">
+        <Form.Check type="checkBox" label="Check me out" />
       </Form.Group>
 
-      <Button className='row1' variant="primary" type="submit" >
+      <Button className='row1 MoBtn'  variant="primary" type="submit" >
         Submit
       </Button>
     </Form>

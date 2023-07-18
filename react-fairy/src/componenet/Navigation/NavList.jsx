@@ -147,7 +147,7 @@ const NavList = (props) => {
         <li><Link to="/categories/800?keyword=800"><p className='NaviCtt'>할인상품</p></Link></li>
         <li><Link to="/categories/1100?keyword=1123"><p className='NaviCtt'>장마철</p></Link></li>
         <li><Link to="/categories/900?keyword=900"><p className='NaviCtt'>뜨는상품</p></Link></li>
-        
+
       </ul>
     </div>
   )

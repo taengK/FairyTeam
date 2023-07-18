@@ -32,25 +32,25 @@ function Join() {
 
 
 
-
-
+  
+  
   const [userData, setUserData] = useState({})
   const [userId, setUserId] = useState({})
-
-
-
-
+  
+  
+  
+  
   // ID 중복체크
   const idCheck1 = (e) => {
     e.preventDefault();
-
+    
     setUserId({ id: idRef.current.value })
-
+    
   }
 
   useEffect(() => {   // 중복체크
     console.log('userId : ', userId.id)
-
+    
     // console.log('중복체크 idCheck 값 : ', idCheck)
     // 초기 id 가 undefined가 아닐 때 글자 수가 5 이상이면 전송함
     if (userId.id !== undefined) {
@@ -58,22 +58,22 @@ function Join() {
         axios.post('http://localhost:8888/user/idcheck', {
           userId: userId
         })
-          .then((res) => {
+        .then((res) => {
 
-            console.log('아이디 중복 검사 :', res.data.idCheck);
-            if (res.data.idCheck === 'existed') {
-              alert('이미 등록된 아이디입니다',)
-              idRef.current.value = ''
-              idRef.current.focus()
-
-            } else if (res.data.idCheck === 'none') {
-              alert('가입이 가능한 아이디입니다')
-              pwRef.current.focus()
-              console.log('가입 가능, res.data.idCheck :', res.data.idCheck);
-              console.log('회원가입 가능? res.data.result :', res.data.result)
-
-            }
-          })
+          console.log('아이디 중복 검사 :', res.data.idCheck);
+          if (res.data.idCheck === 'existed') {
+            alert('이미 등록된 아이디입니다',)
+            idRef.current.value = ''
+            idRef.current.focus()
+            
+          } else if (res.data.idCheck === 'none') {
+            alert('가입이 가능한 아이디입니다')
+            pwRef.current.focus()
+            console.log('가입 가능, res.data.idCheck :', res.data.idCheck);
+            console.log('회원가입 가능? res.data.result :', res.data.result)
+            
+          }
+        })
         // undefined가 아니더라도 짧으면 전송하지 않음
       } else if (userId.id.length < 5) {
         alert('아이디가 너무 짧습니다')
@@ -81,7 +81,9 @@ function Join() {
       }
     }
   }, [userId])
-
+  
+  
+  
   // ... 코드 아니고 함수 접은거임
   const handleJoin = (e) => {
     console.log('handle Join Function'
@@ -97,6 +99,7 @@ function Join() {
 
     setUserData({
       id: idRef.current.value,
+      
       pw: pwRef.current.value,
       cpw: cpwRef.current.value,
       name: nameRef.current.value,
@@ -106,17 +109,15 @@ function Join() {
 
 
   }
-
-
-
+  
   useEffect(() => {
     console.log('userData : ', userData.id)
     /*useEffect의 특성 상, 무조건 화면의 첫 갱신 때 함수가 호출될 수 밖에 없다.
     비어있는 값을 가지고 회원가입을 하면 안되니까 
     화면의 첫 갱신때는 회원가입 로직이 
     실행되지 않도록 조건을 걸어둔 것!*/
-
-
+    
+    
     if (userData.id !== undefined && userData.pw === userData.cpw) {
       if (userData.id.length >= 5
         && userData.id.length <= 20 && userData.pw.length >= 6
@@ -129,7 +130,7 @@ function Join() {
 
           .then((res) => {
             console.log('회원가입 res', res.data.result);
-            if (res.data.result === 'success') {
+            if (res.data.result == 'success') {
               alert('회원가입을 축하드립니다')
               nav('/')
             } else if (res.data.result === 'duplicated') {
@@ -182,9 +183,9 @@ function Join() {
       <Form onSubmit={handleJoin} className='SignUpForm'>
         <h1>Create Account</h1>
         <div class="social-container">
-          <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.google.com/" class="social"><i class="fab fa-google-plus-g"></i></a>
-          <a href="https://www.instagram.com/" class="social"><i class="fab fa-square-instagram"></i></a>
+          <a href="https://www.facebook.com/" target='_blind' class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.google.com/" target='_blind' class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="https://www.instagram.com/" target='_blind' class="social"><i class="fab fa-square-instagram"></i></a>
         </div>
 
         <Row className='row1' >

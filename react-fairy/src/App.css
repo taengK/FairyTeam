@@ -1,5 +1,28 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
 
+
+/* 1. 프리텐다드 고딕 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 2. G마켓 산스 */
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  /* font-family: 'Pretendard-Regular'; */
+  font-family: 'GmarketSansMedium';
+
+}
+
 .App {
   text-align: center;
 }
@@ -47,17 +70,17 @@
 
 .HN {
   width: 1200px;
-  margin: 0 auto;
+  margin: 1% auto;
+  
 }
 main{
  width: 1200px; 
- 
  margin: 0 auto;
 }
 
 
 footer {
-  width: 100%;
-  background-color: #333;
+  width: 100%; 
+  background-color: #eee;
   margin-top: 30px;
 }
