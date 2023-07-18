@@ -55,7 +55,7 @@ const Main = () => {
         
       </section>
       <h2>오늘의 물품상품</h2>
-      <section className='MainCtgCtn'>
+      <section className='GridCtn'>
       {data.map(item =>
         <TodayProd
           name={item.prod_name}

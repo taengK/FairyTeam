@@ -9,8 +9,8 @@
   z-index: 2;
 }
 .overlay-container .overlay {
-  background: darkcyan;
-  background: linear-gradient(to right, #89B2E9, #4B89DC, 	#11A6CE);
+  background: #FF416C;
+  background: linear-gradient(to right, skyblue, #4cc1de, skyblue);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -21,7 +21,6 @@
   width: 200%;
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
-  font-size : 15px;
 }
 .overlay-container .overlay .overlay-panel {
   position: absolute;
@@ -39,7 +38,6 @@
 }
 .overlay-container .overlay .overlay-left {
   transform: translateX(-20%);
-
 }
 
 .container.right-panel-active .overlay-container {
@@ -57,7 +55,6 @@
 .overlay-right {
   right: 0;
   transform: translateX(0);
-  
 }
 
 .container.right-panel-active .overlay-right {

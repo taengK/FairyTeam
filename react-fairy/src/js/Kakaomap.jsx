@@ -5,6 +5,7 @@ const MapContainer = ({ searchPlace }) => {
   const [Places, setPlaces] = useState([]);
 
   useEffect(() => {
+
     const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
     const markers = [];
     const container = document.getElementById('myMap');
@@ -70,8 +71,8 @@ const MapContainer = ({ searchPlace }) => {
       kakao.maps.event.addListener(marker, 'click', function () {
         infowindow.setContent(
           '<div style="padding:5px;font-size:12px;">' +
-            place.place_name +
-            '</div>'
+          place.place_name +
+          '</div>'
         );
         infowindow.open(map, marker);
       });
@@ -80,35 +81,35 @@ const MapContainer = ({ searchPlace }) => {
 
   return (
     <>
-    <ul className='yeaun' style={{display:"flex", justifyContent:"space-between"}}>
-      <li style={{border:"1px solid #f00"}}>
-      <div id="myMap" style={{ width: '500px',height: '500px', }}></div>
-      </li>
-      
-      <li style={{border:"1px solid #00f"}}>
-      <div id="result-list" >
-        {Places.map((item, i) => (
-          <div key={i} style={{ marginTop: '20px' }}>
-            <span>{i + 1}</span>
-            <div>
-              <h5>{item.place_name}</h5>
-              {item.road_address_name ? (
+      <ul >
+        <li>
+          <div id="myMap" style={{ width: '500px', height: '500px', }}></div>
+        </li>
+
+        <li >
+          <div id="result-list" >
+            {Places.map((item, i) => (
+              <div key={i}>
+                <span>{i + 1}</span>
                 <div>
-                  <span>{item.road_address_name}</span>
-                  <span>{item.address_name}</span>
+                  <h5>{item.place_name}</h5>
+                  {item.road_address_name ? (
+                    <div>
+                      <span>{item.road_address_name}</span>
+                      <span>{item.address_name}</span>
+                    </div>
+                  ) : (
+                    <span>{item.address_name}</span>
+                  )}
+                  <span>{item.phone}</span>
                 </div>
-              ) : (
-                <span>{item.address_name}</span>
-              )}
-              <span>{item.phone}</span>
-            </div>
+              </div>
+
+            ))}
+            <div id="pagination"></div>
           </div>
-          
-        ))}
-        <div id="pagination"></div>
-      </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
     </>
   );
 };
@@ -123,21 +124,42 @@ const LandingPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('test')
     setPlace(InputText);
     setInputText('');
   };
 
+  const test = (e) => {
+    console.log('test123123')
+    console.log(InputText)
+    setPlace(InputText);
+    setInputText('');
+  }
   return (
     <>
-      <form className="inputForm" onSubmit={handleSubmit}>
+      {/* <form className="inputForm" onSubmit={handleSubmit}>
         <input
           placeholder="검색어를 입력하세요"
           onChange={onChange}
           value={InputText}
         />
-        <button type="submit">검색</button>
-      </form>
-      <MapContainer searchPlace={Place} />
+        <button type="button" onclick={(e)=>handleSubmit(e)}>검색</button>
+      </form> */}
+      <ul>
+        <li className="inputForm">
+          <input
+            placeholder="검색어를 입력하세요"
+            onChange={onChange}
+            value={InputText}
+          />
+          <button type="button" onClick={(e) => test(e)}>검색</button>
+        </li>
+        <li>
+          <input type="text" placeholder='거래장소를 입력하세요' />
+        </li>
+      </ul>
+
+      <MapContainer searchPlace={Place}/>
     </>
   );
 };
