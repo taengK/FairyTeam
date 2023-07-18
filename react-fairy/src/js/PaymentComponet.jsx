@@ -4,10 +4,10 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
-const PaymentComponet = () => {
+const PaymentComponet = ({prod_name,prod_price}) => {
 
   // 장바구니
-
+  
 
     // useEffect(() => {
     //     // const script1 = document.createElement('script');
@@ -26,18 +26,22 @@ const PaymentComponet = () => {
     //   //   };
     //   // }, []);
     
-      const RealPayment = () => {
+      const RealPayment = (e) => {
+        e.preventDefault()
+
         const IMP = window.IMP;
         IMP.init("imp31853445");
 
+        
         IMP.request_pay(
+          
           {
-
+            
             pg: 'kcp',
             pay_method: 'card',
             merchant_uid: '57008833-33004',
-            name: '당근 10kg', ///
-            amount: 1004, ////
+            name: prod_name, ///
+            amount: prod_price, ////
             buyer_email: 'Iamport@chai.finance',
             buyer_name: '포트원 기술지원팀',
             buyer_tel: '010-1234-5678',
@@ -65,9 +69,11 @@ const PaymentComponet = () => {
           }
         );
       };
+
+      // RealPayment({prod_name,prod_price})
       
   return (
-  <div onClick={RealPayment} className='order'>
+  <div onClick={RealPayment } className='order'>
      결제하기🛒
   </div>
 
