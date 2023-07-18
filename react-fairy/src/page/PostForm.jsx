@@ -584,7 +584,7 @@ function PostForm() {
         </ul>
 
         <div className='PFBtnBoxx'>
-        <Button className=' PFButton' variant="primary"><p>게시물 등록</p></Button>
+        <Button className=' PFButton' variant="primary" onClick={handleJoin}><p>게시물 등록</p></Button>
         </div>
       </Form>
     </div>
