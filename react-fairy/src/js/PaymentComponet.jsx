@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
-const PaymentComponet = ({prod_name,prod_price}) => {
+const PaymentComponet = ({prod_name, prod_price}) => {
 
   // 장바구니
   
