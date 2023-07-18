@@ -59,6 +59,7 @@ import './componenet/Messages/Messages.css'
 import './componenet/TextContainer/TextContainer.css'
 import './css/page/chat.css'
 import './css/page/Modal.css'
+import '../src/css/page/Kakaomap.css'
 
 // Category
 import WomanClothes from './componenet/Category/WomanClothes';

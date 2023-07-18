@@ -566,27 +566,11 @@ function PostForm() {
             <div className='PostFormLabel1'>
               <h5>거래지역</h5>
             </div>
-
-
-
-
-
-
             <ul className='PostFormLabel2 PFMapBox'>
-
-
               <li>
-                    <Kakaomap />
+                <Kakaomap />
               </li>
-
-
-
-              
             </ul>
-
-
-
-
           </li>
         </ul>
         <div className='PFBtnBoxx'>

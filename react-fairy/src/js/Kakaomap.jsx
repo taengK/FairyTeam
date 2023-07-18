@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 const { kakao } = window;
 
 const MapContainer = ({ searchPlace }) => {
@@ -81,33 +82,38 @@ const MapContainer = ({ searchPlace }) => {
 
   return (
     <>
-      <ul >
+      <ul className='realMap'>
         <li>
-          <div id="myMap" style={{ width: '500px', height: '500px', }}></div>
+          <div id="myMap" ></div>
         </li>
 
-        <li >
-          <div id="result-list" >
+        <li id="result-list">
             {Places.map((item, i) => (
-              <div key={i}>
-                <span>{i + 1}</span>
-                <div>
+                  <div key={i}>
+              <ul className='result-list-num'> 
+                <li >
+                  <span>{i + 1}</span>
+                </li>
+                <li>
                   <h5>{item.place_name}</h5>
                   {item.road_address_name ? (
-                    <div>
-                      <span>{item.road_address_name}</span>
-                      <span>{item.address_name}</span>
-                    </div>
+                    <ul>
+                      <li>도로명 주소 : {item.road_address_name}</li>
+                      <li>지번 주소 : {item.address_name}</li>
+                    </ul>
                   ) : (
-                    <span>{item.address_name}</span>
-                  )}
-                  <span>{item.phone}</span>
-                </div>
-              </div>
+                    <li>지번 주소 : {item.address_name}</li>
+                    )}
+                    <li>{item.phone}</li>
+                  </li>
+                </ul>
 
+
+
+              </div>
             ))}
             <div id="pagination"></div>
-          </div>
+          
         </li>
       </ul>
     </>
@@ -145,21 +151,22 @@ const LandingPage = () => {
         />
         <button type="button" onclick={(e)=>handleSubmit(e)}>검색</button>
       </form> */}
-      <ul>
-        <li className="inputForm">
+      <ul className="KaIF">
+        <li >
           <input
             placeholder="검색어를 입력하세요"
             onChange={onChange}
             value={InputText}
           />
           <button type="button" onClick={(e) => test(e)}>검색</button>
+          
         </li>
         <li>
           <input type="text" placeholder='거래장소를 입력하세요' />
         </li>
       </ul>
-
       <MapContainer searchPlace={Place}/>
+
     </>
   );
 };
