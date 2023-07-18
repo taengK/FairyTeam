@@ -37,11 +37,14 @@ const CreatePost = () => {
     <>
 
       {userId ? (
+        
         <Link to='/PostForm'><p className='CPCtt' data-hover="판매하기"><span>판매하기</span></p></Link>
+      
       ) : (
         null
       )}
 
+     
     </>
 
 

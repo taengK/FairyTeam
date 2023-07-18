@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom'
 
 const ShowCart = ({name, price, photo, seq}) => {
   return (
-    
+    <div className="GridMainItem" >
       <Link to={`/Detaill/${seq}`} key={seq}>
         <table>
           <tbody>
             <tr>
               <td
-                className="MainCtgImgBox"
+                className="GridMainImgBox"
                 style={{ backgroundImage: `url(${photo})` }}
               ></td>
             </tr>
             <tr>
-              <td data-name="VIEW MORE" className="MainCtgbtn">
+              <td data-name="VIEW MORE" className="GridMainBtn">
                 <h6>{name}</h6>
                 <p>{price}</p>
               </td>
@@ -24,7 +24,7 @@ const ShowCart = ({name, price, photo, seq}) => {
           </tbody>
         </table>
       </Link>
-
+      </div>
   );
 }
 
