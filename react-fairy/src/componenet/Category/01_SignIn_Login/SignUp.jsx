@@ -41,9 +41,11 @@ function Join() {
   
   
   // ID 중복체크
-  const idCheck1 = (e) => {
-    e.preventDefault();
+  const idCheck1 = (e1) => {
+    e1.preventDefault();
     
+    console.log(idRef.current.value);
+
     setUserId({ id: idRef.current.value })
     
   }
@@ -65,12 +67,14 @@ function Join() {
             alert('이미 등록된 아이디입니다',)
             idRef.current.value = ''
             idRef.current.focus()
+            console.log('가입 불가능, res.data.idCheck :', res.data.idCheck);
+            
             
           } else if (res.data.idCheck === 'none') {
             alert('가입이 가능한 아이디입니다')
             pwRef.current.focus()
             console.log('가입 가능, res.data.idCheck :', res.data.idCheck);
-            console.log('회원가입 가능? res.data.result :', res.data.result)
+            
             
           }
         })
@@ -86,27 +90,28 @@ function Join() {
   
   // ... 코드 아니고 함수 접은거임
   const handleJoin = (e) => {
+    e.preventDefault();
+
     console.log('handle Join Function'
       , idRef.current.value
-      , pwRef.current.value
-      , nameRef.current.value
-      , nickRef.current.value
-      , addRef.current.value);
+      // , pwRef.current.value
+      // , nameRef.current.value
+      // , nickRef.current.value
+      // , addRef.current.value
+      );
 
     // form이 submit 되지 못하도록 작업
-    e.preventDefault();
 
 
     setUserData({
       id: idRef.current.value,
-      
       pw: pwRef.current.value,
       cpw: cpwRef.current.value,
       name: nameRef.current.value,
       nick: nickRef.current.value,
       add: addRef.current.value
     })
-
+    console.log(userData);
 
   }
   
@@ -132,7 +137,7 @@ function Join() {
             console.log('회원가입 res', res.data.result);
             if (res.data.result == 'success') {
               alert('회원가입을 축하드립니다')
-              nav('/')
+              // nav('/')
             } else if (res.data.result === 'duplicated') {
               alert('문제 발생') // 아이디 옆에 중복체크 버튼으로 다른 정보 입력 전에 아이디부터 확인해보기
               console.log('아이디 중복 확인')
@@ -212,6 +217,11 @@ function Join() {
           <Form.Group as={Col} controlId="formGridName">
             <Form.Label><p>NAME</p></Form.Label>
             <Form.Control className='SLinput' type="text" placeholder="이름을 입력하세요" ref={nameRef} />
+          </Form.Group>
+
+          <Form.Group as={Col} controlId="formGridNick2">
+            <Form.Label><p>NAME</p></Form.Label>
+            <Form.Control className='SLinput' type="text" placeholder="닉넴임을 입력하세요" ref={nickRef} />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formGridAddress1">
