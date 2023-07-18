@@ -26,6 +26,9 @@ const [data, setData] = useState({})
   // console.log(seq);
 const [forPayPrice, setForPayPrice] = useState()
 
+const [buyer, setBuyer] = useState()
+const [seller, setSeller] = useState()
+
 useEffect(() => {
   
   // get방식으로도 만들어보기
@@ -70,14 +73,20 @@ useEffect(() => {
             payPrice: parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10)
           })
         }
+        }       
+
+
+        setSeller(sessionStorage.getItem('id'))
+        setBuyer(data.user_id);
+
         
-        
-      }       
+
+
     })
   }
 },[])
 
-
+console.log(buyer,seller);
 
 
 
@@ -144,25 +153,71 @@ useEffect(() => {
             </div>
           </div>
         </article>
+
+  
+      {/* 내 아이디가 아닐 때 */}
         <ul className='DTButtonBox'>
           <li>
             <button className='DTBtn'>
+
+            {buyer === seller ? (
+              
+              null
+              ) : (
               <LoveAdd 
               prod_name={data.prod_name}
               prod_photo={data.prod_photo}
               prod_price={data.prod_price}
-              prod_seq={data.prod_seq}/></button>
+              prod_seq={data.prod_seq}/>
+              )
+            }
+              
+              
+              </button>
           </li>
           <li>
             <button className='DTBtn'>
-            <PaymentComponet
-             prod_name={data.prod_name}
-             prod_price={data.payPrice}/></button>
+
+            {buyer == seller ? (
+              
+              null
+              
+              ) : (
+              <PaymentComponet
+              prod_name={data.prod_name}
+              prod_price={data.payPrice}/>
+              
+                )
+              }
+             
+             </button>
+
           </li>
           <li>
-            <button className='DTBtn'><ChatStart/></button>
+            <button className='DTBtn'>
+
+              {buyer == seller ? (
+                
+                null
+                ) : (
+                <ChatStart/>
+
+
+                  )
+                }
+
+              </button>
           </li>
         </ul>
+
+
+  
+
+
+
+
+
+
       </div>
     </div>
 
