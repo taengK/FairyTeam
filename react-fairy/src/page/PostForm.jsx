@@ -565,19 +565,15 @@ function PostForm() {
               <li>
                 <div className='PFMap'>
                   <ul className='PFMapCtt'>
-          
-                    {/* <li><p>주소검색</p></li> */}
-
-                    <Kakaomap/>
+                    <li><p>주소검색</p></li>
+                    {/* <Kakaomap/> */}
                   </ul>
-
                   <input type="text" placeholder='거래장소를 입력하세요' />
                 </div>
-              </li>
 
+              </li>
               <li className=' PFL2Box'>
-             
-                {/* <iframe className='PFIfram' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.8484619486135!2d126.87518697644086!3d35.11049467277688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35718b03033bfeef%3A0x9148e0a92fb527ab!2z7Iqk66eI7Yq47J247J6s6rCc67Cc7JuQ!5e0!3m2!1sko!2skr!4v1689157673616!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+                <iframe className='PFIfram' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.8484619486135!2d126.87518697644086!3d35.11049467277688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35718b03033bfeef%3A0x9148e0a92fb527ab!2z7Iqk66eI7Yq47J247J6s6rCc67Cc7JuQ!5e0!3m2!1sko!2skr!4v1689157673616!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </li>
            
            
@@ -588,7 +584,7 @@ function PostForm() {
         </ul>
 
         <div className='PFBtnBoxx'>
-        <Button className=' PFButton' variant="primary"><p>Submit</p></Button>
+        <Button className=' PFButton' variant="primary"><p>게시물 등록</p></Button>
         </div>
       </Form>
     </div>
