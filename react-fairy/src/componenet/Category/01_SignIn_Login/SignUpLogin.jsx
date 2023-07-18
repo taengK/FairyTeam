@@ -34,7 +34,7 @@ const SignUpLogin = () => {
 
     return (
         <div className='SLBody' >
-            <h2 className='SLH2' >당신근처의 편의점</h2><h1 style={{textAlign:"center"}}><stron>당신편</stron> </h1>
+            <h2 className='SLH2' ></h2><h1 style={{textAlign:"center"}}><stron></stron> </h1>
             <ul className='container' id="container" ref={containerRef}>
                 <li className="form-container sign-up-container">
                     <SignUp />
@@ -46,7 +46,7 @@ const SignUpLogin = () => {
                 <li className='overlay-container' >
                     <div className="overlay" ref={overlayRef}>
                         <div className={`overlay-panel overlay-left ${activePanel === 'sign-in' ? 'active' : ''}`}>
-                            <h1>Welcome Back!</h1>
+                            <h1>Hello, Friend!</h1>
                             <p>To keep connected with us, please login with your personal info.</p>
                             <button className="ghost" id="signIn" 
                             style={{
@@ -55,14 +55,16 @@ const SignUpLogin = () => {
                                 borderColor:"#ffffff",
                                 marginTop:"10px",
                                 borderRadius:"15px",
-                                color:"#fff"
+                                color:"#fff",
+                                
+                                
                             }}
                             onClick={signIn}>Sign In</button>
                         </div>
 
 
                         <div className={`overlay-panel overlay-right ${activePanel === 'sign-up' ? 'active' : ''}`}>
-                            <h1>Hello, Friend!</h1>
+                            <h1>Welcome!</h1>
                             <p>Enter your personal details and start your journey with us.</p>
                             <button className="ghost" id="signUp" 
                                 style={{

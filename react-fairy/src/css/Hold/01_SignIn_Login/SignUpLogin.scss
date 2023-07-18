@@ -42,9 +42,10 @@
   }
     
 
-// .SLBtn {
-//     text-transform: uppercase;
-//     transition: transform 80ms ease-in;
+.SLBtn {
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+
   
     &:active {
       transform: scale(0.95);
@@ -57,5 +58,6 @@
      .ghost{
       background-color: transparent;
       border-color: #FFFFFF;
+      
     }
-// }
+}

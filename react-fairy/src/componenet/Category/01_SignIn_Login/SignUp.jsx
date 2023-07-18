@@ -186,12 +186,16 @@ function Join() {
   return (
     <div>
       <Form onSubmit={handleJoin} className='SignUpForm'>
-        <h1>Create Account</h1>
-        <div class="social-container">
+        <h1></h1>
+        <br />
+        <br />
+        <br />
+        <br />
+        {/* <div class="social-container">
           <a href="https://www.facebook.com/" target='_blind' class="social"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.google.com/" target='_blind' class="social"><i class="fab fa-google-plus-g"></i></a>
           <a href="https://www.instagram.com/" target='_blind' class="social"><i class="fab fa-square-instagram"></i></a>
-        </div>
+        </div> */}
 
         <Row className='row1' >
           <Form.Group as={Col} controlId="formGridEmail">
@@ -229,7 +233,7 @@ function Join() {
           </Form.Group>
 
           <Button variant="primary" type="submit" className='idOverlap SLBtn'>
-            Submit
+           회원가입
           </Button>
         </Row>
 
