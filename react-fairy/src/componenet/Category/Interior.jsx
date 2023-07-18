@@ -134,7 +134,7 @@ const Interior = (props) => {
     //test start
     <div>
 
-      <div className='MainCtgCtn'>
+      <div className='GridCtn'>
         {superC.map(item =>
           <CategoryTable seq={item.prod_seq}
             name={item.prod_name}

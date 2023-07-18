@@ -59,7 +59,7 @@ const Cart = ({ name, price, photo, seq }) => {
         </div>
         
 
-        <div className="MainCtgItem">
+        <div className="GridCtn">
           {sendFav.map((item) => (
             <ShowCart
               name={item.prod_name}
@@ -68,21 +68,8 @@ const Cart = ({ name, price, photo, seq }) => {
               seq={item.prod_seq}
             ></ShowCart>
           ))}
-</div>
-          {/* <Link to={`/Detaill/${seq}`} key={seq}>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td className='MainCtgImgBox' style={{ backgroundImage: `url(${photo})` }}></td>
-                            </tr>
-                            <tr>
-                                <td data-name="VIEW MORE" className='MainCtgbtn'><h6>{name}</h6><p>{price}</p></td>
-                            </tr>
-                            <tr>
-                            </tr>
-                        </tbody>
-                    </table>
-                </Link> */}
+        </div>
+        
         
       </>
     );
@@ -103,7 +90,20 @@ export default Cart
 
 
 {/* 이거 칸 없애줘 설명 긴거 못넣어 <p>상품설명</p> */ }
-
+  {/* <Link to={`/Detaill/${seq}`} key={seq}>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td className='GridMainImgBox' style={{ backgroundImage: `url(${photo})` }}></td>
+                            </tr>
+                            <tr>
+                                <td data-name="VIEW MORE" className='GridMainBtn'><h6>{name}</h6><p>{price}</p></td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </Link> */}
 
 
 {/* </div>

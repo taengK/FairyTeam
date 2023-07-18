@@ -5,15 +5,15 @@ const TodayProd = ({ name, price, photo, seq }) => {
 
 
   return (
-    <div className='MainCtgItem'>
+    <div className='GridMainItem'>
       <Link to={`/Detaill/${seq}`} key={seq}>
         <table>
           <tbody>
             <tr>
-              <td className='MainCtgImgBox' style={{ backgroundImage: `url(${photo})` }}></td>
+              <td className='GridMainImgBox' style={{ backgroundImage: `url(${photo})` }}></td>
             </tr>
             <tr>
-              <td data-name="VIEW MORE" className='MainCtgbtn'><h6>{name}</h6><p>{price}</p></td>
+              <td data-name="VIEW MORE" className='GridMainBtn'><h6>{name}</h6><p>{price}</p></td>
             </tr>
           </tbody>
         </table>
