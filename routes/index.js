@@ -226,6 +226,32 @@ router.post('/user/ChangePost', (req, res)=>{
 )
 // 게시물 수정 ---------------------------------- 종료
 
+
+// 게시물 불러오기 ---------------------------------- 시작
+
+router.post('/user/callPost', (req, res)=>{
+    console.log('postForm Router', req.body);
+    
+    let sql = "select * from product_info where prod_seq = ?"
+    // id, pw, name, nick, email
+   
+    conn.query(sql
+        , [req.body.seq           
+            ]
+        , (err, rows)=>{
+            if(rows) {
+                console.log('call success')
+                res.json({result : 'success'})
+            } else {
+                console.log('faild to call', err);
+                res.json({result : 'duplicated'})
+            }
+    })
+} 
+)
+// 게시물 불러오기 ---------------------------------- 종료
+
+
 //채팅 내역 ---------------------------------
 router.post('/user/chatting',(req, res)=>{
     console.log('제발 돼라')

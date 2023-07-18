@@ -76,6 +76,7 @@ import DailySupplies from './componenet/Category/DailySupplies';
 
 import { useState } from 'react';
 import { Modal } from 'bootstrap';
+import ChangePost from './js/ChangePost.jsx';
 
 
 
@@ -115,6 +116,7 @@ function App() {
           <Route path='/Detaill/:seq' element={<Detaill />} />
           <Route path='/Modification' element={<Modification />} />
           <Route path='/PostForm' element={<PostForm />} />
+          <Route path='/changePost/:seq' element={<ChangePost />} />
           <Route path='/Chat' element={<Chat />} />
           <Route path='/Join' element={<Join />} />
           <Route path='/Kakao' element={<Kakao />} />

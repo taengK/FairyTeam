@@ -1,11 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import PaymentComponet from '../js/PaymentComponet';
 import ChatStart from '../js/ChatStart';
 import LoveAdd from '../js/LoveAdd';
 
 import axios from 'axios';
+import DelProd from '../js/DelProd';
+import ChangePost from '../js/ChangePost.jsx';
+import ChangeBtn from '../js/ChangeBtn.jsx';
 
 
 
@@ -44,7 +47,7 @@ useEffect(() => {
         // console.log('정보는 :', res.data.prodInfo);
 
         if (res.data.prodInfo !== 'none') {
-          setForPayPrice(parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10))
+          // setForPayPrice(parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10))
 
           if (res.data.prodInfo[0].prod_status == 'N') {
             setData({
@@ -76,25 +79,35 @@ useEffect(() => {
         }       
 
 
-        setSeller(sessionStorage.getItem('id'))
-        setBuyer(data.user_id);
-
         
+        
+        
+        
+      })
+    }
+  },[])
+  
+// console.log(data);
 
 
-    })
-  }
-},[])
+  useEffect(() => {
+    setSeller(data.user_id);
+    setBuyer(sessionStorage.getItem("id"));
+  }, [data]);
+
+
+
+
 
 console.log(buyer,seller);
+// console.log(buyer,seller);
 
 
 
 
   return (
-
     <div>
-      <div className='view'>
+      <div className="view">
         <nav>
           <h1>상품보기</h1>
           <p>
@@ -111,18 +124,25 @@ console.log(buyer,seller);
             <nav>
               <h1>닉네임 ====== {data.user_nick}</h1>
               <h2>
-                상품번호 :
-                <span>{data.prod_seq}</span>
+                상품번호 :<span>{data.prod_seq}</span>
               </h2>
             </nav>
             <nav>
               <h3>{data.prod_name}</h3>
-              <p> prod_status로 새 상품 중고 상품 구분 ===== {data.prod_status} </p>
-              <p> 물품 등록 시간인데 시간 방식이 자동으로 외국으로 적용됨 왜이럼===={data.prod_at} </p>
+              <p>
+                {/* {" "} */}
+                prod_status로 새 상품 중고 상품 구분 ===== {data.prod_status}
+                {/* {" "} */}
+              </p>
+              <p>
+                {/* {" "} */}
+                물품 등록 시간인데 시간 방식이 자동으로 외국으로 적용됨
+                왜이럼===={data.prod_at}
+                {/* {" "} */}
+              </p>
               <p>{data.prod_content}</p>
             </nav>
             <nav>
-
               <div class="dis_price">
                 <ins>{data.prod_price}</ins>
               </div>
@@ -133,7 +153,6 @@ console.log(buyer,seller);
               <span class="desc">본 상품은 국내배송만 가능합니다.</span>
             </nav>
             <nav>
-
               <span class="card cardadd">
                 <i>아이콘</i>&nbsp;&nbsp;카드추가혜택
               </span>
@@ -141,7 +160,11 @@ console.log(buyer,seller);
             <nav>
               <span class="origin">원산지-상세설명 참조</span>
             </nav>
-            <img src="../img/vip_plcc_banner.png" alt="광고이미지" class="banner" />
+            <img
+              src="../img/vip_plcc_banner.png"
+              alt="광고이미지"
+              class="banner"
+            />
             <div class="count">
               <button class="decrease">-</button>
               <input type="text" name="num" value="1" readonly />
@@ -154,73 +177,56 @@ console.log(buyer,seller);
           </div>
         </article>
 
-  
-      {/* 내 아이디가 아닐 때 */}
-        <ul className='DTButtonBox'>
+        {/* 내 아이디가 아닐 때 */}
+        <ul className="DTButtonBox">
           <li>
-            <button className='DTBtn'>
-
-            {buyer === seller ? (
-              
-              null
-              ) : (
-              <LoveAdd 
-              prod_name={data.prod_name}
-              prod_photo={data.prod_photo}
-              prod_price={data.prod_price}
-              prod_seq={data.prod_seq}/>
-              )
-            }
-              
-              
-              </button>
-          </li>
-          <li>
-            <button className='DTBtn'>
-
-            {buyer == seller ? (
-              
-              null
-              
-              ) : (
-              <PaymentComponet
-              prod_name={data.prod_name}
-              prod_price={data.payPrice}/>
-              
-                )
-              }
-             
-             </button>
-
-          </li>
-          <li>
-            <button className='DTBtn'>
-
+            <button className="DTBtn">
               {buyer == seller ? (
+                <ChangeBtn
+                prod_seq={data.prod_seq}/>
+              )
+              :
+              (
+                <LoveAdd
+                  prod_name={data.prod_name}
+                  prod_photo={data.prod_photo}
+                  prod_price={data.prod_price}
+                  prod_seq={data.prod_seq}
+                />
+
+              )}
+            
                 
-                null
-                ) : (
-                <ChatStart/>
-
-
-                  )
-                }
-
-              </button>
+              
+              
+            </button>
+          </li>
+          <li>
+            <button className="DTBtn">
+            {buyer == seller ? (
+              null)
+              :
+              (
+                <PaymentComponet
+                  prod_name={data.prod_name}
+                  prod_price={data.payPrice}
+                />
+  )}
+            </button>
+          </li>
+          <li>
+            <button className="DTBtn">
+            {buyer == seller ? (
+              <DelProd/>
+            ):(
+          
+               <ChatStart />
+  )}
+            </button>
           </li>
         </ul>
-
-
-  
-
-
-
-
-
-
       </div>
     </div>
-
   );
 };
 

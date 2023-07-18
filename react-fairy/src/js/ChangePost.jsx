@@ -5,10 +5,10 @@ import Row from 'react-bootstrap/Row';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useRef, useState } from 'react';
 import axios from 'axios'
-import { Await, useNavigate } from 'react-router-dom'
+import { Await, useNavigate, useParams } from 'react-router-dom'
 import Logo from '../Images/Logo.png'
 
-import Kakaomap from '../js/Kakaomap'
+import Kakaomap from './Kakaomap'
 
 
 
@@ -24,7 +24,13 @@ import Kakaomap from '../js/Kakaomap'
 
 
 
-function ChangePost({prod_seq}) {
+const ChangePost =() =>{
+
+  const params = useParams();
+
+  const [prodSeq, setProdSeq] = useState(params.seq)
+  console.log(prodSeq);
+    
 
   const nav = useNavigate()
 
@@ -135,8 +141,8 @@ function ChangePost({prod_seq}) {
       status: selectedOption,
       photo: showPhoto,
       barcode : barcodeTime,
-      id : sessionStorage.getItem('id'),
-      seq : {prod_seq}
+      id : sessionStorage.getItem('id')
+      
     })
 
 
@@ -189,7 +195,16 @@ function ChangePost({prod_seq}) {
  
 
 
-  
+  useEffect(()=>{
+    axios.post('http://localhost:8888/user/callPost', {
+      seq : prodSeq
+    })
+    .then((res)=>{
+      console.log(res.data.result);
+    })
+    
+
+  }, [])
 
 
 
@@ -208,7 +223,7 @@ function ChangePost({prod_seq}) {
             <div className='PostFormLabel2'>
               <Row className='row1 rowch' >
                 <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Control type="text" placeholder="상품 이름을 입력해주세요" ref={nameRef} />
+                  <Form.Control type="text" placeholder="상품 이름을 입력해주세요"   ref={nameRef} />
                 </Form.Group>
               </Row>
             </div>

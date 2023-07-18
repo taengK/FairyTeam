@@ -35,7 +35,7 @@ const LoveAdd = ({prod_name, prod_price, prod_seq, prod_photo}) => {
         prod_seq : prod_seq,
         user_id : sessionid
       })
-      console.log(userData);
+      // console.log(userData);
     } else {
       
     }

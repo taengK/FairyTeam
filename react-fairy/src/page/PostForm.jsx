@@ -24,7 +24,7 @@ import Kakaomap from '../js/Kakaomap'
 
 
 
-function PostForm() {
+function PostForm(prod_name, prod_photo, prod_seq, prod_content, prod_price) {
 
   const nav = useNavigate()
 
