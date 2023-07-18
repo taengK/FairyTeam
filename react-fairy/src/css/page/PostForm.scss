@@ -66,22 +66,25 @@
 
 //이미지
 .PFL2Box {
-
-
     >ul {
         width: 100%;
-
         >li {
-            &:first-child {
-
+            
+            .PFImgBox {
                 width: 30%;
-                position: relative;
+                >img {
+                    width: 100%;
+                }
             }
-
-            p {
-                color: rgb(230, 21, 21);
-                line-height: 25px;
+            &:last-child {
+                width: 70%;
+                padding: 30px;
+                p {
+                    color: rgb(230, 21, 21);
+                    line-height: 25px;
+                }
             }
+            
         }
 
     }

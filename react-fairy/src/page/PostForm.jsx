@@ -265,12 +265,13 @@ function PostForm(prod_name, prod_photo, prod_seq, prod_content, prod_price) {
             </div>
             <div className='PostFormLabel2 PFL2Box'>
               <ul className='df'>
-                <img src={showPhoto}></img>
+                <li className='PFImgBox'>
+                  <img src = {showPhoto} ></img>
+                  {/* <input type="file" accept='image/jpg, image/jpeg, image/png' /> */}
+                </li>
                 <li>
                   <p>
-                    {/* <input type="file" accept='image/jpg, image/jpeg, image/png' /> */}
-                    <input type="text" ref={imgUrlRef} placeholder='URL 주소를 입력하세요' onClick={photoUpload} />
-                    <button >업로드</button><br /><br />
+                    <input type="text" ref={imgUrlRef} placeholder='URL 주소를 입력하세요'/><button onClick={photoUpload}>업로드</button><br/>
                     <b>* 상품 이미지는 640x640에 최적화 되어 있습니다.</b><br />
                     - 상품 이미지는 PC에서는 1:1, 모바일에서는 1:1.23 비율로 보여집니다.<br />
                     - 이미지는 상품 등록 시 정사각형으로 잘려서 등록됩니다.<br />
@@ -566,27 +567,11 @@ function PostForm(prod_name, prod_photo, prod_seq, prod_content, prod_price) {
             <div className='PostFormLabel1'>
               <h5>거래지역</h5>
             </div>
-
-
-
-
-
-
             <ul className='PostFormLabel2 PFMapBox'>
-
-
               <li>
-                    <Kakaomap />
+                <Kakaomap />
               </li>
-
-
-
-              
             </ul>
-
-
-
-
           </li>
         </ul>
         <div className='PFBtnBoxx'>

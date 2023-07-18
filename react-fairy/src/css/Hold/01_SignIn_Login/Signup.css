@@ -33,6 +33,7 @@
   background-color: #ccc;
   border: none;
   color: #777;
+  font-weight: bold;
 }
 .idOverlap:hover {
   background-color: #aaa;
@@ -40,9 +41,10 @@
 }
 
 .LoginRow2 {
+  margin-top: 50%;
   width: 100%;
   flex-direction: column;
 }
 .LoginRow2 span {
   text-align: center;
-}
+}/*# sourceMappingURL=Signup.css.map */
