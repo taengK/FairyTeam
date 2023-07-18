@@ -23,8 +23,8 @@ const Login = () => {
   
   const [userData,setUserData] = useState({})
 
-  const handleLogin = (e)=>{
-    e.preventDefault();
+  const handleLogin = (e1)=>{
+    e1.preventDefault();
 
     console.log(idRef.current.value,pwRef.current.value);
     
