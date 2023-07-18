@@ -136,7 +136,6 @@ input {
 }
 .container .overlay-container .overlay {
   background: #FF416C;
-  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
   background: linear-gradient(to right, #FF4B2B, #FF416C);
   background-repeat: no-repeat;
   background-size: cover;
@@ -207,4 +206,4 @@ input {
 
 .container.right-panel-active .overlay-right {
   transform: translateX(20%);
-}
+}/*# sourceMappingURL=sumin_Signup_login.css.map */

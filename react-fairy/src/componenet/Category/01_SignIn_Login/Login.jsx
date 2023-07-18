@@ -64,8 +64,7 @@ const Login = () => {
   return (
     <div>
       <Form onSubmit={handleLogin} className='SignUpForm'>
-       <br /><br /><br /><br /><br />
-       <br /><br /><br /><br /><br />
+     
     
      
       
@@ -77,7 +76,7 @@ const Login = () => {
 
 
 
-      <Row className='LoginRow2' >
+      <Row className='LoginRow2'>
       {/* <span>or use your account</span> */}
     <Form.Group as={Col} controlId="formGridEmail">
       <Form.Label style={{fontWeight:"bold", margin:"30px 0 10px 10px"}}>ID</Form.Label>
