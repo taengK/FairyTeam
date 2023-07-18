@@ -127,26 +127,43 @@
 }
 
 @media all and (max-width: 468px) {
-  .HN {
-    background-color: #fc0;
+  .HeadGnbBox {
+    width: 60%;
+    margin-left: auto;
   }
-  .headBox {
-    width: 100%;
-    border: 1px solid #000;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0;
+  .HeadGnbBox > li {
+    color: #a3a3a3;
   }
-  .headBox .LogoBox {
-    background-color: 255;
-    border: 1px solid #000;
+  .HeadGnbBox > li:hover {
+    color: #333;
+    font-weight: bold;
   }
-  .headBox .inputBox {
-    margin-top: 0;
-    width: 100%;
-    margin-left: -50px;
-  }
-  .headBox .inputBox .search {
+  .HeadGnbBox > li:nth-child(1) {
     width: 100%;
   }
-}/*# sourceMappingURL=Head.css.map */
+  .HeadGnbBox > li:nth-child(2) {
+    width: 100%;
+  }
+  .HeadGnbBox > li:nth-child(3) {
+    width: 100%;
+  }
+}
+.head {
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.head .headBox {
+  width: 100%;
+  flex-wrap: wrap;
+}
+.head .headBox .LogoBox {
+  margin: 0 auto;
+}
+.head .headBox .inputBox {
+  margin-top: 0;
+  width: 100%;
+  margin-left: -50px;
+}
+.head .CPCttLove:hover::before {
+  transform: translateX(15px);
+}

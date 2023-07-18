@@ -6,24 +6,24 @@ const Category3 = () => {
 
     <ul>
       <li>
-        <Link to="/categories/300?keyword=310"><h4>남성화</h4></Link>
-        <p><Link to="/categories/300?keyword=311">샌들/슬리퍼</Link></p>
-        <p><Link to="/categories/300?keyword=312">구두/로퍼</Link></p>
-        <p><Link to="/categories/300?keyword=313">워커/부츠</Link></p>
+        <Link to="/categories/300?keyword=310"><p className='ctgPH'>남성화</p></Link>
+        <Link to="/categories/300?keyword=311"><p className='ctgP'>샌들/슬리퍼</p></Link>
+        <Link to="/categories/300?keyword=312"><p className='ctgP'>구두/로퍼</p></Link>
+        <Link to="/categories/300?keyword=313"><p className='ctgP'>워커/부츠</p></Link>
       </li>
       <li>
-        <Link to="/categories/300?keyword=320"><h4>여성화</h4></Link>
-        <p><Link to="/categories/300?keyword=321">샌들/슬리퍼</Link></p>
-        <p><Link to="/categories/300?keyword=322">구두</Link></p>
-        <p><Link to="/categories/300?keyword=323">단화/플랫슈즈</Link></p>
-        <p><Link to="/categories/300?keyword=324">워커/부츠</Link></p>
-        <p><Link to="/categories/300?keyword=325">기타 여성화</Link></p>
+        <Link to="/categories/300?keyword=320"><p className='ctgPH'>여성화</p></Link>
+        <Link to="/categories/300?keyword=321"><p className='ctgP'>샌들/슬리퍼</p></Link>
+        <Link to="/categories/300?keyword=322"><p className='ctgP'>구두</p></Link>
+        <Link to="/categories/300?keyword=323"><p className='ctgP'>단화/플랫슈즈</p></Link>
+        <Link to="/categories/300?keyword=324"><p className='ctgP'>워커/부츠</p></Link>
+        <Link to="/categories/300?keyword=325"><p className='ctgP'>기타 여성화</p></Link>
       </li>
       <li>
-        <Link to="/categories/300?keyword=330"><h4>스포츠화</h4></Link>
-        <p><Link to="/categories/300?keyword=331">축구/풋살화</Link></p>
-        <p><Link to="/categories/300?keyword=333">등산/트레킹화</Link></p>
-        <p><Link to="/categories/300?keyword=335">기타 스포츠화</Link></p>
+        <Link to="/categories/300?keyword=330"><p className='ctgPH'>스포츠화</p></Link>
+        <Link to="/categories/300?keyword=331"><p className='ctgP'>축구/풋살화</p></Link>
+        <Link to="/categories/300?keyword=333"><p className='ctgP'>등산/트레킹화</p></Link>
+        <Link to="/categories/300?keyword=335"><p className='ctgP'>기타 스포츠화</p></Link>
       </li>
     </ul>
   )

@@ -86,3 +86,9 @@ footer {
   background-color: #eee;
   margin-top: 30px;
 }
+
+@media all and (max-width : 468px) {
+  #con, #untilMain, .HN, .GNB, main, footer {
+     width: 100%;
+  }
+}

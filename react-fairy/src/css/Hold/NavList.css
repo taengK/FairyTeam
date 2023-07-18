@@ -84,7 +84,6 @@
 }
 .NaviCtgBox .active {
   border: 1px solid white;
-  background-color: pink;
 }
 .NaviCtgBox .active .show {
   background-color: pink;
@@ -118,4 +117,74 @@
   width: 70%;
   transition: 0.3s all ease-in-out;
   transform: translateX(20%);
-}/*# sourceMappingURL=NavList.css.map */
+}
+
+@media all and (max-width: 468px) {
+  .NaviCtgBox {
+    flex-direction: row-reverse;
+    justify-content: left;
+  }
+  .NaviCtgBox .ham .realHam {
+    margin-left: 50px;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+  }
+  .NaviCtgBox .ham .realHam .fa-bars {
+    text-align: right;
+    line-height: 40px;
+    font-size: 2rem;
+  }
+  .NaviCtgBox .NaviCtgGnb > li {
+    position: relative;
+    right: 50px;
+  }
+  .NaviCtgBox .NaviCtgGnb > li > a {
+    width: 100%;
+    text-align: right;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox {
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: -190%;
+    display: none;
+    z-index: 2;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 328px;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li {
+    width: 150px;
+    height: 450px;
+    border-right: 1px solid whitesmoke;
+    position: relative;
+    right: 26px;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgPH {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgP {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li > a {
+    text-align: center;
+    width: 200%;
+    display: block;
+    color: #555;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li > a:hover {
+    color: skyblue;
+  }
+  .NaviCtgBox > ul > li {
+    width: 100%;
+  }
+}

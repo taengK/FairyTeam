@@ -8,17 +8,14 @@
   font-size: 1.5rem;
   text-align: center;
   padding: 10px;
-  border: 1px solid #f00;
 }
 .df .PostFormLabel1 > h5 {
   font-weight: bold;
-  -moz-text-align-last: left;
-       text-align-last: left;
+  text-align-last: left;
 }
 .df .PostFormLabel2 {
   width: 100%;
   margin-top: 10px;
-  border: 1px solid #00f;
 }
 
 /*************************PostformBox***************************************/
@@ -135,4 +132,44 @@
   text-align: center;
   color: white;
   font-size: 20px;
-}/*# sourceMappingURL=PostForm.css.map */
+}
+
+@media all and (max-width: 468px) {
+  .df {
+    flex-wrap: wrap;
+  }
+  .df .PostFormLabel1 {
+    margin-top: 30px;
+  }
+  .df .PostFormLabel2 {
+    margin-top: 0;
+  }
+}
+.PFL2Box > ul {
+  width: 100%;
+}
+.PFL2Box > ul > li .PFImgBox {
+  width: 30%;
+}
+.PFL2Box > ul > li .PFImgBox > img {
+  width: 100%;
+}
+.PFL2Box > ul > li:last-child {
+  width: 100%;
+  padding: 30px;
+}
+
+.PFIfram {
+  width: 100px;
+  height: 300px;
+  margin-left: auto;
+}
+
+.realMap {
+  flex-wrap: wrap;
+  border: 1px solid #000;
+  width: 100%;
+}
+.realMap > li #myMap {
+  width: 100%;
+}

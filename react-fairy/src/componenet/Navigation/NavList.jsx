@@ -76,6 +76,9 @@ const NavList = (props) => {
         <div className='realHam'>
           <i class="fa-solid fa-bars" ></i><p></p>
         </div>
+
+
+
         <ul class="NaviCtgGnb">
 
           <li><Link to="/categories/100?keyword=100">여성의류</Link>
@@ -142,12 +145,13 @@ const NavList = (props) => {
           </li>
         </ul>
       </div>
+
+
       <ul>
         <li><Link to="/categories/400?keyword=400"><strong><p className='NaviCtt'>EVENT</p></strong></Link></li>
         <li><Link to="/categories/800?keyword=800"><p className='NaviCtt'>할인상품</p></Link></li>
         <li><Link to="/categories/1100?keyword=1123"><p className='NaviCtt'>장마철</p></Link></li>
         <li><Link to="/categories/900?keyword=900"><p className='NaviCtt'>뜨는상품</p></Link></li>
-
       </ul>
     </div>
   )

@@ -92,7 +92,6 @@ function App() {
     <div id='con' >
       <div id='untilMain'  >
         <div className='HN' >
-          <div className='GNB'></div>
           <header >
             <Head />
           </header>

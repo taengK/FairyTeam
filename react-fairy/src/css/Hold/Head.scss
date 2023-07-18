@@ -74,7 +74,6 @@
 
 .CPCtt {
     padding: 10px;
-    
     display: inline-block;
     font-size: 1.2rem;
     position: relative;
@@ -149,32 +148,47 @@
 }
 
 @media all and (max-width : 468px) {
- 
 
-  .HN{
-    background-color: #fc0;
-  }
+.HeadGnbBox {
+    width: 60%;
+    margin-left: auto;
+    >li {
+        color: #a3a3a3;
+        &:hover {
+            color: #333;
+            font-weight: bold;
+        }
+        &:nth-child(1) {
+            width: 100%;
+        }
+        &:nth-child(2) {
+            width: 100%;
+        }
+        &:nth-child(3) {
+            width: 100%;
+        }
+    }
+}
+}
+.head {
+    flex-wrap: wrap;
+    justify-content: left;
     .headBox {
         width: 100%;
-        border: 1px solid #000;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 0;
 
         .LogoBox {
-            background-color: red($color: red);
-            border: 1px solid #000;
+            margin: 0 auto;
         }
 
         .inputBox {
             margin-top:0;
             width: 100%;
             margin-left: -50px;
-           
-            .search {
-                width: 100%;
-            }
         }
+    }
+    .CPCttLove:hover::before {
+        transform: translateX(15px);
     }
 }
 
