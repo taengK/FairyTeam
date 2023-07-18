@@ -87,7 +87,7 @@ const Login = () => {
     </Form.Group>
 
   <Button variant="primary" type="submit" className='idOverlap SLBtn'>
-    Submit
+    로그인
   </Button>
   </Row>
 </Form>

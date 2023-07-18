@@ -219,7 +219,7 @@ function Join() {
           </Form.Group>
 
           <Button variant="primary" type="submit" className='idOverlap SLBtn'>
-            Submit
+           회원가입
           </Button>
         </Row>
 
