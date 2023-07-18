@@ -64,18 +64,10 @@ const Login = () => {
   return (
     <div>
       <Form onSubmit={handleLogin} className='SignUpForm'>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1></h1>
+       <br /><br /><br /><br /><br />
+       <br /><br /><br /><br /><br />
+    
+     
       
       {/* <div class="social-container">
           <a href="https://www.facebook.com/" target='_blind' class="social"><i class="fab fa-facebook-f"></i></a>

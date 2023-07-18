@@ -134,13 +134,13 @@
                         height: 50px;
                         border-radius: 5px;
                         overflow: hidden;
-
+                        background-color: #ddd;
                         >p {
                             text-align: center;
                             line-height: 50px;
 
                             &:hover {
-                                background-color: #fc0;
+                                background-color: gray;
                                 cursor: pointer;
                             }
                         }
@@ -164,17 +164,22 @@
 //submit
 .PFBtnBoxx{
     width: 100%;
-    border: 1px solid #000;
-    margin: 0 auto;
+    margin: 50px;
+    display: flex;
+  justify-content: center;
+
+
     .PFButton {
-    border: 1px solid #00f;
+    border: 1px solid gray;
     width: 250px;
-    border: none;
-    background-color: skyblue;
+ 
+    background-color: lightblue;
     height: 40px;    
     >p {
         width: 100%; 
         text-align: center;
+        color: white;
+        font-size: 20px;
     }
     }
    
