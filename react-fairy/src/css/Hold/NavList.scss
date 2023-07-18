@@ -69,7 +69,7 @@
                             color: #555;
                             
                             &:hover {
-                                color: lightseagreen;
+                                color: skyblue;
                                 // border-bottom: 1px solid #0abb26;
                                 
                             }
@@ -114,7 +114,7 @@
                     content: '';
                     width: 0;
                     height: 5px;
-                    background-color : lightseagreen;
+                    background-color : skyblue;
                     left: 0;
                     bottom: 0;
                     transition: width 0.5s ease-in-out;

@@ -74,7 +74,7 @@
   color: #555;
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li > p > a:hover {
-  color: lightseagreen;
+  color: skyblue;
 }
 .NaviCtgBox .NaviCtgGnb > li:hover .subBox {
   display: block;
@@ -109,7 +109,7 @@
   content: "";
   width: 0;
   height: 5px;
-  background-color: lightseagreen;
+  background-color: skyblue;
   left: 0;
   bottom: 0;
   transition: width 0.5s ease-in-out;
@@ -118,4 +118,4 @@
   width: 70%;
   transition: 0.3s all ease-in-out;
   transform: translateX(20%);
-}
+}/*# sourceMappingURL=NavList.css.map */

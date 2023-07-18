@@ -65,7 +65,7 @@ const Head = () => {
         {userId ? (
           <li className='HeadGnb'><Link to='/' onClick={handleLogout}>로그아웃</Link></li>
         ) : (
-          <li className='HeadGnb'><Link to='/SignUpLogin' >회원가입/로그인</Link></li>
+          <li className='HeadGnb'><Link to='/SignUpLogin'>회원가입/로그인</Link></li>
         )}
       </ul>
 
