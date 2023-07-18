@@ -105,7 +105,7 @@
   font-weight: bold;
 }
 .CPCttLove > span {
-  margin-left: 10px;
+  margin-left: 15px;
   display: inline-block;
   transition: all 0.4s ease-in-out;
 }
@@ -144,4 +144,4 @@
   .headBox .inputBox .search {
     width: 100%;
   }
-}
+}/*# sourceMappingURL=Head.css.map */

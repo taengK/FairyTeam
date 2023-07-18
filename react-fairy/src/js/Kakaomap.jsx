@@ -5,6 +5,7 @@ const MapContainer = ({ searchPlace }) => {
   const [Places, setPlaces] = useState([]);
 
   useEffect(() => {
+    
     const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
     const markers = [];
     const container = document.getElementById('myMap');
@@ -123,20 +124,35 @@ const LandingPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('test')
     setPlace(InputText);
     setInputText('');
   };
 
+  const test = (e) =>{
+    console.log('test123123')
+    console.log(InputText)
+    setPlace(InputText);
+    setInputText('');
+  }
   return (
     <>
-      <form className="inputForm" onSubmit={handleSubmit}>
+      {/* <form className="inputForm" onSubmit={handleSubmit}>
         <input
           placeholder="검색어를 입력하세요"
           onChange={onChange}
           value={InputText}
         />
-        <button type="submit">검색</button>
-      </form>
+        <button type="button" onclick={(e)=>handleSubmit(e)}>검색</button>
+      </form> */}  
+      <div className="inputForm">
+        <input
+          placeholder="검색어를 입력하세요"
+          onChange={onChange}
+          value={InputText}
+        />
+        <button type="button" onClick={(e)=>test(e)}>검색</button>
+        </div>
       <MapContainer searchPlace={Place} />
     </>
   );
