@@ -218,7 +218,8 @@ console.log(buyer,seller);
           <li>
             <button className="DTBtn">
             {buyer == seller || buyer =='admin' ? (
-              null)
+              <DelProd/>
+              )
               :
               (
                 <PaymentComponet
@@ -230,12 +231,10 @@ console.log(buyer,seller);
           </li>
           <li>
             <button className="DTBtn">
-            {buyer == seller || buyer =='admin' ? (
-              <DelProd/>
-            ):(
+           
           
                <ChatStart />
-  )}
+  
             </button>
           </li>
         </ul>
