@@ -29,7 +29,7 @@ const Head = () => {
 
   // 로그아웃 버튼 클릭 시 쿠키의 id 값을 제거하고 상태 변수를 업데이트하는 함수
   const handleLogout = () => {
-    sessionStorage.removeItem('id');
+    sessionStorage.clear();
     window.location.reload();
     setUserId('');
   };
