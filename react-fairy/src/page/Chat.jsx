@@ -1,7 +1,7 @@
 
 import Kakaomap from '../js/Kakaomap'
 
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 
@@ -24,8 +24,7 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState('')
   const [messages, setMessages] = useState([])
   const [plusMessage,setPlusMessage] = useState([])
-  const [all,setAll] = useState([])
-  // const [allmessage,setAllmessage] = useState([])
+ 
   let userId =  sessionStorage.getItem('id')
 
   useEffect(()=>{
@@ -78,7 +77,7 @@ const Chat = ({ location }) => {
 
     event.preventDefault()
 
- 
+  
       
       
       console.log('이거 뜨나?'+userId);
@@ -97,6 +96,8 @@ const Chat = ({ location }) => {
 
         }
     })
+  
+    
     }
   }
 

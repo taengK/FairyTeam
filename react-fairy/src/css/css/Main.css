@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/***********************상위컴포넌트****************************/
+.Main-sec01 {
+  width: 100%;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 300px;
+}
+.mySwiper eBox1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/NAZPRg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .SlideBox2 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/1RLdJ8.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .SlideBox3 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/TyvrN1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .SlideBox4 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/ph7sKt.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .SlideBox5 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/ph7sKt.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.MAdvertising {
+  padding: 100%;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+.GridCtn {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 30px 30px 0 30px;
+  gap: 20px;
+}
+
+/***********************상위컴포넌트****************************/
+/***********************하위컴포넌트****************************/
+.GridMainItem {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.GridMainItem table {
+  width: 100%;
+}
+.GridMainItem table tbody:hover {
+  transform: translateY(-3%);
+  transition: 0.3s;
+}
+.GridMainItem table tbody:hover .GridMainBtn::after {
+  content: attr(data-name);
+}
+.GridMainItem table tbody .GridMainImgBox {
+  border-radius: 15px;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+}
+.GridMainItem table tbody .GridMainBtn {
+  width: 100%;
+  height: 80px;
+  line-height: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.GridMainItem table tbody .GridMainBtn h3,
+.GridMainItem table tbody .GridMainBtn p {
+  text-align: center;
+}
+.GridMainItem table tbody .GridMainBtn::after {
+  content: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 10px;
+  color: #eee;
+}
+
+/***********************하위컴포넌트****************************/
+@media all and (max-width: 468px) {
+  .GridCtn {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 30px 30px 0 30px;
+    gap: 20px;
+  }
+}
