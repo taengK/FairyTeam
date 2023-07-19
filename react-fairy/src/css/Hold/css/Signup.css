@@ -1,0 +1,50 @@
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+}
+
+.SignUpForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.SignUpForm > h1 {
+  text-align: center;
+}
+
+.row1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.row1 p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.idOverlap {
+  border-radius: 15px;
+  margin-top: 10px;
+  background-color: #ccc;
+  border: none;
+  color: #777;
+  font-weight: bold;
+}
+.idOverlap:hover {
+  background-color: #aaa;
+  color: #333;
+}
+
+.LoginRow2 {
+  margin-top: 50%;
+  width: 100%;
+  flex-direction: column;
+}
+.LoginRow2 span {
+  text-align: center;
+}
