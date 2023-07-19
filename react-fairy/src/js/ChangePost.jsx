@@ -137,11 +137,11 @@ const ChangePost =() =>{
       name: nameRef.current.value,
       content: contentRef.current.value,
       price: (parseInt(number).toLocaleString()+'원'),
-      category: category,
       status: selectedOption,
+      category: category,
       photo: showPhoto,
-      barcode : barcodeTime,
-      id : sessionStorage.getItem('id')
+      seq : prodSeq,
+      
       
     })
 
@@ -159,8 +159,8 @@ const ChangePost =() =>{
 
 
     if (userData.name !== undefined) {
-      if (userData.content, userData.price ,userData.price, userData.category, userData.status,userData.photo,userData.time,
-        userData.barcode !== undefined){
+      if (userData.content,userData.price, userData.category, userData.status,userData.photo, userData.seq
+         !== undefined){
 
         //  id 값이 초기상태인 undefined가 아니면서 pw, cpw가 일치할 때만 값을 전송함
         axios.post('http://localhost:8888/user/ChangePost', {
@@ -200,7 +200,20 @@ const ChangePost =() =>{
       seq : prodSeq
     })
     .then((res)=>{
-      console.log(res.data.result);
+      console.log(res.data.result[0]);
+      if(res.data.result !== undefined) {
+        nameRef.current.value = res.data.result[0].prod_name
+        contentRef.current.value = res.data.result[0].prod_content 
+        // priceRef.current.value = parseInt((res.data.result[0].prod_price).replace(/,/g, ''), 10)
+        // priceRef.current.value = res.data.result[0].prod_price
+        photoRef.current.value = res.data.result[0].prod_photo
+        setShowPhoto(res.data.result[0].prod_photo)
+      
+      // console.log(res.data.result[0].prod_name);
+      // console.log(nameRef.current.value);
+
+
+      }
     })
     
 
@@ -249,7 +262,7 @@ const ChangePost =() =>{
               <Row className='row1'>
                 <Form.Group as={Col} controlId="formGridName">
                 
-                  <Form.Control className='PFPrice' type="text" placeholder="숫자만 입력하세요" value={number} onChange={handleNumberChange} />
+                  <Form.Control className='PFPrice' type="text" placeholder="숫자만 입력하세요" value={number} onChange={handleNumberChange} ref={priceRef} />
                 </Form.Group>
               </Row>
             </div>
@@ -282,7 +295,7 @@ const ChangePost =() =>{
             <div className='PostFormLabel2 PFL2Box'>
               <ul className='df'>
                 <li className='PFImgBox'>
-                  <img src = {showPhoto} ></img>
+                  <img src = {showPhoto} ref ={photoRef} ></img>
                   {/* <input type="file" accept='image/jpg, image/jpeg, image/png' /> */}
                 </li>
                 <li>
