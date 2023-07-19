@@ -10,7 +10,7 @@
   width: 100%;
   height: 300px;
 }
-.mySwiper .SlideBox1 {
+.mySwiper eBox1 {
   width: 100%;
   height: 100%;
   background-image: url("https://ifh.cc/g/NAZPRg.jpg");
@@ -35,6 +35,14 @@
   background-size: cover;
 }
 .mySwiper .SlideBox4 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/ph7sKt.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .SlideBox5 {
   width: 100%;
   height: 100%;
   background-image: url("https://ifh.cc/g/ph7sKt.jpg");

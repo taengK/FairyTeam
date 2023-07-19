@@ -38,6 +38,9 @@
   background-color: #eee;
   margin-bottom: 10px;
 }
+.result-list-num:hover {
+  background-color: #ccc;
+}
 .result-list-num > li {
   width: 100%;
   margin-bottom: 10px;
@@ -46,9 +49,14 @@
 }
 .result-list-num > li > span {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .result-list-num > li:nth-child(1) {
+  cursor: pointer;
   width: 10%;
   line-height: 3vh;
   text-align: center;
+}
+.result-list-num > li:nth-child(2) {
+  cursor: pointer;
 }/*# sourceMappingURL=KaKaoMap.css.map */

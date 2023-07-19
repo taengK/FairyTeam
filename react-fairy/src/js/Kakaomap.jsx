@@ -1,9 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import MapList from './MapList';
 
 const { kakao } = window;
 
-const MapContainer = ({ searchPlace }) => {
+const LandingPage = () => {
+
   const [Places, setPlaces] = useState([]);
+  const [InputText, setInputText] = useState('');
+  const [Place, setPlace] = useState('');
+  const placeNameRef = useRef()
+
+
+
+  const onChange = (e) => {
+    setInputText(e.target.value);
+  };
+
+  
+
+  const test = (e) => {
+    console.log('test123123')
+    console.log(InputText)
+    setPlace(InputText);
+    setInputText('');
+  }
+
 
   useEffect(() => {
 
@@ -18,7 +39,7 @@ const MapContainer = ({ searchPlace }) => {
 
     const ps = new kakao.maps.services.Places();
 
-    ps.keywordSearch(searchPlace, placesSearchCB);
+    ps.keywordSearch(Place, placesSearchCB);
 
     function placesSearchCB(data, status, pagination) {
       if (status === kakao.maps.services.Status.OK) {
@@ -78,95 +99,94 @@ const MapContainer = ({ searchPlace }) => {
         infowindow.open(map, marker);
       });
     }
-  }, [searchPlace]);
+  }, [Place]);
+
+  
+
+
+
+
+
+
+// const showPlace =(e)=>{
+//   e.preventDefault()
+
+//   console.log(Places);
+// }
+
+
+
+
+
+
+  
+
+
+
+
 
   return (
     <>
-      <ul className='realMap'>
-        <li>
-          <div id="myMap" ></div>
-        </li>
-
-        <li id="result-list">
-            {Places.map((item, i) => (
-                  <div key={i}>
-              <ul className='result-list-num'> 
-                <li >
-                  <span>{i + 1}</span>
-                </li>
-                <li>
-                  <h5>{item.place_name}</h5>
-                  {item.road_address_name ? (
-                    <ul>
-                      <li>도로명 주소 : {item.road_address_name}</li>
-                      <li>지번 주소 : {item.address_name}</li>
-                    </ul>
-                  ) : (
-                    <li>지번 주소 : {item.address_name}</li>
-                    )}
-                    <li>{item.phone}</li>
-                  </li>
-                </ul>
-
-
-
-              </div>
-            ))}
-            <div id="pagination"></div>
-          
-        </li>
-      </ul>
-    </>
-  );
-};
-
-const LandingPage = () => {
-  const [InputText, setInputText] = useState('');
-  const [Place, setPlace] = useState('');
-
-  const onChange = (e) => {
-    setInputText(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('test')
-    setPlace(InputText);
-    setInputText('');
-  };
-
-  const test = (e) => {
-    console.log('test123123')
-    console.log(InputText)
-    setPlace(InputText);
-    setInputText('');
-  }
-  return (
-    <>
-      {/* <form className="inputForm" onSubmit={handleSubmit}>
-        <input
-          placeholder="검색어를 입력하세요"
-          onChange={onChange}
-          value={InputText}
-        />
-        <button type="button" onclick={(e)=>handleSubmit(e)}>검색</button>
-      </form> */}
       <ul className="KaIF">
-        <li >
+        <li>
           <input
             placeholder="검색어를 입력하세요"
             onChange={onChange}
             value={InputText}
           />
-          <button type="button" onClick={(e) => test(e)}>검색</button>
-          
+          <button type="button" onClick={(e) => test(e)}>
+            검색
+          </button>
         </li>
         <li>
-          <input type="text" placeholder='거래장소를 입력하세요' />
+          {/* <input type="text" placeholder="거래장소를 입력하세요" /> */}
         </li>
       </ul>
-      <MapContainer searchPlace={Place}/>
 
+      <>
+        <ul className="realMap">
+          <li>
+            <div id="myMap"></div>
+          </li>
+
+          <li id="result-list">
+
+
+
+            {Places.map((item) => (
+                <MapList
+                addName = {item.address_name}
+                placeName = {item.place_name}
+                roadAddName= {item.road_address_name}
+                phone = {item.phone}
+                ></MapList>
+              // <div onClick={showPlace}>
+              //   <ul className="result-list-num">
+              //     <li></li>
+              //     <li>
+              //       <h5 >{item.place_name}</h5>
+              //       {item.road_address_name ? (
+              //         <ul>
+              //           <li>도로명 주소 : {item.road_address_name}</li>
+              //           <li>지번 주소 : {item.address_name}</li>
+              //         </ul>
+              //       ) : (
+              //         <li>지번 주소 : {item.address_name}</li>
+              //       )}
+              //       <li>{item.phone}</li>
+              //     </li>
+              //   </ul>
+              // </div>
+            
+            ))}
+
+
+
+
+            <div id="pagination"></div>
+          </li>
+        </ul>
+      </>
     </>
   );
 };

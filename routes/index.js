@@ -166,7 +166,7 @@ router.post('/db/Detaill', (req, res)=>{
 router.post('/user/postForm', (req, res)=>{
     console.log('postForm Router', req.body);
     
-    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, prod_status, category_seq, prod_photo) VALUES (?,?,?,?,?,?) where prod_seq = ?"
+    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, prod_status, category_seq, prod_photo, prod_place, prod_barcode, user_id) VALUES (?,?,?,?,?,?,?,?,?)"
     // id, pw, name, nick, email
    
     conn.query(sql
@@ -176,7 +176,9 @@ router.post('/user/postForm', (req, res)=>{
             , req.body.userData.status
             , req.body.userData.category
             , req.body.userData.photo
-            , req.body.userData.seq
+            , req.body.userData.place
+            , req.body.userData.barcode
+            , req.body.userData.id
             ]
         , (err, rows)=>{
             if(rows) {

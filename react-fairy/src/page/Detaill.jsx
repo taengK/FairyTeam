@@ -60,7 +60,8 @@ useEffect(() => {
               user_id: res.data.prodInfo[0].user_id,
               user_nick : res.data.prodInfo[0].user_nick,
               prod_status: '새 상품',
-              payPrice: parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10)
+              payPrice: parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10),
+              prod_place : res.data.prodInfo[0].prod_place
             })
           } else {
             setData({
@@ -73,7 +74,8 @@ useEffect(() => {
             user_id: res.data.prodInfo[0].user_id,
             user_nick : res.data.prodInfo[0].user_nick,
             prod_status: '중고 상품',
-            payPrice: parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10)
+            payPrice: parseInt((res.data.prodInfo[0].prod_price).replace(/,/g, ''), 10),
+            prod_place : res.data.prodInfo[0].prod_place
           })
         }
         }       
@@ -139,18 +141,20 @@ console.log(buyer,seller);
               </h2>
             </nav>
             <nav>
-              <h3>{data.user_nick}</h3>
+              <h3>판매자 : {data.user_nick}</h3>
               <p>
                 {/* {" "} */}
-                {data.prod_status}
-                {/* {" "} */}
+                상태 : {data.prod_status}
               </p>
+                <p>
+                장소 : {data.prod_place}
+                </p>
               <p>
                 {/* {" "} */}
-                {data.prod_at}
+                등록 시간 : {data.prod_at}
                 {/* {" "} */}
               </p>
-              <p>{data.prod_content}</p>
+              <p>내용 : {data.prod_content}</p>
             </nav>
             <nav>
               <div class="dis_price">

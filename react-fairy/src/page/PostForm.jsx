@@ -135,7 +135,8 @@ function PostForm(prod_name, prod_photo, prod_seq, prod_content, prod_price) {
       status: selectedOption,
       photo: showPhoto,
       barcode: barcodeTime,
-      id: sessionStorage.getItem('id')
+      id: sessionStorage.getItem('id'),
+      place : sessionStorage.getItem('postPlace')
     })
 
 
