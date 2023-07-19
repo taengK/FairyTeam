@@ -26,7 +26,6 @@
 }
 .PostFormBox > form > h1 {
   margin-bottom: 30px;
-  border-bottom: 1px solid #000;
 }
 
 .PFTextArea {
@@ -87,7 +86,6 @@
   padding: 20px;
 }
 .PFMapBox > li:nth-child(1) .PFMap .PFMapCtt {
-  background-color: #fc0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -145,32 +143,29 @@
   .df .PostFormLabel2 {
     margin-top: 0;
   }
-}
-.PFL2Box > ul {
-  width: 100%;
-}
-.PFL2Box > ul > li .PFImgBox {
-  width: 30%;
-}
-.PFL2Box > ul > li .PFImgBox > img {
-  width: 100%;
-}
-.PFL2Box > ul > li:last-child {
-  width: 100%;
-  padding: 30px;
-}
-
-.PFIfram {
-  width: 100px;
-  height: 300px;
-  margin-left: auto;
-}
-
-.realMap {
-  flex-wrap: wrap;
-  border: 1px solid #000;
-  width: 100%;
-}
-.realMap > li #myMap {
-  width: 100%;
+  .PFL2Box > ul {
+    width: 100%;
+  }
+  .PFL2Box > ul > li .PFImgBox {
+    width: 30%;
+  }
+  .PFL2Box > ul > li .PFImgBox > img {
+    width: 100%;
+  }
+  .PFL2Box > ul > li:last-child {
+    width: 100%;
+    padding: 30px;
+  }
+  .PFIfram {
+    width: 100px;
+    height: 300px;
+    margin-left: auto;
+  }
+  .realMap {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .realMap > li #myMap {
+    width: 100%;
+  }
 }/*# sourceMappingURL=PostForm.css.map */

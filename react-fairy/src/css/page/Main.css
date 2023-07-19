@@ -19,6 +19,43 @@
   width: 100%;
   height: 300px;
 }
+.mySwiper .SlideBox1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/NAZPRg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .SlideBox2 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/1RLdJ8.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .SlideBox3 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/TyvrN1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .SlideBox4 {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://ifh.cc/g/ph7sKt.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mySwiper .fkfk {
+  padding: 100%;
+  background-color: #000;
+  opacity: 0.2;
+}
 
 .GridCtn {
   display: grid;
