@@ -11,7 +11,8 @@
 }
 .df .PostFormLabel1 > h5 {
   font-weight: bold;
-  text-align-last: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
 .df .PostFormLabel2 {
   width: 100%;
@@ -172,4 +173,4 @@
 }
 .realMap > li #myMap {
   width: 100%;
-}
+}/*# sourceMappingURL=PostForm.css.map */
