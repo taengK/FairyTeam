@@ -69,6 +69,7 @@
 }
 .NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgP:hover {
   color: skyblue;
+  font-size: 1.1rem;
 }
 .NaviCtgBox .NaviCtgGnb > li:hover .subBox {
   display: block;
