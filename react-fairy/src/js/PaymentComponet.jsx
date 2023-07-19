@@ -8,7 +8,8 @@ const PaymentComponet = ({prod_name, prod_price}) => {
 
   // 장바구니
   
-
+  const forPay = sessionStorage.getItem('id')
+  console.log(forPay);
     // useEffect(() => {
     //     // const script1 = document.createElement('script');
     //     // script1.src = 'https://code.jquery.com/jquery-1.12.4.min.js';
@@ -29,6 +30,7 @@ const PaymentComponet = ({prod_name, prod_price}) => {
       const RealPayment = (e) => {
         e.preventDefault()
 
+        if(forPay !== null){
         const IMP = window.IMP;
         IMP.init("imp31853445");
 
@@ -68,7 +70,8 @@ const PaymentComponet = ({prod_name, prod_price}) => {
             }
           }
         );
-      };
+      }
+    };
 
       // RealPayment({prod_name,prod_price})
       

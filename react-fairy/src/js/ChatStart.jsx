@@ -1,13 +1,29 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
-const ChatStart = () => {
+const ChatStart = ({user_id, buyer, prod_name}) => {
+
+  const forChat = sessionStorage.getItem('id')
+
+  console.log(user_id, buyer, prod_name);
+
+ 
+
   return (
     
-      <div className='DtChat'>
-        <Link to='/Join' >채팅하기💬</Link>
+    (forChat == null ?
+        
+        (
+          <div className='DtChat'>
+          채팅하기💬
       </div>
+          ):(
+          <div className='DtChat'>
+        <Link to='/Join' user_id={user_id} buyer={buyer} prod_name={prod_name} >채팅하기💬</Link>
+      </div>
+
+        ))
      
   )
 }
