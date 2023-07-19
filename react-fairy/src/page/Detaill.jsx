@@ -84,9 +84,25 @@ useEffect(() => {
 // console.log(data);
 
 
+
+const [favoCheck, setFavoCheck]=useState()
+
   useEffect(() => {
     setSeller(data.user_id);
     setBuyer(sessionStorage.getItem("id"));
+
+
+    // axios.post('http://localhost:8888/db/favoCheck', {    
+    //   data : data.prod_seq
+    // })
+    // .then((res)=>{
+    //   if(res.data.favoCheck == 'existed'){
+    //     setFavoCheck('existed')
+    //   }
+
+    // })
+
+
   }, [data]);
 
 
@@ -175,7 +191,7 @@ console.log(buyer,seller);
         <ul className="DTButtonBox">
           <li>
             <button className="DTBtn">
-              {buyer == seller ? (
+              {buyer == seller || buyer =='admin' ? (
                 <ChangeBtn
                 prod_seq={data.prod_seq}/>
               )
@@ -197,7 +213,7 @@ console.log(buyer,seller);
           </li>
           <li>
             <button className="DTBtn">
-            {buyer == seller ? (
+            {buyer == seller || buyer =='admin' ? (
               null)
               :
               (
@@ -210,7 +226,7 @@ console.log(buyer,seller);
           </li>
           <li>
             <button className="DTBtn">
-            {buyer == seller ? (
+            {buyer == seller || buyer =='admin' ? (
               <DelProd/>
             ):(
           

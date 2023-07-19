@@ -400,6 +400,23 @@ router.post('/db/favorite', (req, res)=>{
 })
 // 상세페이지 > 장바구니 ---------------------------- 종료
 
+// 상세페이지 > 장바구니체크 ---------------------------- 시작
+// router.post('/db/favoCheck', (req, res)=>{
+//     console.log(req.body.userData);
+//     let sql = "select * from favorites_info where prod_seq = ? "
+    
+//     conn.query(sql, [req.body.data.prod_seq], (err, rows)=>{
+//         if (rows !== undefined){
+//             console.log('즐찾확인', rows)
+//             res.json({favoCheck : 'existed'})
+//         } else {
+//             console.log('즐찾확인', err)
+//             res.json({favoCheck : 'null'})
+//         }
+//     })
+// })
+// 상세페이지 > 장바구니체크 ---------------------------- 종료
+
 
 // 로그인 > 찜목록 --------------------- 시작
 router.post('/db/myfavor', (req, res)=>{
