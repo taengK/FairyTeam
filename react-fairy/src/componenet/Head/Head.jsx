@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Logo from '../../Images/Logo.svg'
+import Logo from '../../Images/Logo3.svg'
 
 import { Link } from 'react-router-dom'
 
@@ -74,6 +74,7 @@ const Head = () => {
       <ul className='head'>
         <li className='headBox'>
           <div className='LogoBox'><Link to='/'><img src={Logo} alt="" className='LogoImg' /></Link></div>
+          <div className='daangsp'><p>당신편</p></div>
           <div className='inputBox'><input type="text" className='search' placeholder='찾으시는 물품을 입력해주세요' /></div>
           <div><i class="fa-solid fa-magnifying-glass"></i></div>
         </li>
