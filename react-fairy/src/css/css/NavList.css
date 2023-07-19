@@ -1,0 +1,192 @@
+.NaviCtgBox {
+  display: flex;
+  height: 40px;
+}
+.NaviCtgBox .ham {
+  width: 100px;
+}
+.NaviCtgBox .ham .realHam {
+  background-color: white;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+.NaviCtgBox .ham .realHam .fa-bars {
+  line-height: 40px;
+  font-size: 2rem;
+}
+.NaviCtgBox .NaviCtgGnb {
+  z-index: 4;
+  width: 150px;
+  top: -40px;
+  padding-top: 40px;
+  position: relative;
+}
+.NaviCtgBox .NaviCtgGnb > li {
+  display: none;
+}
+.NaviCtgBox .NaviCtgGnb > li > a {
+  background-color: lightblue;
+  display: block;
+  height: 41px;
+  line-height: 41px;
+  text-align: center;
+  color: #fff;
+  stroke: #000;
+  font-size: 1.2rem;
+}
+.NaviCtgBox .NaviCtgGnb .subBox {
+  width: 1200px;
+  height: 450px;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 100%;
+  display: none;
+  z-index: 2;
+}
+.NaviCtgBox .NaviCtgGnb .subBox > ul {
+  display: flex;
+  width: 100%;
+  height: 328px;
+}
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li {
+  height: 450px;
+  border-right: 1px solid whitesmoke;
+  padding: 30px;
+}
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgPH {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+  color: #555;
+  font-size: 1.5rem;
+}
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgP {
+  margin-top: 10px;
+}
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgP:hover {
+  color: skyblue;
+  font-size: 1.1rem;
+}
+.NaviCtgBox .NaviCtgGnb > li:hover .subBox {
+  display: block;
+}
+.NaviCtgBox .NaviCtgGnb:hover li {
+  display: block;
+}
+.NaviCtgBox .active {
+  border: 1px solid white;
+}
+.NaviCtgBox .active .show {
+  background-color: pink;
+}
+.NaviCtgBox > ul {
+  width: 40%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 150px;
+}
+.NaviCtgBox > ul > li {
+  width: 100%;
+}
+.NaviCtgBox > ul > li .NaviCtt {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+.NaviCtgBox > ul > li .NaviCtt::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 5px;
+  background-color: skyblue;
+  left: 0;
+  bottom: 0;
+  transition: width 0.5s ease-in-out;
+}
+.NaviCtgBox > ul > li .NaviCtt:hover::after {
+  width: 70%;
+  transition: 0.3s all ease-in-out;
+  transform: translateX(20%);
+}
+
+@media all and (max-width: 468px) {
+  .NaviCtgBox {
+    flex-direction: row-reverse;
+    justify-content: left;
+  }
+  .NaviCtgBox .ham .realHam {
+    margin-left: 50px;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+  }
+  .NaviCtgBox .ham .realHam .fa-bars {
+    text-align: right;
+    line-height: 40px;
+    font-size: 2rem;
+  }
+  .NaviCtgBox .NaviCtgGnb > li {
+    position: relative;
+    right: 50px;
+  }
+  .NaviCtgBox .NaviCtgGnb > li > a {
+    width: 100%;
+    text-align: right;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox {
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: -190%;
+    display: none;
+    z-index: 2;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 328px;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li {
+    width: 150px;
+    height: 450px;
+    border-right: 1px solid whitesmoke;
+    position: relative;
+    right: 26px;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgPH {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgP {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li > a {
+    text-align: center;
+    width: 200%;
+    display: block;
+    color: #555;
+  }
+  .NaviCtgBox .NaviCtgGnb .subBox > ul > li > a:hover {
+    color: skyblue;
+  }
+  .NaviCtgBox .NaviCttBox {
+    width: 100%;
+    margin-left: -20px;
+    left: 20px;
+    position: relative;
+  }
+  .NaviCtgBox .NaviCttBox > li {
+    width: 100%;
+  }
+}
