@@ -166,19 +166,17 @@ router.post('/db/Detaill', (req, res)=>{
 router.post('/user/postForm', (req, res)=>{
     console.log('postForm Router', req.body);
     
-    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, category_seq, prod_status, prod_photo, prod_at, prod_barcode, user_id) VALUES (?,?,?,?,?,?, current_timestamp ,?,?)"
+    let sql = "INSERT INTO product_info (prod_name, prod_content, prod_price, prod_status, category_seq, prod_photo) VALUES (?,?,?,?,?,?) where prod_seq = ?"
     // id, pw, name, nick, email
    
     conn.query(sql
         , [req.body.userData.name
             , req.body.userData.content
             , req.body.userData.price
-            , req.body.userData.category
             , req.body.userData.status
+            , req.body.userData.category
             , req.body.userData.photo
-            // , req.body.userData.time
-            , req.body.userData.barcode
-            , req.body.userData.id
+            , req.body.userData.seq
             ]
         , (err, rows)=>{
             if(rows) {
@@ -199,7 +197,7 @@ router.post('/user/postForm', (req, res)=>{
 router.post('/user/ChangePost', (req, res)=>{
     console.log('postForm Router', req.body);
     
-    let sql = "(update product_info set prod_name=?,prod_content=?,prod_price=?,category_seq=?,prod_status=?,prod_photo=? where prod_seq=?)"
+    let sql = "update product_info set prod_name=? ,prod_content=? ,prod_price=? ,category_seq=? ,prod_status=? ,prod_photo=? where prod_seq=?;"
     // id, pw, name, nick, email
    
     conn.query(sql
@@ -241,7 +239,7 @@ router.post('/user/callPost', (req, res)=>{
         , (err, rows)=>{
             if(rows) {
                 console.log('call success')
-                res.json({result : 'success'})
+                res.json({result : rows})
             } else {
                 console.log('faild to call', err);
                 res.json({result : 'duplicated'})
