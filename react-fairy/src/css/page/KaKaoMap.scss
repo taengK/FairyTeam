@@ -36,6 +36,10 @@
     gap: 10px;
     background-color: #eee;
     margin-bottom: 10px;
+    &:hover {
+        background-color: #ccc;
+
+    }
     > li {
         width: 100%;
         margin-bottom: 10px;
@@ -43,15 +47,19 @@
         font-size: 1.2rem;
         >span {
             font-size: 1.5rem;
+            
+            
+            cursor: pointer;
         }
         
         &:nth-child(1) {
+            cursor: pointer;
             width: 10%;
-            
             line-height: 3vh;
             text-align: center;
         }
         &:nth-child(2) {
+            cursor: pointer;
             
             
             
