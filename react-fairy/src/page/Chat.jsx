@@ -23,11 +23,30 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('')
   const [message, setMessage] = useState('')
   const [messages, setMessages] = useState([])
-  const [allMessage,setAllMessage] = useState([])
+  const [plusMessage,setPlusMessage] = useState([])
+  const [all,setAll] = useState([])
+  // const [allmessage,setAllmessage] = useState([])
+  let userId =  sessionStorage.getItem('id')
+
+  useEffect(()=>{
+    let { name, room } = queryString.parse(window.location.search)
+
+    axios.post('http://localhost:8888/user/INTOchat',{userId:userId,message:message,name :  name, room: room})
+        .then((res)=>{
+          console.log('중간점검'+res.data.result);
+        
+        
+        if(res.data.result!==undefined){
+          console.log('너무 슬퍼 '+res.data.result);
+          setPlusMessage(res.data.result)
+
+        }
+        })
+  },[]);
 
 
   useEffect(() => {
-    const { name, room } = queryString.parse(window.location.search)
+    let { name, room } = queryString.parse(window.location.search)
 
     console.log(name, room)
 
@@ -60,19 +79,21 @@ const Chat = ({ location }) => {
     event.preventDefault()
 
  
-
-      let userId =  sessionStorage.getItem('id')
+      
+      
       console.log('이거 뜨나?'+userId);
       console.log('이거 뜨나?'+message);
 
     if (message) {
-      axios.post('http://localhost:8888/user/chat',{userId : userId, message : message})
+      axios.post('http://localhost:8888/user/chat',{userId : userId, message : message,name:name,room:room})
       .then((res)=>{
         
-        console.log('중간점검'+res.data.result.id);
+        console.log('중간점검'+res.data.result);
+        
+        
         if(res.data.result!==undefined){
           console.log('너무 슬퍼 '+res.data.result);
-          setAllMessage(res.data.result)
+          setPlusMessage(res.data.result)
 
         }
     })
@@ -83,14 +104,21 @@ const Chat = ({ location }) => {
     <div className='outerContainer'>
       <div className='container' style={{overflow:"scroll"}}>
         <InfoBar room={room} style={{position:"fixed", backgroundColor:"red"}}/>
-        {allMessage.map(item =>
+        {/* {all.map(item =>
+        <Message id={item.talker}
+        chat={item.talk}>
+
+          
+        </Message>         */}
+        {/* )} */}
+        {plusMessage.map(item =>
         <Message id={item.talker}
         chat={item.talk}>
 
           
         </Message> 
         
-        )} 
+        )}  
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
 
 

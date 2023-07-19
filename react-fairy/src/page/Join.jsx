@@ -1,28 +1,21 @@
 import React, {useState, useRef} from 'react';
 import {Link} from "react-router-dom";
 import '../css/page/Join.css'
-import axios from 'axios';
+
+
 
 
 const Join = () => {
     const [name, setName] = useState('')
     const [room, setRoom] = useState('')
+    
 
     const userName = useRef()
     const roomNum = useRef()
 
     function joinChat(){
 
-      axios.post('http://localhost:8888/user/INTOchat',{userName :  userName.current.value, roomNum: roomNum.current.value})
-      .then((res)=>{
-
-        // if(res.data == 'success'){
-        //   axios.post('http://localhost:8888/user/chatting',{id:id,chat:chat})// DB 에서 채팅 내역 가져오기
-        // }
-        // else{
-
-        // }
-      })
+      
     }
 
   return (
@@ -50,11 +43,12 @@ const Join = () => {
       <Link
         onClick={(e) => (!name || !room ? e.preventDefault() : null)}
         to={`/chat?name=${name}&room=${room}`}
-      >
+      >가입
         <button className={'button mt-20'} type='button' onClick={joinChat}>
           가입
         </button>
       </Link>
+
     </div>
   </div> 
   )
