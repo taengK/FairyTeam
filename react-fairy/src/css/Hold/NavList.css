@@ -57,23 +57,17 @@
   border-right: 1px solid whitesmoke;
   padding: 30px;
 }
-.NaviCtgBox .NaviCtgGnb .subBox > ul > li > h4 {
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgPH {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #000;
   color: #555;
+  font-size: 1.5rem;
 }
-.NaviCtgBox .NaviCtgGnb .subBox > ul > li > p {
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgP {
   margin-top: 10px;
 }
-.NaviCtgBox .NaviCtgGnb .subBox > ul > li > p > a {
-  font-size: 10px;
-  display: block;
-  font-size: 1.2rem;
-  margin: 10px 0 0 10px;
-  color: #555;
-}
-.NaviCtgBox .NaviCtgGnb .subBox > ul > li > p > a:hover {
+.NaviCtgBox .NaviCtgGnb .subBox > ul > li .ctgP:hover {
   color: skyblue;
 }
 .NaviCtgBox .NaviCtgGnb > li:hover .subBox {
@@ -89,13 +83,14 @@
   background-color: pink;
 }
 .NaviCtgBox > ul {
-  width: 100%;
+  width: 40%;
   display: flex;
   justify-content: left;
   align-items: center;
+  margin-left: 150px;
 }
 .NaviCtgBox > ul > li {
-  width: 10%;
+  width: 100%;
 }
 .NaviCtgBox > ul > li .NaviCtt {
   width: 100%;
@@ -184,7 +179,13 @@
   .NaviCtgBox .NaviCtgGnb .subBox > ul > li > a:hover {
     color: skyblue;
   }
-  .NaviCtgBox > ul > li {
+  .NaviCtgBox .NaviCttBox {
+    width: 100%;
+    margin-left: -20px;
+    left: 20px;
+    position: relative;
+  }
+  .NaviCtgBox .NaviCttBox > li {
     width: 100%;
   }
 }/*# sourceMappingURL=NavList.css.map */
