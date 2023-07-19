@@ -7,54 +7,56 @@
   height: auto;
   overflow: hidden;
 }
-.view .info > div {
-  float: left;
-  width: 50%;
+.view .Dinfo {
+  display: flex;
+}
+.view .Dinfo > div {
+  width: 100%;
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
 }
-.view .info > .image > img {
+.view .Dinfo .image > img {
   width: 100%;
 }
-.view .info > .summary > nav {
+.view .Dinfo .summary > nav {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 10px;
   margin-bottom: 12px;
   overflow: hidden;
 }
-.view .info > .summary > nav > h1 {
+.view .Dinfo .summary > nav > h1 {
   float: left;
   color: #0231a6;
   font-weight: bold;
   font-size: 1.5em;
 }
-.view .info > .summary > nav > h2 {
+.view .Dinfo .summary > nav > h2 {
   float: right;
   color: #777;
   margin-top: 8px;
 }
-.view .info > .summary > nav > h3 {
+.view .Dinfo .summary > nav > h3 {
   font-size: 18px;
   font-weight: bold;
   color: #1e2732;
 }
-.view .info > .summary > nav > p {
+.view .Dinfo .summary > nav > p {
   font-size: 14px;
   color: #474747;
   line-height: 36px;
   letter-spacing: -1px;
 }
-.view .info > .summary > nav:nth-child(2) > .rating > a {
+.view .Dinfo .summary > nav:nth-child(2) > .rating > a {
   color: #346aff;
   text-decoration: underline;
 }
-.view .info > span {
+.view .Dinfo span {
   color: #eb000a;
   font-size: 16px;
   margin-left: 6px;
 }
-.view .info > span::after {
+.view .Dinfo span::after {
   content: "↓";
 }
 .view .dis_price > ins {
@@ -313,4 +315,10 @@ article > nav > h1 {
 .view > .review > .paging > .num > a.on {
   color: #fe434c;
   font-weight: bold;
+}
+
+@media all and (max-width: 468px) {
+  .Dinfo {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=Detaill.css.map */

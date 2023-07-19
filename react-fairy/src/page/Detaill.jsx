@@ -77,12 +77,6 @@ useEffect(() => {
           })
         }
         }       
-
-
-        
-        
-        
-        
       })
     }
   },[])
@@ -116,7 +110,8 @@ console.log(buyer,seller);
             <strong>남성의류</strong>
           </p>
         </nav>
-        <article class="info">
+        
+        <article class="Dinfo">
           <div class="image">
             <img src={data.prod_photo} alt="상품이미지" />
           </div>
