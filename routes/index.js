@@ -249,6 +249,37 @@ router.post('/user/callPost', (req, res)=>{
 )
 // 게시물 불러오기 ---------------------------------- 종료
 
+// 게시물 삭제 ----------------------------------- 시작
+
+router.post('/user/delPost', (req, res)=>{
+    console.log('postForm Router', req.body);
+    
+    let sql = "delete from campus_h_230627_5.product_info where prod_seq = ?"
+    // id, pw, name, nick, email
+   
+    conn.query(sql
+        , [req.body.seq           
+            ]
+        , (err, rows)=>{
+            if(rows) {
+                console.log('del success')
+                res.json({del : 'success'})
+            } else {
+                console.log('faild to del', err);
+                res.json({del : 'duplicated'})
+            }
+    })
+} 
+)
+
+
+// 게시물 삭제 ----------------------------------- 종료
+
+
+
+
+
+
 
 //채팅 내역 ---------------------------------
 router.post('/user/chatting',(req, res)=>{

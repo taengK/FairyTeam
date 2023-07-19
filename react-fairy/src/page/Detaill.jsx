@@ -7,7 +7,7 @@ import LoveAdd from '../js/LoveAdd';
 
 import axios from 'axios';
 import DelProd from '../js/DelProd';
-import ChangePost from '../js/ChangePost.jsx';
+
 import ChangeBtn from '../js/ChangeBtn.jsx';
 
 
@@ -122,22 +122,21 @@ console.log(buyer,seller);
           </div>
           <div class="summary">
             <nav>
-              <h1>닉네임 ====== {data.user_nick}</h1>
+              <h1> {data.prod_name}</h1>
               <h2>
                 상품번호 :<span>{data.prod_seq}</span>
               </h2>
             </nav>
             <nav>
-              <h3>{data.prod_name}</h3>
+              <h3>{data.user_nick}</h3>
               <p>
                 {/* {" "} */}
-                prod_status로 새 상품 중고 상품 구분 ===== {data.prod_status}
+                {data.prod_status}
                 {/* {" "} */}
               </p>
               <p>
                 {/* {" "} */}
-                물품 등록 시간인데 시간 방식이 자동으로 외국으로 적용됨
-                왜이럼===={data.prod_at}
+                {data.prod_at}
                 {/* {" "} */}
               </p>
               <p>{data.prod_content}</p>
