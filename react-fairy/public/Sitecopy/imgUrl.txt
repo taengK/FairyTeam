@@ -20,3 +20,5 @@ https://ifh.cc/g/NAZPRg.jpg oreo
 https://ifh.cc/g/TyvrN1.jpg aus
 https://ifh.cc/g/1RLdJ8.jpg funi
 https://ifh.cc/g/ph7sKt.jpg hermes
+
+위치기반 API서비스를 이용한 편의점 직/위탁거래
