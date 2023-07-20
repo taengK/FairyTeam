@@ -1,24 +1,44 @@
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const ShowCart = ({name, price, photo, seq}) => {
 
-
-  const [btnValue, setBtnValue] = useState()
+  const nav = useNavigate()
+  const [btnValue, setBtnValue] = useState({})
 
   const btnRef = useRef()
 
   const removeCart =(e)=>{
     e.preventDefault()
-    setBtnValue(btnRef.current.id)
-  }
-  console.log(btnValue);
 
-  useEffect(()=>{
-    axios.post()
-  }, [setBtnValue])
+    if(window.confirm('삭제하시겠습니까?')){
+    setBtnValue(
+      {prod_seq : btnRef.current.id,
+        user_id : sessionStorage.getItem('id')})
+      }
+    }
+    
+    console.log(btnValue);
+    
+    
+    useEffect(()=>{
+      
+    btnValue.prod_seq !== undefined &&
+    axios.post("http://localhost:8888/user/delFavo", {
+      favo : btnValue
+    })
+    .then((res) => {
+      console.log(res.data.delFavo);
+      if(res.data.delFavo == 'success'){
+        alert('삭제되었습니다')
+        window.location.reload();
+      }
+
+    })
+  
+  }, [btnValue])
 
 
 
