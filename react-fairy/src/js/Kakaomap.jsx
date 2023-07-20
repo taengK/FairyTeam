@@ -19,8 +19,7 @@ const LandingPage = () => {
   
 
   const test = (e) => {
-    console.log('test123123')
-    console.log(InputText)
+  
     setPlace(InputText);
     setInputText('');
   }
@@ -103,28 +102,6 @@ const LandingPage = () => {
 
   
 
-
-
-
-
-
-// const showPlace =(e)=>{
-//   e.preventDefault()
-
-//   console.log(Places);
-// }
-
-
-
-
-
-
-  
-
-
-
-
-
   return (
     <>
       <ul className="KaIF">
@@ -151,8 +128,6 @@ const LandingPage = () => {
 
           <li id="result-list">
 
-
-
             {Places.map((item) => (
                 <MapList
                 addName = {item.address_name}
@@ -160,24 +135,7 @@ const LandingPage = () => {
                 roadAddName= {item.road_address_name}
                 phone = {item.phone}
                 ></MapList>
-              // <div onClick={showPlace}>
-              //   <ul className="result-list-num">
-              //     <li></li>
-              //     <li>
-              //       <h5 >{item.place_name}</h5>
-              //       {item.road_address_name ? (
-              //         <ul>
-              //           <li>도로명 주소 : {item.road_address_name}</li>
-              //           <li>지번 주소 : {item.address_name}</li>
-              //         </ul>
-              //       ) : (
-              //         <li>지번 주소 : {item.address_name}</li>
-              //       )}
-              //       <li>{item.phone}</li>
-              //     </li>
-              //   </ul>
-              // </div>
-            
+
             ))}
 
 
