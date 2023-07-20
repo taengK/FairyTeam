@@ -35,18 +35,20 @@ const LoveAdd = ({prod_name, prod_price, prod_seq, prod_photo}) => {
         prod_seq : prod_seq,
         user_id : sessionid
       })
-      // console.log(userData);
-    } else {
-      
-    }
+    } 
     
-     
+    
   }
+  // console.log(userData);
   
 
   useEffect(()=>{
     
-    axios.post('http://localhost:8888/db/favorite',{userData : userData})
+
+    axios.post('http://localhost:8888/db/favorite',
+    {
+      userData : userData
+    })
 
     .then((res)=>{
       console.log(res.data.fav);
@@ -66,10 +68,10 @@ const LoveAdd = ({prod_name, prod_price, prod_seq, prod_photo}) => {
         // window.location.reload();
 
       }
-      //  else if (res.data.fav ==='existed') {
-      //   alert('이미 장바구니에 담겨있는 상품입니다')
+       else if (res.data.fav ==='existed') {
+        alert('이미 장바구니에 담겨있는 상품입니다')
         
-      // } 
+      } 
       
     })
   },[userData])

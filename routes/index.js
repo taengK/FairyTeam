@@ -426,10 +426,11 @@ router.post('/db/recent', (req, res)=>{
 router.post('/db/favorite', (req, res)=>{
     // console.log(req.body.userData);
 
-    // let sql1 = "select prod_seq, user_id from favorites_info where prod_seq = ? and user_id = ?"
-    // conn.query(sql1, [req.body.userData.prod_seq, req.body.userData.user_id], (err, rows)=>{
-    //     console.log('이미 있음', rows);
-    //     if(rows === undefined){
+    let sql1 = "select prod_seq, user_id from favorites_info where prod_seq = ? and user_id = ?"
+
+    conn.query(sql1, [req.body.userData.prod_seq, req.body.userData.user_id], (err, rows)=>{
+        console.log('select 결과', rows);
+        if(rows[0] === undefined){
 
         let sql = "insert into favorites_info (prod_seq, user_id, fav_at) values (?, ?, current_timestamp)"
     
@@ -442,11 +443,11 @@ router.post('/db/favorite', (req, res)=>{
             res.json({fav : 'none'})    
         }
     })
-        
-        //  else{
-        //     res.json({fav : 'existed'})
-        // }
-// })
+}
+         else{
+            res.json({fav : 'existed'})
+        }
+})
 })
 // 상세페이지 > 장바구니 ---------------------------- 종료
 
