@@ -281,22 +281,22 @@ router.post('/user/delPost', (req, res)=>{
 
 // 장바구니 삭제 ----------------------------------- 시작
 
-router.post('/user/delPost', (req, res)=>{
+router.post('/user/delFavo', (req, res)=>{
     console.log('postForm Router', req.body);
     
-    let sql = "delete from campus_h_230627_5.product_info where prod_seq = ?"
+    let sql = "delete from campus_h_230627_5.favorites_info where prod_seq = ? and user_id = ?"
     // id, pw, name, nick, email
    
     conn.query(sql
-        , [req.body.seq           
+        , [req.body.favo.prod_seq, req.body.favo.user_id
             ]
         , (err, rows)=>{
             if(rows) {
-                console.log('del success')
-                res.json({del : 'success'})
+                console.log('delFavo success')
+                res.json({delFavo : 'success'})
             } else {
-                console.log('faild to del', err);
-                res.json({del : 'duplicated'})
+                console.log('faild to delFavo', err);
+                res.json({delFavo : 'duplicated'})
             }
     })
 } 
