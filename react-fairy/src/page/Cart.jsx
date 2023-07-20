@@ -47,6 +47,7 @@ const Cart = ({ name, price, photo, seq }) => {
     }, [myFavo])
 
 
+    // empty words
 
 
     return (
@@ -60,8 +61,9 @@ const Cart = ({ name, price, photo, seq }) => {
         
 
         <div className="GridCtn">
+            
           {sendFav.map((item) => (
-            <ShowCart
+              <ShowCart
               name={item.prod_name}
               price={item.prod_price}
               photo={item.prod_photo}

@@ -199,7 +199,7 @@ router.post('/user/postForm', (req, res)=>{
 router.post('/user/ChangePost', (req, res)=>{
     console.log('postForm Router', req.body);
     
-    let sql = "update product_info set prod_name=? ,prod_content=? ,prod_price=? ,category_seq=? ,prod_status=? ,prod_photo=? where prod_seq=?;"
+    let sql = "update product_info set prod_name=? ,prod_content=? ,prod_price=? ,category_seq=? ,prod_status=? ,prod_photo=?, prod_place =? where prod_seq=?;"
     // id, pw, name, nick, email
    
     conn.query(sql
@@ -210,6 +210,7 @@ router.post('/user/ChangePost', (req, res)=>{
             , req.body.userData.status
             , req.body.userData.photo
             // , req.body.userData.time
+            , req.body.userData.place
             , req.body.userData.seq
             
             ]
@@ -277,6 +278,33 @@ router.post('/user/delPost', (req, res)=>{
 
 // 게시물 삭제 ----------------------------------- 종료
 
+
+
+// 장바구니 삭제 ----------------------------------- 시작
+
+router.post('/user/delFavo', (req, res)=>{
+    console.log('postForm Router', req.body);
+    
+    let sql = "delete from campus_h_230627_5.favorites_info where prod_seq = ? and user_id = ?"
+    // id, pw, name, nick, email
+   
+    conn.query(sql
+        , [req.body.favo.prod_seq, req.body.favo.user_id
+            ]
+        , (err, rows)=>{
+            if(rows) {
+                console.log('delFavo success')
+                res.json({delFavo : 'success'})
+            } else {
+                console.log('faild to delFavo', err);
+                res.json({delFavo : 'duplicated'})
+            }
+    })
+} 
+)
+
+
+// 장바구니 삭제 ----------------------------------- 종료
 
 
 
@@ -396,18 +424,30 @@ router.post('/db/recent', (req, res)=>{
 
 // 상세페이지 > 장바구니 ---------------------------- 시작
 router.post('/db/favorite', (req, res)=>{
-    console.log(req.body.userData);
-    let sql = "insert into favorites_info (prod_seq, user_id, fav_at) values (?, ?, current_timestamp)"
+    // console.log(req.body.userData);
+
+    let sql1 = "select prod_seq, user_id from favorites_info where prod_seq = ? and user_id = ?"
+
+    conn.query(sql1, [req.body.userData.prod_seq, req.body.userData.user_id], (err, rows)=>{
+        console.log('select 결과', rows);
+        if(rows[0] === undefined){
+
+        let sql = "insert into favorites_info (prod_seq, user_id, fav_at) values (?, ?, current_timestamp)"
     
-    conn.query(sql, [req.body.userData.prod_seq, req.body.userData.user_id], (err, rows)=>{
+        conn.query(sql, [req.body.userData.prod_seq, req.body.userData.user_id], (err, rows)=>{
         if (rows){
             console.log('즐찾추가', rows)
             res.json({fav : 'success'})
         } else {
             console.log('즐찾실패', err)
-            res.json({fav : 'none'})
+            res.json({fav : 'none'})    
         }
     })
+}
+         else{
+            res.json({fav : 'existed'})
+        }
+})
 })
 // 상세페이지 > 장바구니 ---------------------------- 종료
 
