@@ -208,6 +208,7 @@ const ChangePost =() =>{
         // priceRef.current.value = res.data.result[0].prod_price
         photoRef.current.value = res.data.result[0].prod_photo
         setShowPhoto(res.data.result[0].prod_photo)
+        sessionStorage.setItem('place', res.data.result[0].prod_place)
       
       // console.log(res.data.result[0].prod_name);
       // console.log(nameRef.current.value);

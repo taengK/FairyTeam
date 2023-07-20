@@ -53,7 +53,9 @@ const LoveAdd = ({prod_name, prod_price, prod_seq, prod_photo}) => {
 
       if(res.data.fav === 'success'){
         alert('해당 상품이 장바구니에 추가되었습니다')
-        
+        if(window.confirm('장바구니에서 확인할까요?')){
+          nav('/cart')
+        }
         // if(result){
         //   nav('/cart')
         // }
@@ -62,9 +64,12 @@ const LoveAdd = ({prod_name, prod_price, prod_seq, prod_photo}) => {
         // sessionStorage.getItem('id')
         // nav('/')
         // window.location.reload();
+
+      }
+      //  else if (res.data.fav ==='existed') {
+      //   alert('이미 장바구니에 담겨있는 상품입니다')
         
-      } else {
-      } 
+      // } 
       
     })
   },[userData])
