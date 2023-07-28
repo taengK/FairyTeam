@@ -44,15 +44,15 @@ const Swiper1 = () => {
       
       
       {/* 오레오 */}
-      <SwiperSlide className='SlideBox1'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/Oreo_Blackpink/index.html" ></a></SwiperSlide>
+      <SwiperSlide className='SlideBox1'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/Oreo_BlackpinkFirst/index.html" ></a></SwiperSlide>
       {/* 가구 */}
-      <SwiperSlide className='SlideBox2'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/furniture/index.html" ></a></SwiperSlide>
+      <SwiperSlide className='SlideBox2'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/furnitureSecond/index.html" ></a></SwiperSlide>
       {/* 여행사 */}
-      <SwiperSlide className='SlideBox3'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/travel_agency/index.html" ></a></SwiperSlide>
+      <SwiperSlide className='SlideBox3'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/travel_agencyThred/index.html" ></a></SwiperSlide>
       {/* 헤르메스 */}
-      <SwiperSlide className='SlideBox4'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/Hermes/index.html" ></a></SwiperSlide>
+      <SwiperSlide className='SlideBox4'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/HermesForth/index.html" ></a></SwiperSlide>
       {/* SMHRD */}
-      <SwiperSlide className='SlideBox5'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/Smhrd/index.html" ></a></SwiperSlide>
+      <SwiperSlide className='SlideBox5'><a target='_blink' className='MAdvertising' href="http://127.0.0.1:5502/react-fairy/public/Sitecopy/SmhrdFifth/index.html" ></a></SwiperSlide>
       
         {/* <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
         <SwiperSlide className='SlideBox'><img src={SlideImg1} alt="" className='SlideImg'/></SwiperSlide>
