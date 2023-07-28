@@ -96,26 +96,7 @@
 
 
 
-  <tr>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/38ed470e-4404-449d-a214-c86075e0d491?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/8a35d7ff-2aca-4919-a8ad-a8d50859d464?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/9f4bb469-bb54-49d1-9fc4-3d500bee1182?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/d21d3282-be22-41a1-8fa2-3b37ab844eb2?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/70ebb0c7-7fd1-4689-bb66-8660735f5263?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    
-    
-    
-  </tr>
+ 
   <tr>
     <td align="center"><strong>박충희</strong></td>
     <td align="center"><strong>박예은</strong></td>
