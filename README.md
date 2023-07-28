@@ -66,12 +66,12 @@
     </tr>
 </table>
 <br>
-## ⚙ 시스템 아키텍처
-![시스템 아키텍쳐](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/ddb3d233-5795-44c2-9ed7-58db9a02a6b5)
+
 
 ## 📌 SW유스케이스
-![유스케이스](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/d4b2f5ce-4963-470a-a4cb-1cf7cfa25dcb){: width="100px" height="100px"}
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/d4b2f5ce-4963-470a-a4cb-1cf7cfa25dcb)"/>
+![유스케이스](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/d4b2f5ce-4963-470a-a4cb-1cf7cfa25dcb)
+
+
 
 
 <br>
@@ -92,12 +92,29 @@
 ![화면4](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/63845f87-8f1c-464a-97c0-aede87ac7ed7)
 ## 👨‍👩‍👦‍👦 팀원 역할
 <table>
+    
+
+
+
   <tr>
-    <td align="center"><img src="https://item.kakaocdn.net/do/fd49574de6581aa2a91d82ff6adb6c0115b3f4e3c2033bfd702a321ec6eda72c" width="100" height="100"/></td>
-    <td align="center"><img src="https://mb.ntdtv.kr/assets/uploads/2019/01/Screen-Shot-2019-01-08-at-4.31.55-PM-e1546932545978.png" width="100" height="100"/></td>
-    <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
-    <td align="center"><img src="https://i.pinimg.com/236x/ed/bb/53/edbb53d4f6dd710431c1140551404af9.jpg" width="100" height="100"/></td>
-    <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
+    <td align="center">
+      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/38ed470e-4404-449d-a214-c86075e0d491?style=flat&logo=JavaScript&logoColor=white">
+    </td>
+    <td align="center">
+      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/8a35d7ff-2aca-4919-a8ad-a8d50859d464?style=flat&logo=JavaScript&logoColor=white">
+    </td>
+    <td align="center">
+      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/9f4bb469-bb54-49d1-9fc4-3d500bee1182?style=flat&logo=JavaScript&logoColor=white">
+    </td>
+    <td align="center">
+      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/d21d3282-be22-41a1-8fa2-3b37ab844eb2?style=flat&logo=JavaScript&logoColor=white">
+    </td>
+    <td align="center">
+      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/70ebb0c7-7fd1-4689-bb66-8660735f5263?style=flat&logo=JavaScript&logoColor=white">
+    </td>
+    
+    
+    
   </tr>
   <tr>
     <td align="center"><strong>박충희</strong></td>
@@ -154,7 +171,7 @@
         페이지구조&디자인
     </b></td>
   </tr>
-  <tr>
+  <tr> 
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></br>
         <a href="https://github.com/자신의username작성해주세요" target='_blank'>notion</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></br>
@@ -167,10 +184,8 @@
         <a href="https://github.com/자신의username작성해주세요" target='_blank'>notion</a></td>
   </tr>
 </table>
+
 ## 🤾‍♂️ 트러블슈팅
-개념: 문제 해결을 위해 문제의 원인을 논리적이고 체계적으로 찾는 일이며 제품이나 프로세스의 운영을 재개
-프로젝트 진행하는 동안 발생했던 이슈 중 가장 기억에 남았던 문제와 해결 프로세스 나열(2~5가지 정도)
-  
 * 문제1<br>
     해결이 되었지만, 초반 기획부터 컴포넌트 분리하는 방법까지 설계없이 무분별하게 만들다가, 기획의 중요성을 알고 재개발 돌입
  
@@ -181,5 +196,4 @@
       chat방이 단톡방이 되는과정
 * 문제4<br>
       모달창 구현이 안되었다는 점
-* 문제5<br>
-      하나 생각해봐
+
