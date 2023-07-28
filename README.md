@@ -1,0 +1,185 @@
+# 당신편(팀명: 요정팀)
+![main](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/ee59e172-308d-46c9-89bd-f8c9a91dc2ad)
+## 👀 서비스 소개
+* 주제:  위치기반 API서비스를 이용한 편의점 직/위탁거래
+* 서비스소개 : 당신편은 자유로운 거래방식이 가능한 플랫폼입니다.</br>
+             비대면 거래를 통해 안전한 중고거래를 가능케하고</br>
+             편의점 방문 이용자들의 잠재적 구매 가능성을 높이는 사이트입니다.</br>
+<br>
+## 📅 프로젝트 기간
+2023.06.18 ~ 2023.07.20 (약 5주)
+<br>
+## ⭐ 주요 기능
+* 다양한 중고물품 정보를 쉽게 찾음 </br>
+* 게시물 작성시 지도에서 주변 편의점 등록</br>
+* 실시간 채팅을 통해 유저 간 거래방식 선택</br>
+* 크롤링을 활용한 중고물품정보 수집</br>
+* KAKAO 지도 API / 결제 API 활용</br>
+* 실시간 채팅 기능</br>
+* 스마트폰에서도 사용가능한 반응형 웹</br>
+<br>
+## ⛏ 기술스택
+<table>
+    <tr>
+        <th>구분</th>
+        <th>내용</th>
+    </tr>
+    <tr>
+        <td>BackEnd</td>
+        <td>
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"/>
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white"/> 
+            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"/> 
+        </td>
+    </tr>
+        <tr>
+        <td>FrontEnd</td>
+        <td>
+            <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black">
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/>
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"/>
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Library&API</td>
+        <td>
+            <img src="https://img.shields.io/badge/BootStrap-7952B3?style=for-the-badge&logo=BootStrap&logoColor=white"/>
+            <img src="https://img.shields.io/badge/KakaoMap-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=Socket.io&logoColor=white">
+        </td>
+    </tr>
+    <tr>
+        <td>IDE</td>
+        <td>
+            <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=Jupyter&logoColor=white"/>
+            <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Cooperation</td>
+        <td>
+            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/>
+            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>
+        </td>
+    </tr>
+</table>
+<br>
+## ⚙ 시스템 아키텍처
+![시스템 아키텍쳐](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/ddb3d233-5795-44c2-9ed7-58db9a02a6b5)
+
+## 📌 SW유스케이스
+![유스케이스](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/d4b2f5ce-4963-470a-a4cb-1cf7cfa25dcb){: width="100px" height="100px"}
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/d4b2f5ce-4963-470a-a4cb-1cf7cfa25dcb)"/>
+
+
+<br>
+
+## 📌 서비스 흐름도
+![서비스흐름도](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/af7a1114-4fa9-4002-87c2-b11f2caac440)
+<br>
+## 📌 ER다이어그램
+![ER](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/5ae3ba3e-641d-432d-8e64-81499054cbbb)
+## 🖥 화면 구성
+### 회원가입/로그인/로그아웃/마이페이지/수정페이지
+![화면1](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/4f6bbb25-fa76-4f30-b753-433f13a22386)
+### 게시물 작성
+![화면2](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/9cdbfc69-f3d5-4b3f-a507-7649581db861)
+### 게시물작성-지도API
+![화면3](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/0d43c737-1c7f-4e46-bb1d-302256566a47)
+### 채팅
+![화면4](https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132533622/63845f87-8f1c-464a-97c0-aede87ac7ed7)
+## 👨‍👩‍👦‍👦 팀원 역할
+<table>
+  <tr>
+    <td align="center"><img src="https://item.kakaocdn.net/do/fd49574de6581aa2a91d82ff6adb6c0115b3f4e3c2033bfd702a321ec6eda72c" width="100" height="100"/></td>
+    <td align="center"><img src="https://mb.ntdtv.kr/assets/uploads/2019/01/Screen-Shot-2019-01-08-at-4.31.55-PM-e1546932545978.png" width="100" height="100"/></td>
+    <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
+    <td align="center"><img src="https://i.pinimg.com/236x/ed/bb/53/edbb53d4f6dd710431c1140551404af9.jpg" width="100" height="100"/></td>
+    <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>박충희</strong></td>
+    <td align="center"><strong>박예은</strong></td>
+    <td align="center"><strong>김태경</strong></td>
+    <td align="center"><strong>김호현</strong></td>
+    <td align="center"><strong>조수민</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Backend</b></td>
+    <td align="center"><b>Backend</b></td>
+    <td align="center"><b>Frontend</b></td>
+  </tr>
+    <tr>
+    <td align="center"><b>
+        (HTML/CSS)</br>
+        전체적인 웹 페이지의 </br>
+        구조를 작성 반응형 구현 </br>
+        (DESIGN)</br>
+        웹 페이지의 전반적인 디자인과</br>
+        스타일을 꾸며주는 역할
+    </b></td>
+    <td align="center"><b>
+        (채팅기능)</br>
+        Socket/채팅창 연결</br>
+        (API)</br>
+        카카오지도,결제API</br>
+        페이지구현
+        (CSS)</br>
+        메인,서브페이지 서포트
+    </b></td>
+    <td align="center"><b>
+        (DB연동)</br>
+        게시물등록/수정/장바구니</br>
+        회원DB테이블에 등록</br>
+        로그인 성공시 세션에</br>
+        id값 저장</br>
+    </b></td>
+    <td align="center"><b>
+        (크롤링)</br>
+        파이썬을 통해 크롤링을 하고</br>
+        DB테이블에 저장</br>
+        (카테고리,페이지 노드연동)</br>
+        필터링된 자료들을</br>
+        DB에서 가져와 페이지구현</br>
+        (실시간채팅)</br>
+        채팅 즉시 db테이블에 저장 후 조회</br>
+    </b></td>
+    <td align="center"><b>
+        (CSS)</br>
+        장바구니/로그인/회원가입</br>
+        페이지구조&디자인
+    </b></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></br>
+        <a href="https://github.com/자신의username작성해주세요" target='_blank'>notion</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></br>
+        <a href="https://github.com/자신의username작성해주세요" target='_blank'>notion</a></td> 
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></br>
+        <a href="https://github.com/자신의username작성해주세요" target='_blank'>notion</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></br>
+        <a href="https://github.com/자신의username작성해주세요" target='_blank'>notion</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></br>
+        <a href="https://github.com/자신의username작성해주세요" target='_blank'>notion</a></td>
+  </tr>
+</table>
+## 🤾‍♂️ 트러블슈팅
+개념: 문제 해결을 위해 문제의 원인을 논리적이고 체계적으로 찾는 일이며 제품이나 프로세스의 운영을 재개
+프로젝트 진행하는 동안 발생했던 이슈 중 가장 기억에 남았던 문제와 해결 프로세스 나열(2~5가지 정도)
+  
+* 문제1<br>
+    해결이 되었지만, 초반 기획부터 컴포넌트 분리하는 방법까지 설계없이 무분별하게 만들다가, 기획의 중요성을 알고 재개발 돌입
+ 
+* 문제2<br>
+     지도API중 편의점을 search하면 Marker가 여러개 찍을 수 없었다는 점
+  
+* 문제3<br>
+      chat방이 단톡방이 되는과정
+* 문제4<br>
+      모달창 구현이 안되었다는 점
+* 문제5<br>
+      하나 생각해봐
