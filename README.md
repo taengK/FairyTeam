@@ -6,7 +6,7 @@
              비대면 거래를 통해 안전한 중고거래를 가능케하고</br>
              편의점 방문 이용자들의 잠재적 구매 가능성을 높이는 사이트입니다.</br>
 <br>
-<a src="https://www.naver.com/)">이게링크다</a>
+
 ## 📅 프로젝트 기간
 2023.06.18 ~ 2023.07.20 (약 5주)
 <br>
@@ -171,6 +171,11 @@
         장바구니/로그인/회원가입</br>
         페이지구조&디자인
     </b></td>
+  </tr>
+
+  
+  <tr>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
   </tr>
 
 </table>
