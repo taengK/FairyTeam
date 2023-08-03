@@ -177,8 +177,8 @@
   <tr>
     <td align="center">
      <a href="https://github.com/ShinePch/ShinePortfolio.git" target='_blank'>GitHub</a> </br>
-     <a href="https://www.notion.so/Resume-ShineP-26643b0204534c4c9e9b8601c9acde20)" target='_blank'>Notion</a>
-   </td>
+     <a href="https://www.notion.so/Resume-ShineP-26643b0204534c4c9e9b8601c9acde20)" target='_blank'>Notion</a></td>
+   
   
   </tr>
 
