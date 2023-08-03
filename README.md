@@ -125,11 +125,11 @@
     <td align="center"><strong>조수민</strong></td>
   </tr>
   <tr>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Front end</b></td>
+    <td align="center"><b>Front end</b></td>
+    <td align="center"><b>Back end</b></td>
+    <td align="center"><b>Back end</b></td>
+    <td align="center"><b>Front end</b></td>
   </tr>
     <tr>
     <td align="center"><b>
