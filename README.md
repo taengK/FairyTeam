@@ -126,7 +126,7 @@
   </tr>
   <tr>
     <td align="center"><b>Front end</b></td>
-    <td align="center"><b>Front end</b></td>
+    <td align="center"><b>Back end</b></td>
     <td align="center"><b>Back end</b></td>
     <td align="center"><b>Back end</b></td>
     <td align="center"><b>Front end</b></td>
