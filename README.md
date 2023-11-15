@@ -94,61 +94,15 @@
 ## 👨‍👩‍👦‍👦 팀원 역할
 <table>
     
-<tr>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/38ed470e-4404-449d-a214-c86075e0d491?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/8a35d7ff-2aca-4919-a8ad-a8d50859d464?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/9f4bb469-bb54-49d1-9fc4-3d500bee1182?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/d21d3282-be22-41a1-8fa2-3b37ab844eb2?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-    <td align="center">
-      <img src="https://github.com/2023-SMHRD-SW-BigData-1/Fairy/assets/132530371/70ebb0c7-7fd1-4689-bb66-8660735f5263?style=flat&logo=JavaScript&logoColor=white">
-    </td>
-
-
-
-  </tr>
-
 
  
   <tr>
-    <td align="center"><strong>박충희</strong></td>
-    <td align="center"><strong>박예은</strong></td>
     <td align="center"><strong>김태경</strong></td>
-    <td align="center"><strong>김호현</strong></td>
-    <td align="center"><strong>조수민</strong></td>
   </tr>
   <tr>
-    <td align="center"><b>Front end</b></td>
     <td align="center"><b>Back end</b></td>
-    <td align="center"><b>Back end</b></td>
-    <td align="center"><b>Back end</b></td>
-    <td align="center"><b>Front end</b></td>
   </tr>
     <tr>
-    <td align="center"><b>
-        (HTML/CSS)</br>
-        전체적인 웹 페이지의 </br>
-        구조를 작성 반응형 구현 </br>
-        (DESIGN)</br>
-        웹 페이지의 전반적인 디자인과</br>
-        스타일을 꾸며주는 역할
-    </b></td>
-    <td align="center"><b>
-        (채팅기능)</br>
-        Socket/채팅창 연결</br>
-        (API)</br>
-        카카오지도,결제API</br>
-        이용해 기능구현
-        (CSS)</br>
-        서브페이지 css
-    </b></td>
     <td align="center"><b>
         (DB연동)</br>
         게시물등록/수정/장바구니</br>
@@ -156,31 +110,10 @@
         로그인 성공시 세션에</br>
         id값 저장</br>
     </b></td>
-    <td align="center"><b>
-        (크롤링)</br>
-        파이썬을 통해 크롤링을 하고</br>
-        DB테이블에 저장</br>
-        (카테고리,페이지 노드연동)</br>
-        필터링된 자료들을</br>
-        DB에서 가져와 페이지구현</br>
-        (실시간채팅)</br>
-        채팅 즉시 db테이블에 저장 후 조회</br>
-    </b></td>
-    <td align="center"><b>
-        (CSS)</br>
-        장바구니/로그인/회원가입</br>
-        페이지구조&디자인
-    </b></td>
   </tr>
 
   
-  <tr>
-    <td align="center">
-     <a href="https://github.com/ShinePch/ShinePortfolio.git" target='_blank'>GitHub</a> </br>
-     <a href="https://www.notion.so/Resume-ShineP-26643b0204534c4c9e9b8601c9acde20)" target='_blank'>Notion</a></td>
-   
-  
-  </tr>
+ 
 
 </table>
 
